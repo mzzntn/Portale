@@ -1,0 +1,4 @@
+<struct name='_security_group'>
+<element name='name' type='text' />
+<element name='parent' type='_security_group' />
+</struct>

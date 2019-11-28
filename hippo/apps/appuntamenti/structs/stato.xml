@@ -1,0 +1,3 @@
+<struct name='stato'>
+        <element name='stato' type='text' />
+</struct>

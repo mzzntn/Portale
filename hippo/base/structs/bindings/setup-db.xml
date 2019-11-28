@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>SETUP</table><bind element="applicazione" dbField="APPLICAZIONE"/><bind element="codice" dbField="CODICE"/><bind element="valore" dbField="VALORE"/><bind element="note" dbField="NOTE"/><bind element="tipo" dbField="ID_TIPO"/><bind element="valoreDefault" dbField="VALOREDEFAULT"/><bind element="accesso" dbField="ID_ACCESSO"/></binding>

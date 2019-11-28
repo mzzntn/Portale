@@ -1,0 +1,9 @@
+<binding type="db" external="true">
+    <table>portal__amministratore</table>
+    <bind element="id" dbField="user_id" />
+    <bind element="login" dbField="username" />
+    <bind element="password" dbField="password" />
+    <bind element='settore' dbField='settore_id' />
+    <bind element='start_user' dbField='start_user' />
+    <bind element='limita' dbField='limitazione_id' />
+</binding>

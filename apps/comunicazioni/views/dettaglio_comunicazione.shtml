@@ -1,0 +1,43 @@
+<div id="dettaglio_comunicazione" class="row col-lg-10">
+    <div class="row">
+        <h3 class="verde col-lg-6 col-md-6 col-sm-12 col-xs-12 pl0">Ultime comunicazioni</h3>
+    </div>
+    <div class="row">
+        <div>
+            <!--<h4 class="col-lg-9 col-md-9 col-sm-9 col-xs-12" sp:if="!@comunicazione.pubblica">Comunicazione riservata</h4>
+            <h4 class="col-lg-9 col-md-9 col-sm-9 col-xs-12">{ @comunicazione.titolo }</h4>-->
+            <!---<h5 sp:if="!@comunicazione.pubblica">Comunicazione riservata</h5>-->
+            <h4>{ @comunicazione.titolo }</h4>
+        </div>
+        <div>
+            <!--<div class="col-lg-9 col-md-9 col-sm-10 col-xs-12 contenuti_comunicazione_dettaglio">-->
+            <div class="contenuti_comunicazione_dettaglio">
+                <!--<div class="container_img pull-left mr10" style="{ @x_resolution.blank? ? '' : 'width:'+@x_resolution.to_s+'px' }">-->
+                <div class="container_img pull-left mr10">
+                    <!--<img sp:if="!@comunicazione.immagine.blank?" src="{ Comunicazioni::ComunicazioniController.http_s_url('download_immagine?id_com='+@comunicazione.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione" style="{ @x_resolution.blank? ? '' : 'width:'+(@x_resolution-5).to_s+'px' }" class="img-responsive img-respo"/>-->
+                    <img sp:if="!@comunicazione.immagine.blank?" src="{ Comunicazioni::ComunicazioniController.http_s_url('download_immagine?id_com='+@comunicazione.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione" class="img-responsive"/>
+                </div>
+                <div>
+                    <p><em>{ (@comunicazione.testo_breve.blank? ? '' : @comunicazione.testo_breve) }</em></p>
+                   { @comunicazione.testo }
+                </div>
+            </div>
+            <!--<div id="id_dettaglio_menu_dx" sp:if="Spider.conf.get('comunicazioni.integra_in_prisma') == true" class="col-sm-3 col-sm-offset-1 dettaglio_menu_dx img_dx_dettaglio_comunicazione">-->
+            <div id="id_dettaglio_menu_dx" sp:if="Spider.conf.get('comunicazioni.integra_in_prisma') == true" class="dettaglio_menu_dx img_dx_dettaglio_comunicazione">
+            </div>
+        </div>
+    </div>
+    <div class="row mt15 mb15">
+		<div class="back" sp:if="Spider.conf.get('comunicazioni.integra_in_prisma') != true">
+        	<a href="{ Comunicazioni::ComunicazioniController.http_s_url }/{ @tipo_elenco }" class="btn">Indietro Elenco comunicazioni</a>
+    	</div>
+        <div sp:if="Spider.conf.get('comunicazioni.integra_in_prisma') == true" class="row contenitore_link_com_dettaglio">
+            <div class="col-sm-1 link_com_dettaglio" >
+                <a href="{ Comunicazioni::ComunicazioniController.http_s_url }/{ @tipo_elenco }" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? 'btn btn-success' : '') }">Elenco Notizie</a>
+            </div>
+            <div class="col-sm-1 link_com_dettaglio">
+                <a href="{ Comunicazioni::ComunicazioniController.http_s_url('archivio') }" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? 'btn btn-success' : '') }">Archivio Notizie</a>
+            </div>
+        </div>
+    </div>
+</div>

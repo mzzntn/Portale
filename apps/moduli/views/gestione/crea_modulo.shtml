@@ -1,0 +1,66 @@
+<div id="crea_modulo">
+    <legend>Crea Modulo: { (!@nome_tipo_modulo.blank? ? @nome_tipo_modulo.capitalize : '') }</legend>
+	<form class="form-horizontal" method="post" id="form_salva_modulo">
+    	<textarea id="textarea_tinymce" name="textarea_tinymce">{ @contenuto_tipo_modulo }</textarea>
+    	<br />
+        <div sp:if="!@importi_collegati.blank? && @pagamenti_attivi">
+            <h3>Tabella Importi Dovuti</h3>
+            <table class="table table-bordered width_auto tabella_importi">
+                <thead>
+                    <tr class="heading_row">
+                        <th>Codice</th>
+                        <th>Descrizione</th>
+                        <th>Importo</th>
+                        <th>Tipo Selezione</th>
+                    </tr>
+                </thead>
+                <tbody sp:each_pair="@importi_collegati |tipo_obbligatorieta,array_importi|">
+                    <tr sp:each="array_importi |importo|">
+                        <td>
+                            { importo.codice }
+                        </td>
+                        <td>
+                            { importo.descrizione } { (importo.bollo ? '(include bollo)' : '') } 
+                        </td>
+                        <td class="importi">
+                            <div sp:if="importo.importo_utente">
+                                Importo Libero
+                            </div>
+                            <div sp:if="!importo.importo_utente">
+                                { ( importo.importo > 0 ? "€ "+importo.importo.to_s : "Gratuito" ) }
+                            </div>
+                        </td>
+                        <td>
+                            { importo.tipo_obbligatorieta }
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <div sp:if="Spider.conf.get('moduli.url_ws_caricamento_pratiche')">
+            <span class="hide" id="url_ws_allegati">{ Spider.conf.get('moduli.url_ws_caricamento_pratiche')+"?tipoAllegato" }</span>
+            <span sp:if="!@allegati_associati.blank?" class="hide" id="hash_allegati_da_db">{ (@allegati_associati.blank? ? "" : @allegati_associati ) }</span>
+            <input type="hidden" name="hash_dati_allegati" id="hash_dati_allegati" value="" />
+        
+            <span class="hide" id="url_ws_eventi">{ Spider.conf.get('moduli.url_ws_caricamento_pratiche')+"?evento" }</span>
+            <span sp:if="!@eventi_associati.blank?" class="hide" id="hash_eventi_da_db">{ (@eventi_associati.blank? ? "" : @eventi_associati ) }</span>
+            <input type="hidden" name="hash_dati_eventi" id="hash_dati_eventi" value="" />
+
+            <span class="hide" id="url_ws_interventi">{ Spider.conf.get('moduli.url_ws_caricamento_pratiche')+"?intervento" }</span>
+            <span sp:if="!@interventi_associati.blank?" class="hide" id="hash_interventi_da_db">{ (@interventi_associati.blank? ? "" : @interventi_associati ) }</span>
+            <input type="hidden" name="hash_dati_interventi" id="hash_dati_interventi" value="" />
+        </div>
+        <span sp:tag-if="@abilita_scelta_font" id="abilita_scelta_font"></span>
+        <span sp:tag-if="@attiva_template_iscrizioni" id="attiva_template_iscrizioni"></span>
+		<div class="row form-actions">
+            <div class="span1">
+                <a href="{ Moduli::GestioneModuliController.http_s_url('nuovo_tipo_modulo/'+@id_tipo_modulo) }" class="btn">Indietro</a>
+            </div> 
+			<div class="span1 offset5">    
+            	<button type="submit" class="btn" name="salva_modulo">Salva</button>
+        	</div>
+        </div>
+  	</form>
+	
+</div>

@@ -1,0 +1,129 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p>
+        <h2 class="align_center">SEGNALAZIONE DEGLI ATTI DI VANDALISMO CONTRO LUOGHI E BENI PUBBLICI DELLA CITTÀ DI VASTO E PROPOSTE PER LA RIQUALIFICAZIONE URBANA.</h2>
+    </p>
+
+    <div class="riga">
+    	<moduli:dato tipo="longText" id="descrizione_problema">Descrizione del problema o di quanto vuoi segnalare: </moduli:dato>
+    </div>
+    <div class="riga">
+    	<moduli:dato id="indirizzo" class="input_bigwidth">Indirizzo: </moduli:dato>
+    </div>
+
+    <moduli:allegato id="foto_segnalazione" autohide="true" save_path="moduli/" class="riga">
+        <label>Allega la foto</label> 
+    </moduli:allegato>
+
+
+    <h3>Dichiaro di aver preso visione delle clausole di utilizzo disponibili al seguente link: http://</h3>
+
+    <div class="riga">
+    	Le seguenti domande sono facoltative, ma ci aiuterebbero molto nell'ambito del nostro progetto. 
+    </div>
+
+    <strong>Ha avuto esperienza diretta il disagio giovanile o i comportamenti di minorenni che integrano danno o rischi di danno, a beni pubblici presenti sul territorio del Comune di Vasto? </strong>
+    <moduli:gruppo id="esperienza_danni" titolo="" class="">
+    	<moduli:opzioni id="tipo_difformita" class="lista_checkbox_vertical">
+    		<moduli:opzione id="mai">no, mai;</moduli:opzione>
+            <moduli:opzione id="fatti_riferiti">no ma mi sono stati riferiti, da altri amici, specifici fatti</moduli:opzione>
+            <div class="riga">
+            	<moduli:dato id="indico_fatti_riferiti" class="input_bigwidth">(indicare i fatti, in forma anonima):</moduli:dato>
+            </div>
+            <moduli:opzione id="esperienza_diretta">si, ne ho esperienza diretta con particolare riferimento ad atti vandalici</moduli:opzione>
+            <div class="riga">
+            	<moduli:dato id="luoghi_atti" class="input_bigwidth"> nei seguenti luoghi di Vasto:</moduli:dato>
+            </div>
+            <moduli:opzione id="non_riferisco">si, ma non intendo riferirne perché ritengo che il disagio e l'illegalità dei minorenni riguardano:
+	            <moduli:opzioni id="interesssati_disagio" class="lista_checkbox_vertical margin_l_10">
+	            	<moduli:opzione id="famiglie_interessate">le famiglie interessate perché direttamente responsabili;</moduli:opzione>
+	            	<moduli:opzione id="scuole">le scuole;</moduli:opzione>
+	            	<moduli:opzione id="servizi_sociali">i servizi sociali;</moduli:opzione>
+	            	<moduli:opzione id="polizia">la Polizia Locale;</moduli:opzione>
+	            	<moduli:opzione id="altro">(altro):</moduli:opzione><moduli:dato id="interessati_disagio_altro" class="input_bigwidth"></moduli:dato>
+            	</moduli:opzioni>
+            </moduli:opzione>
+            <moduli:opzione id="gia_segnalato">si, ma non intendo riferirne perché ho già segnalato i comportamenti a:
+	            <moduli:opzioni id="segnalato_a" class="lista_checkbox_vertical margin_l_10">
+	            	<moduli:opzione id="segnalato_a_cc_polizia">Carabinieri o Polizia</moduli:opzione>
+	            	<moduli:opzione id="segnalato_a_polizia">la Polizia Locale;</moduli:opzione>
+	            	<moduli:opzione id="segnalato_a_comune">il Comune di Vasto</moduli:opzione>
+            	</moduli:opzioni>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>
+    	In relazione ad aggressioni personali o danneggiamenti, nel territorio comunale di Vasto, ritiene che i minorenni autori di danni:
+    </strong>
+    <moduli:gruppo id="minorenni_autori" titolo="" class="">
+    	<moduli:opzioni id="tipo_minorenni_autori" class="lista_checkbox_vertical">
+    		<moduli:opzione id="no_norme">non si rendono conto delle conseguenze sanzionatorie della loro condotta perché  ignorano l’esistenza delle norme;</moduli:opzione>
+    		<moduli:opzione id="alcool_droghe">non si rendono conto delle conseguenze sanzionatorie della loro condotta perché agiscono sotto effetto di alcool o stupefacenti;</moduli:opzione>
+    		<moduli:opzione id="no_diritti_doveri">non attribuiscono disvalore alla loro condotta, perché non c’è percezione dei diritti e doveri dicittadinanza attiva;</moduli:opzione>
+    		<moduli:opzione id="no_riferimenti">non avvertono riferimenti di controllo educativo in famiglia per contrastare adeguatamente l’illegalità;</moduli:opzione>
+    		<moduli:opzione id="disagio">agiscono in condizioni di grave disagio o disintegrazione sociale senza riferimenti adeguati (genitori, insegnanti, adulti in centri d’aggregazione) da cui essere informati sulle conseguenze degli illeciti;</moduli:opzione>
+
+    	</moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>
+    	Quali interventi ritiene prioritari per garantire la sicurezza nel territorio del Comune di Vasto:
+    </strong>
+    <moduli:gruppo id="interventi" titolo="" class="">
+    	<moduli:opzioni id="tipo_interventi" class="lista_checkbox_vertical">
+    		<moduli:opzione id="minorenni">in favore dei minorenni adolescenti:
+    			<moduli:opzione id="maggiore_aggregazione" class="margin_l_10">maggiori contesti di aggregazione in spazi pubblici</moduli:opzione>
+    			<moduli:opzione id="maggiore_lavoro" class="margin_l_10">maggiori opportunità di lavoro, sin dall’età consentita di 16 anni (durante la frequenza scolastica) </moduli:opzione>
+    			<moduli:opzione id="maggiori_forse_ordine" class="margin_l_10">maggiore presenza di forze dell’ordine in strada</moduli:opzione>
+    			<moduli:opzione id="maggiori_controlli" class="margin_l_10">maggiori controlli all’uscita da scuola e nei locali </moduli:opzione>
+    		</moduli:opzione>
+    		<moduli:opzione id="esercenti">in favore degli esercenti commerciali
+    			<moduli:opzione id="coinvolgere_giovani" class="margin_l_10">coinvolgere i giovani in lavori di controllo/manutenzione di aree comunali prossime ad esercizi commerciali </moduli:opzione>
+    			<moduli:opzione id="coinvolgere_famiglie" class="margin_l_10">coinvolgere le famiglie in azioni di controllo partecipato del territorio in cui risiedono</moduli:opzione>
+    			<moduli:opzione id="coinvolgere_imprenditori" class="margin_l_10">coinvolgere gli imprenditori in iniziative per l’orientamento dei giovani al lavoro, sul territorio urbano</moduli:opzione>
+    			<moduli:opzione id="telecamere" class="margin_l_10">utilizzare più telecamere</moduli:opzione>
+    		</moduli:opzione>
+    		<moduli:opzione id="patrimonio_pubblico">a tutela del patrimonio pubblico, per contrastare condotte di vandalismo:
+    			<moduli:opzione id="promoz_web" class="margin_l_10">promuovere in web la conoscenza del valore del territorio e del patrimonio urbano e artistico</moduli:opzione>
+    			<moduli:opzione id="promoz_turismo" class="margin_l_10">promuovere iniziative di turismo tematico per tipologia di utenza e fasce di età</moduli:opzione>
+    			<moduli:opzione id="promoz_famiglie" class="margin_l_10">promuovere servizi per le famiglie e la persona, da attuarsi presso strutture di riferimento culturale</moduli:opzione>
+    			<moduli:opzione id="promoz_segnalazioni" class="margin_l_10">promuovere la segnalazione dei reati come forma di cittadinanza attiva, attraverso la scuola e i servizi sociali</moduli:opzione>
+    		</moduli:opzione>
+    	</moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>
+    	Quali sono i luoghi di Vasto in cui pensa di essere esposto/a a maggiori rischi per la sua sicurezza?
+    </strong>
+    <moduli:gruppo id="periodo_meno_sicurezza" titolo="" class="">
+    		<moduli:opzioni id="tipo_periodo_meno_sicurezza" class="lista_checkbox_vertical">
+    			<moduli:opzione id="anno_scolastico">Durante l’anno scolastico (da settembre a giugno):
+    				<div class="riga">
+    					<moduli:dato id="luoghi_anno_scolastico" class="input_bigwidth"></moduli:dato>
+    				</div>
+    			</moduli:opzione>
+    			<moduli:opzione id="estate">Durante l’estate (da giugno a settembre):
+    				<div class="riga">
+    					<moduli:dato id="luoghi_estate" class="input_bigwidth"></moduli:dato>
+    				</div>
+    			</moduli:opzione>
+    		</moduli:opzioni>
+    </moduli:gruppo>
+
+    <hr>
+
+    <div class="riga lista_input_oriz">
+    	<moduli:dato id="nome">Nome: </moduli:dato><moduli:dato id="cognome">Cognome: </moduli:dato>
+    </div>
+    <div class="riga lista_input_oriz">
+    	<moduli:dato id="email" class="label_bigwidth input_mediumwidth">Indirizzo di posta elettronica: </moduli:dato>
+    </div>
+    
+
+
+</moduli:modulo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<portal>
+  <ENTE>Comune di Paperopoli</ENTE>
+  <VIA_ENTE>Via dei Gigli, 5</VIA_ENTE>
+  <CAP_ENTE>12345</CAP_ENTE>
+  <COMUNE_ENTE>PONTE SAN NICOLO'</COMUNE_ENTE>
+  <PROV_ENTE>PD</PROV_ENTE>
+  <MAIL_CED>ced@paperopoli.it</MAIL_CED>
+  <EMAIL_REGISTRAZIONE>info@soluzionipa.it</EMAIL_REGISTRAZIONE>
+  <URL_AMMINISTRAZIONE>gestione/index.php</URL_AMMINISTRAZIONE>
+  <STRUTTURA_UTENTI>portal::utente</STRUTTURA_UTENTI>
+  <STRUTTURA_DITTE>portal::ditta</STRUTTURA_DITTE>
+</portal>

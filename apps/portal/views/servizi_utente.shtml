@@ -1,0 +1,49 @@
+<div id="gestione_servizi">
+    <p class="introduzione text-center lead">
+        In questa sezione puoi gestire i servizi a cui sei registrato, e richiedere l'attivazione di nuovi servizi.
+    </p>
+    <p sp:if="@servizi && @servizi.length > 0">
+        <form action="{ Portal::ControllerServizi.http_s_url('attiva') }" method="POST">
+            <ul class="list-unstyled text-center">
+                <li sp:each="@servizi_privati |servizio|" class="bordo_servizio pad_servizio el_servizi">
+                    <span class="nome_servizio">{ servizio.nome }</span>
+                    <div sp:if="!servizio.descrizione.blank?" class="descr_servizio lead">
+                        { servizio.descrizione }
+                    </div>
+                    <div sp:if="servizio.oggetto_db? && (!servizio.stato || (servizio.stato != 'richiesto' && servizio.stato != 'configurazione'))" class="stato-servizio">
+                        <!-- <label for="servizio[{ servizio.id }]">Servizio</label> -->
+                        <input type="checkbox" name="servizio[{ servizio.id }]" sp:attr-if="servizio.attivo?,checked">
+                        Autorizza al trattamento dei dati ed Attiva
+                    </div>
+                    <div sp:if="servizio && (servizio.stato == 'richiesto' || servizio.stato == 'configurazione')"  class="stato-servizio">
+                        <strong><em>{ servizio.stato }</em></u>
+                    </div>
+                    <div sp:if="!servizio.servizio_utente">
+                        <div sp:if="servizio.accesso == 'confermati' && @utente_portale.stato != 'confermato'">
+                            (Il servizio sarà attivo solo dopo la conferma dell'account da parte dell'amministratore)
+                        </div>
+                        <div sp:if="servizio.accesso == 'abilitati'">
+                            (Il servizio sarà attivo solo dopo l'abilitazione da parte dell'amministratore)
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="row text-center">
+                <div class="mb10">
+                    <input type="submit" name="submit" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }" value="Salva modifiche">
+                </div>
+            </div>
+        </form>
+        <div class="row mt20 centra_contenuto">
+            <div class="back">
+                <a href="{ Portal::PortalController.http_s_url }" class="btn { (@layout_web ? '' : 'btn-lg') }">Torna</a>
+            </div>
+        </div>
+    </p>
+    <p sp:if="!@servizi || @servizi.length == 0" class="alert alert-info" role="alert">
+        <br>
+        Attualmente non sono presenti servizi configurabili.
+    </p>
+    <br>
+</div>

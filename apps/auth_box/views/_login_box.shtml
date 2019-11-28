@@ -1,0 +1,37 @@
+<div id="login_box">
+    <div id="login_content">
+    <form class="form-horizontal" method="post" action="{ ( @route_controller.blank? ? '' : @route_controller+'/' ) }login{ ( @cod_applicazione.blank? ? '' : '/'+@cod_applicazione ) }">
+        <div class="campi_nascosti">
+            <!-- questo e un segnaposto per appendere i campi dei vari login --> 
+        </div>
+        <div class="errori">
+            <!-- questo e un segnaposto per appendere gli errori --> 
+        </div>
+        <div class="form-group row">
+            <label for="username" class="control-label col-sm-4">Username</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="username_login_box" name="username_login_box" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="control-label col-sm-4">Password</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="password_login_box" name="password_login_box" placeholder="Password">
+            </div>
+        </div>
+        <div sp:if="@cod_applicazione == 'missioni'" class="form-group row">
+            <label for="ruolo" class="control-label col-sm-4">Ruolo</label>
+            <div class="col-sm-8">
+                <select name="ruolo" class="form-control" placeholder="Seleziona Ruolo ...">
+                    <option value="DIPEN">Dipendente/Missionario</option>
+                    <option value="RESP">Responsabile/Gestore missioni</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2 col-sm-offset-4">
+                <button type="submit" class="btn btn-default">Entra</button>
+            </div>
+        </div>
+    </form>
+</div>

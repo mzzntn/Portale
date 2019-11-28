@@ -1,0 +1,164 @@
+<div class="index">
+
+    <div class="row">
+        <div sp:if="@login_effettuato && @pagamenti_pendenti_presenti" class="alert alert-warning col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+            <strong>Attenzione:</strong> non hai completato il pagamento di alcuni elementi che sono nel tuo carrello, <a href="{ Pagamenti::PagamentiController.http_s_url }">vedi carrello</a>
+        </div>
+
+        <div class="row">
+            <div sp:if="@flash_errore" class="alert alert-danger col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+                <strong>Attenzione:</strong> { @flash_errore }
+            </div>
+        </div>
+        <div class="row">
+            <div sp:if="@flash_warning" class="alert alert-warning col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+                { @flash_warning }
+            </div>
+        </div>
+        <div class="row">
+            <div sp:if="@flash_info" class="alert alert-info col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+                { @flash_info }
+            </div>
+        </div>
+        <div class="row">
+            <div sp:if="@flash_conferma" class="alert alert-success col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+                { @flash_conferma }
+            </div>
+        </div>
+    </div>
+
+    <!-- NON SONO LOGGATO SUL PORTALE -->
+    <div sp:if="!@utente_portale" id="elenchi_servizi" class="row mb40">
+        <div id="elenco_servizi_pubblici" class="{ (@layout_web ? 'col-lg-6 col-md-6 col-sm-6' : 'col-lg-12 col-md-12 col-sm-12') } col-xs-12 servizi">
+            <!--- Se sono su app mostro tasto per accedere -->
+            <div sp:if="!@layout_web" class="row">
+                <a href="{ Portal::ControllerAutenticazione.https_url }" class="btn btn-primary btn-lg col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 " >Accedi</a>
+                <br /><br /><br /><br />
+            </div>
+            
+            <!-- LISTA DI SERVIZI PUBBLICI SEMPRE VISIBILE -->
+            <div class="text-uppercase lead text-right"><h2>Servizi ad accesso libero</h2></div>
+                <ul sp:if="!@servizi_pubblici.blank?">
+<!--                 <span class="titolo_serv_pubblici">Servizi Pubblici</span> -->
+                    <li sp:each="@servizi_pubblici |servizio|" class="bordo_servizio pad_servizio el_servizi">
+                        <a class="nome_servizio" href="{ (!servizio.url.blank? ? servizio.url+(servizio.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s) : '#' ) }">{ servizio.nome }</a>
+
+                        <div class="descr_servizio lead" sp:if="!servizio.descrizione.blank?">{ servizio.descrizione }</div>
+                    </li>
+                </ul>
+                <div sp:if="@servizi_pubblici.blank?">
+                    Non sono attualmente presenti servizi pubblici.
+                </div>
+        </div>
+        <div sp:if="@layout_web">
+            <div id="elenco_servizi_privati" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 servizi">
+                <!-- NON SONO LOGGATO SUL PORTALE, LISTA SERVIZI RISERVATI, SE CLICCO FACCIO AUTENTICAZIONE -->
+                <div class="text-uppercase lead"><h2>Servizi per utenti registrati</h2></div>
+                <ul sp:if="!@servizi_privati.blank?">
+<!--                 <span class="titolo_serv_privati">Servizi Privati</span> -->
+                    <li sp:each="@servizi_privati |servizio|" class="bordo_servizio pad_servizio el_servizi">
+                        <a href="{ Portal::PortalController.http_s_url('autenticazione') }">
+                            <span class="nome_servizio">{ servizio.nome }</span>
+                            <div class="descr_servizio lead" sp:if="!servizio.descrizione.blank?">{ servizio.descrizione }</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- SONO LOGGATO SUL PORTALE E NON HO SERVIZI ATTIVI -->
+    
+    <!-- SONO LOGGATO SUL PORTALE E HO SERVIZI ATTIVI -->
+    <div sp:if="@utente_portale" id="sezione_privata" class="text-center col-lg-12 mb40">
+        <div class="text-uppercase lead"><h2>La tua Sezione Privata</h2></div>
+        <!--<h1>La tua Sezione Privata</h1>-->
+        <div sp:if="!@layout_web">
+            <tpl:include  src="_link_index.shtml" />
+        </div>
+        <!-- parte presa da view attivazione_servizi  -->
+        <div class="row">
+            <div sp:if="!@index" class="lead col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                <div sp:if="!@disabilitati.blank?" class="alert alert-info" role="alert">
+                I seguenti servizi sono disabilitati:
+                <ul class="list-unstyled">
+                    <li sp:each="@disabilitati |servizio|">
+                        { servizio.nome }
+                    </li>
+                </ul>
+                </div>
+                <div sp:if="!@attivati.blank?" class="alert alert-info" role="alert">
+                    I seguenti servizi sono stati attivati:
+                    <ul class="list-unstyled">
+                        
+                        <li sp:each="@attivati |servizio|">
+                            { servizio.nome }
+                        </li>
+                    </ul>
+                </div>
+                <div sp:if="!@richiesti.blank?" class="alert alert-info" role="alert">
+                    È stata richiesta l'attivazione dei seguenti servizi:
+                    <ul class="list-unstyled">
+                        <li sp:each="@richiesti |servizio|">
+                            { servizio.nome }
+                        </li>
+                    </ul>
+                    Verrai contattato non appena l'amministratore attiverà l'accesso al servizio.
+                </div>
+
+                <div sp:if="@disabilitati.blank? && @attivati.blank? && @richiesti.blank?" class="alert alert-info" role="alert">
+                    Nessuna modifica.
+                </div>
+            </div>
+        </div>
+        <!-- fine parte presa da view attivazione_servizi  -->
+        
+        <div sp:if="@servizi_privati_utente.blank?"  class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 alert alert-warning text-center">
+            Attualmente non sei registrato ad alcun servizio.<br />
+            <a href="servizi/">
+                Richiedi l'attivazione di nuovi servizi.
+            </a>
+        </div>
+
+
+        <tpl:pass sp:if="!@servizi_privati_utente.blank?">
+            <ul id="lista_servizi_privati">
+                <li sp:each="@servizi_privati_utente |servizio|" class="bordo_servizio pad_servizio el_servizi">
+                    <span class="servizio_{ servizio.stato } nome_servizio">
+                        <a href="{ servizio.url.strip+(servizio.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s) }" sp:tag-if="servizio.attivo? && !servizio.url.blank? && !(@utente_portale.stato != 'confermato' && servizio.accesso == 'confermati') && !( !@utente_portale.attivo? && servizio.accesso == 'abilitati')">{ servizio.nome }</a>
+                        <span sp:if="@utente_portale.stato != 'confermato' && servizio.accesso == 'confermati'">
+                            (in attesa di conferma dell'account)
+                        </span>
+                        <span sp:if="@utente_portale.attivo? && servizio.stato == 'richiesto'" class="descrizione_stato">
+                            (in attesa di attivazione)
+                        </span>
+                        <span sp:if="servizio.stato == 'configurazione'" class="descrizione_stato">
+                            (è necessario eseguire la <a href="configurazione_servizio/{ servizio.id }">configurazione</a>)
+                        </span>
+                    </span>
+                    <div class="descr_servizio lead" sp:if="!servizio.descrizione.blank?">
+                        { servizio.descrizione }
+                    </div>
+                </li>
+            </ul>
+            
+            <ul id="lista_funzioni_utente" class="list-unstyled list-group lista-servizi">
+                <li sp:if="defined?(Comunicazioni) != nil" class="bordo_servizio pad_servizio el_servizi">
+                    <a href="{ Comunicazioni::ComunicazioniController.http_s_url('elenco_privato') }" class="nome_servizio">Comunicazioni private</a>
+                </li>
+                <!---<li class="span1 offset6 fw"><a href="{ Portal::PortalController.http_s_url('servizi') }" class="btn">Gestisci i tuoi servizi</a></li>
+                <li class="span1 offset6 fw" sp:if="!@modifica_dati_disabilitata"><a href="{ Portal::PortalController.http_s_url('dettagli_utente') }" class="btn">Modifica i tuoi dati</a></li>-->
+                
+                <!---<li><button type="submit" class="btn btn-logout" value="Logout">Logout</button></li>-->
+            </ul>
+
+            
+                        
+        </tpl:pass>
+        <div sp:if="@layout_web">
+            <tpl:include  src="_link_index.shtml" />
+        </div>
+
+    </div>
+
+
+</div>

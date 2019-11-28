@@ -1,0 +1,247 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <!-- esempio di ancora per il menu laterale
+
+    <a name="dichiarazioni" class="anchor_menu" testo="Dichiarazioni"></a> 
+    -->
+    <a name="dati_utente" class="anchor_menu" testo="Dati Utente"></a>
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+    <p>
+        <h2 class="align_center">RICHIESTA DI CERTIFICATO DI AGIBILITA'</h2>
+        <h4 class="align_center">(art. 24 DEL d.p.r 6 giugno 2001, n, 380 e successive modifiche e integrazioni)</h4>
+    </p>
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_titolare">Cognome</moduli:dato>
+            <moduli:dato id="nome_titolare">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="ragione_sociale_titolare" class="input_bigwidth">o Ragione Sociale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_titolare">codice fiscale</moduli:dato>
+            <moduli:dato id="piva_titolare">partita iva</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_titolare">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_titolare" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_titolare" class="input_mediumwidth">indirizzo </moduli:dato>
+            <moduli:dato id="civico_residenza_titolare" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+            <moduli:dato id="cap_residenza_titolare" class="label_smlwidth input_xsmallwidth">C.A.P.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email_titolare" class="input_bigwidth">posta elettronica</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="telefono_titolare" class="input_bigwidth">Recapito Telefonico </moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+
+    <strong>In qualità di titolare dei sottoelencati titoli abilitativi all'esecuzione di opere edilizie:</strong>
+    <moduli:gruppo id="titolarita_titoli" titolo="" class="dati_modulo">
+        (1) Permesso di costruire - (2) D.I.A. - (3) Concessione Edilizia - (4) SCIA
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_tipo_1">Tipo </moduli:dato></span></td>
+                    <td><span class="input_xxsmallwidth"><moduli:dato id="titoli_n_1">n° </moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_data_1">del</moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_prat_n_1_1">( pratica edilizia n°</moduli:dato></moduli:dato>)</span></td>
+                </tr>
+                <tr>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_tipo_2">Tipo </moduli:dato></span></td>
+                    <td><span class="input_xxsmallwidth"><moduli:dato id="titoli_n_2">n° </moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_data_2">del</moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_prat_n_2">( pratica edilizia n°</moduli:dato></moduli:dato>)</span></td>
+                </tr>
+                <tr>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_tipo_3">Tipo </moduli:dato></span></td>
+                    <td><span class="input_xxsmallwidth"><moduli:dato id="titoli_n_3">n° </moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_data_3">del</moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_prat_n_3">( pratica edilizia n°</moduli:dato></moduli:dato>)</span></td>
+                </tr>
+                <tr>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_tipo_4">Tipo </moduli:dato></span></td>
+                    <td><span class="input_xxsmallwidth"><moduli:dato id="titoli_n_4">n° </moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_data_4">del</moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_prat_n_4">( pratica edilizia n°</moduli:dato></moduli:dato>)</span></td>
+                </tr>
+                <tr>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_tipo_5">Tipo </moduli:dato></span></td>
+                    <td><span class="input_xxsmallwidth"><moduli:dato id="titoli_n_5">n° </moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_data_5">del</moduli:dato></span></td>
+                    <td><span class="input_xsmallwidth"><moduli:dato id="titoli_prat_n_5">( pratica edilizia n°</moduli:dato></moduli:dato>)</span></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </moduli:gruppo>
+
+    <strong>Relativi all'intervento di:</strong>
+    <moduli:gruppo id="rel_intervento" titolo="" class="dati_modulo checkbox_esclusivi1">
+        <div class="clear_both"><moduli:opzione id="rel_intervento_1"></moduli:opzione>Nuova costruzione/ampliamento
+        </div>
+        <div class="clear_both"><moduli:opzione id="rel_intervento_2"></moduli:opzione>Ricostruzioni/sopraelevazioni, totali o parziali
+        </div>
+        <div class="clear_both"><moduli:opzione id="rel_intervento_3"></moduli:opzione>Sistemazione dell'edificio esistente che ha influito sulle condizioni di sicurezza, igiene, salubrità, risparmio energetico degli edifici e degli impianti 
+            <div class="riga margin_l_35">negli stessi installati, valutate secondo quanto dispone la normativa vigente.</div>
+        </div>
+    </moduli:gruppo>
+
+    <div class="riga dati_modulo">
+        <moduli:dato id="data_ult_lavori" tipo="data" class="label_xbigwidth readonly_js"><label><strong>Essendo stati ultimati i lavori in data: </strong></label></moduli:dato>
+    </div>
+
+    <strong>Con direzione dei lavori eseguita dal signor:</strong>
+
+    <moduli:gruppo id="progettista_1" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_progettista">Cognome e Nome</moduli:dato>
+            <moduli:dato id="codice_fiscale_progettista">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_studio_progettista" class="label_bigwidth">indirizzo studio</moduli:dato>
+            <moduli:dato id="civico_studio_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_studio_progettista"class="label_smlwidth input_xxsmallwidth">cap </moduli:dato>
+            <moduli:dato id="citta_studio_progettista" class="label_smlwidth input_smallwidth">città </moduli:dato>
+            <moduli:dato id="prov_studio_progettista" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec_progettista">indirizzo PEC</moduli:dato>
+            <moduli:dato id="fax_progettista">fax studio</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tel_progettista">telefono studio</moduli:dato>
+            <moduli:dato id="citta_ordine_progettista">iscrizione albo/ordine</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_ordine_progettista">della provincia di</moduli:dato>
+            <moduli:dato id="n_ordine_progettista" class="input_smallwidth">numero</moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <a name="chiede" class="anchor_menu" testo="Chiede"></a>
+    <br /><br />
+    <h3>CHIEDE</h3>
+    <h4 class="align_center">(ai sensi degli articoli 24 e 25 del D.P.R. 06/06/2001 n° 380)</h4>
+    <br />
+    <h3>IL RILASCIO DEL CERTIFICATO DI AGIBILITA'</h3>
+    <br />
+    <strong>Opere per le quali si richiede l'agibilità</strong>
+    <moduli:gruppo id="agib_opere" titolo="" class="dati_modulo">
+        <moduli:opzioni id="scelta_agib_opere" class="checkbox_esclusivi2">
+            <div class="clear_both"><moduli:opzione id="agib_opere_1"></moduli:opzione><strong>Per tutte le opere</strong> oggetto del permesso di costruire/denuncia di inizio attività indicati; 
+            </div>
+            <div class="clear_both"><moduli:opzione id="agib_opere_2"></moduli:opzione><strong>Relativamente alle seguenti parti</strong> del permesso di costruire/denuncia di inizio attività indicati:
+            </div>
+        </moduli:opzioni>
+        <div class="riga">
+            <moduli:dato tipo="longText" id="parti_indicati" class="adaptive_input"></moduli:dato>
+        </div>
+        
+    </moduli:gruppo>
+
+    <strong>dell'edificio ad uso attività</strong>
+    <moduli:gruppo id="tipo_uso_attivita" titolo="" class="dati_modulo">
+        <div class="clear_both">
+            <moduli:opzione id="residenziale">residenziale</moduli:opzione> <moduli:opzione id="tipo_uso_2">commerciale</moduli:opzione>
+            <moduli:opzione id="direzionale">direzionale</moduli:opzione> <moduli:opzione id="turistica">turistica</moduli:opzione>
+            <moduli:opzione id="agricola">agricola</moduli:opzione> 
+        </div>
+        <div class="clear_both">
+            <div class="clear_both">
+                <moduli:opzione id="produttiva">produttiva (</moduli:opzione>
+                <moduli:opzione id="artigianale">artigianale</moduli:opzione> <moduli:opzione id="industriale">industriale</moduli:opzione>  
+                ) 
+            </div>
+            <moduli:opzione id="altro">altro</moduli:opzione><moduli:dato id="altro_tipo_uso_7"></moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <strong>sito in:</strong>
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="loc_int_via" class="label_bigwidth input_bigwidth">via, piazza, ecc.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_n" class="label_smlwidth input_xsmallwidth">numero </moduli:dato>
+            <moduli:dato id="loc_int_piano" class="label_smlwidth input_xsmallwidth">piano </moduli:dato>
+            <moduli:dato id="loc_int_interno" class="label_smlwidth input_xsmallwidth">interno </moduli:dato>
+            <moduli:dato id="loc_int_cap" class="label_smlwidth input_xsmallwidth">cap </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_loc" class="input_bigwidth">località</moduli:dato>
+        </div>
+        
+    </moduli:gruppo>
+
+    
+    <div class="riga dati_modulo"><moduli:dato id="n_piani" class="label_bigwidth input_xxsmallwidth"><label><strong>composto di piani n°</strong></label></moduli:dato><strong> comprendenti le unità immobiliari e le parti comuni di seguito elencate nell' allegato INTERCALARE </strong>
+    </div>
+    <div class="riga"><strong>UNITA' IMMOBILIARI</strong></div>
+    
+    <strong>in riferimento all'art 25 comma 4 del D.P.R. n° 380/2001, precisa che:</strong>
+    <moduli:gruppo id="prec_art_25" titolo="" class="dati_modulo checkbox_esclusivi3">
+        <div class="clear_both"><moduli:opzione id="prec_art_25_1"></moduli:opzione>La conformità del progetto ai parametri igienico sanitari è stata <strong>autocertificata</strong> con permesso di costruire o denuncia di inizio attività, ai sensi dell'art. 20 comma 1 del D.P.R. N°380/2001.<br />
+        <strong>Pertanto il termine per la formazione del silenzio-assenso è di giorni sessanta (60);</strong> 
+        </div>
+        <div class="clear_both"><moduli:opzione id="prec_art_25_2"></moduli:opzione>Per il progetto è stato ottenuto il parere dell'USL n°14 - Dipartimento di Prevenzione - Servizio igiene e Sanità Pubblica, e successivamente al citato parere non sono state apportate varianti la cui conformità del progetto ai parametri igienico sanitari sia stata autocertificata con permesso di costruire o denuncia di inizio attività.<br />
+        <strong>Pertanto il termine per la formazione del silenzio-assenso è di giorni trenta (30);</strong> 
+        </div>
+    </moduli:gruppo>
+    <a name="delega" class="anchor_menu" testo="Delega"></a>
+    <br />
+    <moduli:gruppo id="prog" titolo="" class="dati_modulo">
+        <div class="clear_both"><moduli:opzione id="delega_prog"></moduli:opzione><strong>Delega</strong> il progettista sotto indicato a ricevere tutte le comunicazioni relative alla presente pratica, eleggendo domicilio presso lo studio dello stesso e autorizzando il Comune a trasmettere gli atti e le richieste esclusivamente al progettista incaricato sollevando in tal modo l'Amministratore comunale da ogni responsabilità per il mancato ricevimento di atti e comunicazioni:
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="progettista_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_progettista">Cognome</moduli:dato>
+            <moduli:dato id="nome_progettista">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_progettista">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_progettista">nato a</moduli:dato>
+            <moduli:dato id="provincia_nascita_progettista" class="label_smlwidth input_xxsmallwidth">prov</moduli:dato>
+            <moduli:dato id="cap_nascita_progettista" class="input_xsmallwidth">C.A.P.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_progettista" tipo="data" class="label_smlwidth">nato il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_studio_progettista">con studio in </moduli:dato>
+            <moduli:dato id="prov_studio_progettista" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_studio_progettista" class="input_bigwidth">indirizzo</moduli:dato>
+            <moduli:dato id="civico_studio_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="ordine_progettista" class="label_bigwidth">Iscritto all'albo/ordine</moduli:dato>
+            <moduli:dato id="citta_ordine_progettista" class="label_smlwidth input_xsmallwidth">prov</moduli:dato>
+            <moduli:dato id="n_ordine_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tel_progettista" class="">Telefono</moduli:dato>
+            <moduli:dato id="fax_progettista" class="">Fax</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec_progettista" class="input_bigwidth label_bigwidth">posta elettronica certificata</moduli:dato>
+        </div>
+        
+    </moduli:gruppo>
+
+
+</moduli:modulo>
+
+

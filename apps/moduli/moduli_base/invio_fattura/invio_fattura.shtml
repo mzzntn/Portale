@@ -1,0 +1,68 @@
+<moduli:modulo id="modulo" 
+    titolo="<h4>Invio fattura.</h4>"
+    codice="">
+    <moduli:gruppo id="dati_utente" titolo="Dati personali" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato-utente id="nome_cognome" size="50">Il/la sottoscritto/a</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_nascita" label-align="utente">nato/a a </moduli:dato-utente>
+            <moduli:dato-utente id="data_nascita" class="label_smlwidth">il</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="codice_fiscale">C.F.</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_residenza" label-align="utente">residente a </moduli:dato-utente>
+        	<moduli:dato-utente id="indirizzo_residenza" label-align="utente">in via/fraz. </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="numero_telefono" class="label_smlwidth">n. tel. </moduli:dato-utente>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="estremi_ordine" titolo="Estremi ordine / Impegno">
+	    <div class="dati_modulo">
+	     	<div class="riga">
+	            <moduli:dato id="estremi_impegno" class="input_bigwidth">Estremi impegno</moduli:dato>
+	        </div>
+	     	<div class="riga">
+	            <moduli:dato id="anno_ordine" class="">Anno Ordine</moduli:dato>
+	        </div>
+	        <div class="riga">
+	            <moduli:dato id="numero_ordine" class="">Numero Ordine</moduli:dato>
+	        </div>
+	    </div>
+	</moduli:gruppo>
+
+	<moduli:gruppo id="estremi_documento" titolo="Estremi documento">
+	    <div class="dati_modulo">
+	        <div class="riga">
+	            <moduli:dato id="numero_documento" class="label_bigwidth">Numero Documento</moduli:dato>
+	        </div>
+            <div class="riga">
+                <moduli:dato id="oggetto_fattura" class="">Oggetto Fattura</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="importo_fattura" class="">Importo Fattura</moduli:dato>
+            </div>
+	        <div class="riga">
+	        	<moduli:dato id="data_documento" class="label_bigwidth" tipo="data">Data Documento</moduli:dato>
+	        </div>
+			<div class="riga">
+	        	<moduli:dato id="data_scadenza" class="label_bigwidth" tipo="data">Data Scadenza</moduli:dato>
+	        </div>
+	        <div class="riga">
+            	Allegare documento.
+            	<moduli:allegato id="doc_allegato" autohide="true" class="riga">(seleziona)
+                </moduli:allegato>
+            </div>
+	</moduli:gruppo>
+	<moduli:gruppo id="note">
+        	<label>
+                Note:
+        	</label>
+        	<moduli:dato id="note" tipo="longText" />
+    </moduli:gruppo>
+
+</moduli:modulo>

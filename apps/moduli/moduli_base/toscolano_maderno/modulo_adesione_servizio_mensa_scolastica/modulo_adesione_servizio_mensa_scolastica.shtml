@@ -1,0 +1,77 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+
+    <p>
+        <h2 class="align_center">MODULO DI ADESIONE AL SERVIZIO DI MENSA SCOLASTICA</h2>
+        <h2 class="align_center">A.S. { Date.today.year }/{ Date.today.year+1 }</h2>
+
+    </p>
+    <br />
+	<moduli:gruppo id="dati_utente" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_mediumwidth">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth">residente a</moduli:dato>
+            <moduli:dato id="prov_residenza" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="cap" class="label_xsmlwidth input_xxsmallwidth">cap. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza" class="input_mediumwidth">Via/V.LE/P.zza/Loc.</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_xsmlwidth input_xxsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare" class="input_mediumwidth">Numero Telefonico</moduli:dato>   
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente1" titolo="" class="dati_modulo no_border">
+    	<p>In qualit&agrave; di genitore di:</p>
+    	<br />
+	    <div class="riga">
+	        <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_mediumwidth">Nome e Cognome Alunno</moduli:dato>   
+	    </div>
+	    <div class="riga">
+	    	<moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE:</moduli:dato>
+	    	<moduli:opzione id="classe_elementare" class="checkbox_esclusivi1">Elementare</moduli:opzione>
+            <moduli:opzione id="classe_media" class="checkbox_esclusivi1">Media</moduli:opzione>
+	    </div>	
+	    <p><small> (che frequenter&agrave; nell'a.s. { Date.today.year }/{ Date.today.year+1 })</small></p>
+		
+		<br />
+		<h4>Chiede di poter usufruire del servizio mensa nei seguenti giorni:</h4>
+
+		<!-- <h5>Giorni di utilizzo del servizio mensa</h5> -->
+		<div class="riga">
+			<moduli:opzioni id="gravano_atti" class="lista_checkbox_oriz margin_l_10">
+				<moduli:opzione id="lunedi" class="elenco_prima">Luned&igrave;</moduli:opzione>
+				<moduli:opzione id="martedi" class="elenco_prima">Marted&igrave;</moduli:opzione>
+				<moduli:opzione id="mercoledi" class="elenco_prima">Mercoled&igrave;</moduli:opzione>
+				<moduli:opzione id="giovedi" class="elenco_prima">Gioved&igrave;</moduli:opzione>
+				<moduli:opzione id="venerdi" class="elenco_prima">Venerd&igrave;</moduli:opzione>
+			</moduli:opzioni>
+		</div>
+		<br />
+		<br />
+		<ol class="decimal">
+			<li>Contrassegnare con una croce i giorni in cui il servizio verrà utilizzato con regolarità.</li>
+			<li>Possono frequentare il servizio mensa solo gli alunni che svolgono lezioni sia al mattino che al pomeriggio e quelli iscritti al Cag.</li>
+			<li>Coloro i quali volessero usufruire dell’alternativa del primo piatto (corrispondente alla pasta in bianco) ed  al secondo piatto (corrispondente al prosciutto cotto o formaggio) del menu giornaliero della mensa scolastica, per motivi religiosi e/o per motivi di salute (comprovati da certificato medico) dovranno comunicarlo, dichiarandolo in calce a questo stampato.</li>
+		</ol>
+		<br />
+		<p>
+			Non verranno somministrate ai bambini alternative al pasto programmato dalla ASL, se non in via eccezionale, per un temporaneo malessere del bambino, previa comunicazione scritta dei genitori alle maestre, ed esclusivamente per un breve periodo.
+			<br />
+			Tale scelta avrà valore per l’intero anno scolastico.
+			<br />
+			Si prega di firmare per presa visione e restituire il presente avviso.
+		</p>
+		<br />
+		<br />
+    </moduli:gruppo>
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma"/>
+    </div>
+</moduli:modulo>

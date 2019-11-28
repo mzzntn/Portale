@@ -1,0 +1,157 @@
+<div id="gestione_dossier">
+	
+	<div sp:if="!@servizio_selezionato.blank?">
+	
+		
+
+		<legend>Vedi dati: { @servizio_selezionato['nome'] }</legend>
+		<div id="tabs_dossier_cittadino">
+			<ul>
+				<li><a href="#tabs-1">Cerca dati</a></li>
+				<li><a href="#tabs-2">Esporta in csv i dati</a></li>
+			</ul>
+			<div id="tabs-1">
+				<span class="label label-info">Filtra i dati del dossier</span>
+				<div class="well well-small no_b_margin">
+
+				   	<form method="post" class="form-horizontal filtra_transazioni no_b_margin">
+				   		<!-- <div class="row">
+							<div class="control-group span5">
+								<label class="control-label" for="tipologia_servizio">Tipologia richiesta:</label>
+								<div class="controls">
+									<input type="text" name="tipologia_richiesta" class="input-large" value="{ @dati['tipologia_richiesta'] }" />
+								</div>
+							</div>
+						</div> -->
+						<!-- <div class="row">
+							<div class="control-group span5">
+								<label class="control-label" for="id_transazione_app">Id Transazione Applicazione:</label>
+								<div class="controls">
+									<input type="text" name="id_transazione_app" class="input-large" value="{ @dati['id_transazione_app'] }" />
+								</div>
+							</div>
+						</div> -->
+						<div class="row">
+							<div class="control-group span3">
+								<label class="control-label" class="small_label" for="data_da">Da Data:</label>
+								<div class="controls">
+									<forms:datetime id="data_da" class="small_input" change-month="true" change-year="true" past-dates="true" value="@dati['data_da']"  />
+								</div>
+							</div>
+					    	<div class="control-group span3">
+								<label class="control-label" class="small_label" for="data_a">A data:</label>
+								<div class="controls">
+									<forms:datetime id="data_a" class="small_input" size="10" change-month="true" past-dates="true" change-year="true" value="@dati['data_a']" />
+								</div>
+							</div>
+							<a href="#" class="btn pull-right button_cancella">Cancella</a>
+					    	<button type="submit" class="btn pull-right" name="submit" value="cerca">Cerca</button>
+					    </div>
+			    	</form>
+			    </div>
+	    	</div>
+			<div id="tabs-2">
+				<span class="label label-info">Esporta in csv i dati degli accessi ai demografici</span>
+				<div class="well well-small">
+				   	<form method="post" class="form-search estrai_dati no_b_margin">
+				   		<p>
+					   		<label class="checkbox">
+								<input type="checkbox" name="testo_apici" />
+								Testo tra apici
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="intestazione_campi" />
+								Nome dei campi nella prima riga
+							</label>
+						</p>
+						<p>
+							<h5>Separatore:</h5>
+							<label class="radio">
+								<input type="radio" name="separatore" id="separatore_virgola" value="virgola" checked />
+								Virgola (,)
+							</label>
+							<label class="radio">
+								<input type="radio" name="separatore" id="separatore_punto_virgola" value="punto_virgola" />
+								Punto e Virgola (;)
+							</label>
+						    <button type="submit" class="btn pull-right" value="esporta_tabella" name="submit">Esporta Tabella</button>
+					    </p>
+			    	</form>
+			    </div>
+			</div>
+			
+		</div>
+
+		<!-- Div per tabella dati -->
+		<div sp:if="@filtro_dati == true">
+			<div sp:if="@righe.blank?" class="alert alert-info">
+				Non sono presenti informazioni riguardanti i parametri inseriti.
+			</div>
+		  	<!-- Imposto il numero di utenti per pagina che viene passato al js -->
+			<input type='hidden' id='items_per_page' value="7" />  
+			<!-- Imposto il numero di link alle pagine da mostrare nella navbar --> 
+			<input type='hidden' id='max_page_in_navbar' value="14"/>
+			<!-- the input fields that will hold the variables we will use -->  
+			<input type='hidden' id='current_page' />  
+			<input type='hidden' id='show_per_page' />
+			<div id='pagination_content'>
+
+				<table sp:if="!@righe.blank?" class="table table-bordered table-striped width_auto">
+					<thead>
+					    <tr class="heading_row">
+					    	<th>Numero operazione</th>
+					      	<th>Data e Ora</th>
+					      	<th>Tipologia Operazione</th>
+					        <!-- <th>Applicazione</th> -->
+					      	<th>Identificativo Transazione</th>
+					      	<th>Dati Dettaglio</th>
+					    </tr>
+				  	</thead>
+				  	<tbody>
+				    	<tr sp:each="@righe |riga|" class="paginated_element">
+				    		<td>
+					     		<!-- <a href="{ Portal::DossierController.http_s_url('dettaglio_transazione?id_t='+riga.object_id.to_s+"&id_srv="+@servizio_selezionato['id']) }">
+					      		{ riga.id.to_s }
+					      		</a> -->
+					      		{ riga.id.to_s }
+					     	</td>
+				    		<td>
+				    			{ riga.obj_created.strftime('%d/%m/%Y') } <strong>Ore</strong> { riga.obj_created.strftime('%H:%M:%S') }
+				    		</td>
+					     	<td>
+					      		{ riga.tipologia_richiesta }
+					     	</td>
+					     	<!-- <td>
+					      		{ riga.tipologia_servizio  }
+					     	</td> -->
+					     	<td>
+					      		{ riga.id_transazione_app }
+					     	</td>
+					     	<td>
+					      		{ riga.parametri_ricercati }
+					     	</td>
+				    	</tr>
+				   	</tbody>
+				</table>
+			</div>
+	    </div> 	
+
+	    <!-- div che contiene il navigatore -->  
+		<div id="page_navigation" class="pagination"><ul></ul></div>
+
+	</div>
+
+	<div class="row col-lg-12 mt20 pull-right">
+        <div class="back">
+        	<a href="{ Portal::DossierController.http_s_url }" class="btn">Indietro</a>
+	    </div>
+    </div>
+
+	<!--<div class="control-group back">
+	    <div class="controls pull-right">
+	    	<a href="{ Portal::DossierController.http_s_url }" class="btn">Indietro</a>
+	    </div>
+    </div>-->
+   
+</div>
+

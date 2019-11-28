@@ -1,0 +1,18 @@
+<div class="testata_modulo_suap_puglia">
+		<div class="logo_testata">
+			<img  alt="logo comune" src="{ Moduli::ModuliController.download_img_b64('logo_puglia.png') }" />
+		</div>
+
+		<span class="font_16">MOD. COM { id_modulo_com }</span>
+		<div class="center_text font_20">REGIONE  PUGLIA</div>
+		<div class="center_text font_16">{ nome_modulo }</div>
+		<div class="center_text font_18"><strong>SEGNALAZIONE CERTIFICATA INIZIO ATTIVITA'</strong></div>
+
+		<div class="riga">
+			Al { Spider.config.get('ente.nome') }
+		</div>
+		<div class="riga">
+			Ai sensi della L.R. 11/03 e Regolamento Regionale n. 3/2011, il sottoscritto
+		</div>
+		<div class="hide" id="sezione_attiva">{ @sezione_attiva }</div>
+</div>

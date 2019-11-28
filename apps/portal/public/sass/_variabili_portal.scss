@@ -1,0 +1,110 @@
+/* IMMAGINI */
+$public_dir: '/portal/public/';
+$public_img_dir: $public_dir+'img/';
+$sfondo_stemma: '/portal/public/css/sfondo_stemma_portale.png' !default; /*gagliardetto di sfondo allo stemma del comune*/
+$stemma: '/portal/public/css/stemma_portale.png' !default; /*stemma del comune*/
+$barretta_divisoria: '/portal/public/css/barretta_h88.png' !default; /*barretta che divide nel navigatore*/
+$freccia_sx_big: '/portal/public/css/freccia_sx_big.png' !default; /*punta freccia a sinistra navigatore grande*/
+$freccia_dx_big: '/portal/public/css/freccia_dx_big.png' !default;
+$freccia_h32_gs: '/portal/public/css/freccia_h32_gs.png' !default; /*punta freccia grigio scuro dettagli utente*/
+$attenzione: #F81212 !default;
+$logo-spid: '/portal/public/css/spid-logo-bis-36.png' !default; 
+$barretta_divisoria_small: '/portal/public/css/barretta_h25.png' !default; /*barretta che divide nel navigatore piccolo*/
+$freccia_sx_small: '/portal/public/css/freccia_sx_small_h42.png' !default; /*punta freccia a sinistra piccola*/
+$freccia_dx_small: '/portal/public/css/freccia_dx_small_h42.png' !default;
+$freccia_sx_small_bg: '/portal/public/css/freccia_sx_small_h32.png' !default;
+$freccia_dx_small_bg: '/portal/public/css/freccia_dx_small_h32.png' !default;
+$Euro-Servizi-Logo_h23: '/portal/public/css/Euro-Servizi-Logo_h23.png' !default;
+
+$height_stemma: 80px !default;
+$width_stemma: 64px !default;
+$height_stemma_modulo: 100px !default;
+$width_stemma_modulo: 89px !default;
+$height_header: 115px !default;
+$height_header-sm: 80px !default; /*altezza header sotto i 768px */
+
+
+/* FONT */
+
+$font-family-sans-serif: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif !default; /* default "Helvetica Neue", Helvetica, Arial, sans-serif */
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default; /* Georgia, "Times New Roman", Times, serif */
+$font-size-base: 14px !default; /* default 14px */
+$font-family-base: $font-family-sans-serif !default; /* default @font-family-sans-serif */
+$font_size_ente: 33px !default;
+
+$font_weight_thin: 100 !default;
+$font_weight_light: 300 !default;
+$font_weight_regular: 400 !default;
+$font_weight_medium: 500 !default;
+$font_weight_semibold: 600 !default;
+$font_weight_bold: 700 !default;
+$font_weight_black: 900 !default;
+
+$font_style_italic: italic !default;
+
+
+/* COLORI */
+$main-color: #0066CC;
+$text-color: lighten(#000, 20%) !default; 
+$link-color: #0066CC !default;  
+$link-color_light: lighten($link-color, 30%) !default; 
+$link-color_light_side: $link-color_light !default;
+$link-hover-color: #0B88E0 !default;
+$link_servizi-color: darken($link-hover-color, 7%) !default; 
+$link-hover-decoration: none !default;
+$link_iperlight_side: $link-hover-color !default;
+$link-white: #fff !default;
+$link-white-hover: $link-color !default;
+$dark_gray: #212122 !default;
+$fill-freccia-color: lighten(#000, 75%); 
+$gray_visfoot: #585858 !default; /*colore visible_footer*/
+
+$border_gray: #BCBEC0 !default; /*bordo grigio chiaro, per esempio del bottone avanti/indietro*/
+$fill_gray: #F1F2F2 !default; /* colore di riempimento grigio chiaro, per esempio del bottone avanti/indietro*/
+$fill_dark_gray: $dark_gray !default; /*colore di riempimento scuro*/
+$fill_dark_gray_lighter: #2D2C2C !default; /*colore di riempimento meno scuro*/
+
+/*colori bottoni*/
+$btn-login-bg: $link-color !default; /*bottone invio colore sfondo verde*/
+$btn-login-color: #fff !default;
+$btn-login-hf: darken($btn-login-bg, 5%) !default; /*bottone invio hover e focus colore sfondo verde*/
+$btn-login-border: darken($btn-login-bg, 5%) !default;
+$btn-spid-bg: #003399 !default;
+$btn-spid-hf: #0066CC !default;
+
+$btn-register-bg: $link-color !default; /*colore background*/
+$btn-register-color: #fff !default; /*colore bianco del testo*/
+$btn-register-hf: darken($btn-register-bg, 5%) !default; /*colore quando hover e focus*/
+$btn-register-border: darken($btn-register-bg, 5%) !default;
+$btn-label: lighten($btn-register-bg, 10%) !default;
+$btn-label-hover: $btn-register-bg !default;
+
+/*bottoni con colori di bootstrap ridefiniti*/
+$brand-primary: $link-color !default; 
+$brand-success: $link-color !default; 
+$brand-info: #16c0ee !default;
+$brand-warning: #ef7e4d !default;
+$brand-danger: #e63933 !default;
+$input-border-focus: $link-color !default;
+
+/*social*/
+$tw-color: #4099ff !default; /* colori cerchio di sfondo */
+$fb-color: #3B5998 !default;
+$gp-color: #db5a3c !default;
+
+/* alert */
+$alert-padding: 8px;
+
+/* RESPONSIVE */
+$screen-lg: 1200px !default;
+$screen-md: 768px !default; 
+$screen-sm: 576px !default; 
+$screen-xs: 400px !default; 
+$break-910: 910px !default;
+$break-580: 580px !default;
+$break-460: 460px !default;
+
+/*perchè il navigatore non si spezzi fra 981px e 1027px*/
+$break-981: 981px !default;
+$break-1027: 1027px !default;
+

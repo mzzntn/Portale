@@ -1,0 +1,12 @@
+<struct name="modulo" external="true">
+    <element name="id" type="int" key="true" />
+    <element name="tipo" type="text" />
+    <element name="descrizione" type="text" />
+    <element name="nome" type="text" />
+    <element name="idSettore" type="int" />
+    <element name="idResponsabile" type="int" />
+    <element name="idProcedimento" type="int" />
+    <element name="dataInizio" type="text" />
+    <element name="dataFine" type="text" />
+    <element name="stato" type="text" />
+</struct>

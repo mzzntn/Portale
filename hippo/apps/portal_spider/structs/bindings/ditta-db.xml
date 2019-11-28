@@ -1,0 +1,19 @@
+<binding type="db">
+    <table>portal__ditta</table>
+    <bind element="id" dbField="ID" />
+    <bind element="utente" dbField="referente_id" />
+    <bind element='dtCreazione' dbField='obj_created' />
+    <bind element='dtModifica' dbField='obj_modified' />
+    <bind element='ragioneSociale' dbField='ragione_sociale' />
+    <bind element='partitaIvaAzienda' dbField='partita_iva'  />
+    <bind element='indirizzoAzienda' dbField='indirizzo_azienda' />
+    <bind element='capAzienda' dbField='cap_azienda' />
+    <bind element='comuneAzienda' dbField='comune_azienda'  />
+    <bind element='provAzienda' dbField='provincia_azienda' />
+    <bind element='telefonoAzienda' dbField='telefono_azienda' />
+    <bind element='faxAzienda' dbField='fax_azienda' />
+    <bind element='emailAzienda' dbField='email_azienda' />
+    <bind element='pecAzienda' dbField='pec_azienda' />
+    <bind element='civicoAzienda' dbField='civico_azienda'  />
+    <bind element='codiceFiscaleAzienda' dbField='codice_fiscale_azienda'  />
+</binding>

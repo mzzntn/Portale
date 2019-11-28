@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_803152f0-9591-0137-cc99-005056a531ed" entityID="https://portale.comune.alessandria.it">
+   <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+      <ds:SignedInfo>
+         <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+         <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+         <ds:Reference URI="#_803152f0-9591-0137-cc99-005056a531ed">
+            <ds:Transforms>
+               <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+               <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                  <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="#default samlp saml2p saml ds xs xsi md" />
+               </ds:Transform>
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <ds:DigestValue>EzJ5IfD9usDNg4EBqmdymz8dNHGHSjACaZrkcG7K8M4=</ds:DigestValue>
+         </ds:Reference>
+      </ds:SignedInfo>
+      <ds:SignatureValue>phoc2Cj/XCIzDzORONFH1p9wH8T3xBbp+RhxcyK133DsSsLyWzCcGK9hxf9pdhtx3zUEbA14qWQn/Ob08tIJOgGeWU3el6cPSiO5H52DAsnR1oz7p5Ld6oZv9RiBPunOjCq4jf5VZgT+R6FVFh65hy+BGEMIse8xZvf7io7Gbr+0+7jNnnbL5qk9lk3SrUkTplhuc5JA3VEv5yfd7pPtpxl65RMhmvourCXYaZ+VJ4+2OwTCBrlzA0CAI3Awt/YYGxmrM/NVS3HaJU+3vbdzCbHjH0Z+xW7GMrxSNlpHWs0zrcQXDw2HeOJp8MMC4I5WQHN/BRXS4r3qRtE8TIrBCQ==</ds:SignatureValue>
+      <ds:KeyInfo>
+         <ds:X509Data>
+            <ds:X509Certificate>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</ds:X509Certificate>
+         </ds:X509Data>
+      </ds:KeyInfo>
+   </ds:Signature>
+   <md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="signing">
+         <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:X509Data>
+               <ds:X509Certificate>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</ds:X509Certificate>
+            </ds:X509Data>
+         </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:X509Data>
+                <ds:X509Certificate>MIIDLTCCAhWgAwIBAgIJAJhjCRQh7HeRMA0GCSqGSIb3DQEBCwUAMCQxIjAgBgNVBAMTGXd3dy5jb211bmUuYWxlc3NhbmRyaWEuaXQwHhcNMTkwNzMwMTUxMjMxWhcNMjkwNzI3MTUxMjMxWjAkMSIwIAYDVQQDExl3d3cuY29tdW5lLmFsZXNzYW5kcmlhLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApq1WTOsnQlpIuZEr0htO6IdoNc5dOmEZEBOpG6PBlk0tGgs1MFD4YNLuYYhwFStRWlEMyyFtQHsMhXvTPeWEqF45O73PDU41rzzH2gXaRwc3iWgk3UDm7O0a8kCN6RZlG2zNa4L+64XGY9hbMTy+JT7xi6qmzCs3FfRO+XMFaRO7b0hfph+unUdwqF6SywZhQt+ZV6+zrjV2wUXhnf3ueFOXwE/mdGtIpzKO52DgHr9NFjaQjcWlZw96Xyj5cSTl4+lRgI3IY8ep00VswVmAW8hkE+Jd8Opcy8tsIc8cv/Iu5QDakEu6CZePc5kHMBZWmgj5NmCyco+/RYw2CuiEmQIDAQABo2IwYDA/BgNVHREEODA2ghl3d3cuY29tdW5lLmFsZXNzYW5kcmlhLml0hhl3d3cuY29tdW5lLmFsZXNzYW5kcmlhLml0MB0GA1UdDgQWBBRIkv/k5aRhUocrr8H7zQAm33ASSTANBgkqhkiG9w0BAQsFAAOCAQEAa9928PT5B8BQmOqiBYD1/Jky97I60r1T7QvhF4G4RooOqhBQ5HSDyf8GHB0pTwZ6zEWi0YLJ2mKGDJrVrzkh0w4/9ZL+likoqx526pXPvnPkCBOIPyBeel5XhXf2uLwEAOqIHnn+/MJwJZlFqvybw68hhDRYSM8jcVYHC7LUCbhqJxcxJY2Wap9gVDtKhWatxT9a+H6lSGqdirii8Q1vXnwJpuIfdlKTVIp9ndexzRnU4a736MXKRmbm7k4nBqR8rXjpCKKbvWQEqbR7t8cPrvOczO+w145ChoG1mdUknsNdPfe5+UQ5VjMuZ1/BhL0YFoZrxuQ0jXz2aAKSErTZpg==</ds:X509Certificate>
+            </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://portale.comune.alessandria.it/portal/auth/spid/logout_service" />
+      <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portale.comune.alessandria.it/portal/auth/spid/logout_service" />
+      <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portale.comune.alessandria.it/portal/auth/spid/assertion_consumer" index="0" isDefault="true" />
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://servizionline.comune.alessandria.it/cmsalessandria/spidassertionconsumer.aspx" index="2" />
+      <md:AttributeConsumingService index="0">
+         <md:ServiceName xml:lang="it">User Data</md:ServiceName>
+         <md:RequestedAttribute Name="spidCode" />
+         <md:RequestedAttribute Name="name" />
+         <md:RequestedAttribute Name="familyName" />
+         <md:RequestedAttribute Name="fiscalNumber" />
+         <md:RequestedAttribute Name="email" />
+         <md:RequestedAttribute Name="gender" />
+         <md:RequestedAttribute Name="dateOfBirth" />
+         <md:RequestedAttribute Name="placeOfBirth" />
+         <md:RequestedAttribute Name="countyOfBirth" />
+         <md:RequestedAttribute Name="idCard" />
+         <md:RequestedAttribute Name="address" />
+         <md:RequestedAttribute Name="digitalAddress" />
+         <md:RequestedAttribute Name="expirationDate" />
+         <md:RequestedAttribute Name="mobilePhone" />
+         <md:RequestedAttribute Name="ivaCode" />
+         <md:RequestedAttribute Name="registeredOffice" />
+      </md:AttributeConsumingService>
+      <md:AttributeConsumingService index="2">
+        <md:ServiceName xml:lang="it">servizionline</md:ServiceName>
+        <md:RequestedAttribute Name="familyName"/>
+        <md:RequestedAttribute Name="name"/>
+        <md:RequestedAttribute Name="gender"/>
+        <md:RequestedAttribute Name="dateOfBirth"/>
+        <md:RequestedAttribute Name="fiscalNumber"/>
+        <md:RequestedAttribute Name="email"/>
+      </md:AttributeConsumingService>
+   </md:SPSSODescriptor>
+   <md:Organization>
+      <md:OrganizationName xml:lang="it">Comune di Alessandria</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="it">Comune di Alessandria</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="it">portale.comune.alessandria.it</md:OrganizationURL>
+   </md:Organization>
+</md:EntityDescriptor>

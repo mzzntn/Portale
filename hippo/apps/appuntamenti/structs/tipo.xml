@@ -1,0 +1,5 @@
+<struct name='tipo'>
+	<element name='tipo' type='text' />
+	<element name='durata' label='Durata (Minuti)' type='int' />
+	<element name='istruzioni' label='Istruzioni opertative' type='html' />
+</struct>

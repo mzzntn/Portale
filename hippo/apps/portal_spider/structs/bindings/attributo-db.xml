@@ -1,0 +1,7 @@
+<binding type="db">
+    <table>portal__utente__attributiaggiuntivi</table>
+    <bind element="id" dbField="ID" />
+    <bind element="utente" dbField="utente_id" />
+    <bind element="attributo" dbField="attributo_utente_id" />
+    <bind element="valore" dbField="valore" />
+</binding>

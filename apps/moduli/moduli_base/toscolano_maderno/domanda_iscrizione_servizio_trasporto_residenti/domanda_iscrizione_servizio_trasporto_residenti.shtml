@@ -1,0 +1,88 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p class="destinatario">Spett.le</p>
+    <p class="destinatario">Comune di Toscolano Maderno</p>
+    <p class="destinatario">Ufficio Pubblica Istruzione</p>
+    <br />
+    <br />
+    <p>
+        <h3 class="align_center">DOMANDA DI ISCRIZIONE AL SERVIZIO TRASPORTO</h3>
+    </p>
+    <br />
+    <br />
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_mediumwidth">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="genitore_di" class="input_mediumwidth">genitore di</moduli:dato><strong>residente</strong> in Toscolano Maderno
+        </div>
+        <div class="riga">
+            <moduli:dato id="classe_stud" class="input_xxsmallwidth">che frequenter&agrave; la classe</moduli:dato>
+            <moduli:opzioni id="classi" class="lista_checkbox_oriz margin_l_10 checkbox_esclusivi1">
+                <moduli:opzione id="classe_elementare">Elementare</moduli:opzione>
+                <moduli:opzione id="classe_media">Media</moduli:opzione>
+            </moduli:opzioni>
+        </div>  
+        <div class="riga">
+            <moduli:dato id="cellulare" class="input_mediumwidth">Numero Telefonico</moduli:dato>   
+        </div>
+    </moduli:gruppo>
+    <br />
+    <br />
+    <h3>Chiedo</h3>
+    <br />
+    <br />
+    <p>Che mio/a figlio/a venga iscritto/a per l’anno scolastico { Date.today.year }/{ Date.today.year+1 }, al  servizio SCUOLABUS</p>
+    <ul>
+        <li>linea di Gaino/Montemaderno</li>
+        <li>fermata:
+            <br/>
+            <sup><small>(selezionare una a scelta)</small></sup>
+        </li>
+    </ul>
+    <moduli:gruppo id="autobus_fermata" titolo="" class="dati_modulo no_border">
+        <moduli:opzioni id="fermate" class="lista_checkbox_oriz margin_l_10 checkbox_esclusivi2">
+            <div class="riga">
+                <moduli:opzione id="fermata1">Maderno Upim</moduli:opzione>
+                <moduli:opzione id="fermata2">Bivio Castello</moduli:opzione>
+                <moduli:opzione id="fermata3">Bivio Cecina</moduli:opzione>
+                <moduli:opzione id="fermata4">Bivio Gaino</moduli:opzione>
+                <moduli:opzione id="fermata5">Cabiana</moduli:opzione>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="fermata6">Canova</moduli:opzione>
+                <moduli:opzione id="fermata7">Folino</moduli:opzione>
+                <moduli:opzione id="fermata8">Maclino</moduli:opzione>
+                <moduli:opzione id="fermata9">Maclino Chiesa</moduli:opzione>
+                <moduli:opzione id="fermata10">Maderno Chiesa</moduli:opzione>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="fermata11">Oriolo</moduli:opzione>
+                <moduli:opzione id="fermata12">Piana Pulciano</moduli:opzione>
+                <moduli:opzione id="fermata13">Piazza Gaino</moduli:opzione>
+                <moduli:opzione id="fermata14">Ponte Lef&agrave;</moduli:opzione>
+                <moduli:opzione id="fermata15">Pulciano</moduli:opzione>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="fermata16">S. Ambrogio</moduli:opzione>
+                <moduli:opzione id="fermata17">Sanico</moduli:opzione>
+                <moduli:opzione id="fermata18">Stina</moduli:opzione>
+                <moduli:opzione id="fermata19">Vigole</moduli:opzione>
+                <moduli:opzione id="fermata20">Villa dei Roccoli</moduli:opzione>
+                <moduli:opzione id="fermata21">Villaggio Nuovo</moduli:opzione>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+    <br />
+    <br />
+    <p><u>Il versamento per l'iscrizione al servizio</u> (€ 51,00  primo figlio, € 25,50 dal secondo figlio) c/o la Tesoreria comunale – Banca Popolare di Sondrio con la seguente causale: <br />Cognome Nome (del ragazzo) iscrizione servizio trasporto scolastico <u>dovr&agrave; essere effettuato entro il 01/09/{ Date.today.year }</u>
+    </p>
+    <br />
+    <br />
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma"/>
+    </div>
+</moduli:modulo>

@@ -1,0 +1,18 @@
+<div id="gestione_dossier">
+	<legend>Gestione Dossier Personale</legend>
+	<div class="well">
+		<strong>Utente:</strong> { @utente.nome } { @utente.cognome }, <span sp:if="!@utente.utente_login.blank? && !@utente.utente_login.username.blank?"> <strong>Username:</strong> { @utente.utente_login.username } </span><br />
+		<strong>Data registrazione:</strong> { @data_creazione }, <strong>Ultimo accesso:</strong> { @ultimo_accesso }  
+	</div>
+	<div sp:if="@servizi_tracciati.blank?" class="alert alert-danger">
+		Non ci sono servizi configurati per la tracciatura.
+	</div>
+	<div sp:if="!@servizi_tracciati.blank?">
+		<ul>
+			<li class="link_dati_dossier" sp:each="@servizi_tracciati |servizio|">
+				<a href="{ Portal::DossierController.http_s_url('vedi_dati?id_srv='+servizio['id']) }"> Vedi dati transazioni di: { servizio['nome'] } </a>
+			</li>
+
+		</ul>		
+	</div>
+</div>

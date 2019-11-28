@@ -1,0 +1,51 @@
+runmode: 'production'
+apps:
+- core
+- worker
+- cas_server
+- messenger
+- auth_box
+- portal
+- files
+- images
+- comunicazioni
+- moduli
+
+storages:
+    default: 
+        db:mysql://portale:Pass.2019!@localhost:/var/lib/mysql/mysql.sock/portale
+    
+set devel:
+    template.cache.disable: true
+    debugger.start: true
+    log.level: DEBUG
+
+
+css.sass.use_compass: false
+#css.compile: true
+
+widget_table_responsive: true
+
+db.mysql.default_engine: 'innoDb'
+
+site.ssl: true
+site.domain: tuodominio.it
+ente.nome: Comune di ...
+ente.indirizzo: Via ... ,  - cap localita
+ente.mail: ""
+ente.telefono:i "" 
+ente.fax: ""
+ente.pec: tua@pec.it
+ente.codfisc: 00000000
+ente.partita_iva: 00000000
+
+portal.email_amministratore: amministratore@tuodominio.it
+portal.email_from: no-reply@tuodominio.it
+
+auth.enable_superuser_backdoor: true
+
+portal.abilita_gdpr_utente: true
+
+portal.attivazione_utenti_automatica: "true"
+
+comunicazioni.canali_comunicazione: ['portale', 'email', 'rss']

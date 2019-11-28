@@ -1,0 +1,170 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p>
+        <h2 class="align_center">DOMANDA DI DETERMINAZIONE DELLA RETTA SERVIZIO REFEZIONE SCOLASTICA</h2>
+        <h2 class="align_center">A.S. 2016/2017</h2>
+
+    </p>
+
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_mediumwidth">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth">residente a</moduli:dato>
+            <moduli:dato id="prov_residenza" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="cap" class="label_xsmlwidth input_xxsmallwidth">cap. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza" class="label_bigwidth input_mediumwidth">Via/V.LE/P.zza/Loc.</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_xsmlwidth input_xxsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec" class="label_xbigwidth input_mediumwidth">INDIRIZZO DI POSTA ELETTRONICA (P.E.C.)</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email" class="label_xbigwidth input_mediumwidth">INDIRIZZO E-MAIL </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare" class="label_xbigwidth input_mediumwidth">NUMERO CELLULARE</moduli:dato>   
+        </div>
+    </moduli:gruppo>
+
+    <p>
+        <strong>In qualità di genitore o di chi ne fa le veci, chiede la DETERMINAZIONE DELLA RETTA per il Servizio Refezione Scolastica per i seguenti figli:</strong>
+    </p>
+
+    <moduli:gruppo id="dati_studente1" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_bigwidth input_mediumwidth">Frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="paese_scuola_stud" class="label_xsmlwidth input_xsmallwidth">di</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente2" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_bigwidth input_mediumwidth">Frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="paese_scuola_stud" class="label_xsmlwidth input_xsmallwidth">di</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente3" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_bigwidth input_mediumwidth">Frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="paese_scuola_stud" class="label_xsmlwidth input_xsmallwidth">di</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente4" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_bigwidth input_mediumwidth">Frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="paese_scuola_stud" class="label_xsmlwidth input_xsmallwidth">di</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <table class="table ">
+        <thead>
+            <tr>
+                <th></th>
+                <th>FASCIA A</th>
+                <th>FASCIA B</th>
+                <th>FASCIA C</th>
+                <th>FASCIA D</th>
+                <th>FASCIA E</th>
+            </tr>
+            <tr>
+                <th>DESCRIZIONE</th>
+                <th>ISEE da € 5.941,00 a € 10.000,00</th>
+                <th>ISEE da € 10.001,00 a € 14.000,00</th>
+                <th>ISEE da € 14.001,00 a € 18.000,00</th>
+                <th>ISEE da € 14.001,00 a € 18.000,00</th>
+                <th>ISEE oltre € 22.000,00</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Mensile pro-capite (Sc.Infanzia e Primaria Colonnetta)</td>
+            <td>55,00</td>
+            <td>55,00</td>
+            <td>55,00</td>
+            <td>58,00</td>
+            <td>60,00</td>
+        </tr>
+        <tr>
+            <td>Fino a 12 presenze mensili (Scuole Infanzia  e Primaria Colonnetta) - A pasto</td>
+            <td>3,50</td>
+            <td>3,50</td>
+            <td>3,50</td>
+            <td>3,70</td>
+            <td>3,80</td>
+        </tr>
+        <tr>
+            <td>Pasto singolo (Scuola Primaria con moduli)</td>
+            <td>3,50</td>
+            <td>3,50</td>
+            <td>3,50</td>
+            <td>3,70</td>
+            <td>3,80</td>
+        </tr>
+    </table>
+    <br/>
+    <div class="riga align_center">A tal fine il sottoscritto <h3 class="inline"><u>DICHIARA</u></h3></div>
+    <br/>
+    <ul class="dash">
+        <li>che dal calcolo effettuato dall'Ente <sub><small>(1)</small></sub> <moduli:dato id="isee_ente"></moduli:dato> in data <moduli:dato id="isee_data" class="label_smlwidth input_xsmallwidth"></moduli:dato>, risulta un ISEE di € <moduli:dato id="isee_valore" class="label_smlwidth input_xsmallwidth"></moduli:dato></li>
+        <li>di aver conoscenza che nel caso di corresponsione del beneficio, si applica l'art. 11, del D.P.C.M. 05/12/2013 N. 159, in materia di controllo della veridicità delle informazioni fornite e di essere a conoscenza delle sanzioni penali previste dall'art. 76 del D.P.R. 28.12.2000 N. 445, in caso di dichiarazioni mendaci rese in sede di di autocertificazione;</li>
+    </ul>
+    <br /><br />
+    <div class="riga"><strong>NOTE: <sub><small>(1)</small></sub> Indicare l'Ente presso il quale è stata </strong>attestata la Dichiarazione ISEE (Es. Sede o Agenzia INPS, Centro Assistenza Fiscale CAF, Studio Commerciale).</div>
+    
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma"/>
+    </div>
+    <!-- <br />
+
+    <moduli:gruppo id="inform_privacy">
+        <h4 class="align_center">INFORMATIVA AI SENSI DEL D.L. 30.06.2003 N. 196 (PRIVACY)</h4>
+        <p>Si rende noto che le informazioni fornite dalla S.V. , dati personali, eventuali recapiti di posta elettronica e numeri di cellulari, potranno essere utilizzati in conformità a quanto previsto dalla normativa vigente in materia di privacy (art. 13 DLgs. 196/2003) e ci consentiranno di effettuare eventuali urgenti comunicazioni inerenti i Servizi Scolastici Mensa e Trasporto.</p>
+    </moduli:gruppo>
+
+    <br /><br /> -->
+    
+</moduli:modulo>

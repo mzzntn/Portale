@@ -1,0 +1,251 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <a name="dati_utente" class="anchor_menu" testo="Dati Utente"></a>
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+        <p>
+            <h2 class="align_center">RICHIESTA DI AUTORIZZAZIONE PAESAGGISTICA</h2>
+            <h4 class="align_center">ai sensi dell' art. 146 del d.p.r 6 giugno 2001, n, 380 e successive modifiche e integrazioni)</h4>
+        </p>
+        
+        <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:dato id="cognome_titolare">Cognome</moduli:dato>
+                <moduli:dato id="nome_titolare">Nome</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="ragione_sociale_titolare" class="input_bigwidth">o Ragione Sociale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="codice_fiscale_titolare">codice fiscale</moduli:dato>
+                <moduli:dato id="piva_titolare">partita iva</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_titolare">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_titolare" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_titolare" class="input_mediumwidth">indirizzo </moduli:dato>
+                <moduli:dato id="civico_residenza_titolare" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_titolare" class="label_smlwidth input_xsmallwidth">C.A.P.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="email_titolare" class="input_bigwidth">posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="telefono_titolare" class="input_bigwidth">Recapito Telefonico </moduli:dato>
+            </div>
+        </moduli:gruppo>
+
+        <moduli:gruppo id="soggetto_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                Per società / associazioni / condomini e altri soggetti giuridici indicare i dati relativi a chi sottoscrive la denuncia di inizio attività:
+            </div>
+            <div class="riga">
+                <moduli:dato id="cognome_soggetto">Cognome</moduli:dato>
+                <moduli:dato id="nome_soggetto">Nome</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="ragione_sociale_soggetto" class="input_bigwidth">o Ragione Sociale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="codice_fiscale_soggetto">codice fiscale</moduli:dato>
+                <moduli:dato id="piva_soggetto">partita iva</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_soggetto">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_soggetto" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_soggetto" class="input_mediumwidth">indirizzo </moduli:dato>
+                <moduli:dato id="civico_residenza_soggetto" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_soggetto" class="label_smlwidth input_xsmallwidth">C.A.P.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="email_soggetto" class="input_bigwidth">posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="telefono_soggetto" class="input_bigwidth">Recapito Telefonico </moduli:dato>
+            </div>
+        </moduli:gruppo>    
+
+        <div class="riga">
+            <moduli:dato id="in_qualita_di" class="input_mediumwidth">In qualità di </moduli:dato>
+        </div>
+
+        <h3>CHIEDE</h3>
+
+        <div class="riga"><strong>l'autorizzazione paesaggistica ai sensi dell'art. 146 del D.Lgs. 22 gennaio 2004, n. 42</strong></div>
+
+        <moduli:opzioni id="tipo_rilascio" class="lista_checkbox_vertical">
+            <moduli:opzione id="ordinario" class="">da rilasciarsi secondo procedura ordinaria</moduli:opzione>
+            <moduli:opzione id="proc_sempli" class=""></moduli:opzione>da rilasciarsi secondo procedura semplificata, trattandosi di intervento riconducibile alla tipologia 
+            <div class="riga">
+                <moduli:dato id="num_tipologia" class="label_xsmlwidth input_xsmallwidth">n° </moduli:dato> di cui all'allegato 1 previsto dall'art. 1 comma 1 del D.P.R. 9 luglio 2010 n° 139
+            </div>
+        </moduli:opzioni>
+        <div class="riga lista_checkbox">
+            <moduli:dato id="lavori_di" class="input_largewidth" >per lavori di</moduli:dato>
+        </div>
+        
+        <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:opzione id="area_ubicata"><label><strong>sull'area ubicata</strong></label></moduli:opzione>
+                <moduli:opzione id="FABBRICATO_UBICATO" class="label_auto"><label><strong>sul fabbricato ubicato</strong></label></moduli:opzione>
+            </div>
+            <div class="riga">
+                <div class="float_left">1) </div><moduli:dato id="loc_int_via" class="label_bigwidth input_largewidth">sito in (via, piazza, ecc.)</moduli:dato> <moduli:dato id="loc_int_n" class="label_smlwidth input_xsmallwidth">n. </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="loc_int_scala" class="label_smlwidth input_xsmallwidth">scala </moduli:dato>
+                <moduli:dato id="loc_int_piano" class="label_smlwidth input_xsmallwidth">piano </moduli:dato>
+                <moduli:dato id="loc_int_interno" class="label_smlwidth input_xsmallwidth">interno </moduli:dato>
+                <moduli:dato id="loc_int_cap" class="label_smlwidth input_xsmallwidth">cap </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="censita_nct"><label><strong>Censita al N.C.T.</strong></label></moduli:opzione>
+                <moduli:opzione id="censito_nceu"><label><strong>Censita al N.C.E.U.</strong></label></moduli:opzione>
+            </div>
+            <div class="riga">
+                <moduli:dato id="catasto_foglio" class="label_smlwidth input_xsmallwidth">foglio n. </moduli:dato>
+                <moduli:dato id="catasto_map" class="label_smlwidth input_xsmallwidth">map </moduli:dato>
+                <moduli:dato id="catasto_sub" class="label_smlwidth input_xsmallwidth">sub </moduli:dato>
+                <moduli:dato id="catasto_sez" class="label_smlwidth input_xsmallwidth">sez </moduli:dato>
+                <moduli:dato id="catasto_sez_urb" class="label_smlwidth input_xsmallwidth">sez urb. </moduli:dato>
+            </div>
+            
+        </moduli:gruppo>
+        <moduli:gruppo id="oggetto_territoriale_2" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:opzione id="area_ubicata"><label><strong>sull'area ubicata</strong></label></moduli:opzione>
+                <moduli:opzione id="FABBRICATO_UBICATO" class="label_auto"><label><strong>sul fabbricato ubicato</strong></label></moduli:opzione>
+            </div>
+            <div class="riga">
+                <div class="float_left">2) </div><moduli:dato id="loc_int_via" class="input_largewidth input_bigwidth">sito in (via, piazza, ecc.)</moduli:dato> <moduli:dato id="loc_int_n" class="label_smlwidth input_xsmallwidth">n. </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="loc_int_scala" class="label_smlwidth input_xsmallwidth">scala </moduli:dato>
+                <moduli:dato id="loc_int_piano" class="label_smlwidth input_xsmallwidth">piano </moduli:dato>
+                <moduli:dato id="loc_int_interno" class="label_smlwidth input_xsmallwidth">interno </moduli:dato>
+                <moduli:dato id="loc_int_cap" class="label_smlwidth input_xsmallwidth">cap </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="censita_nct"><label><strong>Censita al N.C.T.</strong></label></moduli:opzione>
+                <moduli:opzione id="censito_nceu"><label><strong>Censita al N.C.E.U.</strong></label></moduli:opzione>
+            </div>
+            <div class="riga">
+                <moduli:dato id="catasto_foglio" class="label_smlwidth input_xsmallwidth">foglio n. </moduli:dato>
+                <moduli:dato id="catasto_map" class="label_smlwidth input_xsmallwidth">map </moduli:dato>
+                <moduli:dato id="catasto_sub" class="label_smlwidth input_xsmallwidth">sub </moduli:dato>
+                <moduli:dato id="catasto_sez" class="label_smlwidth input_xsmallwidth">sez </moduli:dato>
+                <moduli:dato id="catasto_sez_urb" class="label_smlwidth input_xsmallwidth">sez urb. </moduli:dato>
+            </div>
+        </moduli:gruppo>
+
+        <moduli:gruppo id="tab_strum_urban" titolo="" class="dati_modulo dati_readable_js">
+            <strong>Soggetti a vincoli: </strong>
+            <div class="riga">
+                <moduli:dato id="vincolo_1" class="input_largewidth"></moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="vincolo_2" class="input_largewidth"></moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="vincolo_3" class="input_largewidth"></moduli:dato>
+            </div>
+        </moduli:gruppo>
+
+        <moduli:gruppo id="progettista_1" titolo="" class="dati_modulo">
+            <strong>Comunica che il Tecnico progettista delle opere è il signor:</strong>
+            <div class="riga">
+                Per società / associazioni / condomini e altri soggetti giuridici indicare i dati relativi a chi sottoscrive la denuncia di inizio attività:
+            </div>
+
+
+            <div class="riga">
+                <moduli:dato id="cognome_progettista">Cognome</moduli:dato>
+                <moduli:dato id="nome_progettista">Nome</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="ragione_sociale_progettista" class="input_bigwidth">o Ragione Sociale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="codice_fiscale_progettista">codice fiscale</moduli:dato>
+                <moduli:dato id="piva_progettista">partita iva</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_progettista">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_progettista" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_progettista" class="input_mediumwidth">indirizzo </moduli:dato>
+                <moduli:dato id="civico_residenza_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_progettista" class="label_smlwidth input_xsmallwidth">C.A.P.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="email_progettista" class="input_bigwidth">posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="telefono_progettista" class="input_bigwidth">Recapito Telefonico </moduli:dato>
+            </div>
+        </moduli:gruppo>  
+        <br /><br />
+        <p>
+            <strong>Delega</strong> il progettista sopra indicato a ricevere tutte le comunicazioni relative alla presente pratica, eleggendo domicilio presso lo studio dello stesso e autorizzando il Comune a trasmettere gli atti e le richieste esclusivamente al progettista incaricato sollevando in tal modo l'Amministrazione comunale da ogni responsabilità per il mancato ricevimento di atti e comunicazioni.
+        </p> 
+
+        <p>
+            <strong>Allega alla presente:</strong>
+            <moduli:opzioni id="ricevuta_versamento" class="lista_checkbox_vertical">
+                <moduli:opzione id="ricevuta"></moduli:opzione>ricevuta comprovante l'avvenuto versamento dell'importo di <strong>€ 100,00 per diritti di segreteria <u>per il rilascio dell'autorizzazione paesaggistica.</u></strong>
+            </moduli:opzioni>
+            <div class="riga">
+                <strong>eseguito:</strong><br />
+                <moduli:opzione id="cc_banca" class="margin_l_20"></moduli:opzione>sul Conto Corrente Bancario di tesoreria IBAN: IT 64 O 03069 20910 100000300043 - Cassa di Risparmio di Venezia, intestato al Comune di Chioggia;<br />
+                <moduli:opzione id="cc_posta" class="margin_l_20"></moduli:opzione>sul Conto Corrente Postale n. 13582309 intestato al Comune di Chioggia - Corso del Popolo 1193, da effettuarsi presso qualsiasi sportello Postale.
+            </div>
+        </p>
+
+        <moduli:gruppo id="causale_ricevuta" titolo="" class="dati_modulo lista_checkbox">
+            <h4>Nota bene: nelle ricevute dovrà essere indicata la causale</h4>
+            <div class="riga">Diritti di segreteria RICHIESTA AUTORIZZAZIONE PAESAGGISTICA - </div><moduli:dato id="ditta_richiesta" class="label_smlwidth">ditta</moduli:dato>
+             <moduli:dato id="via_richiesta" class="">opere in via </moduli:dato> - <moduli:dato id="fg_richiesta" class="label_smlwidth">Fg </moduli:dato> 
+            <moduli:dato id="mapp_richiesta" class="label_smlwidth">mapp. </moduli:dato> 
+        </moduli:gruppo>
+
+        <moduli:gruppo id="asseverazione" titolo="" class="dati_modulo">
+            <h4 class="center_text">DICHIARAZIONE DA COMPILARE NEL SOLO CASO DI RICHIESTA DI AUTORIZZAZIONE PAESAGGISTICA CON PROCEDURA SEMPLIFICATA</h4>
+            <div class="riga">
+                Il sottoscritto tecnico abilitato
+            </div>
+            <h3>ASSEVERA</h3>
+
+            <div class="riga">
+                la conformità delle opere da realizzare agli strumenti urbanistici approvati e non in contrasto con quelli adottati ed ai regolamenti edilizi vigenti, nonchè il rispetto delle norrma di sicurezza e di quelle igienico-sanitarie.
+            </div>
+        </moduli:gruppo>
+
+        <div class="riga">
+            <moduli:data-firma id="data_firma_1" label-firma="Il tecnico" class="data-firma"/>
+        </div>
+
+        <div class="riga lista_checkbox">
+            <moduli:dato id="data_compilazione" tipo="data" class="input_xsmallwidth">Chioggia</moduli:dato>
+        </div>
+        <div class="riga lista_checkbox">
+            <moduli:dato id="richiedente"><label><strong>Il richiedente</strong></label></moduli:dato>
+        </div>
+        <div class="riga lista_checkbox">
+            <moduli:dato id="tecnico"><label><strong>Il Tecnico</strong></label></moduli:dato>
+        </div>
+
+
+</moduli:modulo>
+
+
+
+
+
+
+
+

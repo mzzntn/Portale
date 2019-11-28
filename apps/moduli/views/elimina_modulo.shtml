@@ -1,0 +1,9 @@
+<div>
+	<legend>Cancellazione modulo </legend>
+	<p class="lead">Modulo id { @modulo.id } dal titolo '{ @modulo.tipo_modulo.nome }'</p>
+	<core:confirm id="cancellaModulo" cancel_param="annulla" ok_param="conferma">
+      <tpl:content name="text">
+          Sei sicuro di voler eliminare il modulo?
+      </tpl:content>
+  </core:confirm>
+</div>	

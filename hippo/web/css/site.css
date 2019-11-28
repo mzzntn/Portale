@@ -1,0 +1,40 @@
+/* site styles */
+    div.image{ 
+      float: left;
+      margin: 0 10px 5px 5px; 
+    }   
+/* calendario eventi */
+    div#cal_eve{
+      text-align: center;
+      margin-bottom: 10px;      
+    }
+    div#cal_eve a,div#cal_eve a:visited,div#cal_eve a:active{
+      text-decoration: none;
+    }
+    div#cal_eve table tr#cal_links a,div#cal_eve table tr#cal_links a:active,div#cal_eve table tr#cal_links a:visited{
+      display: inline;
+      margin: 0;
+      padding: 0.6em;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    #cal_links{
+      font-size: 0.9em;
+      white-space: nowrap;
+    }
+    div#cal_eve table th{
+    }
+    div#cal_eve table tr td a.event_link,div#cal_eve table tr td a.event_link:active,div#cal_eve table tr td a.event_link:visited{
+      padding: 2px;
+    }
+	h3.notizie {
+		padding: 5px;
+		margin-bottom: 0;
+	}
+	h4.notizie{
+		margin-top: 0;
+		padding: 5px;
+	}
+	div.notizia{
+	  /* float: left;*/
+	}

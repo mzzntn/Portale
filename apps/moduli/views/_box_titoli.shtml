@@ -1,0 +1,53 @@
+<div id="box_titoli_studio">
+	<h2 class="hide hidden mostra_in_stampa">Scheda B - Titoli di studio</h2>
+	<div sp:if="@titoli_studio.blank?" class="alert alert-info">
+		Non sono stati inseriti Titoli di Studio
+	</div>
+	<div sp:if="!@titoli_studio.blank?" class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Titoli di Studio</h4>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered table-striped width_auto">
+				<thead>
+				    <tr class="heading_row">
+				    	<th>Titolo</th>
+				    	<th>In</th>
+				      	<th>Conseguito presso</th>
+				      	<th>Punteggio</th>
+						<th>Facolta</th>
+				      	<th>Anno</th>
+				      <!--	<th>Titolo/Descrizione</th> -->
+				      	<th class="nascondi_in_stampa"></th>
+				    </tr>
+				</thead>
+			  	<tbody>
+					<tr sp:each_pair="@titoli_studio |id,titolo|">
+						<td>{ (Moduli.tipo_titolo(titolo['tipo_titolo'],@cat_giuridica))['nome'] }</td>
+						<td>{ titolo['in'] }</td>
+						<td>{ titolo['universita'] }</td>
+						<td>{ (Moduli.hash_titoli(@cat_giuridica))[titolo['tipo_titolo']]['punteggio'] }</td>
+						<td>{ titolo['facolta'] }</td>
+						<td>{ titolo['anno_accademico'] }</td>
+						<!---<td>{ titolo['titolo_descrizione'] }</td>-->
+						<td class="nascondi_in_stampa">
+							<a sp:if="titolo['tipo_titolo'] != 'titolo_necessario'" title="Cancella" class="link_cancellazione_titoli" id_modulo="{ @id_modulo.to_s }" id_titolo="{ titolo['id_inc'].to_s }" href="#" ><i class="glyphicon glyphicon-trash"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="nascondi_in_stampa">
+				Totale Punteggi: <span id="totale_punteggio_titoli">{ @totale_punteggio_titoli }</span> (punteggio indicativo soggetto a verifica come da bando)
+				<input type="hidden" id="totale_punteggio_titoli_form" name="totale_punteggio_titoli" value="{ @totale_punteggio_titoli }">
+			</div>
+		</div>
+               <p class="hide hidden mostra_in_stampa">
+                        Totale Punteggio Titoli di Studio: <span id="totale_punteggio_titoli">{ @totale_punteggio_titoli }</span><br/>
+                        (punteggio indicativo soggetto a verifica come da bando)
+                </p>
+
+		<p class="hide hidden mostra_in_stampa annotazioni">
+			Ai sensi del Testo Unico approvato con D.P.R. 28/12/2000, n. 445, le dichiarazioni rese e sottoscritte nella domanda di ammissione hanno valore di autocertificazione; nel caso di falsità in atti e dichiarazioni mendaci si applicano le sanzioni penali previste dall’art. 76 del Testo Unico approvato con D.P.R. 28/12/2000, n. 445, pertanto anche ogni scheda va firmata e datata.
+		</p>
+	</div>
+</div>

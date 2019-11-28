@@ -1,0 +1,48 @@
+<tpl:extend widget="files:viewer">
+    <tpl:asset type="js" src="js/image_viewer.js" />
+    <tpl:append search=".file_info .details">
+        <div class="row">
+            <label>_(Dimensions):</label>
+            <span class="data">
+                <span class="image-width">{ @dimensions[0] }</span>
+                x
+                <span class="image-height">{ @dimensions[1] }</span>
+            </span>
+        </div>
+        <div class="row" sp:if="@copy">
+            <label>_(Original):</label>
+            <span class="data">
+                <span class="original-width">{ @original[:dimensions][0] }</span>
+                x
+                <span class="original-height">{ @original[:dimensions][1] }</span>
+            </span>
+        </div>
+    </tpl:append>
+    <tpl:override-content search=".params form .fields .row.tags">
+        <tpl:pass sp:if="@copy">
+            <label>_(Folder):</label>
+            <span class="data">{ @tags }</span>
+        </tpl:pass>
+        <tpl:pass sp:if="!@copy">
+            <tpl:overridden />
+        </tpl:pass>
+    </tpl:override-content>
+    <tpl:append search=".params form .fields">
+        <div class="row" sp:if="@show_caption">
+            <label>_(Caption):</label>
+            <textarea name="{ widget_param('caption') }" rows="3">{ @caption }</textarea>
+        </div>
+        <div class="row" sp:if="@allow_resize">
+            <label>_(Dimensions):</label>
+            <input type="text" size="4" class="width-input" name="{ widget_param('width') }" value="{ @resize_dimensions[0] }">
+            <span class="inline">
+            &nbsp; x &nbsp;
+            </span>
+            <input type="text" size="4" class="height-input" name="{ widget_param('height') }" value="{ @resize_dimensions[1] }">
+            <input type="checkbox" class="keep-ratio-checkbox" name="{ widget_param('keep_ratio') }" checked>
+            <span class="keep-ratio">
+                _(Keep ratio)
+            </span>
+        </div>
+    </tpl:append>
+</tpl:extend>

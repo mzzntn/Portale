@@ -1,0 +1,25 @@
+<div>
+	<div sp:if="@multilingua_attivo" id="scelta_lingua" class="container">
+		<legend>Scelta lingua</legend>
+		<div class="alert alert-info">Seleziona la lingua da utilizzare per la gestione delle comunicazioni.</div>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<ul class="nav">
+					<tpl:pass sp:each="@lingue_traduzioni |lingua|">
+						<li class="{ ( (@lingua_corrente == lingua) ? 'active' : '' ) }"><a href="?lang={ lingua }">{ lingua.capitalize }</a></li>
+					</tpl:pass>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<br /><br />
+	<legend>Elenco comunicazioni <span sp:if="@multilingua_attivo">Lingua: { @lingua_corrente.capitalize }</span></legend>
+	<core:crud id="crud_comunicazione" model="Comunicazioni::Comunicazione" new-link="@url_nuova_comunicazione" edit-link="@url_gestione_comunicazioni">
+        <sp:attribute widget="table" name="elements" value="id,titolo,obj_created,data_da,data_a,pubblica,stato" />
+        <sp:attribute widget="table" name="labels" value=",,Data creazione,Inizio Pubblicazione,Fine Pubblicazione,," />
+        <sp:attribute widget="table" name="sort" value="obj_created,desc" />
+    </core:crud>
+	
+    
+</div>

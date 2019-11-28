@@ -1,0 +1,56 @@
+<div>
+	<div id="breadcrumb">
+        <a href="{ Portal.http_s_url }">Home</a> -> Codice Autenticazione
+    </div>
+    <form class="form-horizontal" method="post">
+	    	<legend>Codice Autenticazione</legend>
+	    	<div class="alert alert-danger" sp:if="!@messaggio_errore.blank?">
+				<strong>{ @messaggio_errore }</strong>
+			</div>
+	    	<div class="alert alert-success" sp:if="!@messaggio_azione.blank?">
+				<strong>{ @messaggio_azione }</strong>
+			</div>
+	    	<div class="alert alert-info" sp:if="!@messaggio_info.blank?">
+				<strong>{ @messaggio_info }</strong>
+			</div>	
+	    	<div sp:if="@errori" class="alert alert-danger width_50">
+		        <ul>
+		            <li sp:each="@errori |errore|">{ errore }</li>
+		        </ul>
+		    </div>
+
+	    	<div class="control-group">
+				<div class="row">
+					<div class="span4 offset1">
+						<a href="?repeat=t" >Rimanda codice di autenticazione</a>
+					</div>
+				</div>
+			</div>	
+	    	<br /><br />
+
+	    	<div class="control-group { @error_codice_sms.blank? ? '' : 'error' }">
+				<label class="control-label" for="codice_sms">Codice</label>
+				<div class="controls">
+					<input type="password" id="codice_sms" name="codice_sms" />
+				</div>
+			</div>
+			<br /><br />
+			<div class="row">
+				<div class="span6 offset1 muted">
+					Ti ricordiamo che puoi cambiare il tuo numero di cellulare cliccando su <em><a href="{ @link_cambio_dati }">'I tuoi dati'</a></em>
+				</div>
+			</div>
+			
+			<br /><br />			
+			<div class="control-group">
+				<div sp:if="@autenticazione_abilitata == false">
+					<h4>Autenticazione non abilitata.</h4>
+				</div>
+			    <div sp:if="@autenticazione_abilitata == true" class="controls">
+					<input type="submit" class="btn" name="invia_codice" value="Conferma" />		
+	        	</div>       
+	        </div>           
+	           
+	    </form>
+	</div>
+</div>

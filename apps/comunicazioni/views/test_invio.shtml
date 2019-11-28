@@ -1,0 +1,52 @@
+<div>
+    <legend>test invio</legend>
+    
+    <form method="post" class="form-horizontal" action="{ Comunicazioni::ComunicazioniController.http_url('aggiungi_segnalazione') }" enctype="multipart/form-data">
+        
+        <div class="control-group">
+            <label class="control-label" for="nome">nome</label>
+            <div class="controls">
+                <div class="row">
+                    <input type="text" name="nome" />
+                </div>
+            </div>
+            <label class="control-label" for="cognome">cognome</label> 
+            <div class="controls">
+                <div class="row">
+                    <input type="text" name="cognome" />
+                </div>
+            </div>
+            <label class="control-label" for="email">email</label>
+            <div class="controls">
+                <div class="row">
+                    <input type="text" name="email" />
+                </div>
+            </div>
+            <label class="control-label" for="indirizzo">indirizzo</label>
+            <div class="controls">
+                <div class="row">
+                    <input type="text" name="indirizzo" />
+                </div>
+            </div>  
+            <div class="controls">
+                <div class="row">
+                    <input type="text" name="gestore_segnalazione" value="ambiente_servizi" />
+                </div>
+            </div> 
+
+            <label class="control-label" for="immagine">Immagine</label>
+            <div class="controls">
+                <div class="row">
+                    <input type="file" name="foto" />
+                </div>
+            </div>  
+        </div>
+        <div class="row">
+			<div class="span1 offset4">
+            	<input type="submit" class="btn" name="submit" value="Prosegui">
+        	</div>
+        </div>
+    </form>
+
+
+</div>

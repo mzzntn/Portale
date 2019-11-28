@@ -1,0 +1,172 @@
+<div>
+	<form method="post" class="form-horizontal" action="{ Comunicazioni::GestioneComunicazioniController.https_url(@comunicazione.id.to_s+'/scelta_destinatari') }" id="form_pubblicazione">
+		<h4>Scegli i destinatari della comunicazione: { @comunicazione.titolo }</h4><br />
+		<div class="radio_label">
+			<input type="radio" name="scelta_tipo_comunicazione" sp:attr-if="!@tipo_comunicazione.blank? && @tipo_comunicazione == 'pubblica',checked,checked" id="scelta_tipo_pubblica" value="pubblica" checked>
+			<label class="radio">
+				Comunicazione pubblica
+			</label>
+			<span sp:if="!@attiva_gruppi" class="help-block">
+                In questa modalità la comunicazione verrà inviata a tutti gli utenti registrati, attraverso il canale di comunicazione scelto.
+            </span>
+            <div sp:if="@attiva_gruppi" class="scelta_gruppi_pubblica">
+            	<div class="control-group" sp:if="!@gruppi_utente.blank?">
+
+						<b>Gruppo</b>
+						<div sp:each_pair="@gruppi_utente |i,array_gruppo|" class="row">
+							<div sp:each="array_gruppo |item_gruppo|" class="span4">
+								<span class="stati_utente">
+									<input type="checkbox" class="checkbox" name="gruppo_utente[{ item_gruppo.nome }]" sp:attr-if="!@gruppo_utente.blank? && @gruppo_utente[item_gruppo.nome] == 'true',checked,checked" value="true">
+									<label>
+										{ item_gruppo.nome.capitalize }
+									</label>
+								</span>
+							</div>
+						</div>		
+				
+				</div>
+				<span class="help-block">
+                Se non si selezionano dei gruppi la comunicazione viene inviata a tutti gli utenti registrati, attraverso il canale di comunicazione scelto.
+            </span>
+            </div>
+		</div>
+		<div class="radio_label">
+			<input type="radio" name="scelta_tipo_comunicazione" sp:attr-if="!@tipo_comunicazione.blank? && @tipo_comunicazione == 'privata',checked,checked" id="scelta_tipo_privata" value="privata">
+			<label class="radio">
+				Comunicazione privata
+			</label>
+		</div>
+		<div class="scelta_destinatari_privati">
+				<legend>Seleziona utenti: <tpl:pass sp:if="!@utenti.nil?"><span class="alert alert-info well-small num_utenti"><span id="numero_utenti">{ @utenti.length }</span> utenti trovati</span></tpl:pass>
+				<!-- <input sp:if="!@utenti.nil? && @utenti.length>0" type="submit" class="btn mostra_ris_button" name="mostra_risultati" value="Mostra risultati" /> -->
+				<span sp:if="!@utenti.nil? && @utenti.length>0" class="btn mostra_ris_button">Mostra/Filtra Risultati</span>
+				<input type="submit" class="btn" name="cerca" value="Cerca" />
+				</legend>
+				<div class="row">
+					<div class="span3">
+						<label>Nome</label>
+						<input type="text" placeholder="Nome" name="nome_utente" value="{ @nome_utente }">
+					</div>
+					<div class="span3">
+						<label>Cognome</label>
+						<input type="text" placeholder="Cognome" name="cognome_utente" value="{ @cognome_utente }">
+					</div>
+					<div class="span3">
+						<label>Sesso</label>
+						<select name="sesso_utente">
+							<option sp:if="!@sesso_utente.blank? && @sesso_utente == 'M'" value="M">Maschio</option>
+							<option sp:if="!@sesso_utente.blank? && @sesso_utente == 'F'" value="F">Femmina</option>
+							<option value=""></option>
+							<option value="M">Maschio</option>
+							<option value="F">Femmina</option>
+						</select>
+					</div>
+					<div class="span3">
+						<label>Nato dal:</label>
+						<forms:datetime id="data_nascita_utente_dal" value="@data_nascita_utente_dal" change-month="true" change-year="true" />
+					</div>
+					<div class="span3">
+						<label>al:</label>
+						<forms:datetime id="data_nascita_utente_al" value="@data_nascita_utente_al" change-month="true" change-year="true" />
+					</div>
+				</div>
+				<br/>
+				<div class="control-group" sp:if="!@gruppi_utente.blank?">
+						<b>Gruppo</b>
+						<div sp:each_pair="@gruppi_utente |i,array_gruppo|" class="row">
+							<div sp:each="array_gruppo |item_gruppo|" class="span4">
+								<span class="stati_utente">
+									<input type="checkbox" class="checkbox" name="gruppo_utente[{ item_gruppo.nome }]" sp:attr-if="!@gruppo_utente.blank? && @gruppo_utente[item_gruppo.nome] == 'true',checked,checked" value="true">
+									<label>
+										{ item_gruppo.nome.capitalize }
+									</label>
+								</span>
+							</div>
+						</div>
+				</div>
+				<div class="control-group">
+						<b>Stato utente:</b>
+						<span sp:each="@stati_utente |stato|" class="stati_utente">
+							<input type="checkbox" class="checkbox" name="stato_utente[{ stato.id }]" sp:attr-if="!@stato_utente.blank? && @stato_utente[stato.id] == 'true',checked,checked" value="true">
+							<label>
+								{ stato.desc.capitalize }
+							</label>
+						</span>		
+				</div>
+				<div class="control-group">
+						<b>Servizi disponibili:</b>
+						<ul sp:each="@servizi_privati |servizio|" class="servizi_utente">
+							<li>
+								<span class="nome_servizio">{ servizio.nome }</span>
+								<input type="checkbox" class="checkbox checkbox_servizio" name="servizio_utente[{ servizio.nome }]" 
+								sp:attr-if="!@servizio_utente.blank? && !@servizio_utente[servizio.nome].blank? && @servizio_utente[servizio.nome] == 'true',checked,checked"  value="true"> Attivo
+								<input type="checkbox" class="checkbox checkbox_servizio" name="servizio_utente[{ servizio.nome }]" 
+								sp:attr-if="!@servizio_utente.blank? && !@servizio_utente[servizio.nome].blank? && @servizio_utente[servizio.nome] == 'false',checked,checked"  value="false"> Non Attivo
+							</li>
+						</ul>		
+				</div>
+				
+				<div class="row form-actions search_actions">
+					<div class="span1 offset3">	
+			        	<input type="submit" class="btn" name="cerca" value="Cerca" />
+			    	</div>
+			    	<div sp:if="!@utenti.nil? && @utenti.length>0" class="span3">
+			    		<!-- <input type="submit" name="mostra_risultati" value="Mostra risultati" class="btn mostra_ris_button"/> -->
+			    		<span class="btn mostra_ris_button">Mostra/Filtra Risultati</span>
+			    	</div>	
+		    	</div>
+		</div>
+		
+		<h4><input type="checkbox" class="checkbox" name="forza_invio" value="true" sp:attr-if="@forza_invio,checked,checked"> Forza Invio A Tutti Gli Utenti.</h4>
+
+		<div class="row form-actions">
+			<div class="span1 offset5">
+				<a href="{ Comunicazioni::GestioneComunicazioniController.https_url(@comunicazione.id.to_s+'/modifica_comunicazione') }" class="btn">
+				Indietro
+				</a>
+			</div>
+			<div class="span1">	
+              <input type="submit" class="btn btn-primary send_comunicazione" value="Invia" name="submit_invia" id="invia_form" />
+<!--	        	<input sp:if="@pubblica_in_fb == false" type="submit" class="btn btn-primary send_comunicazione" value="Invia" name="submit_invia" id="invia_form" />
+	        	<input sp:if="@pubblica_in_fb == true" type="button" class="btn btn-primary send_comunicazione" value="Invia" name="submit_invia" id="button_facebook" />-->
+	    	</div>
+	    </div>
+	</form>   
+	<div id="campi_comunicazione">
+		<span id="id_comunicazione">{ @comunicazione.id }</span>
+		<div sp:if="!@comunicazione.immagine.blank?">
+	        <img id="img_comunicazione" src="{ Comunicazioni::GestioneComunicazioniController.https_url('download_immagine?id_com='+@comunicazione.id.to_s+'&t_img=mini') }">
+	    </div>
+		<span id="titolo">{ @comunicazione.titolo }</span>
+		<span id="testo_breve">{ (@comunicazione.testo_breve.blank? ? "" : @comunicazione.testo_breve) }</span>
+		<span id="testo">{ @comunicazione.testo }</span>
+	</div> 
+
+	<!-- finestra modale per lista risultati -->
+	<div id="modal_risultati" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">Lista Risultati</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>One fine body…</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Chiudi</button>
+	    <button class="btn btn-primary" id="aggiorna_lista">Aggiorna</button>
+	  </div>
+	</div>
+
+	<!-- finestra modale per invio della comunicazione -->
+	<div id="modal_window" class="modal hide fade modal-sm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <!--- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+            <h3 id="myModalLabel">Invio Comunicazione</h3>
+        </div>
+        <div class="modal-body">
+            <h3>Invio comunicazione in corso, attendere il completamento dell'operazione.</h3>
+        </div>
+    </div>
+   
+
+</div>

@@ -1,0 +1,52 @@
+<div id="noteattivita">
+    <moduli:gruppo id="allegato_c" titolo="" class="dati_modulo no_border break">
+        <sup class="float_right">
+            <strong>ALLEGATO C</strong>
+        </sup>
+        <div class="center_text">
+            <strong>CLASSIFICAZIONE DELLE ATTIVITA' DI COMMERCIO AL DETTAGLIO</strong>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi non specializzati a prevalenza alimentare</strong><br />
+            <div>- ipermercati (oltre 2.500 mq - self service)</div>
+            <div>- supermercati (oltre 400 mq - self service)</div>
+            <div>- altro (minimercati, prodotti surgelati…)</div>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi specializzati a prevalenza alimentare</strong><br />
+            <div>Frutta e verdura</div>
+            <div>Carne e prodotti a base di carne</div>
+            <div>Pesci, crostacei, molluschi</div>
+            <div>Pane, pasticceria, dolciumi</div>
+            <div>Bevande (vini, olii, birra ed altre)</div>
+            <div>Tabacco e altri generi di monopolio</div>
+            <div>Altri esercizi specializzati alimentari (drogherie, salumerie, pizzicherie, caffè torrefatto…)</div>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi non specializzati a prevalenza non alimentare</strong><br />
+            <div>Grandi magazzini (oltre 400 mq - self service)</div>
+            <div>Altro (vendita di una grande varietà di prodotti non alimentari)</div>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi specializzati a prevalenza non alimentare</strong><br />
+            <div>Farmacie</div>
+            <div>Articoli medicali e ortopedici</div>
+            <div>Cosmetici e articoli di profumeria</div>
+            <div>Prodotti tessili e biancheria</div>
+            <div>Articoli di abbigliamento e accessori, pellicceria</div>
+            <div>Calzature e articoli in cuoio</div>
+            <div>Mobili, casalinghi e articoli di illuminazione</div>
+            <div>Elettrodomestici, radio - televisori, dischi, strumenti musicali</div>
+            <div>Ferramenta, vernici, giardinaggio,art. igienico sanitari e da costruzione</div>
+            <div>Libri, giornali, cartoleria</div>
+            <div>Altri esercizi specializzati non alimentari (macchine e attrezzature per ufficio, materiale per ottica, fotografia, orologi, articoli gioielleria, giocattoli, </div>
+            <div>articoli sportivi per il tempo libero,articoli da regalo, oggetti d'arte, combustibile uso domestico, natanti.....)</div>
+            <div>Articoli di seconda mano (libri usati, mobili usati, indumenti usati, ecc:)</div>
+            <div>Distributori di carburante</div>
+        </div>
+    </moduli:gruppo>
+</div>

@@ -1,0 +1,8 @@
+<struct name='servizioInterno'>
+<element name='nome' type='text' />
+<element name='url' type='text' size='200'/>
+<element name='descrizione' type='longText' />
+<element name='codEstr' type='text' label='Codice applicativo' />
+<element name='codCom1' type='text' label='Visibile anche ai componenti di' />
+<element name='codCom2' type='text' label='Visibile anche ai componenti di' />
+</struct>

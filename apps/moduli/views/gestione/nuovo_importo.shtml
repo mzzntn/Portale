@@ -1,0 +1,16 @@
+<div>
+    <legend>{ @azione } Importo per tipologia modulo:  { @nome_tipo_modulo }</legend>
+	<p>Inserire importo 0 se è un importo libero, che viene completato dall'utente. </p>
+	<br />
+    <forms:form model="Moduli::Importo" id="form_nuovo_importo" pk="@pk" auto_redirect="@url_redirect">
+		<tpl:append search=".form-actions">
+	        <a class="btn" href="{ Moduli::GestioneModuliController.http_s_url(@id_tipo_modulo.to_s+'/associa_importi') }">Indietro</a>
+	    </tpl:append>
+	</forms:form>
+
+
+
+
+
+
+</div>

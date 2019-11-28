@@ -1,0 +1,44 @@
+<div>
+	<legend>Gestione Modulistica On Line</legend>
+
+    <div sp:if="!@esito_azione.nil?" class="alert alert-success">
+			{ @esito_azione }	
+	</div>
+	<div sp:if="!@errore.nil?" class="alert alert-error alert-danger">
+			{ @errore }	
+	</div>
+
+    <div sp:if="@settori_presenti">
+        <form method="post" class="form-horizontal" id="scegli_settore" >
+            <div class="control-group">
+                <label class="control-label" for="settore">Settore</label>
+                <div class="controls">
+                    <select id="settore" name="settore">
+                        <option sp:if="@admin_servizi">Selezionare settore..</option>
+                        <option sp:if="@admin_portal || @admin_tutti_servizi" value="tutti">Tutti</option>
+                        <option value="0" >Settore generico</option>
+                        <option sp:each="@settori_modulo |settore|"  value="{ settore.id }" >{ settore.nome }</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row form-actions">
+                <input type="submit" class="btn" name="submit" id="carica_settore" value="Conferma" />
+            </div>
+        </form>
+    </div>
+    <div sp:if="@settori_presenti.blank?">
+        <core:crud id="crud_tipi_modulo" model="Moduli::TipoModulo" new-link="@url_nuovo_tipo_modulo" edit-link="@url_gestione_tipo_modulo">
+            <sp:attribute widget="table" name="elements" value="id,nome,descrizione,stato_visualizzazione,disponibile_dal,disponibile_al,tipo_compilazione,solo_pratiche,per_iscrizioni_scolastiche" />
+            <!-- <sp:attribute widget="table" name="sort" value="nome,desc" /> -->
+        </core:crud>
+    </div>
+    <div class="alert alert-success">
+        Nuove funzionalità e correzioni rilasciate<br><br>
+        * Inserita la possibiltà di definire come l'istanza deve essere firmata<br>
+        * Attivata integrazione con SPID: se il cittadino accede con SPID, il sistema non richiederà di apporre alcuna firma come prevede la revisione del CAD<br>
+        * Attivato collegamento con pagamenti (necessaria applicazione pagamenti): è ora possibile definire una sorta di listino personalizzato per ciacuna istanza ed il comportamento del sistema in termini di obbligatorierà<br>
+        * Integrata la ricevuta di avvio del procedimento ex art. 18 bis del 241/90<br>
+        * Migliorata la componente Editor (gestione del testo) sulla base delle segnalazioni ricevute<br>
+        * Aggiornato il manuale d'uso con tutte le notività<br>
+    </div>
+</div>

@@ -1,0 +1,483 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <!-- esempio di ancora per il menu laterale
+
+    <a name="dichiarazioni" class="anchor_menu" testo="Dichiarazioni"></a> 
+    -->
+    <moduli:gruppo id="box_intestazione_destra" class="box_top_dx">
+    AL RESPONSABILE<br />
+    Settore Urbanistica<br />
+    Servizio Edilizia Privata<br />
+    { Spider.conf.get('ente.nome') }<br />
+    </moduli:gruppo>
+
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+
+    <div class="clear_both"></div>
+    <a name="dati_utente" class="anchor_menu" testo="Dati Utente"></a>
+    <p>
+    <h2 class="align_center">CIL PER INTERVENTI DI EDILIZIA LIBERA</h2>
+    <h4 class="align_center">(art. 6, comma 2, lettere b, c, d ed e, d.P.R. 6 giugno 2001, n. 380)</h4>
+    </p>
+    <h3 class="riga_grigia">Dati del Titolare</h3>
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_titolare">Cognome</moduli:dato>
+            <moduli:dato id="nome_titolare">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_titolare">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="qualifica_persona_ditta_titolare" class="write_enable_js">in qualità di</moduli:dato>
+            <moduli:dato id="nome_ditta_titolare" class="input_mediumwidth">della ditta/società</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cf_ditta_titolare" class="input_bigwidth">con codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="piva_ditta_titolare" class="input_bigwidth">partita iva</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_titolare">nato a</moduli:dato>
+            <moduli:dato id="provincia_nascita_titolare" class="label_smlwidth input_xxsmallwidth">prov</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_titolare" class="input_smallwidth">stato</moduli:dato>
+            <moduli:dato id="data_nascita_titolare" class="label_smlwidth input_xsmallwidth" tipo="data">nato il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_titolare">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_titolare" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            <moduli:dato id="stato_residenza_titolare" class="label_smlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_titolare">indirizzo </moduli:dato>
+            <moduli:dato id="civico_residenza_titolare" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_residenza_titolare" class="input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec_titolare" class="input_bigwidth">PEC</moduli:dato>
+        </div>
+         <div class="riga">
+            <moduli:dato id="email_titolare" class="input_bigwidth">posta elettronica</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tel_fisso_cellulare_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <br /><br />
+    <h3 class="riga_grigia">DICHIARAZIONI</h3>
+    <p>
+    Il titolare, consapevole delle pene stabilite per false attestazioni e mendaci dichiarazioni ai sensi dell’ <u>articolo 76 del d.P.R. 28 dicembre 2000, n. 445</u> e degli artt. 483,495 e 496 del Codice Penale e che inoltre, qualora dal controllo effettuato emerga la non veridicità del contenuto della dichiarazione resa, decadrà dai benefici conseguenti al provvedimento conseguito sulla base della dichiarazione non veritiera ai sensi dell’<u>articolo 75 del d.P.R. n. 445/2000</u>, sotto la propria responsabilità
+    </p>
+    
+    <h3>DICHIARA</h3>
+
+    <strong>a) Titolarità dell'intervento</strong>
+    <moduli:gruppo id="titolarita_intervento" titolo="" class="dati_modulo">
+        <strong>di avere titolo alla presentazione di questa pratica edilizia in quanto</strong>
+        <div class="riga">
+            <moduli:dato id="titolo_persona" class=""></moduli:dato>
+        </div>
+        <div class="riga">dell’immobile interessato dall’intervento e di</div>
+        <moduli:opzioni id="altro_titolo" class="lista_checkbox_vertical checkbox_esclusivi1">
+            <div class="clear_both"><div class="float_left">a.1 </div><moduli:opzione id="titolo_esclusivo" class="elenco_prima"></moduli:opzione><strong>aver titolarità esclusiva</strong> all’esecuzione dell’intervento</div>
+            <div class="clear_both"><div class="float_left">a.2 </div><moduli:opzione id="no_titolo_esclusivo" class="elenco_prima"></moduli:opzione><strong>non avere titolarità esclusiva</strong> all’esecuzione dell’intervento, ma di disporre comunque della dichiarazione di assenso dei terzi titolari di altri diritti reali o obbligatori</div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+    -------------------------------------------------
+    <p>
+        Con la comunicazione di inizio lavori (CIL) in edilizia libera (prevista per gli interventi indicati all’articolo 6, comma 2, lettere b, c, d, ed e, d.P.R. 6 giugno 2001, n. 380) possono essere realizzate:
+        <ul>
+            <li>1. le opere temporanee e da rimuovere entro novanta giorni;</li>
+            <li>2. le opere di pavimentazione e di finitura di spazi esterni;</li>
+            <li>3. i pannelli solari, fotovoltaici, a servizio degli edifici, da realizzare al di fuori della zona A (decreto  del  Ministro per i lavori pubblici 2 aprile 1968, n. 1444);</li>
+            <li>4. le aree ludiche senza fini di lucro e gli elementi di arredo delle aree pertinenziali degli edifici;</li>
+            <li>5. l’installazione  di singoli generatori eolici con altezza non superiore a 1,5 metri e diametro non superiore a 1 metro.</li>
+        </ul>
+    </p>
+
+
+    <strong>b) Opere su parti comuni o modifiche esterne </strong>
+    <moduli:gruppo id="parti_comuni" titolo="" class="dati_modulo checkbox_esclusivi2">
+        <strong>che le opere oggetto della presente comunicazione di inizio lavori</strong>
+        <div class="clear_both"><div class="float_left">b.1 </div><moduli:opzione id="parti_comuni_1" class="elenco_prima"></moduli:opzione><strong>non riguardano parti comuni </strong>
+        </div>
+        <div class="clear_both"><div class="float_left">b.2 </div><moduli:opzione id="parti_comuni_2" class="elenco_prima"></moduli:opzione><strong>riguardano le parti comuni di un fabbricato condominiale</strong>
+        </div>
+        <div class="clear_both"><div class="float_left">b.3 </div><moduli:opzione id="parti_comuni_3" class="elenco_prima"></moduli:opzione>riguardano parti comuni di un <strong>fabbricato con più proprietà, non costituito in condominio,</strong> e dichiara che l’intervento è stato approvato 
+            <div class="riga margin_l_35">dai comproprietari delle parti comuni, come risulta da atto consegnato al progettista ovvero dalla sottoscrizione degli elaborati da parte di tutti i comproprietari corredata da copia di documento d’identità</div>
+        </div>
+        <div class="clear_both"><div class="float_left">b.4 </div><moduli:opzione id="parti_comuni_4" class="elenco_prima"></moduli:opzione>riguardano parti dell’edificio di proprietà comune ma non necessitano di assenso perché, secondo l’art. 1102 c.c., apportano, a spese del titolare,
+            <div class="riga margin_l_35">le modificazioni necessarie per il miglior godimento delle parti comuni non alterandone la destinazione e senza impedire agli altri partecipanti di usufruirne secondo il loro diritto</div>
+        </div>
+    </moduli:gruppo>
+
+    <strong>c) Rispetto della normativa sulla privacy</strong>
+    <moduli:gruppo id="norm_priv" titolo="" class="dati_modulo">
+        <strong>di aver letto l’informativa sul trattamento dei dati personali posta al termine del presente modulo</strong>
+    </moduli:gruppo>
+
+    <a name="comunica" class="anchor_menu" testo="Comunica"></a>
+    <h3>COMUNICA</h3>
+
+    <strong>d) Presentazione della comunicazione di inizio dei lavori </strong>
+    <moduli:gruppo id="com_inizio_lav" titolo="" class="dati_modulo checkbox_esclusivi3">
+        <strong>l’inizio dei lavori per interventi di edilizia libera</strong>
+        <div class="clear_both"><div class="float_left">d.1 </div><moduli:opzione id="com_inizio_lav_1" class="elenco_prima"></moduli:opzione>per la cui realizzazione <strong>non sono necessari altri atti di assenso </strong>(ad es. autorizzazione paesaggistica, ecc.)
+        </div>
+        <div class="clear_both"><div class="float_left">d.2 </div><moduli:opzione id="com_inizio_lav_2" class="elenco_prima"></moduli:opzione>per la cui realizzazione <strong>sono necessari i seguenti atti di assenso, già rilasciati dalle competenti amministrazioni </strong>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tipologia di atto</th>
+                        <th>Autorità competente</th>
+                        <th>Prot. n.</th>
+                        <th>Data di rilascio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><moduli:dato class="input_codfiscwidth" id="atto_1"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="autorita_1"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="prot_n_1"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="data_ril_1" tipo="data"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:dato class="input_codfiscwidth" id="atto_2"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="autorita_2"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="prot_n_2"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="data_ril_2" tipo="data"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:dato class="input_codfiscwidth" id="atto_3"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="autorita_3"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="prot_n_3"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="data_ril_3" tipo="data"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:dato class="input_codfiscwidth" id="atto_4"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="autorita_4"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="prot_n_4"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="data_ril_4" tipo="data"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:dato class="input_codfiscwidth" id="atto_5"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="autorita_5"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="prot_n_5"></moduli:dato></td>
+                    <td><moduli:dato class="input_codfiscwidth" id="data_ril_5" tipo="data"></moduli:dato></td>
+                </tr>
+            </tbody>
+            </table>
+
+        </div>
+        <div class="clear_both"><div class="float_left">d.3 </div><moduli:opzione id="com_inizio_lav_3" class="elenco_prima"></moduli:opzione>per la cui realizzazione <strong>si richiede l’acquisizione d’ufficio, da parte dello sportello unico, dei seguenti atti di assenso.</strong> Il titolare dichiara di essere a conoscenza che l’intervento può essere iniziato dopo la comunicazione, da parte dello sportello unico, dell'avvenuta acquisizione degli atti di assenso presupposti.
+            <table class="mediumwidth align_center"> 
+                <thead>
+                    <tr>
+                        <th>Tipologia di atto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><moduli:dato class="input_mediumwidth" id="atto_1"></moduli:dato></td>
+                    </tr>
+                    <tr>
+                        <td><moduli:dato class="input_mediumwidth" id="atto_2"></moduli:dato></td>
+                    </tr>
+                    <tr>
+                        <td><moduli:dato class="input_mediumwidth" id="atto_3"></moduli:dato></td>
+                    </tr>
+                    <tr>
+                        <td><moduli:dato class="input_mediumwidth" id="atto_4"></moduli:dato></td>
+                    </tr>
+                    <tr>
+                        <td><moduli:dato class="input_mediumwidth" id="atto_5"></moduli:dato></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </moduli:gruppo>
+
+    <strong>e) Qualificazione dell’intervento (*)</strong>
+    <moduli:gruppo id="qual_interv" titolo="" class="dati_modulo">
+        <strong>che la presente comunicazione riguarda:</strong>
+        <moduli:opzioni id="tipo_qual_interv" class="lista_checkbox_vertical checkbox_esclusivi4">
+            <div class="clear_both"><div class="float_left">e.1 </div><strong> nuovi interventi di cui all’articolo 6, comma 2, lettere b), c), d) ed e) </strong>del d.P.R. n. 380/2001, descritti nel quadro g), e che:
+                <div class="clear_both margin_l_35"><div class="float_left">e.1.1 </div><moduli:opzione id="tipo_qual_interv_1_1" class="elenco_prima"><label><strong>i lavori avranno inizio</strong></label></moduli:opzione><moduli:dato id="data_parere_sopr" class="label_smlwidth input_xsmallwidth" tipo="data">in data</moduli:dato><strong>(opzioni d.1, d.2)</strong>
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">e.1.2</div><moduli:opzione id="tipo_qual_interv_1_2" class="elenco_prima"></moduli:opzione><strong>i lavori avranno inizio dopo la comunicazione, da parte dello sportello unico, dell'avvenuta acquisizione degli atti di assenso presupposti. (opzione d.3)</strong>
+                </div>
+            </div>    
+            <div class="clear_both"><div class="float_left">e.2 </div><moduli:opzione id="tipo_qual_interv_2" class="elenco_prima"><label><strong>intervento in corso di esecuzione,</strong> iniziato </label></moduli:opzione><moduli:dato id="data_tipo_qual_interv_2" class="label_smlwidth input_xsmallwidth" tipo="data">in data</moduli:dato> <strong>di cui all’art. 6, comma 7 </strong>del d.P.R. n. 380/2001, 
+                <div class="riga margin_l_35">con pagamento di sanzione e pertanto si allega <strong>la ricevuta di versamento di € 333,00</strong></div>
+            </div>
+            <div class="clear_both"><div class="float_left">e.3 </div><moduli:opzione id="tipo_qual_interv_3" class="elenco_prima"><label><strong>intervento realizzato</strong></label></moduli:opzione><moduli:dato id="data_tipo_qual_interv_3" class="label_smlwidth input_xsmallwidth" tipo="data">in data</moduli:dato> <strong>di cui all’art. 6, comma 7 </strong>del d.P.R. n. 380/2001,con pagamento di sanzione e pertanto si 
+                <div class="riga margin_l_35">allega <strong>la ricevuta di versamento di € 1000,00</strong></div>
+            </div>
+            <div class="riga"><strong>e che inoltre riguarda: (solo nel caso di presentazione allo Sportello Unico per le Attività Produttive - SUAP)</strong></div>
+            <div class="clear_both"><div class="float_left">e.4 </div><moduli:opzione id="tipo_qual_interv_4" class="elenco_prima"></moduli:opzione><strong>attività che rientrano nell’ambito del procedimento automatizzato </strong>ai sensi degli articoli 5 e 6 del d.P.R. n. 160/2010
+            </div>
+            <div class="clear_both"><div class="float_left">e.5 </div><moduli:opzione id="tipo_qual_interv_5" class="elenco_prima"></moduli:opzione><strong>attività che rientrano nell’ambito del procedimento ordinario </strong>ai sensi dell’articolo 7 del d.P.R. n. 160/2010
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>f) Localizzazione dell'intervento</strong>
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo dati_readable_js">
+        <strong>che l’intervento interessa l’immobile</strong>
+        <div class="riga">
+            <div class="float_left">1) </div><moduli:dato id="loc_int_via" class="label_bigwidth input_bigwidth">sito in (via, piazza, ecc.)</moduli:dato> <moduli:dato id="loc_int_n" class="label_smlwidth input_xsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_scala" class="label_smlwidth input_xsmallwidth">scala </moduli:dato>
+            <moduli:dato id="loc_int_piano" class="label_smlwidth input_xsmallwidth">piano </moduli:dato>
+            <moduli:dato id="loc_int_interno" class="label_smlwidth input_xsmallwidth">interno </moduli:dato>
+            <moduli:dato id="loc_int_cap" class="label_smlwidth input_xsmallwidth">cap </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tipo_catasto_descrizione">censito al: </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="catasto_foglio" class="label_smlwidth input_xsmallwidth">foglio n. </moduli:dato>
+            <moduli:dato id="catasto_map" class="label_smlwidth input_xsmallwidth">map </moduli:dato>
+            <moduli:dato id="catasto_sub" class="label_smlwidth input_xsmallwidth">sub </moduli:dato>
+            <moduli:dato id="catasto_sez" class="label_smlwidth input_xsmallwidth">sez </moduli:dato>
+            <moduli:dato id="catasto_sez_urb" class="label_smlwidth input_xsmallwidth">sez urb. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="destinazione_uso" class="label_bigwidth input_bigwidth">avente destinazione d'uso</moduli:dato>
+        </div>
+        <div class="riga">
+                (Ad es. residenziale, industriale, commerciale, ecc.)
+        </div> 
+    </moduli:gruppo>
+    <moduli:gruppo id="oggetto_territoriale_2" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <div class="float_left">2) </div><moduli:dato id="loc_int_via" class="label_bigwidth input_bigwidth">sito in (via, piazza, ecc.)</moduli:dato> <moduli:dato id="loc_int_n" class="label_smlwidth input_xsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_scala" class="label_smlwidth input_xsmallwidth">scala </moduli:dato>
+            <moduli:dato id="loc_int_piano" class="label_smlwidth input_xsmallwidth">piano </moduli:dato>
+            <moduli:dato id="loc_int_interno" class="label_smlwidth input_xsmallwidth">interno </moduli:dato>
+            <moduli:dato id="loc_int_cap" class="label_smlwidth input_xsmallwidth">cap </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tipo_catasto_descrizione">censito al: </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="catasto_foglio" class="label_smlwidth input_xsmallwidth">foglio n. </moduli:dato>
+            <moduli:dato id="catasto_map" class="label_smlwidth input_xsmallwidth">map </moduli:dato>
+            <moduli:dato id="catasto_sub" class="label_smlwidth input_xsmallwidth">sub </moduli:dato>
+            <moduli:dato id="catasto_sez" class="label_smlwidth input_xsmallwidth">sez </moduli:dato>
+            <moduli:dato id="catasto_sez_urb" class="label_smlwidth input_xsmallwidth">sez urb. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="destinazione_uso" class="label_bigwidth input_bigwidth">avente destinazione d'uso</moduli:dato>
+        </div>
+        <div class="riga">
+                (Ad es. residenziale, industriale, commerciale, ecc.)
+        </div>
+    </moduli:gruppo>
+
+    <strong>g) Tipologia di intervento e descrizione sintetica delle opere (*)</strong>
+    <moduli:gruppo id="tipo_interv_sint" titolo="" class="dati_modulo">
+        <div class="riga">
+            <strong>che i lavori riguardano l’immobile individuato nella comunicazione di inizio lavori </strong>di cui la presente relazione costituisce parte integrante e sostanziale;  
+        </div>
+        <div class="riga">
+            che le opere in progetto sono subordinate a <strong>comunicazione di inizio lavori </strong>in quanto rientrano nella seguente <strong>tipologia di intervento</strong>
+        </div>
+        <moduli:opzioni id="tipo_interv_nuovo_rist" class="lista_checkbox_vertical checkbox_esclusivi5">
+            <div class="clear_both"><div class="float_left">g.1 </div><moduli:opzione id="tipo_interv_sint_1" class="elenco_prima"></moduli:opzione><strong>opere dirette a soddisfare obiettive esigenze contingenti e temporanee e  ad  essere  immediatamente  rimosse  al  cessare  della </strong>
+                <div class="riga margin_l_35"><strong>necessità e, comunque, entro un  termine  non  superiore  a  novanta giorni</strong> (articolo 6, comma 2, lettera b) del d.P.R. n. 380/2001)</div>
+            </div>
+            <div class="clear_both "><div class="float_left">g.2 </div><moduli:opzione id="tipo_interv_sint_2" class="elenco_prima"></moduli:opzione><strong>opere di pavimentazione e di  finitura  di  spazi  esterni, anche per aree di  sosta,  che  siano  contenute  entro  l'indice  di permeabilità</strong>
+                <div class="riga margin_l_35"><strong>, ove stabilito dallo  strumento  urbanistico  comunale, ivi compresa la realizzazione di intercapedini interamente  interrate e non accessibili, vasche di raccolta delle acque, locali tombati</strong> (articolo 6, comma 2, lettera c) del d.P.R. n. 380/2001)</div>
+            </div>
+            <div class="clear_both "><div class="float_left">g.3 </div><moduli:opzione id="tipo_interv_sint_3" class="elenco_prima"></moduli:opzione><strong>pannelli solari, fotovoltaici, a servizio degli edifici,  da realizzare al di fuori della zona A) di cui al decreto  del  Ministro per i lavori </strong> 
+                <div class="riga margin_l_35"><strong>pubblici 2 aprile 1968, n. 1444</strong> (articolo 6, comma 2, lettera d) del d.P.R. n. 380/2001)</div>
+            </div>
+            <div class="clear_both "><div class="float_left">g.4 </div><moduli:opzione id="tipo_interv_sint_4" class="elenco_prima"></moduli:opzione><strong>aree ludiche senza fini di lucro e gli elementi di arredo delle aree pertinenziali degli edifici </strong>(articolo 6, comma 2, lettera e)  
+                <div class="riga margin_l_35">del d.P.R. n. 380/2001)</div>
+            </div>
+            <div class="clear_both "><div class="float_left">g.5 </div><moduli:opzione id="tipo_interv_sint_5" class="elenco_prima"></moduli:opzione><strong>installazione  di singoli generatori eolici con altezza complessiva non superiore a 1,5 metri e diametro non superiore a 1 metro</strong>
+                <div class="riga margin_l_35">(articolo 11, comma 3, del d.lgs. n. 115/2008)</div>
+            </div>
+            <div class="riga margin_l_35">e che consistono in:
+                <moduli:dato tipo="longText" id="descrizione_tipo_interv_sint_9" class="readonly_js"></moduli:dato>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" label-firma="Il/I Dichiarante/i" class="data-firma"/>
+    </div>
+    <br /><br /><br />
+
+    <h3>TUTELA DELLA SALUTE E DELLA SICUREZZA NEI LUOGHI DI LAVORO</h3>
+    <h4 class="align_center">D. lgs. 9 aprile 2008, n. 81</h4>
+    <br /><br />
+
+    <table>
+        <thead>
+            <tr>
+                <th>N. imprese</th>
+                <th>Uomini/Giorno (u/g)</th>
+                <th>Verifica Documentazione</th>
+                <th>Invio Notifica Preliminare</th>
+                <th>Nomina Coordinatore Progettazione</th>
+                <th>Nomina Coordinatore Esecuzione</th>
+                <th>Piano di Sicurezza e Fascicolo opera (a cura del Coordinatore)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Meno di 200 u/g</td>
+                <td>SI</td>
+                <td>NO</td>
+                <td>NO</td>
+                <td>NO</td>
+                <td>NO</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Più di 200 u/g</td>
+                <td>SI</td>
+                <td>SI</td>
+                <td>NO</td>
+                <td>NO</td>
+                <td>NO</td>
+            </tr>
+            <tr>
+                <td>2 o più imprese</td>
+                <td><moduli:dato id="uomini_giorno"></moduli:dato></td>
+                <td>SI</td>
+                <td>SI</td>
+                <td>SI</td>
+                <td>SI</td>
+                <td>SI</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <moduli:gruppo id="dati_commit_tit" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="nome_cognome_commit_tit">Cognome e Nome</moduli:dato>
+            <moduli:dato id="in_qualita">in qualità di</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="ordine_commit_tit" class="label_bigwidth">Iscritto all'ordine/collegio</moduli:dato>
+            <moduli:dato id="citta_commit_tit" class="label_smlwidth input_xsmallwidth">di</moduli:dato>
+            <moduli:dato id="n_commit_tit" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_commit_tit">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_commit_tit" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            <moduli:dato id="stato_residenza_commit_tit" class="label_smlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_commit_tit">indirizzo </moduli:dato>
+            <moduli:dato id="civico_residenza_commit_tit" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_residenza_commit_tit" class="input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec_email_commit_tit" class="input_bigwidth label_bigwidth">PEC / posta elettronica</moduli:dato>
+        </div>
+        
+        <div class="riga">
+            <moduli:dato id="tel_commit_tit" class="">Telefono fisso / Cellulare</moduli:dato>
+        </div>
+
+        <div class="riga"><strong>Il titolare/responsabile dei lavori dichiara che l’intervento descritto nella comunicazione di inizio lavori, di cui il presente allegato costituisce parte integrante,</strong></div>
+
+        <moduli:opzioni id="tut_salute" class="lista_checkbox_vertical checkbox_esclusivi6">
+            <div class="clear_both"><moduli:opzione id="dati_commit_tit_1" ></moduli:opzione><strong>non ricade </strong>
+                nell’ambito di applicazione del Titolo IV del d.lgs. n. 81/2008
+            </div>
+            <div class="clear_both"><strong> ricade </strong>
+                nell’ambito di applicazione del Titolo IV del d.lgs. n. 81/2008 e pertanto:
+            </div>            
+            <div class="riga margin_l_35">relativamente alla documentazione delle imprese esecutrici</div>
+            <div class="riga margin_l_35">
+                <div class="clear_both"><moduli:opzione id="dati_commit_tit_2_1" ></moduli:opzione><strong>dichiara </strong>
+                    che l’entità presunta del cantiere è inferiore a 200 uomini-giorno ed i lavori non comportano i rischi particolari di cui all’allegato XI del d.lgs. n. 81/2008 e di aver verificato il certificato di iscrizione alla Camera di commercio, il documento unico di regolarità contributiva, corredato da autocertificazione in ordine al possesso degli altri requisiti previsti dall’allegato XVII del d.lgs. n. 81/2008, e l’autocertificazione relativa al contratto collettivo applicato
+                </div>
+                <div class="clear_both"><moduli:opzione id="dati_commit_tit_2_2" ></moduli:opzione><strong>dichiara </strong>
+                    che l’entità presunta del cantiere è pari o superiore a 200 uomini-giorno o i lavori comportano i rischi particolari di cui all’allegato XI del d.lgs. n. 81/2008 e di aver verificato la documentazione di cui alle lettere a) e b) dell'art. 90 comma 9 prevista dal d.lgs. n. 81/2008 circa l’idoneità tecnico professionale della/e impresa/e esecutrice/i e dei lavoratori autonomi, l’organico medio annuo distinto per qualifica, gli estremi delle denunce dei lavoratori effettuate all'Istituto nazionale della previdenza sociale (INPS), all'Istituto nazionale assicurazione infortuni sul lavoro (INAIL) e alle casse edili, nonché il contratto collettivo applicato ai lavoratori dipendenti, della/e impresa/e esecutrice/i
+                </div>
+            </div>
+        </moduli:opzioni> 
+        <br />
+        <div class="riga margin_l_35">relativamente alla <strong>notifica preliminare di cui all’articolo 99 </strong>del d.lgs. n. 81/2008</div>
+        <moduli:opzioni id="dati_commit_tit_3_" class="lista_checkbox_vertical margin_l_35 checkbox_esclusivi7">
+            <div class="clear_both"><moduli:opzione id="dati_commit_tit_3_1" ></moduli:opzione>dichiara che l’intervento <strong>non è soggetto </strong>
+                all’invio della notifica
+            </div>
+            <div class="clear_both">
+                <div class="riga margin_l_20"> dichiara che l’intervento <strong>è soggetto </strong>all’invio della notifica e pertanto</div>
+                
+                    <div class="clear_both margin_l_35"><moduli:opzione id="dati_commit_tit_3_2_1" ></moduli:opzione><strong>allega </strong>alla presente comunicazione la notifica, il cui contenuto sarà riprodotto su apposita tabella, esposta in cantiere per tutta la durata dei lavori, in luogo visibile dall’esterno 
+                    </div>
+                    <div class="clear_both margin_l_35"><moduli:opzione id="dati_commit_tit_3_2_2" ><label><strong>indica </strong>gli estremi della notifica, il cui contenuto sarà riprodotto su apposita tabella, esposta in cantiere per tutta la durata dei lavori </label></moduli:opzione>
+                        <div class="riga margin_l_35"> 
+                        <moduli:dato id="data_dati_commit_tit_3_1" class="label_smlwidth input_xsmallwidth" tipo="data">, in luogo visibile dall’esterno, già trasmessa in data</moduli:dato> <moduli:dato id="prot_dati_commit_tit_3_1" class="label_smlwidth input_xsmallwidth">con prot n.</moduli:dato>
+                        </div>
+                    </div>
+            </div>
+        </moduli:opzioni>
+                
+        
+        <div class="riga">
+            <p>
+            <strong>di essere a conoscenza </strong>che l’efficacia della presente comunicazione è sospesa qualora sia assente il piano di sicurezza e coordinamento di cui all’articolo 100 del d.lgs. n. 81/2008 o il fascicolo di cui all’articolo 91, comma 1, lettera b), quando previsti, oppure in assenza di notifica di cui all’articolo 99, quando prevista, oppure in assenza di documento unico di regolarità contributiva
+            </p>
+        </div>
+    </moduli:gruppo>
+    <div class="riga">
+        <moduli:data-firma id="data_firma_2" label-firma="Firma" class="data-firma"/>
+    </div>
+    <br />
+
+    ---------------------------------------
+    <p>
+    Gli adempimenti in materia di salute e sicurezza nei cantieri differiscono, ai sensi degli articoli 90 e 99 del d.lgs. n. 81/2008, principalmente in base al numero di imprese esecutrici dei lavori e all’entità presunta del cantiere, misurata in uomini-giorno (ad es. se la durata stimata dei lavori è di 25 giorni e la squadra di lavoro è composta da 3 uomini, l’entità del cantiere è di 75 uomini-giorno):
+    </p>
+    <ul>
+        <li>•  se i lavori sono eseguiti da una sola impresa:
+            <ul>
+                <li>
+                    e l’entità presunta del cantiere è inferiore a 200 uomini-giorno:
+                    <ul>
+                        <li>
+                            a.  e i lavori non comportano i rischi particolari di cui all’allegato XI del d.lgs. n. 81/2008, il titolare/responsabile dei lavori è tenuto a verificare la documentazione dell’impresa (iscrizione alla Camera di commercio, DURC e autocertificazioni relative al contratto collettivo applicato e al possesso dei requisiti previsti dall’allegato XVII del d.lgs. n. 81/2008).
+                        </li>
+                        <li>
+                            b.  ma i lavori comportano i rischi particolari di cui all’allegato XI del d.lgs. n. 81/2008, il titolare/responsabile dei lavori è tenuto a verificare la documentazione di cui alle lettere a) e b) dell'art. 90 comma 9 prevista dal d.lgs. n. 81/2008 circa l’idoneità tecnico professionale dell’impresa esecutrice e dei lavoratori autonomi, l’organico medio annuo distinto per qualifica, gli estremi delle denunce dei lavoratori effettuate all'Istituto nazionale della previdenza sociale (INPS), all'Istituto nazionale assicurazione infortuni sul lavoro (INAIL) e alle casse edili, nonché il contratto collettivo applicato ai lavoratori dipendenti dell’impresa esecutrice.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    e l’entità presunta del cantiere è pari o superiore ai 200 uomini-giorno, il titolare/responsabile dei lavori è tenuto a verificare la documentazione di cui alla lettera b. di cui sopra. Inoltre, il titolare/responsabile dei lavori è tenuto all’invio della notifica preliminare di cui all’articolo 99 del d.lgs. n. 81/2008
+                </li>
+            </ul>
+        </li>
+        <li>
+            •  se i lavori sono eseguiti da più di un’impresa, anche non contemporaneamente, il titolare/responsabile dei lavori è tenuto ad adempiere, nei confronti di ciascuna impresa, a tutti gli obblighi in materia di verifica della documentazione di cui sopra, in base alla casistica applicabile, nonché  a inviare la notifica preliminare di cui all’articolo 99 del d.lgs. n. 81/2008 e a nominare il coordinatore per la sicurezza, che rediga il piano di sicurezza e coordinamento e il fascicolo dell’opera.
+        </li>
+    </ul>
+
+
+
+</moduli:modulo>
+

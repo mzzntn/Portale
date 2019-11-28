@@ -1,0 +1,11 @@
+<div class="testata_modulo_sue_puglia">
+		<div class="logo_testata_modulo">
+			<img  alt="logo comune" src="{ Moduli::ModuliController.download_img_b64('logo_monopoli.png') }"/>
+		</div>
+
+		<div class="nome_ente align_center">
+			{ Spider.config.get('ente.nome') }
+		</div>
+
+		<div class="hide" id="sezione_attiva">{ @sezione_attiva }</div>
+</div>

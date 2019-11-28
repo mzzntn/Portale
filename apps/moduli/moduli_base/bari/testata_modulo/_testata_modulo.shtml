@@ -1,0 +1,27 @@
+<div>
+	<div class="testata_modulo_bari">
+		<div class="logo_testata_modulo_bari">
+			<img  alt="logo comune" src="{ Moduli::ModuliController.download_img_b64('logo_bari.png') }" height="100%" width="100%" />
+		</div>
+		<div class="centro_testata_modulo_bari">
+			<h2>Alla Ripartizione Urbanistica<br /> ed Edilizia Privata</h2>
+			<div class="font_20">SPORTELLO UNICO PER L’EDILIZIA – S.U.E.</div>
+			<div class="box_pratica">
+				<div class="font_19 align_center margin_b_15">PRATICA PRECEDENTE</div>
+				<div class="font_20">
+				<span>TIPO<moduli:dato id="tipo_testata" class="input_smallwidth"></moduli:dato></span>
+				<span>ANNO<moduli:dato id="anno_testata_centro" class="input_smallwidth"></moduli:dato></span>
+				</div>
+			</div>
+		</div>
+		<div class="riquadro_esterno_dx_testata_modulo_bari">
+			<div class="riquadro_dx_testata_modulo">
+				<div class="font_20 align_center">PRATICA EDILIZIA</div><br /><br />
+				<h2 class="">{ sigla_modulo } <moduli:dato id="num_pratica_testata" class="input_smallwidth readonly_js"></moduli:dato></h2>
+				<h2 class="">ANNO <moduli:dato id="anno_testata_dx" class="input_xsmallwidth readonly_js"></moduli:dato></h2>
+			</div>
+			<div class="align_center">RISERVATO ALL’UFFICIO</div>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,52 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>Autorizzazione al trattamento dei dati personali.</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<p id="testo_informativa">
+				{ @informativa_gdpr }
+				</p>
+				<div sp:if="!@servizi_privati_utente.blank?">
+					<h3>Elenco servizi attivi:</h3>
+					<div sp:each="@servizi_privati_utente |serv|">
+						<strong class="lead">{ serv.nome }</strong> <br />
+						<em>{ serv.descrizione }</em> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<form method="POST" action="" class="form-horizontal">
+					<div class="checkbox">
+						<input type="checkbox" name="abilita_comunicazioni_gdpr" sp:attr-if="(@comunicazioni_abilitate),checked,checked" />
+						<label>
+							<strong>Autorizzo all'utilizzo dei miei dati di contatto per le comunicazioni telematiche.</strong>
+						</label>
+					</div>
+					<br />
+					<div class="alert alert-warning">
+						<strong>Attenzione:</strong> la mancata autorizzazione al trattamento dei dati personali, equivale alla richiesta di cancellazione. I tuoi dati personali verranno automaticamente cancellati alle ore 9:00 di domani. Entro tale orario potrai accedere ancora al sistema ed autorizzare al trattamento, rinunciando quindi alla richiesta di cancellazione. A cancellazione avvenuta verrà data notifica al responsabile del trattamento.
+					</div>
+					<br />
+
+					<div class="row flex_cont rev_flex">
+						<div class="back pt10 col-lg-1 col-md-1 col-sm-8 col-xs-8">
+							<a href="{ Portal::PortalController.http_s_url }" class="btn { (@layout_web ? '' : 'btn-lg') }">Indietro</a>
+						</div>
+						<div class="pt10 col-lg-1 col-md-1 col-sm-8 col-xs-8">
+							<button type="submit" class="btn btn-primary { (@layout_web ? '' : 'btn-lg') }" value="accetto" sp:attr-if="(@gdpr_accettato == true),disabled,disabled" name="submit_accetto" >{ (@gdpr_accettato.blank? ? 'Accetto' : 'Accettato' ) }</button>
+						</div >
+						<div class="pt10 col-lg-1 col-md-1 col-sm-8 col-xs-8">
+							<button type="submit" class="btn btn-danger { (@layout_web ? '' : 'btn-lg') }" value="non_accetto" name="submit_non_accetto">Non Accetto</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>		
+	</div>
+</div>

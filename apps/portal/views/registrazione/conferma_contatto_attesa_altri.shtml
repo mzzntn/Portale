@@ -1,0 +1,33 @@
+<div>
+    <p>
+    Grazie, { @utente.nome } { @utente.cognome }: il tuo { @modificato } è ora confermato.<br>
+
+    <span sp:if="!@contatti_pendenti.blank?">Per attivare l'account, devi confermare anche { Spider::I18n.list(@contatti_pendenti) }.</span>
+    
+    <div sp:if="@modifiche['email']">
+        <p>
+            L'e-mail di controllo è stata inviata all'indirizzo <strong>{ @modifiche['email'].dopo }</strong>.
+        </p>
+        <p>
+            Se non dovessi ricevere l'e-mail entro breve tempo, ti preghiamo di verificare l'indirizzo e-mail inserito. Se
+            l'indirizzo è corretto, ti preghiamo di controllare che l'e-mail di controllo non sia stata messa nella casella
+            "spam" del tuo programma di posta.
+        </p>
+        <p>
+            Se vuoi che inviamo una nuova e-mail di controllo, <a href="{ Portal::PortalController.http_s_url('controllo_email') }?invia">clicca qui</a>.
+        </p>
+    </div>
+    
+    <div sp:if="@modifiche['cellulare']">
+        <p>
+            Un SMS contenente il codice di controllo è stato inviato al numero <strong>{ @modifiche['cellulare'].dopo }</strong>.
+        </p>
+        <p>
+            Per inserire il codice, o per richiedere l'invio di un nuovo SMS, vai alla 
+            <a href="{ Portal::PortalController.http_s_url('controllo_cellulare') }">pagina di controllo numero di cellulare</a>.
+        </p>
+    </div>
+
+    
+    
+</div>

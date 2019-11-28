@@ -1,0 +1,18 @@
+<struct name="ditta" external="true">
+   <element name="utente" type='portal_spider::utente' />
+   <element name='id' type='int' key='true' />	
+   <element name='dtCreazione' type='dateTime' />
+   <element name='dtModifica' type='dateTime' />
+   <element name='ragioneSociale' type='text' />
+   <element name='partitaIvaAzienda' type='text'  />
+   <element name='indirizzoAzienda' type='text' />
+   <element name='capAzienda' type='text' />
+   <element name='comuneAzienda' type='text'  />
+   <element name='provAzienda' type='dateTime' />
+   <element name='telefonoAzienda' type='text' />
+   <element name='faxAzienda' type='text' />
+   <element name='emailAzienda' type='email' />
+   <element name='pecAzienda' type='email' />
+   <element name='civicoAzienda' type='text'  />
+   <element name='codiceFiscaleAzienda' type='email'  />
+</struct>

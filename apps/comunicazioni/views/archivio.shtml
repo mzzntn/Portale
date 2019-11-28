@@ -1,0 +1,27 @@
+<div class="col-lg-10">
+    <div class="row">
+        <h3 class="verde col-lg-6 col-md-6 col-sm-12 col-xs-12 pl0">Archivio comunicazioni</h3>
+    </div>
+	
+	<div class="row">
+        <core:list id="lista_comunicazioni" queryset="@comunicazioni" searchable="true" paginate="15">
+        	<tpl:override-content search=".desc">
+                <h4 class="bordo_servizio pb10"><a class="" href="{ Comunicazioni::ComunicazioniController.http_s_url('comunicazione') }/{ @values[i].id }/pubblica">
+                    { @values[i].titolo.capitalize } - ({ @values[i].data_da.strftime('%d/%m/%Y') } - { @values[i].data_a.strftime('%d/%m/%Y') })
+                </a></h4>
+            </tpl:override-content>
+    	</core:list>
+    </div>
+	<div sp:if="@comunicazioni.blank?">
+        <div class="row">
+    		<div class="alert alert-info col-lg-8 col-md-10" role="alert">
+    	    	Non sono attualmente presenti comunicazioni.
+    	    </div>
+        </div>
+	</div> 
+    <div class="row">
+        <div class="fw mb10 pull-right">
+            <a href="{ Comunicazioni::ComunicazioniController.http_s_url }" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? 'btn btn_big_border' : '') }" class="btn">Elenco Comunicazioni</a>
+        </div>
+    </div>
+</div>	

@@ -1,0 +1,43 @@
+.Table{
+  border: 0;
+
+}
+
+.Table th{
+  border: 0;
+  background-color: #208A20;
+  color: #FFFFFF;
+}
+
+.Table td{
+  border: 0;
+}
+
+.Table a{
+  color: blue;
+  text-decoration: underline;
+}
+
+.Table.th a{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;  
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.Table.row{
+  cursor: pointer;
+}
+
+.Table.row.even{
+  background-color: #F7FFF7;
+}
+
+.Table.row.odd{
+  background-color: #DFFFDF;
+}
+
+.Table tr:hover{
+  background-color: #FAFFCF;
+}

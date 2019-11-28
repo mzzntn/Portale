@@ -1,0 +1,25 @@
+<div class="image-archive">
+    <tpl:asset type="js" src="js/image_archive.js" />
+    <div class="tags_div">
+        <h5>_(Folders)</h5>
+        <div class="tags">
+            <span sp:each="@tags |tag|" class="{ (@active_tags[tag.name] ? 'active' : '') }">
+                <a href="{ widget_params(:toggle_tag => tag ) }">{ tag }</a>
+            </span>
+        </div>
+    </div>
+    <core:search-table id="table" queryset="@images" elements="title,tag_list" row_limit="3">
+        <tpl:prepend search="thead tr">
+            <th></th>
+        </tpl:prepend>
+        <tpl:prepend search="tbody tr">
+            <td>
+                <a class="image-link" href="{ @_parent.widget_params(:clicked => @data[row_i].uuid ) }">
+                    <img src="{ @data[row_i].url_micro }">
+                </a>
+            </td>
+        </tpl:prepend>
+        <tpl:override-attr search="tfoot td" name="colspan" value="{ @elements.size + 1 }" />
+    </core:search-table>
+
+</div>

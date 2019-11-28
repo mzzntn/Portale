@@ -1,0 +1,13 @@
+<group name='testgroup'>
+  <grant struct='news::notizia'>
+    <op>w</op>
+    <op>r</op>
+    <params>
+      <categoria>2</categoria>
+  </params>
+ </grant>
+ <option name='editor'>
+    <toolbar>limited</toolbar>
+    <template>prova</template>
+ </option>
+</group>

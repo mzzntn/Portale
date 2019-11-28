@@ -1,0 +1,13 @@
+'Portal::Notifiche::Applicazione':
+- codice: demografici
+  nome_breve: Carte Identità
+  descrizione: Notifiche Carte d'Identità in scadenza
+- codice: muse
+  nome_breve: CityCard
+  descrizione: Notifiche credito CityCard
+- codice: pratiche
+  nome_breve: Pratiche
+  descrizione: Notifiche Pratiche
+- codice: pagamenti
+  nome_breve: PagoPA
+  descrizione: Avvisatura digitale, invia una mail di notifica per l'inserimento di un nuovo pagamento da parte della pubblica amministrazione 

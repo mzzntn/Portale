@@ -1,0 +1,11 @@
+<?
+
+class CodeBrowser{
+  var $dir;
+
+
+
+}
+
+
+?>

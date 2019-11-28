@@ -1,0 +1,6 @@
+Gentile <%= utente_portale.nome %> <%= utente_portale.cognome %>,
+Le ricordiamo che la sua Carta d'Identità numero <%= carta_identita.sigla %><%= carta_identita.numero.rjust(7,"0") %>, rilasciata il <%= carta_identita.rilascio.lformat(:short) %>,
+scadrà il giorno <%= carta_identita.scadenza.lformat(:short) %>.
+Potrà provvedere al rinnovo presso gli uffici comunali, in <%= Spider.conf.get('ente.indirizzo') %>
+Cordiali saluti,
+<%= Spider.conf.get('ente.tipo') %> <%= Spider.conf.get('ente.nome') %>

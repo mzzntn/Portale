@@ -1,0 +1,85 @@
+/* portale */
+	div#register{
+		margin: 0 auto;
+	}
+    #register .textbox{
+      margin: 10px 0px;
+      padding: 5px 10px;
+    }
+
+    #pageBox{
+		width: 90%;
+		margin: 20px auto;
+		padding-bottom: 5px;
+    }
+
+    #pageBox .leftTopCorner{
+      float: left;
+      width: 5px;
+      height: 5px;
+    }
+
+    #pageBox .rightTopCorner{
+      float: right;
+      width: 5px;
+      height: 5px;
+    }
+
+    #pageBox .leftBottomCorner{
+      float: left;
+      width: 5px;
+      height: 5px;
+    }
+     
+    #pageBox .rightBottomCorner{
+      float: right;
+      width: 5px;
+      height: 5px;
+    }
+ 
+    #pageBox .boxContent{
+		clear: both;
+		margin: 5px;
+		margin-bottom: 0;
+		padding: 5px;
+    }
+
+    #pageBox .boxSpacer{
+      height: 10px;
+    }
+     
+    #pageBox #iciStuff, #pageBox #imuStuff{
+      float: left;
+      width: 190px;
+      margin: 0pt;
+      padding: 5px;
+    }
+    
+    #pageBox #iciStuffDx, #pageBox #imuStuffDx{
+        float: right;
+        width: 200px;
+        padding: 0pt;
+        margin: 0pt;
+        border: 1px solid #DDD;
+    }
+
+    #pageBox #iciCalculator,#pageBox #imuCalculator{  
+      margin-left: 200px;
+    }
+
+    #pageBox #iciResult, #pageBox #imuResult{
+      clear: both;
+      margin: 10px auto;
+    }
+
+    #pageBox a.highlight{
+      display: inline;
+      margin: auto;
+    }
+
+    #pageBox h3{
+    }
+    
+    .datoCommissione {
+    margin-right: 20px;
+    }

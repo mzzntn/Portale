@@ -1,0 +1,191 @@
+
+<div class="modulo mb15">
+    <tpl:assets widgets="forms:datetime, moduli:allegato, moduli:data-firma, moduli:dato, moduli:dato-utente, moduli:gruppo, moduli:opzione, moduli:opzioni" />
+    <div id="codice">{ @codice }</div>
+    <div id="intestazione_modulo"> { @titolo }
+    </div>
+
+    <div id="avviso_errore" class="align_center alert alert-danger">
+        <h3>Errore nella compilazione dei campi.</h3>
+        <h4>Scorrere il documento prestando attenzione alle parti evidenziate in rosso.</h4>
+    </div>
+    <!-- COMMENTATO PER NON MOSTRARLO NEL CASO DI ALLEGATI CHE HANNO CLASSE anchor_menu: DA RIFARE INDICE!!
+    <div id="sidecontent_pullout" class="sidecontentpullout" >
+        <span style="display: block; text-align: center;">I</span>
+        <span style="display: block; text-align: center;">N</span>
+        <span style="display: block; text-align: center;">D</span>
+        <span style="display: block; text-align: center;">I</span>
+        <span style="display: block; text-align: center;">C</span>
+        <span style="display: block; text-align: center;">E</span>
+    </div>
+    <nav id="sidebar_menu" class="hide">
+        <strong>INDICE</strong>
+        <ul id="list_sidebar">
+        </ul>
+    </nav>
+    -->
+
+    <form method="POST" enctype="multipart/form-data" id="form_modulo">
+        <div id="contenuto" class="bordi_laterali pt15 mb15 pl5 pr5"></div>
+        <!-- Mostro gli importi associati -->
+
+        <div id="associazione_eventi_sezioni" class="hide" sp:if="!@eventi_associati_sezioni.blank?">{ @eventi_associati_sezioni }</div>
+        <div id="evento_pratica" class="hide" sp:if="!@codice_evento_da_pratiche.blank?">{ @codice_evento_da_pratiche }</div>
+        <div id="associazione_interventi_sezioni" class="hide" sp:if="!@interventi_associati_sezioni.blank?">{ @interventi_associati_sezioni }</div>
+        <div id="intervento_pratica" class="hide" sp:if="!@codice_intervento_da_pratiche.blank?">{ @codice_intervento_da_pratiche }</div>
+
+        <input type="hidden" id="array_id_riquadri_opzionali" name="array_id_riquadri_opzionali" value="{ (@riquadri_opzionali.blank? ? '' : @riquadri_opzionali ) }">
+
+        <div id="importi_modulo" sp:if="defined?(Pagamenti) != nil && !@importi_collegati.blank?">
+            <h3>Tabella Importi Dovuti</h3>
+            <table class="table table-bordered table-striped width_auto tabella_importi no-responsive">
+                <thead>
+                    <tr class="heading_row">
+                        <th></th>
+                        <th>Codice</th>
+                        <th>Descrizione</th>
+                        <th>Importo</th>
+                    </tr>
+                </thead>
+                <tbody sp:each_pair="@importi_collegati |tipo_obbligatorieta,array_importi|" class="{ tipo_obbligatorieta.id }">
+                    <tr sp:if="!@errore_importi_almeno_uno.blank? &&  tipo_obbligatorieta.id == 'almeno_uno'">
+                    <td colspan="4" class="{ @errore_importi_almeno_uno }">
+                        Errore: selezionare almeno uno dei seguenti importi.
+                    </td>
+                    </tr>
+                    <tr sp:if="!@errore_importi_solo_uno.blank? && tipo_obbligatorieta.id == 'solo_uno'">
+                    <td colspan="4" class="{ @errore_importi_solo_uno }">
+                        Errore: selezionare solo uno dei seguenti importi
+                    </td>
+                    </tr>
+
+                    <tr sp:each="array_importi |importo|">
+                        <td>
+                            <input type="checkbox" class="checkbox_importo { (tipo_obbligatorieta == 'obbligatorio' ? 'obbligatorio' : '') }" id="{ importo.id }" sp:attr-if="(tipo_obbligatorieta == 'obbligatorio' || (!@importi_ceccati.blank? && !@importi_ceccati[importo.id.to_s].blank?) ),checked,checked" name="importi_collegati[{ importo.id }]">
+                        </td>
+                        <td>
+                            { importo.codice }
+                        </td>
+                        <td>
+                            { importo.descrizione } { (importo.bollo ? '(include bollo)' : '') } 
+                        </td>
+                        <td class="importi">
+                            <div sp:if="importo.importo_utente" class="{ ( !@errori_importi.blank? ? @errori_importi[importo.id.to_s] : '') }">
+                                € <input type="text" class="importo_per_totale" name="importi[{ importo.id.to_s }]" value="{ (!@importi_selezionati.blank? && !@importi_selezionati[importo.id.to_s].blank? ? @importi_selezionati[importo.id.to_s].gsub('.','') : '') }"  />
+                            </div>
+                            <div sp:if="!importo.importo_utente" class="{ ( !@errori_importi.blank? ? @errori_importi[importo.id.to_s] : '') }">
+                                { ( importo.importo > 0 ? "€ "+importo.importo.lformat : "Gratuito" ) }
+                                <input sp:if="importo.importo > 0" type="hidden" class="importo_per_totale" name="importi[{ importo.id.to_s }]" value="{ importo.importo.to_s('F').gsub('.','') }" />
+                                <input sp:if="importo.importo == 0.0" type="hidden" class="importo_per_totale" name="importi[{ importo.id.to_s }]" value="0" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <strong>Totale: € <span id="totale_importi_modulo">{ (!totale_importi_selezionati.blank? ? totale_importi_selezionati.lformat : '') }</span></strong>
+                            <input type="hidden" id="totale_importi" name="totale_importi" value="">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <sp:run obj="@clone_widget" />
+        <sp:run sp:if="@sub_widgets" sp:each="@sub_widgets |s_w|" obj="s_w" />
+        <div class="bottom_screen_link clear_left mb15">
+        <input type="hidden" id="dimensioni" name="dimensioni" value="{ @dimensioni_da_db }" />
+        <div id="stato_modulo" class="hide">{ @stato }</div>
+        <div id="data_conferma_modulo" class="hide">{ @data_conferma_modulo }</div>
+
+        <span id="errori" class="hide">{ @errori }</span>
+
+            <tpl:pass sp:if="@standard">
+                <div sp:if="@stato.blank? || @stato == 'bozza'" class="alert alert-warning"><strong>Attenzione:</strong> una volta che il modulo viene confermato non è più possibile modificarlo</div>
+                <div class="back">
+                    <a href="{ @torna_indietro }" class="btn">Torna Elenco moduli</a>
+                </div>
+                <tpl:pass sp:if="@stato.blank? || @stato == 'bozza'">
+                    <button class="btn btn-success" type="submit" name="bozza" value="true">Salva Bozza</button>
+                    <!-- se ho la cat giuridica devo inserire esp lavorative e titoli studio-->
+                    <span sp:if="@da_completare">
+                        <button class="btn btn-success" id="confermato" type="submit" name="confermato" value="true">Conferma e completa Esperienze Lavorative e Titoli di Studio</button>
+                    </span>
+                    <span sp:if="!@da_completare">
+                        <span sp:if="!@da_firmare">
+                            <span sp:if="!@da_pagare">
+                                <!-- ci sono importi opzionali o ti tipo solo uno comunque -->
+                                <span sp:if="@importi_collegati_presenti">
+                                    <button class="btn btn-success" id="confermato" type="submit" name="confermato" value="true">Conferma e Procedi</button>
+                                </span>
+                                <span sp:if="!@importi_collegati_presenti">
+                                    <!-- caso senza firma e importi configurati -->
+                                    <button class="btn btn-success" id="confermato" type="submit" name="confermato" value="true">Salva e Invia</button>
+                                </span>
+                                
+                            </span>
+                            <span sp:if="@da_pagare">
+                                <button class="btn btn-success" id="confermato" type="submit" name="confermato" value="true">Conferma e Procedi</button>
+                            </span>
+                        </span>
+                        <span sp:if="@da_firmare">
+                            <button class="btn btn-success" id="confermato" type="submit" name="confermato" value="true">Conferma e Procedi</button>
+                        </span>
+                    </span>
+                </tpl:pass>
+            </tpl:pass>
+            <tpl:pass sp:if="@da_pratiche">
+                <div sp:if="!@url_allegati_pdf.blank?">
+                    <div sp:each="@url_allegati_pdf |all_pdf|">
+                        <br /><br />
+                        <a name="{ all_pdf['testo'] }" class="anchor_menu" testo="{ all_pdf['testo'] }">
+                        <object data="{ Moduli::ModuliController.http_s_url('download_pdf_embed?id='+@id_pratica+'&nome_file='+all_pdf['nome']) }" type="application/pdf" width="940" height="400">
+                            <embed src="{ Moduli::ModuliController.http_s_url('download_pdf_embed?id='+@id_pratica+'&nome_file='+all_pdf['nome']) }" type="application/pdf" width="940" height="400"/>
+                        </object>
+                        <br /><br />
+                    </div>
+                </div>
+                <input type="hidden" name="id_pratica" value="{ @id_pratica }">
+                <input type="hidden" name="proseguo" id="errori" value="true"> <!-- serve per il submit dal menu laterale -->
+
+                <div class="back">
+                    <a href="{ @url_ritorno }" id="torna_indietro" class="btn">Torna indietro</a>
+                </div>
+            
+                <button class="btn btn-success" type="submit" name="proseguo" id="submit_prosegui" value="true">Prosegui</button>
+                <br /><br />
+            </tpl:pass>
+            <tpl:pass sp:if="@da_iscrizioni">
+                <input type="hidden" name="id_iscrizione" value="{ @id_iscrizione }">
+                <input type="hidden" name="per_iscrizioni" id="errori" value="true"> <!-- serve per il submit dal menu laterale -->
+
+                <div class="back">
+                    <a href="{ @url_ritorno }" id="torna_indietro" class="btn">Torna indietro</a>
+                </div>
+            
+                <button class="btn btn-success" type="submit" name="per_iscrizioni" id="submit_per_iscrizioni" value="true">Prosegui</button>
+                <br /><br />
+            </tpl:pass>
+        </div> 
+    </form>
+
+    <!-- finestra modale per lista risultati -->
+
+
+    <div id="modal_caricamento" class="modal mio_modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Caricamento</h3>
+                </div>
+                <div class="modal-body">
+                    <h3>Attendere: compilazione del modulo in corso...</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

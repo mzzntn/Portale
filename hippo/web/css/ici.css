@@ -1,0 +1,167 @@
+/* stampa */
+.stampa{
+  font-family: Verdana, Tahoma, Arial, Times New Roman;
+}
+
+.stampa TD.label{
+  font-weight: bold;
+  background-color: #EEEEFF;
+  border: 1px solid black;
+}
+.stampa TD.labelRavv{
+  font-weight: bold;
+  background-color: #FFCCCC;
+  border: 1px solid black;
+}
+.stampa TD.dat{
+  background-color: #EEEEEE;
+  border: 1px solid black;
+}
+.stampa TD.datRavv{
+  background-color: #FFCCCC;
+  border: 1px solid black;
+}
+
+
+.stampa .riepilogo TH{
+  background-color: #EEEEFF;
+  border: 1px solid black;
+}
+
+.stampa .riepilogo TR{
+  background-color: #FFFFCC;
+  border: 1px solid black;
+}
+
+.bollettino{
+  border: 1px solid black;
+}
+
+.avviso{
+  background-color: #DFC3C3;
+  font-weight: bold;
+}
+
+.f24{
+	font-size: 0.7em;
+}
+
+TABLE.f24{
+	background-color: #e6f4fa;
+}
+
+.f24 TH{
+	color: #626262;
+	font-size: 0.6em;
+}
+
+.f24 TD{
+	background-color: white;
+	height: 1.3em;
+}
+
+.f24 .intestazione{
+	background-color: #bce4f4;
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 3px;
+}
+
+.f24 .codice_comune{
+	width: 15%;
+}
+
+.f24 .vuota{
+	empty-cells: hide;
+}
+
+.f24 TD{
+	border-right: 10px solid #e6f4fa;
+
+}
+
+.f24 TD.codice_comune{
+	
+	border-right: 25px solid #e6f4fa;
+}
+
+.f24 TD.codice_comune, .f24 TD.debito, .f24 TD.credito{
+	padding-left: 30px;
+	text-align: right;
+}
+
+.f24 TD.ravvedimento, .f24 TD.variato, .f24 TD.acconto, .f24 TD.saldo,
+.f24 TD.numero
+{
+	text-align: center;
+}
+
+.etichetta{
+	font-weight: bold;
+}
+
+.f24 TD.etichetta_totale, .f24 TD.etichetta_saldo, .f24 TD.etichetta_detrazione{
+	background-color: #e6f4fa;
+	
+}
+
+.f24 TD.etichetta_totale{
+	text-align: right;
+}
+
+.f24 TD.etichetta_detrazione{
+	border: 0px;
+	color: #626262;
+	font-size: 0.6em;
+	font-weight: bold;
+	padding-right: 0px;
+}
+
+.f24 TD.etichetta_saldo{
+	vertical-align: bottom;
+}
+
+.f24 TD.G, .f24 TD.H{
+	background-color: #e6f4fa;
+	font-weight: bold;
+	text-align: right;
+}
+
+.f24 TD.G .importo, .f24 TD.H .importo{
+	background-color: white;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+/* Ravvedimento */
+
+
+TABLE.posizione
+{
+font-family: Verdana, Arial;
+border-collapse: collapse;
+border: 2px outset #d5d5d5;
+background-color: #fafafa;
+font-size: smaller;
+}
+
+TABLE.posizione TD
+{
+padding: 4px;
+margin: 0;
+border: inset 1pt;
+}
+
+TABLE.posizione TH
+{
+padding: 4px;
+margin: 0;
+border: inset 1pt;
+background-color: #f0f0f0;
+}
+
+.avviso{
+  background-color: #fbfba5;
+  font-weight: bold;
+}

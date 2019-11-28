@@ -1,0 +1,92 @@
+<div id="moduli_container">
+	<div class="titolo_pagina">
+		<h3 class="verde pb10">Gestione Moduli Personali</h3>
+	</div>
+	<div sp:if="!@esito_azione.blank?" class="alert alert-success">
+    	{ @esito_azione }
+    </div>
+    <div sp:if="!@errore.blank?" class="alert alert-error alert-danger">
+    	{ @errore }
+    </div>
+	<div class="btn btn-success mb20">
+		<a href="{ @link_nuovo }">Nuovo Modulo</a>
+	</div>
+	<div sp:if="@moduli_compilati.blank?" class="alert alert-info">
+    	Non sono presenti moduli salvati.
+    </div>
+	<div sp:if="!@moduli_in_bozza.blank?" class="alert alert-warning">
+    	<strong>Sono presenti dei moduli Salvati in Bozza ma non ancora Confermati!</strong>
+    </div>
+    <div sp:if="!@moduli_da_pagare.blank?" class="alert alert-warning t_b_margin_15">
+    	<strong>Sono presenti dei moduli da pagare per essere inviati!<br />
+    		    Se hai già effettuato il pagamento, tieni presente che può volerci qualche minuto affinchè il modulo venga effettivamente inviato.<br/>
+    		    Il sistema infatti attende che arrivi la ricevuta telematica per considerare il pagamento concluso a tutti gli effetti. Qualora invece sia trascorso molto tempo dal momento in cui hai effettuato il pagamento, ti invitiamo a verificarne lo stato dalla sezione Pagamenti ed in particolare dalla voce 'Storico Pagamenti'. 
+    	</strong>
+    </div>
+
+	<div>
+	<!-- Imposto il numero di utenti per pagina che viene passato al js -->
+		<input type='hidden' id='items_per_page' value="5" />  
+		<!-- Imposto il numero di link alle pagine da mostrare nella navbar --> 
+		<input type='hidden' id='max_page_in_navbar' value="10"/>
+		<!-- the input fields that will hold the variables we will use -->  
+		<input type='hidden' id='current_page' />  
+		<input type='hidden' id='show_per_page' />
+
+		
+	    <table sp:if="!@moduli_compilati.blank?" class="table table-bordered table-striped width_auto pagination_content">
+			<thead>
+			    <tr class="heading_row">
+			    	<th>Istanza Nr.</th>
+			      	<th>Nome Modulo</th>
+			      	<th>Ultima modifica</th>
+			      	<th>Stato</th>
+			      	<th>Azioni</th>
+			    </tr>
+			</thead>
+		  	<tbody>
+				<tr sp:each="@moduli_compilati |modulo|" class="paginated_element">
+			    	<td class="text-center">
+			    		{ modulo.id }
+			     	</td>
+			    	<td>
+			      		{ modulo.tipo_modulo.nome }
+			     	</td>
+			     	<td>
+			      		{ modulo.obj_modified.strftime("%d/%m/%Y %H:%M:%S") }
+			     	</td>
+			     	<td class="evidenzia_stato { ( modulo.stato.blank? ? '' : modulo.stato.id ) }">
+			      		{ ( (modulo.stato != 'da_pratiche' && modulo.stato != 'da_iscrizioni' && modulo.stato != 'bozza' && modulo.completare_servizi_titoli == true) ? "Da Completare" : modulo.stato ) }<br />
+			      		<span sp:if="modulo.stato == 'inviato' && modulo.protocollo_id.blank?">{ ( modulo.inviato.blank? ? '' : modulo.inviato.strftime('%d/%m/%Y %H:%M:%S') ) }</span>
+			      		<span sp:if="modulo.stato == 'inviato' && !modulo.protocollo_id.blank?">prot. { modulo.protocollo_numero } del { modulo.protocollo_data.lformat(:short) }</span>
+			     	</td>
+			     	<td class="text-center">
+			    		<a sp:if="modulo.stato != 'da_pratiche' && modulo.stato != 'da_iscrizoni' && modulo.stato == 'bozza' " href="{ Moduli::ModuliController.http_s_url(modulo.tipo_modulo.id.to_s+'/modulo/'+modulo.id.to_s) }" title="Visualizza"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+			    		&nbsp;
+			    		<a sp:if="modulo.completare_servizi_titoli.blank? && modulo.stato != 'da_pratiche' && modulo.stato != 'da_iscrizioni' && modulo.stato == 'da_firmare'" href="{ Moduli::ModuliController.http_s_url('firma_modulo?id_modulo='+modulo.id.to_s) }" title="Firma"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+
+			    		<a sp:if="modulo.completare_servizi_titoli.blank? && defined?(Pagamenti) != nil && modulo.stato != 'da_pratiche' && modulo.stato != 'da_iscrizioni' && (modulo.stato == 'da_pagare')" href="{ Pagamenti::PagamentiController.http_s_url() }" title="Paga"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+
+			    		<a sp:if="modulo.completare_servizi_titoli == true && modulo.stato != 'bozza'" href="{ Moduli::ModuliController.http_s_url('servizi_svolti?id_modulo='+modulo.id.to_s) }" title="Completa"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+
+			     	<!--</td>
+				<td class="text-center">-->
+			     		<a sp:if="!modulo.stato.blank? && modulo.stato.id != 'bozza' && modulo.stato.id != 'confermato' && modulo.completare_servizi_titoli.blank?" title="Scarica" href="{ Moduli::ModuliController.http_s_url(modulo.id.to_s+'/stampa/download') }" ><!--Scarica--> <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
+			     	<!--</td>
+				<td class="text-center">-->
+			     		<a sp:if="!modulo.stato.blank? && modulo.stato.id != 'inviato'" title="Cancella" href="{ Moduli::ModuliController.http_s_url(modulo.id.to_s+'/cancella') }" ><i class="glyphicon glyphicon-remove"></i></a>
+			     	</td>
+		   		</tr>
+		   	</tbody>
+		</table>
+		<div class="page_navigation pagination"><ul></ul></div>
+	    </div>
+			
+		<div class="row">
+			<div class="back col-sm-2">
+	        	<a href="{ Portal.http_s_url }" class="btn">Torna al portale</a>
+	    	</div>
+	    </div>
+
+
+</div>

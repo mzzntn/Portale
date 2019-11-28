@@ -1,0 +1,222 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p>
+        <h2 class="align_center">QUESTIONARIO DI RILEVAZIONE DI CONDOTTE DI VALDALISMO E/O ABBANDONO ILLEGALE DI RIFIUTI</h2>
+    </p>
+
+
+    <strong>1) Hai mai assistito personalmente ad episodi di abbandono illegale di rifiuti sul territorio urbano</strong>
+    <moduli:gruppo id="assistito_abbandono" titolo="" class="">
+    	<moduli:opzioni id="scelta_assistito_abbandono" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_assistito_abbandono_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_assistito_abbandono_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>2) Ti risulta che questi episodi si stanno tutt'ora verificando?</strong>
+    <moduli:gruppo id="verificando_tuttora" titolo="" class="">
+    	<moduli:opzioni id="scelta_verificando_tuttora" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_verificando_tuttora_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_verificando_tuttora_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>3) Di fronte a questa situazione ti senti (segna una o più risposte):</strong>
+    <moduli:gruppo id="sentimento" titolo="" class="">
+    	<moduli:opzioni id="tipo_sentimento" class="lista_checkbox_vertical">
+    		<moduli:opzione id="preoccupato">preoccupato/a di essere riconosciuto/a</moduli:opzione>
+            <moduli:opzione id="minacciato">minacciato/a di ritorsioni</moduli:opzione>
+            <moduli:opzione id="leso">leso/a come cittadino di Vasto </moduli:opzione>
+            <moduli:opzione id="esposto">esposto a rischi di igiene pubblica</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>4) Questa situazione si verifica o si è verificata per</strong>
+    <moduli:gruppo id="verificata_per" titolo="" class="">
+    	<moduli:opzioni id="tipo_verificata_per" class="lista_checkbox_vertical">
+    		<moduli:opzione id="meno_settimana">meno di una settimana </moduli:opzione>
+            <moduli:opzione id="una_tre_set">da una a tre settimane </moduli:opzione>
+            <moduli:opzione id="piu_tre">da più di tre settimane</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>5) Quante volte si è verificata</strong>
+    <moduli:gruppo id="periodicita" titolo="" class="">
+    	<moduli:opzioni id="scelta_periodicita" class="lista_checkbox_vertical">
+    		<moduli:opzione id="alcune_mese">alcune volte in un mese </moduli:opzione>
+            <moduli:opzione id="una_sett">una volta alla settimana </moduli:opzione>
+            <moduli:opzione id="alcune_sett">più volte durante la settimana</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>6) Hai mai segnalato una situazione di abbandono illegale di rifiuti o di vandalismo?</strong>
+    <moduli:gruppo id="mai_segnalato" titolo="" class="">
+    	<moduli:opzioni id="scelta_mai_segnalato" class="lista_checkbox_vertical">
+    		<moduli:opzione id="no_luogo_distante">Mai, perché si è verificata in un luogo diverso e distante dalla mia residenza </moduli:opzione>
+            <moduli:opzione id="no_anonimato">Mai, perché non ho avuto garanzie circa l’anonimato della mia segnalazione</moduli:opzione>
+            <moduli:opzione id="si_quartiere">Sì, perché ritengo che potrebbe verificarsi anche nel mio quartiere di residenza</moduli:opzione>
+            <moduli:opzione id="si_documentato">Sì, perché ho documentato fotograficamente la situazione con un esposto contro ignoti alle autorità</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>7) La persona o le persone che ritieni responsabili di condotte di vandalismo e/o abbandono illegale di rifiuti hanno</strong>
+    <moduli:gruppo id="eta_responsabili" titolo="" class="">
+    	<moduli:opzioni id="scelta_eta_responsabili" class="lista_checkbox_vertical">
+    		<moduli:opzione id="molto_giovane">un’età molto giovane (dai 10 ai 15 anni)</moduli:opzione>
+            <moduli:opzione id="giovane">un’età giovane (dai 15 ai 20 anni)  </moduli:opzione>
+            <moduli:opzione id="adulto_giovane">un’età adulta giovane (dai 20 ai 30 anni)  </moduli:opzione>
+            <moduli:opzione id="adulto">un’età adulta (dai 30 ai 50 anni) </moduli:opzione>
+            <moduli:opzione id="non_so">non so</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>8) C'è stato qualcun altro che ha assistito ad uno o più episodi anche senza intervenire?</strong>
+    <moduli:gruppo id="altro_assistito" titolo="" class="">
+    	<moduli:opzioni id="scelta_altro_assistito" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_altro_assistito_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_altro_assistito_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>9) Hai mai assistito ad una reazione aggressiva da parte dei responsabili di vandalismo e/o abbandono illegale di rifiuti?</strong>
+    <moduli:gruppo id="reazione_aggressiva" titolo="" class="">
+    	<moduli:opzioni id="scelta_reazione_aggressiva" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_reazione_aggressiva_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_reazione_aggressiva_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>10) In quale luogo o contesto sono state da te verificate condotte di vandalismo o abbandono di rifiuti (segna una o più risposte)</strong>
+    <moduli:gruppo id="luogo_abbandono" titolo="" class="">
+    	<moduli:opzioni id="scelta_luogo_abbandono" class="lista_checkbox_vertical">
+    		<moduli:opzione id="edif_abbandonato">All'interno di un’area e/o di un edificio in abbandono</moduli:opzione>
+            <moduli:opzione id="casa_lavoro">Nel tragitto tra casa e lavoro o tra casa e scuola</moduli:opzione>
+            <moduli:opzione id="strada_alto_scor">In strade ad alto scorrimento </moduli:opzione>
+            <moduli:opzione id="luoghi_ritrovo">Nei luoghi di ritrovo all'aperto (piazza, parco, etc)</moduli:opzione>
+            <moduli:opzione id="strada_basso_scor">In luoghi poco visibili (vie poco affollate)</moduli:opzione>
+            <moduli:opzione id="vicino_centri_spor">In aree vicine a Centri sportivi o di aggregazione</moduli:opzione>
+            <moduli:opzione id="spiaggia">In spiaggia</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>11) Se ha un’età ricompresa tra 12 e 18 anni, hai parlato degli episodi di vandalismo o abbandono illegale di rifiuti, per chiedere l'aiuto di qualcuno?</strong>
+    <moduli:gruppo id="chiesto_aiuto" titolo="" class="">
+    	<moduli:opzioni id="scelta_chiesto_aiuto" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_chiesto_aiuto_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_chiesto_aiuto_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>se sì:</strong>
+    <moduli:gruppo id="aiuto_a" titolo="" class="">
+    	<moduli:opzioni id="scelta_aiuto_a" class="lista_checkbox_vertical">
+    		<moduli:opzione id="coetaneo">ad un tuo coetaneo</moduli:opzione>
+            <moduli:opzione id="insegnante">ad un insegnante</moduli:opzione>
+            <moduli:opzione id="familiare">ad un familiare</moduli:opzione>
+            <moduli:opzione id="adulto">ad un altro adulto </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>12) Quale o quali tra queste situazioni ti è capitata, dopo averne parlato?</strong>
+    <moduli:gruppo id="situaz_dopo" titolo="" class="">
+    	<moduli:opzioni id="tipo_situaz_dopo" class="lista_checkbox_vertical">
+    		<moduli:opzione id="deriso">Vengo preso in giro </moduli:opzione>
+            <moduli:opzione id="escluso">Vengo escluso dal gruppo</moduli:opzione>
+            <moduli:opzione id="idealista">Vengo considerato un/una idealista perché tanto anche segnalando non si verificano interventi di controllo, salvo in caso di posizionamento di telecamere </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>13) Sei</strong>
+    <moduli:gruppo id="sesso" titolo="" class="">
+    	<moduli:opzioni id="tipo_sesso" class="lista_checkbox_vertical">
+    		<moduli:opzione id="maschio">maschio</moduli:opzione>
+            <moduli:opzione id="femmina">femmina</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>14) Quanti anni hai?</strong>
+    <moduli:gruppo id="anni" titolo="" class="">
+    	<moduli:opzioni id="int_anni" class="lista_checkbox_vertical">
+    		<moduli:opzione id="meno_14">meno di 14</moduli:opzione>
+            <moduli:opzione id="14_18">14 - 18</moduli:opzione>
+            <moduli:opzione id="piu_18">Più di 18</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>15) Frequenti la Scuola o l’Università?</strong>
+    <moduli:gruppo id="scuola" titolo="" class="">
+    	<moduli:opzioni id="tipo_scuola" class="lista_checkbox_vertical">
+    		<moduli:opzione id="secondaria_primo">Scuola Secondaria primo grado (Medie),</moduli:opzione><moduli:dato id="istituto_primo_grado">Istituto </moduli:dato> 
+            <moduli:opzione id="secondaria_secondo">Scuola Secondaria  secondo grado (Superiori) </moduli:opzione><moduli:dato id="istituto_secondo_grado">Istituto </moduli:dato>
+            <moduli:opzione id="universita"></moduli:opzione><moduli:dato id="nome_uni">Università</moduli:dato>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>16) Indipendentemente dal vandalismo e dall’abbandono illegale di rifiuti, hai assistito a gesti o ad atteggiamenti di prepotenza o aggressività verso altri, su aree pubbliche del territorio di Vasto?</strong>
+    <moduli:gruppo id="gesti_aggress" titolo="" class="">
+    	<moduli:opzioni id="scelta_gesti_aggress" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_gesti_aggress_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_gesti_aggress_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>17) Queste situazioni di aggressività in pubblico, secondo te, si verificano spesso?</strong>
+    <moduli:gruppo id="verifica_spesso" titolo="" class="">
+    	<moduli:opzioni id="scelta_verifica_spesso" class="lista_checkbox_vertical">
+    		<moduli:opzione id="scelta_verifica_spesso_si">si</moduli:opzione>
+            <moduli:opzione id="scelta_verifica_spesso_no">no</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>18) Quali sono stati gli episodi cui hai assistito, senza essere visto?</strong>
+    <moduli:gruppo id="episodi" titolo="" class="">
+    	<moduli:opzioni id="tipo_episodi" class="lista_checkbox_vertical">
+    		<moduli:opzione id="offese">Offese/Insulti (razziali, socio-politiche-religiose)</moduli:opzione>
+            <moduli:opzione id="prepotenze">Prepotenze fisiche (aggressioni, molestie) </moduli:opzione>
+            <moduli:opzione id="minacce">Minacce</moduli:opzione>
+            <moduli:opzione id="emarginazione">Condotte di allontanamento ed emarginazione </moduli:opzione>
+            <moduli:opzione id="diffamazioni">Diffamazioni</moduli:opzione>
+            <moduli:opzione id="danneggiamenti">Danneggiamenti</moduli:opzione>
+            <moduli:opzione id="molestie">Molestie sessuali </moduli:opzione>
+            <moduli:opzione id="pubbl_non_autoriz">Pubblicazioni di informazioni e foto non autorizzate attraverso i social network</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>19) Sei mai stato coinvolto, come vittima diretta, in episodi di aggressività correlati ad un determinato contesto ambientale?</strong>
+    <moduli:gruppo id="vittima_episodi" titolo="" class="">
+    	<moduli:opzioni id="scelta_vittima_episodi" class="lista_checkbox_vertical">
+    		<moduli:opzione id="interno_scuola">Si, all'interno della scuola  </moduli:opzione>
+            <moduli:opzione id="trag_casa_scuola">Si, nel tragitto tra casa e scuola</moduli:opzione>
+            <moduli:opzione id="ritrovo_aperto">Si, in luoghi di ritrovo all'aperto (piazza, parco, etc):</moduli:opzione><moduli:dato id="luogo_vittima" class="input_bigwidth">indicare quali</moduli:dato>
+            <moduli:opzione id="poco_freq">Si, in luoghi poco frequentati di Vasto (vie poco affollate)</moduli:opzione>
+            <moduli:opzione id="trasporto_pubb">Si, sui mezzi di trasporto (autobus)</moduli:opzione>
+            <moduli:opzione id="centri_aggreg">Si in centri di aggregazione o centri sportivi</moduli:opzione>
+            <moduli:opzione id="ambiente_lavoro">Si in ambiente di lavoro</moduli:opzione>
+            <moduli:opzione id="mezzi_comunicazione">Si su sms, e-mail, blog oppure su social network </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>20) Se non hai sporto formale denuncia alle autorità, hai comunque riferito dell’aggressione subita, parlandone con una persona di fiducia?</strong>
+    <moduli:gruppo id="riferito_aggressione" titolo="" class="">se si:
+    	<moduli:opzioni id="riferito_aggressione_a" class="lista_checkbox_vertical">
+    		<moduli:opzione id="a_coetaneo">ad un coetaneo (compagno di scuola o collega di lavoro)</moduli:opzione>
+            <moduli:opzione id="ad_insegnante">ad un insegnante</moduli:opzione>
+            <moduli:opzione id="a_familiare">ad un familiare</moduli:opzione>
+            <moduli:opzione id="altro_adulto">ad un altro adulto</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <hr>
+
+   	<div class="riga lista_input_oriz">
+    	<moduli:dato id="nome">Nome: </moduli:dato><moduli:dato id="cognome">Cognome: </moduli:dato>
+    </div>
+    <div class="riga lista_input_oriz">
+    	<moduli:dato id="email" class="label_bigwidth input_mediumwidth">Indirizzo di posta elettronica: </moduli:dato>
+    </div>
+
+
+
+</moduli:modulo>

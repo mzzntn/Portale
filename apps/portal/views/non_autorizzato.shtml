@@ -1,0 +1,9 @@
+<div>
+    <h4 class="error">Non è possibile accedere alla sezione richiesta.</h4>
+    <div sp:if="@servizio && @servizio == 'richesto'">
+        L'amministratore deve ancora abilitare l'accesso a questo servizio. Riceverai un'e-mail non appena l'accesso sarà abilitato.
+    </div>
+    <div sp:if="@servizio && @servizio.stato == 'configurazione'">
+        Il servizio richiesto è attivo, ma devi completare la <a href="{ @url_configurazione_servizio }">configurazione.
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div id='user_box' class="menu_box">
+    <h3>Sezione privata</h3>
+    <div class="menucnt">
+        <div id="riquadro-utente" sp:if='@utente_portale'>
+            <span id="user_welcome">Benvenuto, { @utente_portale }.</span>
+            <ul class="list-unstyled">
+                <li sp:if="defined?(Comunicazioni) != nil">
+                    <a href="{ Comunicazioni::ComunicazioniController.http_s_url('elenco_privato') }">Comunicazioni private</a>
+                    <span class="badge badge-warning">({ Comunicazioni::ComunicazioniController.comunicazioni_private_non_lette(@utente_portale.id) })</span>
+                    
+                </li>
+                <li sp:if="!Spider.conf.get('notifiche.cron').blank?">
+                    <a href="{ Portal::PortalController.http_s_url('notifiche') }">Attivazione Notifiche</a>
+                </li>
+                <li sp:if="Spider.conf.get('portal.abilita_dossier_cittadini')"><a href="{ Portal::PortalController.http_s_url('dossier_utente') }">Dossier personale</a></li>
+                <li><a href="{ Portal::PortalController.http_s_url('dettagli_utente') }">I tuoi dati</a></li>
+                <li><a href="{ Portal::PortalController.http_s_url('autenticazione/logout') }" class="btn btn-logout">Logout</a></li>
+            </ul>
+        </div>
+        <div sp:if="!@utente_portale" id="riquadro-accesso">
+    		<ul class="list-unstyled">
+    		    <li sp:if="@autenticazione_interna && @registrazione_utenti">
+    		        <a href="{ Portal::PortalController.http_s_url('registrazione') }">Registrati</a>
+    		    </li>
+            	<li><a href="{ Portal::PortalController.http_s_url('autenticazione') }">Effettua l'accesso</a></li>
+    		</ul>
+        </div>
+    </div>
+</div>

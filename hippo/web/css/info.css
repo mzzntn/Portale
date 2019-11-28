@@ -1,0 +1,58 @@
+BODY{
+}
+
+
+.titolo{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.sottotitolo{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight:  bold;
+}
+.txt_giust{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+	text-align: justify;
+	color: #284d6d;
+}
+.txt_standard{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+	color: #284d6d;
+}
+.txt_standard_underline{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+	color: #284d6d;
+	text-decoration: underline;
+}
+.txt_grassetto{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+  font-weight:  bold;
+	color: #284d6d;
+}
+.txt_grassetto_bkg{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+  font-weight:  bold;
+	color: #284d6d;
+	background-color:#e2e2e2;
+}
+.txt_grassetto_underline{
+ font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+  font-weight:  bold;
+	color: #284d6d;
+	text-decoration: underline;
+}
+.txt_grassetto_bkg_turchese{
+ font-family: Georgia, "Times New Roman", Times, serif;
+  font-size:  10px;
+  font-weight:  bold;
+	color: #284d6d;
+	background-color:#7ba8ce;
+}

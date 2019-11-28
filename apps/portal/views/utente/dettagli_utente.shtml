@@ -1,0 +1,346 @@
+<div class="row { (@layout_web ? '' : 'centra_contenuto') }">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row mb20 mt20">
+            <div class="{ (@layout_web ? 'col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1' : '') }">
+                    <div id="indietro" class="back">
+                        <a href="{ Portal::PortalController.http_s_url }" class="btn btn-default { (@layout_web ? '' : 'btn-lg') }">Torna</a>
+                    </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div sp:if="!@modifica" class="col-lg-10 col-lg-offset-1 dettagli_utente">
+                <div class="alert alert-danger" sp:if="!@errore_strong_auth.blank?">
+                    { @errore_strong_auth }
+                </div>
+                <div class="alert alert-success" sp:if="!@dati_modificati.blank?">
+                    { @dati_modificati }
+                </div>
+                <div>
+                    <h3 class="verde"><span>{ @utente.nome }</span> <span>{ @utente.cognome }</span></h3>
+                </div>
+                <div sp:if="Spider.conf.get('portal.abilita_gdpr_utente')">
+                    <a class="btn btn-primary { (@layout_web ? '' : 'btn-lg') }" href="{ Portal::PortalController.http_s_url('conferma_gdpr') }">{ (@layout_web ? 'Gestione consenso al trattamento dei dati' : 'Gestione GDPR') }</a>
+                </div>
+                <br>
+                <div class="dettagli"><strong>Stato:</strong> <em>{ @utente.stato.to_s }</em></div>
+                <p>
+                    <a href="{ Portal::PortalController.http_s_url('servizi') }" class="btn btn-success { (@layout_web ? '' : 'btn-lg') } mt10">Gestisci i tuoi servizi</a>
+                </p>
+                <div class="row dettagli mb40">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3>Credenziali accesso</h3>
+                        <div class="credenziale_accesso center-block" sp:if="@autenticazioni[:login]">
+                            <h5>Accesso con nome utente e password.</h5>
+                            <p>
+                                <span class="label-inverse">Nome utente:</span>
+                                <span class="dato">{ @autenticazioni[:login].username }</span>
+                            </p>
+                            <div class="alert alert-warning" sp:if="@messaggio_cambia_password">{ @messaggio_cambia_password }</div>
+                            <div sp:if="(@password_libera || @password_cambiabile) && !@cambia_password" class="mt10">
+                                <a sp:if="@link_cambio_password_attivo" href="?cambia_password" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }">Cambia password</a>
+                                <span sp:if="@link_cambio_password_attivo.blank?">Cambia password</span>
+                            </div>
+                            
+                            <div id="cambio_password" class="cambio_password { (@layout_web ? '' : 'col-md-4 col-md-offset-4') }" sp:if="(@password_libera || @password_cambiabile) && @cambia_password">
+                                <div class="alert alert-danger mt10" sp:if="@errore_cambia_password">
+                                    { @errore_cambia_password }
+                                </div>
+                                <form action="" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="password" class="col-sm-4 control-label">Scegli una password</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="form-group">
+                                        <label for="password2" class="col-sm-4 control-label">Ripeti la password</label>
+                                        <div class="col-sm-8">
+                                            <input type="password" name="password2" class="form-control" id="password2" placeholder="Ripeti Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="btn btn-success { (@layout_web ? '' : 'btn-lg') }" type="submit" name="submit" value="Cambia password" />
+                                        <a sp:if="@link_cambio_password_attivo" href="/portal/dettagli_utente" class="btn btn-default { (@layout_web ? '' : 'btn-lg') }">Annulla</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 credenziale_accesso" sp:each="@providers |provider|">
+                        <h5>{ provider.details[:nome] }</h5>
+                    </div>
+                </div>
+        
+                <div sp:if="true || @disabilita_comunicazioni" class="row dettagli mb40">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3>Stato Invio Comunicazioni</h3>
+                        <div class="riga stato_invio_notifiche{ (@layout_web ? '' : '_lg') } ">
+                            <strong>Stato corrente:</strong> { ( @utente.disabilita_comunicazioni ? '<span class=\'label label-success\'>Disabilitato</span>' : '<span class=\'label label-success\'>Abilitato</span>') }
+                        </div>
+                        <a href="{ ( @utente.disabilita_comunicazioni ? Portal::PortalController.http_s_url('abilita_comunicazioni') : Portal::PortalController.http_s_url('disabilita_comunicazioni')) }" class="btn btn-default { (@layout_web ? '' : 'btn-lg') } mt10">{ ( @utente.disabilita_comunicazioni ? 'Abilita' : 'Disabilita') }</a>
+                    </div>
+                </div>
+            
+                <div class="row dettagli mb10">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="mb20">Dati Registrazione</h3>
+                        <h4> Dati Anagrafici <span sp:if="!@utente.ditta.blank?">Referente</span></h4> 
+                        <div class="riga">
+                            <span class="label-inverse">Nome e cognome:</span>
+                            <span class="dato">{ @utente.nome }</span>
+                            <span class="dato">{ @utente.cognome }</span>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">Codice fiscale:</span>
+                            <span class="dato">{ @utente.codice_fiscale }</span>
+                            <span class="label-inverse">Sesso:</span>
+                            <span class="dato">{ @utente.sesso }</span>
+                        </div>
+                        <div class="riga">                
+                            <span class="label-inverse">Comune di nascita:</span>
+                            <span class="dato">{ @utente.comune_nascita }</span>
+                            <tpl:pass sp:if="Spider.conf.get('portal.province_tabellate')" >
+                                (<span class="dato">{ @utente.provincia_nascita_tab }</span>)
+                            </tpl:pass>
+                            <tpl:pass sp:if="!Spider.conf.get('portal.province_tabellate')" >
+                                (<span class="dato">{ @utente.provincia_nascita }</span>)
+                            </tpl:pass>
+                        </div>
+                        <div class="riga">                
+                            <span class="label-inverse">Comune di residenza:</span>
+                            <span class="dato">{ @utente.comune_residenza }</span>
+                            <tpl:pass sp:if="Spider.conf.get('portal.province_tabellate')" >
+                                (<span class="dato">{ @utente.provincia_residenza_tab }</span>)
+                            </tpl:pass>
+                            <tpl:pass sp:if="!Spider.conf.get('portal.province_tabellate')" >
+                                (<span class="dato">{ @utente.provincia_residenza }</span>)
+                            </tpl:pass>
+                            
+                        </div>
+                        <div class="riga" sp:if="@utente.tipo_documento">
+                            <span class="label-inverse">Documento:</span>
+                            <span class="dato">{ @utente.tipo_documento }</span> n° <span class="dato">{ @utente.numero_documento }</span>
+                                rilasciato il <span class="dato">{ @utente.data_documento ? @utente.data_documento.lformat(:short) : '' }</span>
+                                    da <span class="dato">{ @utente.documento_rilasciato }</span>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">E-mail:</span>
+                            <span class="dato">{ @utente.email }</span>
+                            <div sp:if="@modifica_email_pendente">
+                                <div>
+                                    In attesa di conferma nuova e-mail: 
+                                    <span class="dato">{ @modifica_email_pendente.dopo }</span>
+                                </div>
+                                <div>
+                                    <a href="{ Portal.http_s_url('controllo_email') }">Invia nuova e-mail di verifica</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="riga" sp:if="!@utente.cellulare.blank? || @modifica_cellulare_pendente">
+                            <span class="label-inverse">Cellulare:</span>
+                            <span class="dato">
+                                { @utente.cellulare }
+                                <tpl:pass sp:if="@utente.cellulare_confermato">(confermato)</tpl:pass>
+                            </span>
+                            <div sp:if="!@utente.cellulare_confermato? && @modifica_cellulare_pendente">
+                                <div>
+                                    In attesa di conferma 
+                                    <tpl:pass sp:if="@modifica_cellulare_pendente.dopo != @utente.cellulare">
+                                        nuovo numero: 
+                                        <span class="dato">{ @modifica_cellulare_pendente.dopo }</span>
+                                    </tpl:pass>
+                                </div>
+                                <p>
+                                    <div>
+                                        <div class="mb15">
+                                            <a class="btn btn-primary { (@layout_web ? '' : 'btn-lg') }" href="{ Portal.http_s_url('controllo_cellulare') }?invia">Invia nuovo sms di verifica</a>
+                                        </div>
+                                        <div>
+                                            <a class="btn btn-primary { (@layout_web ? '' : 'btn-lg') }" href="{ Portal.http_s_url('controllo_cellulare') }">Inserisci codice di verifica</a>
+                                        </div>        
+                                    </div>
+                                </p>
+                            </div>
+                            <div sp:if="@invio_sms_attivo && !@modifica_cellulare_pendente && (!@utente.cellulare_confermato && Spider.conf.get('portal.conferma_cellulare')) ">
+                                Questo numero di cellulare non è confermato. 
+                                <a href="{ Portal.http_s_url('controllo_cellulare') }">Conferma il numero di cellulare</a>.
+                            </div>
+                        </div>
+                        
+                        <div class="riga">
+                            <tpl:pass sp:if="!@utente.telefono.blank?">
+                                <span class="label-inverse">Telefono:</span>
+                                <span class="dato">{ @utente.telefono }</span>
+                            </tpl:pass>
+                            <tpl:pass sp:if="!@utente.fax.blank?">
+                                <span class="label-inverse">Fax:</span>
+                                <span class="dato">{ @utente.fax }</span>
+                            </tpl:pass>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row dettagli mb10" sp:if="!@utente.ditta.blank?" >
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h4>Dati Azienda </h4> 
+                        <div class="riga">
+                            <span class="label-inverse">Ragione Sociale:</span>
+                            <span class="dato">{ @utente.ditta.ragione_sociale }</span>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">Partita IVA:</span>
+                            <span class="dato">{ @utente.ditta.partita_iva }</span>
+                        </div>
+                        <div class="riga">                
+                            <span class="label-inverse">Codice Fiscale Azienda:</span>
+                            <span class="dato">{ @utente.ditta.codice_fiscale_azienda }</span>
+                        </div>
+                        <div class="riga">                
+                            <span class="label-inverse">Indirizzo Azienda:</span>
+                            <span class="dato">{ @utente.ditta.indirizzo_azienda }, { @utente.ditta.civico_azienda } ({ @utente.ditta.cap_azienda })</span>
+                        </div>
+                        <div sp:if="Spider.conf.get('portal.comuni_province_tabellate')" >
+                            <div class="riga">                
+                                <span class="label-inverse">Provincia Azienda:</span>
+                                <span class="dato">{ @utente.ditta.provincia_azienda_tab }</span>
+                            </div>
+                            <div class="riga">
+                                <span class="label-inverse">Comune Azienda:</span>
+                                <span class="dato">{ @utente.ditta.comune_azienda_tab }</span>
+                            </div>
+                        </div>
+                        <div sp:if="Spider.conf.get('portal.province_tabellate')" >
+                            <div class="riga">                
+                                <span class="label-inverse">Provincia Azienda:</span>
+                                <span class="dato">{ @utente.ditta.provincia_azienda_tab }</span>
+                            </div>
+                            <div class="riga">
+                                <span class="label-inverse">Comune Azienda:</span>
+                                <span class="dato">{ @utente.ditta.comune_azienda }</span>
+                            </div>
+                        </div>
+                        <div sp:if="!Spider.conf.get('portal.comuni_province_tabellate') && !Spider.conf.get('portal.province_tabellate')">                
+                            <div class="riga">
+                                <span class="label-inverse">Provincia Azienda:</span>
+                                <span class="dato">{ @utente.ditta.provincia_azienda }</span>
+                            </div>
+                            <div class="riga">
+                                <span class="label-inverse">Comune Azienda:</span>
+                                <span class="dato">{ @utente.ditta.comune_azienda }</span>
+                            </div>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">Telefono Azienda:</span>
+                            <span class="dato">{ @utente.ditta.telefono_azienda }</span>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">Fax Azienda:</span>
+                            <span class="dato">{ @utente.ditta.fax_azienda }</span>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">E-Mail Azienda:</span>
+                            <span class="dato">{ @utente.ditta.email_azienda }</span>
+                        </div>
+                        <div class="riga">
+                            <span class="label-inverse">Pec Azienda:</span>
+                            <span class="dato">{ @utente.ditta.pec_azienda }</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="?modifica" class="btn btn-success { (@layout_web ? '' : 'btn-lg') } mt10">Modifica dati registrazione</a></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div sp:if="@modifica" class="col-lg-10 col-lg-offset-1 form_mod_dati_utente">
+                <!--- Carico in tag nascosto campi per bloccare input -->
+                <span id="attributi_eidas" class="hide hidden">{ @attributi_eidas }</span>
+                <span class="hide hidden" sp:if="@provider_utente" id="provider_utente">{ @provider_utente }</span>
+                <div sp:if="@completa_dati">
+                    <div class="alert alert-warning" id="dati_da_completare">
+                        Completa i dati anagrafici per poter utilizzare i servizi on line.
+                    </div>
+                    <div class="hide hidden" sp:if="@blocca_campi" id="blocca_campi"></div>
+                    <span sp:if="@doc_ident_da_spid" id="doc_da_spid"></span>
+                </div>
+                <!--- Se uso una auth esterna e da conf devo bloccare i dati visualizzo il div per far partire il js che mette readonly gli input --->
+                <div class="hide hidden" sp:if="@blocca_campi && @utente_corrente_esterno" id="blocca_campi"></div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <div class="alert alert-danger" sp:if="!@errore_strong_auth.blank?">
+                        { @errore_strong_auth }
+                    </div>
+        
+                    <div sp:if="@utente.confermato? && (@utente.respond_to?(:utente_login) && !@utente.utente_login.nil?)" class="alert alert-warning">
+                        <div class="attenzione"><strong>Attenzione</strong>:</div>
+                        <div>
+                            Se si modificano i dati anagrafici,
+                            l'account dovrà essere nuovamente confermato dall'amministratore.
+                        </div>
+                    </div>
+        
+                    <div sp:if="!@dati_da_idp.blank?" class="alert alert-warning">
+                        Attenzione: i dati { @dati_da_idp.join(", ") } verranno sovrascritti ad ogni accesso per garantire l'allineamento delle informazioni con quelle del tuo sistema di gestione dell'identità. Eventuali modifiche avranno effetto solo per la sessione corrente.
+                    </div>
+        
+                    <div sp:if="!@servizi_utente_confermato.blank?" class="alert alert-warning">
+                        <tpl:pass sp:if="@servizi_utente_confermato.length > 1">I servizi</tpl:pass>
+                        <tpl:pass sp:if="@servizi_utente_confermato.length == 1">Il servizio</tpl:pass>
+                        { Spider::I18n.list(@servizi_utente_confermato.map{ |s| "&quot;#{s.to_s}&quot;"}) }
+                        <tpl:pass sp:if="@servizi_utente_confermato.length > 1">non saranno accessibili</tpl:pass>
+                        <tpl:pass sp:if="@servizi_utente_confermato.length == 1">non sarà accessibile</tpl:pass>
+                        finché l'account non sarà stato confermato.
+                    </div>
+                </div>
+                
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <forms:form model="@model" pk="@id_form" id="form_registrazione" auto_redirect="true" >
+                        <form:fields>
+                            <input type="hidden" value="{ @_parent.mode }" name="mode" />
+                            <input type="hidden" name="modifica" value="">
+                            <fieldset sp:if="@_parent.mode == :azienda " class="ui-corner-all">
+                                <legend>Dati persona giuridica</legend>
+                                <forms:element_row element=":ragione_sociale" required="true" />
+                                <forms:element_row element=":partita_iva" required="true" />
+                                <forms:element_row element=":codice_fiscale_azienda" required="true"/>
+                                <forms:element_row element=":indirizzo_azienda" required="true"/>
+                                <forms:element_row element=":civico_azienda" required="true"/>
+                                <forms:element_row element=":cap_azienda" required="true"/>
+                                <tpl:pass sp:if="@comuni_prov_tabellati">
+                                    <forms:element_row element=":provincia_azienda_tab" required="true"/>
+                                    <forms:element_row element=":comune_azienda_tab" required="true"/>
+                                </tpl:pass>
+                                <tpl:pass sp:if="@prov_tabellate">
+                                    <forms:element_row element=":provincia_azienda_tab" required="true"/>
+                                    <forms:element_row element=":comune_azienda" required="true"/>
+                                </tpl:pass>
+                                <tpl:pass sp:if="!@prov_tabellate && !@comuni_prov_tabellati">
+                                    <forms:element_row element=":provincia_azienda" required="true"/>
+                                    <forms:element_row element=":comune_azienda" required="true"/>
+                                </tpl:pass>
+                                <forms:element_row element=":telefono_azienda" />
+                                <forms:element_row element=":fax_azienda" />
+                                <forms:element_row element=":email_azienda" />
+                                <forms:element_row element=":pec_azienda" />
+                            </fieldset>
+                            <tpl:include src="registrazione/_form_dati_anagrafici.shtml" />
+                        </form:fields>
+                        <br />
+                        <tpl:override-content search=".form-actions">
+                            
+                            <input type='submit' class="btn btn-success { (@layout_web ? '' : 'btn-lg') }" name='_w{ @widget[:param] }[submit]' value='{ @submit_text }'>   
+                        </tpl:override-content>
+                    </forms:form>
+                    <br />
+                </div>        
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,5 @@
+<struct name='ditta'>
+<extends>portal::utente</extends>
+<element name='nomeDitta' type='text' />
+<element name='partitaIva' type='text' />
+</struct>

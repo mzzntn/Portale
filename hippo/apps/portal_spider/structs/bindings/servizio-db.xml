@@ -1,0 +1,7 @@
+<binding type="db" external="true" autogen="false">
+    <table>portal__servizio</table>
+    <bind element="id" dbField="ID" />
+    <bind element="nome" dbField="nome" />
+    <bind element="accesso" dbField="accesso_id" />
+    <bind element="url" dbField="url" />
+</binding>

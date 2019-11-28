@@ -1,0 +1,4 @@
+gem "nokogiri"
+gem "sass"
+gem "compass"
+gem "yui-compressor"

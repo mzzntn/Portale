@@ -1,0 +1,13 @@
+<binding type="db" external="true">
+    <table>moduli__tipomodulo</table>
+    <bind element="id" dbField="ID" />
+    <bind element="tipo" dbField="TIPO" /> 
+     <bind element="nome" dbField="NOME" />
+    <bind element="descrizione" dbField="descrizione" />
+    <bind element="idSettore" dbField="settore_id" />
+    <bind element="idResponsabile" dbField="responsabile_id" />
+    <bind element="idProcedimento" dbField="procedimento_id" />
+    <bind element="dataInizio" dbField="disponibile_dal" />
+    <bind element="dataFine" dbField="disponibile_al" />
+    <bind element="stato" dbField="stato_visualizzazione_id" />
+</binding>

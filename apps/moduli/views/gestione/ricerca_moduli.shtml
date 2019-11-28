@@ -1,0 +1,189 @@
+<div id="content_ricerca_moduli">
+	<legend class="no_b_margin">Ricerca Moduli</legend>
+	
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Filtra la modulistica on-line</a></li>
+			<li><a href="#tabs-2">Esporta in csv la modulistica on-line</a></li>
+		</ul>
+		<div id="tabs-1">
+			<span class="label label-info">Filtra la modulistica on-line</span>
+			<div class="well well-small no_b_margin">
+
+			   	<form method="post" class="form-horizontal filtra_moduli no_b_margin">
+			   		<div class="row">
+						<div class="control-group span5">
+							<label class="control-label" for="id_modulo">Id Modulo:</label>
+							<div class="controls">
+								<input type="text" name="id_modulo" class="input-small" value="{ @dati['id_modulo'] }" placeholder="Id Modulo"/>
+							</div>
+						</div>
+						<div class="control-group span5">
+							<label class="control-label" for="id_utente">Id Utente:</label>
+							<div class="controls">
+								<input type="text" name="id_utente" class="input-small" value="{ @dati['id_utente'] }" placeholder="Id Utente"/>
+							</div>
+						</div>
+						<div class="control-group span5">
+							<label class="control-label" for="spid_code">Spid Code:</label>
+								<div class="controls">
+									<input type="text" name="spid_code" class="input-large" value="{ @dati['spid_code'] }" placeholder="Codice autenticazione tramite Spid"/>
+								</div>
+							</div>
+					</div>
+					<div class="row">
+				    	<div class="control-group span5">
+							<label class="control-label" for="cognome">Cognome:</label>
+							<div class="controls">
+								<input type="text" name="cognome" class="input-large" value="{ @dati['cognome'] }" placeholder="Cognome"/>
+							</div>
+						</div>
+				    	<div class="control-group span5">
+							<label class="control-label" for="nome">Nome:</label>
+							<div class="controls">
+								<input type="text" name="nome" class="input-large" value="{ @dati['nome'] }" placeholder="Nome"/>
+							</div>
+						</div>
+					</div>
+					<div class="row" sp:if="@settori_presenti">
+						<div class="control-group span5">
+							<label class="control-label" for="settore">Settore:</label>
+							<div class="controls">
+								<select name="settore" id="settore">
+									<option value="" sp:if="@admin_portal || @admin_tutti_servizi">Seleziona Settore..</option>
+									<option value="0">Settore Generico</option>
+									<option sp:each="@settori_modulo |settore|" value="{ settore.id }" sp:attr-if="settore.id.to_s == @dati['settore'], selected, selected" >{ settore }</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="control-group span5">
+							<label class="control-label" for="nome_modulo">Nome Modulo:</label>
+							<div class="controls">
+								<select name="nome_modulo" id="select_tipo_modulo">
+									<option value="">Selezione nome modulo...</option>
+									<option sp:each="@tipi_modulo |tipo_modulo|" value="{ tipo_modulo.id }" sp:attr-if="tipo_modulo.id.to_s == @dati['nome_modulo'], selected, selected" >{ tipo_modulo.nome }</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group span5">
+							<label class="control-label" for="stato_modulo">Stato Modulo:</label>
+							<div class="controls">
+								<select name="stato_modulo">
+									<option value="">Selezione stato modulo...</option>
+									<option sp:each_pair="@stati_modulo |stato_modulo_key,stato_modulo_value|" value="{ stato_modulo_key }" sp:attr-if="stato_modulo_key == @dati['stato_modulo'], selected, selected">{ stato_modulo_value }</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="control-group span5">
+							<label class="control-label" for="data_da">Da Data:</label>
+							<div class="controls">
+								<forms:datetime id="data_da" change-month="true" change-year="true" past-dates="true" value="@dati['data_da']"  />
+							</div>
+						</div>
+						<div class="control-group span5">
+							<label class="control-label" for="data_a">A data:</label>
+							<div class="controls">
+								<forms:datetime id="data_a" change-month="true" past-dates="true" change-year="true" value="@dati['data_a']" />
+							</div>
+						</div>
+					</div>
+				    <div class="row">
+						<a href="#" class="btn pull-right button_cancella">Cancella</a>
+			    		<button type="submit" class="btn pull-right" name="submit" value="cerca">Cerca</button>
+			    	</div>
+		    	</form>
+		    </div>
+    	</div>
+		<div id="tabs-2">
+			<span class="label label-info">Esporta in csv la modulistica on-line</span>
+			<div class="well well-small">
+			   	<form method="post" class="form-search estrai_dati no_b_margin">
+			   		<p>
+				   		<label class="checkbox">
+							<input type="checkbox" name="testo_apici" />
+							Testo tra apici
+						</label>
+						<label class="checkbox">
+							<input type="checkbox" name="intestazione_campi" />
+							Nome dei campi nella prima riga
+						</label>
+					</p>
+					<p>
+						<h5>Separatore:</h5>
+						<label class="radio">
+							<input type="radio" name="separatore" id="separatore_virgola" value="virgola" checked />
+							Virgola (,)
+						</label>
+						<label class="radio">
+							<input type="radio" name="separatore" id="separatore_punto_virgola" value="punto_virgola" />
+							Punto e Virgola (;)
+						</label>
+					    <button type="submit" class="btn pull-right" value="esporta_tabella" name="submit">Esporta Tabella</button>
+				    </p>
+		    	</form>
+		    </div>
+		</div>
+		
+	</div>
+
+	<!-- Div per tabella dati -->
+	<div sp:if="@filtro_moduli == true">
+
+		<div id="totali" class="alert alert-info lead">
+			Numero moduli Selezionati: { @totale_righe } 
+		</div>
+		<div sp:if="@righe_moduli.blank?" class="alert alert-info">
+			Non sono presenti moduli con i parametri selezionati.
+		</div>
+	  	<!-- Imposto il numero di moduli per pagina che viene passato al js -->
+		<input type='hidden' id='items_per_page' value="15" />  
+		<!-- Imposto il numero di link alle pagine da mostrare nella navbar --> 
+		<input type='hidden' id='max_page_in_navbar' value="10"/>
+		<!-- the input fields that will hold the variables we will use -->  
+		<input type='hidden' id='current_page' />  
+		<input type='hidden' id='show_per_page' />
+		
+
+		<table sp:if="!@righe_moduli.blank?" class="table table-bordered table-striped width_auto pagination_content">
+			<thead>
+		    <tr class="heading_row">
+		    	<th>Id</th>
+		    	<th>Dettaglio</th>
+			    <th>Data e Ora</th>
+			    <th>(Id) Utente Portale</th>
+			    <th>Nome Modulo</th>
+			    <th>Stato modulo</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    	<tr sp:each="@righe_moduli |riga|" class="paginated_element">
+		    		<td>
+		    			{ riga.id }
+		    		</td>
+		    		<td>
+						<a href="{ Moduli::GestioneModuliController.http_s_url('dettagli_modulo?id='+riga.id.to_s) }">Vedi dettaglio</a>
+		    		</td>
+		    		<td>
+		    			{ riga.obj_modified.strftime('%d/%m/%Y') } <strong>Ore</strong> { riga.obj_modified.strftime('%H:%M:%S') }
+		    		</td>
+			    	<td>
+			      		(<strong>{ riga.utente.id }</strong>) { riga.utente.nome } { riga.utente.cognome }
+			     	</td>
+			     	<td>
+			      		{ riga.tipo_modulo.nome }
+			     	</td>
+			     	<td>
+			      		{ riga.stato }
+			     	</td>
+		    	</tr>
+		     					
+		   </tbody>
+		</table>
+		<div class="page_navigation pagination"><ul></ul></div>
+	</div>
+	<br /><br /><br />
+</div>

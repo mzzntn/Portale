@@ -1,0 +1,7 @@
+<engine dbType='oracle'>
+<connection type='oracle'>
+<name>nome_db</name>
+<user>utente</user>
+<pass>password</pass>
+</connection>
+</engine>

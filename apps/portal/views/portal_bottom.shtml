@@ -1,0 +1,47 @@
+<footer id="portal_bottom" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<!-- VECCHIO FOOTER
+   <div class="ente">
+       <ul>
+           <li sp:if="!Spider.conf.get('portal.nome').blank?"><strong>{ Spider.conf.get('portal.nome') }</strong></li>
+           <li sp:if="!Spider.conf.get('ente.indirizzo').blank?">{ Spider.conf.get('ente.indirizzo') }</li>
+           <li sp:if="!Spider.conf.get('ente.telefono').blank?">Telefono { Spider.conf.get('ente.telefono') }</li>
+           <li sp:if="!Spider.conf.get('ente.fax').blank?">Fax { Spider.conf.get('ente.fax') }</li>
+           <li sp:if="!Spider.conf.get('ente.partita_iva').blank?">P.Iva { Spider.conf.get('ente.partita_iva') }</li>
+           <li sp:if="!Spider.conf.get('ente.mail').blank?">E-mail <a href="mailto:{ Spider.conf.get('ente.mail') }">{ Spider.conf.get('ente.mail') }</a></li>
+       </ul>
+   </div>
+   --> 
+
+    <div id="hide_footer_background">
+        <div id="centered_content" class="lead text-center">
+                        { Spider.conf.get('portal.nome') }
+                        { Spider.conf.get('ente.indirizzo') }
+                        Telefono { Spider.conf.get('ente.telefono') } - Fax { Spider.conf.get('ente.fax') } - P.Iva { Spider.conf.get('ente.partita_iva') }
+        </div>
+    </div>  
+    <div id="visible_footer">
+        <div class="row">
+            <div id="link_copy" class="col-lg-offset-2 col-lg-3 col-md-offset-1 col-md-3 col-sm-4 col-xs-4">
+                <span id="copy_intero">&copy; { Date.today.year } <a href="http://www.soluzionipa.it/">Euro Servizi S.r.l.</a></span>
+                <span id="copy_logo">&copy; { Date.today.year } <a href="http://www.soluzionipa.it/" class="trasp">EuroS</a></span>
+            </div>
+            
+            <div id="social_links" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <span sp:if="!@link_social.blank?">
+                    <span sp:each_pair="@link_social |social,link|">
+                        <a href="{ link }" class="{ social }">facebook
+                    </span>
+                </span>
+            </div>
+            <div id="mail_link" class="col-lg-3 col-md-3 col-sm-3 col-xs-2" sp:if="!Spider.conf.get('ente.mail').blank?">
+                <a class="email_contact" href="mailto:{ Spider.conf.get('ente.mail') }?subject=Richiesta Informazioni" title="richiesta informazioni">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> <span id="testo_mail">{ Spider.conf.get('ente.mail') }</span></a>
+            </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 back-to-top">
+                <a href="#" title="jjj"><i class="fa fa-chevron-circle-up fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+</footer>

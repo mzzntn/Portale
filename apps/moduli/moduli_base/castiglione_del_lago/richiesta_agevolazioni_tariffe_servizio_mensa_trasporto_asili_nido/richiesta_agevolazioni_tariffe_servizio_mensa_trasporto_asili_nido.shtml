@@ -1,0 +1,146 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p>
+        <h2 class="align_center">RICHIESTA AGEVOLAZIONI TARIFFE SERVIZIO MENSA/TRASPORTO/ASILI NIDO</h2>
+        <h2 class="align_center">A.S. 2015/2016</h2>
+
+    </p>
+
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_mediumwidth">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth">residente a</moduli:dato>
+            <moduli:dato id="prov_residenza" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="cap" class="label_xsmlwidth input_xxsmallwidth">cap. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza" class="label_bigwidth input_mediumwidth">Via/V.LE/P.zza/Loc.</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_xsmlwidth input_xxsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare" class="label_smlwidth input_smallwidth">Tel./Cell.</moduli:dato> 
+            <moduli:dato id="email" class="label_xsmlwidth input_mediumwidth">E-mail</moduli:dato>  
+        </div>
+    </moduli:gruppo>
+    <p>
+    <h3>CHIEDE LA RIDUZIONE PARZIALE</h3>
+    <div class="align_center">relativa al pagamento dei servizi scolastici a fianco di ciascun figlio indicati:</div>
+    </p>
+    <br />
+    <table class="table ">
+        <thead>
+            <tr>
+                <th>COGNOME E NOME DEI FIGLI</th>
+                <th>MENSA</th>
+                <th>TRASPORTO</th>
+                <th>ASILO</th>
+            </tr>
+        </thead>
+        <tr>    
+            <td><moduli:dato id="figlio1" class="input_mediumwidth"></moduli:dato></td>
+            <td><moduli:opzione id="asilo1" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="trasporto1" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="mensa1" class="inline"></moduli:opzione></td>
+        </tr>
+        <tr>
+            <td><moduli:dato id="figlio2" class="input_mediumwidth"></moduli:dato></td>
+            <td><moduli:opzione id="asilo2" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="trasporto2" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="mensa2" class="inline"></moduli:opzione></td>
+        </tr>
+        <tr>
+            <td><moduli:dato id="figlio3" class="input_mediumwidth"></moduli:dato></td>
+            <td><moduli:opzione id="asilo3" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="trasporto3" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="mensa3" class="inline"></moduli:opzione></td>
+        </tr>
+        <tr>
+            <td><moduli:dato id="figlio4" class="input_mediumwidth"></moduli:dato></td>
+            <td><moduli:opzione id="asilo4" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="trasporto4" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="mensa4" class="inline"></moduli:opzione></td>
+        </tr>
+        <tr>
+            <td><moduli:dato id="figlio5" class="input_mediumwidth"></moduli:dato></td>
+            <td><moduli:opzione id="asilo5" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="trasporto5" class="inline"></moduli:opzione></td>
+            <td><moduli:opzione id="mensa5" class="inline"></moduli:opzione></td>
+        </tr>
+    </table>
+    <div class="center_text">Consapevole delle responsabilità penali cui può andare incontro in caso di dichiarazioni false o contenenti dati non rispondenti a verità ed in tal senso ammonito (Art. 76 DPR 28.12.2000, n. 445)</div>
+    <br />
+    <h3>DICHIARA QUANTO SEGUE:</h3>
+    <ol class="alpha">
+        <li>di essere in possesso del permesso di soggiorno o della carta di soggiorno lungo periodo (solo se cittadino extracomunitario)</li>
+        <li>il valore ISEE del mio nucleo familiare, come da attestazione ISEE  2015, è pari ad € <moduli:dato id="isee_valore" class="label_smlwidth input_xsmallwidth"></moduli:dato></li>
+        <li>di essere a conoscenza che i dati contenuti nella presente dichiarazione potranno essere trasmessi all'INPS per i controlli di competenza.</li>
+        <li>di impegnarsi a comunicare eventuali modifiche della situazione economica e della composizione del nucleo familiare che comportino un cambiamento della propria posizione rispetto alle prestazioni agevolate richieste.</li>
+    </ol>
+    <div class="riga">
+        <moduli:data-firma id="data_firma" class="data-firma_1" label-firma="Firma del dichiarante"/>
+    </div>
+    <moduli:gruppo id="inform_privacy">
+        <h4 class="align_center">INFORMATIVA SULL'USO DEI DATI PERSONALI E SUI DIRITTI DEL DICHIARANTE</h4>
+        <p class="center_text">(D.Lgs. n° 196/2003)</p>
+        <p>I dati  dichiarati saranno trattati, anche con strumenti informatici, esclusivamente per le finalità per i quali sono stati rilasciati.<br />
+        I dati  verranno comunicati a terzi solo per le finalità di controllo dell'autocertificazione.</p>
+        <p><strong>Il responsabile del trattamento è la sig.ra PRIMI MARGHERITA Responsabile dell'Area Politiche Sociali del Comune di Castiglione del Lago.</strong></p>
+        <p>Il dichiarante può in ogni momento esercitare diritti di accesso, rettifica, aggiornamento ed integrazione o cancellazione come previsto dal D.Lgs. n° 196/2003 rivolgendosi al Responsabile del trattamento dei dati.</p>
+        <div class="data-firma">
+            <div class="data">
+            </div>
+            <div class="firma">
+                <label>Sottoscrizione per presa visione</label>
+                <span class="spazio-firma">&nbsp;</span>
+            </div>
+        </div>
+    </moduli:gruppo>
+    
+    <hr class="bigwidth align_center"></hr>
+    <h3 class="align_left">PARTE RISERVATA ALL'UFFICIO</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2">FASCIA</th>
+                <th>REFEZIONE SCOLASTICA</th>
+                <th>TRASPORTO</th>
+                <th>ASILO NIDO</th>
+            </tr>
+            <tr >
+                <th colspan="2">ISEE</th>
+                <th>quota di esenzione</th>
+                <th>quota di esenzione</th>
+                <th>quota di esenzione</th>
+            </tr>
+        </thead>
+        <tr>
+            <td><moduli:opzione id="fascia1" class="inline"></moduli:opzione></td>
+            <td>Fino € 4.909,00</td>
+            <td>75%</td>
+            <td>75%</td>
+            <td>75%</td>
+        </tr>
+        <tr>
+            <td><moduli:opzione id="fascia2" class="inline"></moduli:opzione></td>
+            <td>Da € 4.909,01 ad € 5.340,00</td>
+            <td>50%</td>
+            <td>50%</td>
+            <td>50%</td>
+        </tr>
+        <tr>
+            <td><moduli:opzione id="asilo5" class="inline"></moduli:opzione></td>
+            <td>Da € 5.340,01 ad € 5.940,00</td>
+            <td>25%</td>
+            <td>25%</td>
+            <td>25%</td>
+        </tr>
+    </table>   
+</moduli:modulo>

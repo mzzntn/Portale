@@ -1,0 +1,8 @@
+<struct name="amministratoreServizi" external="true">
+   <element name='id' type='int' key='true' />
+   <element name='login' type='text' />
+   <element name='password' type='text' />
+   <element name='settore' type='int' />
+   <element name='start_user' type='text' />
+   <element name='limita' type='text' />
+</struct>

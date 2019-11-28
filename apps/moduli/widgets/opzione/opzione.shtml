@@ -1,0 +1,7 @@
+<div class="opzione">
+    <tpl:asset type="js" src="js/opzione.js" />
+    <div class="input">
+        <input type="checkbox" name="{ @name }" id="input" sp:attr-if="@checked,checked" value="1" />
+        <label for="{ @widget[:full_id] }-input" sp:if="!@label.blank?">{ @label }</label>
+    </div>
+</div>

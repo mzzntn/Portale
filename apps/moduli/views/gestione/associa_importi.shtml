@@ -1,0 +1,18 @@
+<div>
+    <legend>Tabella Importi { @nome_tipo_modulo }</legend>
+    <core:crud id="crud_importi" model="Moduli::Importo" new-link="@url_new_importo" edit-link="@url_view_importo">
+      	<sp:attribute widget="table" name="elements" value="id,descrizione,tipo_dovuto,tipo_obbligatorieta,importo,importo_utente" />
+      	<sp:attribute widget="table" name="sort" value="obj_created,asc" />
+      	<sp:attribute widget="table" name="class" value="row_linked" />
+  	</core:crud>
+
+
+  	<div class="row form-actions" sp:if="!@no_bottoni">
+        <div class="span1">
+            <a class="btn" href="{ @url_indietro }">Indietro</a>
+        </div>
+        <div class="span1 offset5">
+            <a class="btn" href="{ @url_avanti }">Prosegui</a>
+        </div>
+    </div>
+</div>

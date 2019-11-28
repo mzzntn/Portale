@@ -1,0 +1,998 @@
+<?xml version="1.0"?>
+
+<prova_isfol>
+
+	<portal__provincia>
+	<row>
+		<id>1</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>823</cod_provincia>
+		<nome>AGRIGENTO</nome>
+		<sigla>AG</sigla>
+	</row>
+
+	<row>
+		<id>2</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>824</cod_provincia>
+		<nome>ALESSANDRIA</nome>
+		<sigla>AL</sigla>
+	</row>
+
+	<row>
+		<id>3</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>825</cod_provincia>
+		<nome>ANCONA</nome>
+		<sigla>AN</sigla>
+	</row>
+
+	<row>
+		<id>4</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>826</cod_provincia>
+		<nome>AOSTA</nome>
+		<sigla>AO</sigla>
+	</row>
+
+	<row>
+		<id>5</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>827</cod_provincia>
+		<nome>ASCOLI PICENO</nome>
+		<sigla>AP</sigla>
+	</row>
+
+	<row>
+		<id>6</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>828</cod_provincia>
+		<nome>L'AQUILA</nome>
+		<sigla>AQ</sigla>
+	</row>
+
+	<row>
+		<id>7</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>829</cod_provincia>
+		<nome>AREZZO</nome>
+		<sigla>AR</sigla>
+	</row>
+
+	<row>
+		<id>8</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>830</cod_provincia>
+		<nome>ASTI</nome>
+		<sigla>AT</sigla>
+	</row>
+
+	<row>
+		<id>9</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>831</cod_provincia>
+		<nome>AVELLINO</nome>
+		<sigla>AV</sigla>
+	</row>
+
+	<row>
+		<id>10</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>832</cod_provincia>
+		<nome>BARI</nome>
+		<sigla>BA</sigla>
+	</row>
+
+	<row>
+		<id>11</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>833</cod_provincia>
+		<nome>BERGAMO</nome>
+		<sigla>BG</sigla>
+	</row>
+
+	<row>
+		<id>12</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>834</cod_provincia>
+		<nome>BELLUNO</nome>
+		<sigla>BL</sigla>
+	</row>
+
+	<row>
+		<id>13</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>835</cod_provincia>
+		<nome>BENEVENTO</nome>
+		<sigla>BN</sigla>
+	</row>
+
+	<row>
+		<id>14</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>836</cod_provincia>
+		<nome>BOLOGNA</nome>
+		<sigla>BO</sigla>
+	</row>
+
+	<row>
+		<id>15</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>837</cod_provincia>
+		<nome>BRINDISI</nome>
+		<sigla>BR</sigla>
+	</row>
+
+	<row>
+		<id>16</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>838</cod_provincia>
+		<nome>BRESCIA</nome>
+		<sigla>BS</sigla>
+	</row>
+
+	<row>
+		<id>17</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>839</cod_provincia>
+		<nome>BOLZANO</nome>
+		<sigla>BZ</sigla>
+	</row>
+
+	<row>
+		<id>18</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>840</cod_provincia>
+		<nome>CAGLIARI</nome>
+		<sigla>CA</sigla>
+	</row>
+
+	<row>
+		<id>19</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>841</cod_provincia>
+		<nome>CAMPOBASSO</nome>
+		<sigla>CB</sigla>
+	</row>
+
+	<row>
+		<id>20</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>842</cod_provincia>
+		<nome>CASERTA</nome>
+		<sigla>CE</sigla>
+	</row>
+
+	<row>
+		<id>21</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>843</cod_provincia>
+		<nome>CHIETI</nome>
+		<sigla>CH</sigla>
+	</row>
+
+	<row>
+		<id>22</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>844</cod_provincia>
+		<nome>CALTANISSETTA</nome>
+		<sigla>CL</sigla>
+	</row>
+
+	<row>
+		<id>23</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>845</cod_provincia>
+		<nome>CUNEO</nome>
+		<sigla>CN</sigla>
+	</row>
+
+	<row>
+		<id>24</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>846</cod_provincia>
+		<nome>COMO</nome>
+		<sigla>CO</sigla>
+	</row>
+
+	<row>
+		<id>25</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>847</cod_provincia>
+		<nome>CREMONA</nome>
+		<sigla>CR</sigla>
+	</row>
+
+	<row>
+		<id>26</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>848</cod_provincia>
+		<nome>COSENZA</nome>
+		<sigla>CS</sigla>
+	</row>
+
+	<row>
+		<id>27</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>849</cod_provincia>
+		<nome>CATANIA</nome>
+		<sigla>CT</sigla>
+	</row>
+
+	<row>
+		<id>28</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>850</cod_provincia>
+		<nome>CATANZARO</nome>
+		<sigla>CZ</sigla>
+	</row>
+
+	<row>
+		<id>29</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>851</cod_provincia>
+		<nome>ENNA</nome>
+		<sigla>EN</sigla>
+	</row>
+
+	<row>
+		<id>30</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>852</cod_provincia>
+		<nome>FERRARA</nome>
+		<sigla>FE</sigla>
+	</row>
+
+	<row>
+		<id>31</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>853</cod_provincia>
+		<nome>FOGGIA</nome>
+		<sigla>FG</sigla>
+	</row>
+
+	<row>
+		<id>32</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>854</cod_provincia>
+		<nome>FIRENZE</nome>
+		<sigla>FI</sigla>
+	</row>
+
+	<row>
+		<id>33</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>855</cod_provincia>
+		<nome>FORLI'-CESENA</nome>
+		<sigla>FO</sigla>
+	</row>
+
+	<row>
+		<id>34</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>856</cod_provincia>
+		<nome>FROSINONE</nome>
+		<sigla>FR</sigla>
+	</row>
+
+	<row>
+		<id>35</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>857</cod_provincia>
+		<nome>GENOVA</nome>
+		<sigla>GE</sigla>
+	</row>
+
+	<row>
+		<id>36</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>858</cod_provincia>
+		<nome>GORIZIA</nome>
+		<sigla>GO</sigla>
+	</row>
+
+	<row>
+		<id>37</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>859</cod_provincia>
+		<nome>GROSSETO</nome>
+		<sigla>GR</sigla>
+	</row>
+
+	<row>
+		<id>38</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>860</cod_provincia>
+		<nome>IMPERIA</nome>
+		<sigla>IM</sigla>
+	</row>
+
+	<row>
+		<id>39</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>861</cod_provincia>
+		<nome>ISERNIA</nome>
+		<sigla>IS</sigla>
+	</row>
+
+	<row>
+		<id>40</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>862</cod_provincia>
+		<nome>LECCE</nome>
+		<sigla>LE</sigla>
+	</row>
+
+	<row>
+		<id>41</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>863</cod_provincia>
+		<nome>LIVORNO</nome>
+		<sigla>LI</sigla>
+	</row>
+
+	<row>
+		<id>42</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>864</cod_provincia>
+		<nome>LATINA</nome>
+		<sigla>LT</sigla>
+	</row>
+
+	<row>
+		<id>43</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>865</cod_provincia>
+		<nome>LUCCA</nome>
+		<sigla>LU</sigla>
+	</row>
+
+	<row>
+		<id>44</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>866</cod_provincia>
+		<nome>MACERATA</nome>
+		<sigla>MC</sigla>
+	</row>
+
+	<row>
+		<id>45</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>867</cod_provincia>
+		<nome>MESSINA</nome>
+		<sigla>ME</sigla>
+	</row>
+
+	<row>
+		<id>46</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>868</cod_provincia>
+		<nome>MILANO</nome>
+		<sigla>MI</sigla>
+	</row>
+
+	<row>
+		<id>47</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>869</cod_provincia>
+		<nome>MANTOVA</nome>
+		<sigla>MN</sigla>
+	</row>
+
+	<row>
+		<id>48</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>870</cod_provincia>
+		<nome>MODENA</nome>
+		<sigla>MO</sigla>
+	</row>
+
+	<row>
+		<id>49</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>871</cod_provincia>
+		<nome>MASSA CARRARA</nome>
+		<sigla>MS</sigla>
+	</row>
+
+	<row>
+		<id>50</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>872</cod_provincia>
+		<nome>MATERA</nome>
+		<sigla>MT</sigla>
+	</row>
+
+	<row>
+		<id>51</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>873</cod_provincia>
+		<nome>NAPOLI</nome>
+		<sigla>NA</sigla>
+	</row>
+
+	<row>
+		<id>52</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>874</cod_provincia>
+		<nome>NOVARA</nome>
+		<sigla>NO</sigla>
+	</row>
+
+	<row>
+		<id>53</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>875</cod_provincia>
+		<nome>NUORO</nome>
+		<sigla>NU</sigla>
+	</row>
+
+	<row>
+		<id>54</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>876</cod_provincia>
+		<nome>ORISTANO</nome>
+		<sigla>OR</sigla>
+	</row>
+
+	<row>
+		<id>55</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>877</cod_provincia>
+		<nome>PALERMO</nome>
+		<sigla>PA</sigla>
+	</row>
+
+	<row>
+		<id>56</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>878</cod_provincia>
+		<nome>PIACENZA</nome>
+		<sigla>PC</sigla>
+	</row>
+
+	<row>
+		<id>57</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>879</cod_provincia>
+		<nome>PADOVA</nome>
+		<sigla>PD</sigla>
+	</row>
+
+	<row>
+		<id>58</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>880</cod_provincia>
+		<nome>PESCARA</nome>
+		<sigla>PE</sigla>
+	</row>
+
+	<row>
+		<id>59</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>881</cod_provincia>
+		<nome>PERUGIA</nome>
+		<sigla>PG</sigla>
+	</row>
+
+	<row>
+		<id>60</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>882</cod_provincia>
+		<nome>PISA</nome>
+		<sigla>PI</sigla>
+	</row>
+
+	<row>
+		<id>61</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>883</cod_provincia>
+		<nome>PORDENONE</nome>
+		<sigla>PN</sigla>
+	</row>
+
+	<row>
+		<id>62</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>884</cod_provincia>
+		<nome>PARMA</nome>
+		<sigla>PR</sigla>
+	</row>
+
+	<row>
+		<id>63</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>885</cod_provincia>
+		<nome>PESARO-URBINO</nome>
+		<sigla>PS</sigla>
+	</row>
+
+	<row>
+		<id>64</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>886</cod_provincia>
+		<nome>PISTOIA</nome>
+		<sigla>PT</sigla>
+	</row>
+
+	<row>
+		<id>65</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>887</cod_provincia>
+		<nome>PAVIA</nome>
+		<sigla>PV</sigla>
+	</row>
+
+	<row>
+		<id>66</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>888</cod_provincia>
+		<nome>POTENZA</nome>
+		<sigla>PZ</sigla>
+	</row>
+
+	<row>
+		<id>67</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>889</cod_provincia>
+		<nome>RAVENNA</nome>
+		<sigla>RA</sigla>
+	</row>
+
+	<row>
+		<id>68</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>890</cod_provincia>
+		<nome>REGGIO CALABRIA</nome>
+		<sigla>RC</sigla>
+	</row>
+
+	<row>
+		<id>69</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>891</cod_provincia>
+		<nome>REGGIO EMILIA</nome>
+		<sigla>RE</sigla>
+	</row>
+
+	<row>
+		<id>70</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>892</cod_provincia>
+		<nome>RAGUSA</nome>
+		<sigla>RG</sigla>
+	</row>
+
+	<row>
+		<id>71</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>893</cod_provincia>
+		<nome>RIETI</nome>
+		<sigla>RI</sigla>
+	</row>
+
+	<row>
+		<id>72</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>894</cod_provincia>
+		<nome>ROMA</nome>
+		<sigla>ROMA</sigla>
+	</row>
+
+	<row>
+		<id>73</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>895</cod_provincia>
+		<nome>ROVIGO</nome>
+		<sigla>RO</sigla>
+	</row>
+
+	<row>
+		<id>74</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>896</cod_provincia>
+		<nome>SALERNO</nome>
+		<sigla>SA</sigla>
+	</row>
+
+	<row>
+		<id>75</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>897</cod_provincia>
+		<nome>SIENA</nome>
+		<sigla>SI</sigla>
+	</row>
+
+	<row>
+		<id>76</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>898</cod_provincia>
+		<nome>SONDRIO</nome>
+		<sigla>SO</sigla>
+	</row>
+
+	<row>
+		<id>77</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>899</cod_provincia>
+		<nome>LA SPEZIA</nome>
+		<sigla>SP</sigla>
+	</row>
+
+	<row>
+		<id>78</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>900</cod_provincia>
+		<nome>SIRACUSA</nome>
+		<sigla>SR</sigla>
+	</row>
+
+	<row>
+		<id>79</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>901</cod_provincia>
+		<nome>SASSARI</nome>
+		<sigla>SS</sigla>
+	</row>
+
+	<row>
+		<id>80</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>902</cod_provincia>
+		<nome>SAVONA</nome>
+		<sigla>SV</sigla>
+	</row>
+
+	<row>
+		<id>81</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>903</cod_provincia>
+		<nome>TARANTO</nome>
+		<sigla>TA</sigla>
+	</row>
+
+	<row>
+		<id>82</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>904</cod_provincia>
+		<nome>TERAMO</nome>
+		<sigla>TE</sigla>
+	</row>
+
+	<row>
+		<id>83</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>905</cod_provincia>
+		<nome>TRENTO</nome>
+		<sigla>TN</sigla>
+	</row>
+
+	<row>
+		<id>84</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>906</cod_provincia>
+		<nome>TORINO</nome>
+		<sigla>TO</sigla>
+	</row>
+
+	<row>
+		<id>85</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>907</cod_provincia>
+		<nome>TRAPANI</nome>
+		<sigla>TP</sigla>
+	</row>
+
+	<row>
+		<id>86</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>908</cod_provincia>
+		<nome>TERNI</nome>
+		<sigla>TR</sigla>
+	</row>
+
+	<row>
+		<id>87</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>909</cod_provincia>
+		<nome>TRIESTE</nome>
+		<sigla>TS</sigla>
+	</row>
+
+	<row>
+		<id>88</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>910</cod_provincia>
+		<nome>TREVISO</nome>
+		<sigla>TV</sigla>
+	</row>
+
+	<row>
+		<id>89</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>911</cod_provincia>
+		<nome>UDINE</nome>
+		<sigla>UD</sigla>
+	</row>
+
+	<row>
+		<id>90</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>912</cod_provincia>
+		<nome>VARESE</nome>
+		<sigla>VA</sigla>
+	</row>
+
+	<row>
+		<id>91</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>913</cod_provincia>
+		<nome>VERCELLI</nome>
+		<sigla>VC</sigla>
+	</row>
+
+	<row>
+		<id>92</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>914</cod_provincia>
+		<nome>VENEZIA</nome>
+		<sigla>VE</sigla>
+	</row>
+
+	<row>
+		<id>93</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>915</cod_provincia>
+		<nome>VICENZA</nome>
+		<sigla>VI</sigla>
+	</row>
+
+	<row>
+		<id>94</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>916</cod_provincia>
+		<nome>VERONA</nome>
+		<sigla>VR</sigla>
+	</row>
+
+	<row>
+		<id>95</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>917</cod_provincia>
+		<nome>VITERBO</nome>
+		<sigla>VT</sigla>
+	</row>
+
+	<row>
+		<id>96</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>918</cod_provincia>
+		<nome>BIELLA</nome>
+		<sigla>BI</sigla>
+	</row>
+
+	<row>
+		<id>97</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>919</cod_provincia>
+		<nome>CROTONE</nome>
+		<sigla>KR</sigla>
+	</row>
+
+	<row>
+		<id>98</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>920</cod_provincia>
+		<nome>LECCO</nome>
+		<sigla>LC</sigla>
+	</row>
+
+	<row>
+		<id>99</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>921</cod_provincia>
+		<nome>LODI</nome>
+		<sigla>LO</sigla>
+	</row>
+
+	<row>
+		<id>100</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>922</cod_provincia>
+		<nome>PRATO</nome>
+		<sigla>PO</sigla>
+	</row>
+
+	<row>
+		<id>101</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>923</cod_provincia>
+		<nome>RIMINI</nome>
+		<sigla>RN</sigla>
+	</row>
+
+	<row>
+		<id>102</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>924</cod_provincia>
+		<nome>VERBANO CUSIO OSSOLA</nome>
+		<sigla>VB</sigla>
+	</row>
+
+	<row>
+		<id>103</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>925</cod_provincia>
+		<nome>VIBO VALENTIA</nome>
+		<sigla>VV</sigla>
+	</row>
+
+	<row>
+		<id>104</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>926</cod_provincia>
+		<nome>MONZA BRIANZA</nome>
+		<sigla>MB</sigla>
+	</row>
+
+	<row>
+		<id>105</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>927</cod_provincia>
+		<nome>FERMO</nome>
+		<sigla>FM</sigla>
+	</row>
+
+	<row>
+		<id>106</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>928</cod_provincia>
+		<nome>BARLETTA-ANDRIA-TRANI</nome>
+		<sigla>BT</sigla>
+	</row>
+
+	<row>
+		<id>107</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>929</cod_provincia>
+		<nome>CARBONIA_IGLESIAS</nome>
+		<sigla>CI</sigla>
+	</row>
+
+	<row>
+		<id>108</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>930</cod_provincia>
+		<nome>MEDIO CAMPIDANO</nome>
+		<sigla>VS</sigla>
+	</row>
+
+	<row>
+		<id>109</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>931</cod_provincia>
+		<nome>OGLIASTRA</nome>
+		<sigla>OG</sigla>
+	</row>
+
+	<row>
+		<id>110</id>
+		<obj_created>NULL</obj_created>
+		<obj_modified>NULL</obj_modified>
+		<cod_provincia>932</cod_provincia>
+		<nome>OLBIA-TEMPIO</nome>
+		<sigla>OT</sigla>
+	</row>
+
+	</portal__provincia>
+
+</prova_isfol>

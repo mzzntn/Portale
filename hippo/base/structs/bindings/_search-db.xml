@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db"><table>_SEARCH</table><bind element="name" dbField="NAME"/><bind element="struct" dbField="ID_STRUCT"/><bind element="category" dbField="ID_CATEGORY"/><bind element="queryParams" dbField="QUERYPARAMS"/><bind element="requests" dbField="REQUESTS"/></binding>

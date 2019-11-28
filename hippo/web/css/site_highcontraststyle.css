@@ -1,0 +1,26 @@
+/* site styles */
+    div#site{
+    }
+    div.image{ 
+    }   
+/* calendario eventi */
+    div#cal_eve{
+      border: 1px solid #006699;
+    }
+    div#cal_eve a,div#cal_eve a:visited,div#cal_eve a:active{
+    }
+    div#cal_eve table tr#cal_links a,div#cal_eve table tr#cal_links a:active,div#cal_eve table tr#cal_links a:visited{
+      background: url('');
+      border: 0;
+    }
+    div#cal_eve table th{
+      background-color: #000;
+      border-bottom: 2px solid #006699;
+      color: #00ffff;
+    }
+    div#cal_eve table tr td a.event_link,div#cal_eve table tr td a.event_link:active,div#cal_eve table tr td a.event_link:visited{
+      background-color: #000;
+      color: #fff;
+    }
+	div.notizia{
+	}

@@ -1,0 +1,39 @@
+<div id="usr_dimenticato_html">
+	<!--
+ 	<div id="breadcrumb">
+        <a href="{ Portal.http_s_url }">Home</a> -> Recupero Username
+    </div><br />
+    -->
+    <div class="alert alert-danger" sp:if="!@errore.nil?">
+    	{ @errore }
+    </div>
+    <form class="form-horizontal" method="post" id="form_usr_dimenticato" role="form">
+    	<legend>Recupero Username</legend>
+    	
+	    <div class="alert alert-danger" sp:if="!@dati.nil? && @dati['esito'] == 'Errore'">
+    		<ul>
+	        	<tpl:pass sp:each_pair="@dati |key, value|">
+	        		<li sp:if="key != 'esito' && key != 'messaggio_errore' && value == 'blank'"> 
+	        			<tpl:pass sp:if="key == 'email'">Il campo E-mail non può essere vuoto</tpl:pass>
+	        			<tpl:pass sp:if="key == 'cf'">Il campo Codice Fiscale non può essere vuoto</tpl:pass>
+	        		</li>
+	        	</tpl:pass>
+	    	</ul>
+    	</div>
+		
+    	<div class="form-group" sp:attr-if="!@dati.nil? && @dati['email'] == 'blank',class,control-group error">
+      		<input sp:if="@dati.nil? || (!@dati.nil? && @dati['email'] == 'blank')" type="text" id="email_usr_dim" name="email_usr_dim" placeholder="Email" class="form-control" tabindex="8" />
+	    	<input sp:if="!@dati.nil? && @dati['email'] != 'blank'" type="text" id="email_usr_dim" name="email_usr_dim" placeholder="Email" value="{ @dati['email'] }" class="form-control" tabindex="8" />
+    	</div>
+	    <div class="form-group" sp:attr-if="!@dati.nil? && @dati['cf'] == 'blank',class,control-group error">
+	      	<input sp:if="@dati.nil? || (!@dati.nil? && @dati['cf'] == 'blank')" type="text" id="cf_usr_dim" name="cf_usr_dim" placeholder="Codice Fiscale" class="form-control" tabindex="9" />
+		    <input sp:if="!@dati.nil? && @dati['cf'] != 'blank'" type="text" id="cf_usr_dim" name="cf_usr_dim" placeholder="Codice Fiscale" value="{ @dati['cf'] }" class="form-control" tabindex="9" />
+    	</div>
+    	
+		<div class="form-group">
+			<div class="row">
+                <button type="submit" class="btn btn-success btn btn-success col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3" tabindex="10">INVIA</button>
+			</div>
+		</div>
+    </form>
+</div>

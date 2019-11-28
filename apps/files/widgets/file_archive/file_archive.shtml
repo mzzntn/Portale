@@ -1,0 +1,24 @@
+<div>
+    <tpl:asset type="css" src="css/files.css" />
+    <tpl:asset type="js" src="js/file_archive.js" />
+    <div class="tags_div">
+        <h5>_(Folders)</h5>
+        <div class="tags">
+            <span sp:each="@tags |tag|" class="{ (@active_tags[tag.name] ? 'active' : '') }">
+                <a href="{ widget_params(:toggle_tag => tag ) }">{ tag }</a>
+            </span>
+        </div>
+    </div>
+    <core:search-table id="list" queryset="@files" elements="name,obj_modified,tags" >
+        <tpl:override-content search="tbody td">
+            <tpl:pass sp:if="element == :name">
+                <a class="file-link" href="{ @_parent.widget_params(:clicked => @data[row_i].uuid ) }">
+                    <tpl:overridden />
+                </a>
+            </tpl:pass>
+            <tpl:pass sp:if="element != :name">
+                <tpl:overridden />
+            </tpl:pass>
+        </tpl:override-content>
+    </core:search-table>
+</div>

@@ -1,0 +1,3 @@
+<div>
+    <images:manager id="image_manager" allow-resize="true" />
+</div>

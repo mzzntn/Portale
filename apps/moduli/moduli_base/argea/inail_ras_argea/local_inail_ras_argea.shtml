@@ -1,0 +1,206 @@
+<moduli:modulo id="modulo" 
+    titolo="<h4>Domanda di contributo per la messa in sicurezza delle trattrici agricole.</h4>"
+    codice="">
+    <moduli:gruppo id="box_servizio_territoriale" class="box_top_dx">
+    All' Agenzia Argea<br />
+    Servizio Territoriale<br />
+    _____________________
+    </moduli:gruppo>
+    <moduli:gruppo id="servizio_territoriale" titolo="Seleziona Servizio Territoriale" class="dati_modulo clear_both">	
+		Servizio Territoriale Argea che ha in carico l'azienda relativamente alla gestione del carburante agricolo agevolato: 
+		    	<moduli:opzioni id="tipologia" class="lista_checkbox_vertical checkbox_esclusivi1">
+		            <moduli:opzione id="basso_campidano_e_del_sarrabus">del Basso Campidano e del Sarrabus</moduli:opzione>
+		            <moduli:opzione id="medio_campidano">del Medio Campidano</moduli:opzione>
+		            <moduli:opzione id="sulcis_iglesiente">del Sulcis Iglesiente</moduli:opzione>
+		            <moduli:opzione id="ogliastra">dell'Ogliastra</moduli:opzione>
+		            <moduli:opzione id="oristanese">dell'Oristanese</moduli:opzione>
+		            <moduli:opzione id="nuorese">del Nuorese</moduli:opzione>
+		            <moduli:opzione id="sassarese">del Sassarese</moduli:opzione>
+		            <moduli:opzione id="gallura">della Gallura</moduli:opzione>
+		        </moduli:opzioni>
+	</moduli:gruppo>
+    <moduli:gruppo id="dati_utente" titolo="Dati personali" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato-utente id="nome_cognome" size="50">Il/la sottoscritto/a</moduli:dato-utente>
+            <span class="help-block clear_both">Per le imprese individuali è il titolare dell'impresa. Per le società è il legale rappresentante.</span>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_nascita" label-align="utente">nato/a a </moduli:dato-utente>
+            <moduli:dato-utente id="data_nascita" class="label_smlwidth">il</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="codice_fiscale">C.F.</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_residenza" label-align="utente">residente a </moduli:dato-utente>
+        	<moduli:dato-utente id="indirizzo_residenza" label-align="utente">in via/fraz. </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="numero_telefono" class="label_smlwidth">n. tel. </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <div><moduli:dato id="titolo_rappresentanza" class="">In qualità di</moduli:dato></div> dell'impresa agricola.
+        	<span class="help-block clear_both label_bigwidth">Titolare (o tutore o procuratore speciale) per le imprese individuali, legale rappresentante per le società.</span>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_impresa" titolo="Dati domanda">
+	    <div class="dati_modulo">
+	     	 <div class="riga">
+	            <moduli:dato id="denom_impresa" class="input_bigwidth">Richiedente</moduli:dato>
+	            <span class="help-block clear_both label_bigwidth">Cognome e nome del richiedente o denominazione dell'impresa (non del legale rappresentante o altra persona fisica richiedente)</span>
+	        </div>
+	     	<div class="riga">
+	            <moduli:dato id="cuaa" class="">CUAA</moduli:dato>
+	            <span class="help-block clear_both label_bigwidth">Per le imprese in forma societaria è richiesto il codice fiscale dell'impresa agricola.</span>
+	        </div>
+	        <div class="riga">
+	            <moduli:dato id="sede_impresa" class="">con sede in</moduli:dato>
+	        </div>
+	        <h3>CHIEDE</h3>
+	        <div class="riga">
+	        di beneficiare dell’aiuto previsto dal Progetto per la prevenzione e sicurezza in agricoltura, come descritto nell’apposito bando pubblico adottato da ... con provvedimento n. … allo scopo di mettere in sicurezza la propria trattrice così descritta:
+	        </div>
+	        <div class="riga">
+	            <moduli:dato id="matricola_telaio" class="">Matricola telaio</moduli:dato>
+	        </div>
+	        <div class="riga">
+            Seleziona Tipologia Trattrice   
+		    	<moduli:opzioni id="tipologia" class="lista_checkbox_vertical checkbox_esclusivi2">
+		            <moduli:opzione id="voce1">Trattori a cingoli modello fiat 605 e simili (405, 455, 505, ecc.)</moduli:opzione>
+
+					<moduli:opzione id="voce2">Trattori a cingoli modello fiat 120c e simili (60c, 70c, 80c, ecc.)</moduli:opzione>
+
+					<moduli:opzione id="voce3">Trattori a cingoli modello lamborghini c553</moduli:opzione>
+
+					<moduli:opzione id="voce4">Trattori a ruote a carreggiata standard modello sameminitauro</moduli:opzione>
+
+					<moduli:opzione id="voce5">Trattori a ruote a carreggiata standard  modello fiat 640 e simili (600, 540, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce6">Trattori a cingoli modello fiat 70-65m e simili (60-65, 80-65, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce7">Trattori a ruote a carreggiata standard modello landini 6500 dt e simili (5500 dt, 4500 dt etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce8">Trattori a ruote a carreggiata standard modello same centauro</moduli:opzione>
+
+					<moduli:opzione id="voce9">Trattori a cingoli modello landini 6500c e simili</moduli:opzione>
+
+					<moduli:opzione id="voce10">Trattori a cingoli modello fiat 1355 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce11">Trattori a cingoli modello fiat 955 e simili (fiat 95-55, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce12">Trattori a ruote a carreggiata standard modello fiat 411r e simili (fiat 312r, etc.) </moduli:opzione>
+
+					<moduli:opzione id="voce13">Trattori a cingoli modello fiat 411c  e simili (fiat 451c , fiat 455c, etc.) </moduli:opzione>
+
+					<moduli:opzione id="voce14">Trattori a cingoli modello landini 4500 cl  e simili </moduli:opzione>
+
+					<moduli:opzione id="voce15">Trattori a ruote a carreggiata standard  modello fiat 450 dth e simili (fiat 350 dt)</moduli:opzione>
+
+					<moduli:opzione id="voce16"> Trattori a cingoli modello fiat 765 c  e simili (fiat 665 cm, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce17"> Trattori a ruote a carreggiata standard modello fiat 415r e simili (fiat 215, fiat 315, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce18"> Trattori a ruote a carreggiata standard modello same corsaro 70 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce19"> Trattori a ruote a carreggiata standard  modello ford super dexta 3000 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce20"> Trattori a cingoli modello lamborghini c653 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce21"> Trattori a ruote a carreggiata standard  modello fiat 500 e simili (fiat 550, fiat 600, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce22"> Trattori a cingoli modello om 50 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce23"> Trattori a ruote a carreggiata standard modello same delfino 35 dt e simili</moduli:opzione>
+
+					<moduli:opzione id="voce24"> Trattori a ruote a carreggiata standard modello lamborghini r235 dt e simili  (lamborghini r350 dt, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce25"> Trattori a ruote a carreggiata standard modello samefalcon e simili</moduli:opzione>
+
+					<moduli:opzione id="voce26"> Trattori a ruote a carreggiata standard  modello samed.a. 30 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce27"> Trattori a cingoli modello same condor c e simili</moduli:opzione>
+
+					<moduli:opzione id="voce28"> Trattori a cingoli modello samefalcon c  e simili</moduli:opzione>
+
+					<moduli:opzione id="voce29"> Trattori a ruote a carreggiata standard modello om 615 e simili (om 715, etc.)</moduli:opzione>
+
+					<moduli:opzione id="voce30"> Trattori a cingoli modello lamborghini c674 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce31"> Trattori a ruote a carreggiata stretta modello lamborghini r503sb e simili</moduli:opzione>
+
+					<moduli:opzione id="voce32"> Trattori a ruote a carreggiata stretta modello fiat 300 dt e simili</moduli:opzione>
+
+					<moduli:opzione id="voce33"> Trattori a cingoli modello fiat 352c e simili</moduli:opzione>
+
+					<moduli:opzione id="voce34"> Trattori a cingoli modello fiat 351 c e simili</moduli:opzione>
+
+					<moduli:opzione id="voce35"> Trattori a ruote a carreggiata standard  modello same leone 70 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce36"> Trattori a cingoli modello fiat 805 c e simili</moduli:opzione>
+
+					<moduli:opzione id="voce37"> Trattori a ruote a carreggiata standard modello ford major 4000 e simili</moduli:opzione>
+
+					<moduli:opzione id="voce38"> Trattori a cingoli modello lamborghini 4 ctle simili</moduli:opzione>
+
+					<moduli:opzione id="voce39"> Trattori a ruote a carreggiata standard modello same aurora 45 e simili</moduli:opzione>
+		        </moduli:opzioni>
+		    </div>
+		    <br />
+	    	<br />
+		    <h4>Il richiedente attesta:</h4>
+		    <ul>
+		    	<li>Di essere iscritto all’Anagrafe delle aziende agricole</li>
+		    	<li>Di essere proprietario della trattrice per la quale si richiede il contributo</li>
+		    	<li>Di avere in uso tale trattrice ai fini della concessione del carburante agricolo agevolato per l’anno fiscale in corso</li>
+		    	<li>Che i terreni aziendali gestiti dall’impresa ricadono nel territorio della Sardegna</li>
+		    	<li>Che l’impresa richiedente è iscritta al registro speciale delle aziende agricole presso la camera di commercio<br />
+		    	<moduli:dato id="iscrizione_camera_commercio" class="label_smlwidth"> di </moduli:dato>
+		    	 <moduli:dato id="numero_iscrizione" class="label_bigwidth"> con numero di iscrizione </moduli:dato></li>
+		    </ul>
+		    <br />
+		    <br />
+            <h4 class="clear_both">            
+            	Il richiedente è a conoscenza delle condizioni per accedere al contributo descritte dal bando ed è consapevole che la sussistenza di tali condizioni e la corrispondenza dei dati forniti nella domanda saranno verificati sull’Anagrafe aziendale presso il Sistema Informativo Agricolo Regionale (SIAR) nonché presso altre banche dati delle pubbliche amministrazioni.Il richiedente è consapevole, in particolare, che la difformità dei dati forniti da quanto rilevabile in sede di verifica sarà causa di esclusione della domanda dal beneficio.
+            </h4>
+    		<br />
+            <div class="riga">
+            	Si allega la fotocopia di un documento di identità in corso di validità del compilatore firmatario della domanda.
+            	<!-- <moduli:allegato id="doc_identita" autohide="true" class="riga">(seleziona)
+                </moduli:allegato> -->
+                <h4>In mancanza la domanda non potrà essere ammessa</h4>
+            </div>
+            
+
+
+	    </div>
+	    <br />
+	    <br />
+	    <div class="dati_modulo">
+	    	<h4>Recapiti per le comunicazioni ufficiali</h4>
+	    	<div class="riga">
+	            <moduli:dato id="indirizzo" class="">Indirizzo</moduli:dato>
+	            <moduli:dato id="cap" class="">CAP</moduli:dato>
+	        </div>
+	        <div class="riga">
+	            <moduli:dato id="citta" class="">Città</moduli:dato>
+	        </div>
+	        <div class="riga">
+	            <moduli:dato id="telefono" class="">Telefono</moduli:dato>
+	            <moduli:dato id="fax" class="">Fax</moduli:dato>
+	        </div>
+	        <div class="riga">
+	            <moduli:dato id="email" class="">E-Mail</moduli:dato>
+	        </div>
+	        <h4>Il richiedente autorizza l’uso dei dati personali forniti, limitatamente all’ambito del presente procedimento e per gli usi di legge.</h4>
+	    </div>
+	    <br />
+	    <div class="dati_modulo">
+	    	<h3>Titolare del trattamento dei dati é l’Agenzia ARGEA Sardegna</h3>
+	    	<div class="riga">
+	            <moduli:dato id="luogo_firma" >Luogo</moduli:dato>
+	        </div>
+	    	<moduli:data-firma  id="data_firma2" class="data-firma"/>
+		</div>
+
+	 </moduli:gruppo>
+</moduli:modulo>

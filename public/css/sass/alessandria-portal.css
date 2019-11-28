@@ -1,0 +1,82 @@
+/*
+Error: File to import not found or unreadable: portal/sass/portal.scss.
+       Load paths:
+         /var/www/siti/alessandria/apps/portal/public/sass
+         /usr/local/rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+         /var/www/siti/alessandria/apps
+         /usr/local/lib/spider/apps
+        on line 5 of /var/www/siti/alessandria/public/sass/alessandria-portal.scss
+
+1: /var/www/siti/alessandria/public/sass/alessandria-portal.scss
+
+Backtrace:
+/var/www/siti/alessandria/public/sass/alessandria-portal.scss:5
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/rvm/gems/ruby-2.1.2/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:173:in `block (2 levels) in compile'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:155:in `timed'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:168:in `block in compile'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/logger.rb:78:in `block in red'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/logger.rb:88:in `wrap'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/logger.rb:78:in `red'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:167:in `compile'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:146:in `compile_if_required'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:131:in `block (2 levels) in run'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:129:in `each'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:129:in `block in run'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:155:in `timed'
+/usr/local/rvm/gems/ruby-2.1.2/gems/compass-1.0.3/lib/compass/compiler.rb:128:in `run'
+/usr/local/lib/spider/lib/spiderfw/templates/resources/sass.rb:117:in `compile'
+/usr/local/lib/spider/lib/spiderfw/templates/layout.rb:284:in `compile_asset'
+/usr/local/lib/spider/lib/spiderfw/templates/layout.rb:55:in `block in prepare_assets'
+/usr/local/lib/spider/lib/spiderfw/templates/layout.rb:48:in `each'
+/usr/local/lib/spider/lib/spiderfw/templates/layout.rb:48:in `prepare_assets'
+/usr/local/lib/spider/lib/spiderfw/templates/layout.rb:21:in `render'
+/usr/local/lib/spider/lib/spiderfw/controller/mixins/visual.rb:248:in `render'
+/var/www/siti/alessandria/apps/portal/controllers/portal_controller.rb:314:in `index'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:299:in `block in execute'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:276:in `catch'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:276:in `execute'
+/usr/local/lib/spider/lib/spiderfw/controller/mixins/visual.rb:113:in `execute'
+/usr/local/lib/spider/lib/spiderfw/controller/dispatcher.rb:74:in `do_dispatch'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:281:in `block in execute'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:276:in `catch'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:276:in `execute'
+/usr/local/lib/spider/lib/spiderfw/controller/dispatcher.rb:74:in `do_dispatch'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:281:in `block in execute'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:276:in `catch'
+/usr/local/lib/spider/lib/spiderfw/controller/controller.rb:276:in `execute'
+/usr/local/lib/spider/lib/spiderfw/controller/http_controller.rb:130:in `execute'
+/usr/local/lib/spider/lib/spiderfw/controller/first_responder.rb:22:in `block in execute'
+/usr/local/lib/spider/lib/spiderfw/controller/first_responder.rb:20:in `catch'
+/usr/local/lib/spider/lib/spiderfw/controller/first_responder.rb:20:in `execute'
+/usr/local/lib/spider/lib/spiderfw/http/adapters/rack.rb:122:in `block in call'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: portal/sass/portal.scss.\A        Load paths:\A          /var/www/siti/alessandria/apps/portal/public/sass\A          /usr/local/rvm/gems/ruby-2.1.2/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A          /var/www/siti/alessandria/apps\A          /usr/local/lib/spider/apps\A         on line 5 of /var/www/siti/alessandria/public/sass/alessandria-portal.scss\A \A 1: /var/www/siti/alessandria/public/sass/alessandria-portal.scss"; }

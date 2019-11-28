@@ -1,0 +1,34 @@
+<div>
+	<legend>Dettagli Modulo</legend>
+	<div class="titolo_dettaglio">Nome Modulo: { @modulo.tipo_modulo.nome }</div>
+	<div class="b_t_margin_4"><span class="label label-info">Stato Modulo:</span> { @modulo.stato }</div>
+	<div class="b_t_margin_4"><span class="label label-info">Utente:</span> { @modulo.utente } <span sp:if="!@modulo.spid_code.blank?"><span class="label label-info">Spid Code:</span> { @modulo.spid_code }</span></div>
+	<div class="b_t_margin_4" sp:if="!@modulo.confermato.blank?"><span class="label label-info">Data compilazione:</span> { @modulo.confermato.strftime("%d/%m/%Y %H:%M:%S") }</div>
+	<div sp:if="@modulo.stato == 'inviato'">
+		<div class="b_t_margin_4"><span class="label label-info">Scarica modulo:</span> 
+
+			<a href="{ Moduli::ModuliController.http_s_url(@modulo.id.to_s+'/stampa/download') }">Download modulo <i class="icon-download-alt"></i></a>
+		</div>
+		<div class="b_t_margin_4"><span class="label label-info">Rigenera pdf:</span> 
+
+			<a href="{ Moduli::ModuliController.http_s_url(@modulo.id.to_s+'/stampa/download?rig=t') }">Download modulo <i class="icon-download-alt"></i></a>
+		</div>
+	</div>
+	<div class="b_t_margin_4" sp:if="!@allegati.blank?"><span class="label label-info">Allegati presenti</span>
+		<ul class="lista_allegati">
+			<li sp:each="@allegati |allegato|"><a href="{ Moduli::GestioneModuliController.http_s_url('download_allegato?id='+@modulo.id.to_s+'&na='+allegato) }">{ allegato }</a></li>
+		</ul>
+	</div>
+	<div sp:if="@modulo.stato == 'inviato'">
+		<span class="label label-success">Modulo inviato per e-mail in data: { @modulo.inviato.strftime("%d/%m/%Y %H:%M:%S") }</span>
+	</div>
+
+	<div class="row form-actions">
+        <div class="span2 offset3" sp:if="!@pag_provenienza.blank?">
+            <a class="span1 btn" href="{ Moduli::GestioneModuliController.http_s_url('graduatoria_moduli?_w[lista_moduli][page]='+@pag_provenienza) }">Indietro</a>
+        </div> 
+        <div class="span2 offset3" sp:if="@pag_provenienza.blank?">
+            <a class="span1 btn" href="{ Moduli::GestioneModuliController.http_s_url('ricerca_moduli') }">Indietro</a>
+        </div> 
+    </div>
+</div>

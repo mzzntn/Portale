@@ -1,0 +1,1239 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <!-- esempio di ancora per il menu laterale
+
+    <a name="dichiarazioni" class="anchor_menu" testo="Dichiarazioni"></a>
+    -->
+
+    <moduli:gruppo id="box_intestazione_destra" class="box_top_dx">
+    AL RESPONSABILE<br />
+    Settore Urbanistica<br />
+    Servizio Edilizia Privata<br />
+    { Spider.conf.get('ente.nome') }<br />
+    </moduli:gruppo>
+    <div class="clear_both"></div>
+    <br />
+    <br />
+
+    <a name="dati_utente" class="anchor_menu" testo="Dati Utente"></a>
+    
+    <p>
+    <h2 class="align_center">RICHIESTA DI PERMESSO DI COSTRUIRE</h2>
+    <h3 class="align_center">(art. 20, d.P.R. 6 giugno 2001, n. 380 – art. 7, d.P.R. 7 settembre 2010, n. 160)</h3>
+    </p>
+    <h3 class="riga_grigia">Dati del Titolare</h3>
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_titolare">Cognome e Nome</moduli:dato>
+            <moduli:dato id="codice_fiscale_titolare">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_titolare">nato a</moduli:dato>
+            <moduli:dato id="provincia_nascita_titolare" class="label_smlwidth input_xxsmallwidth">prov</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_titolare" class="input_smallwidth">stato</moduli:dato>
+            <moduli:dato id="data_nascita_titolare" tipo="data" class="label_smlwidth input_xsmallwidth">nato il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_titolare">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_titolare" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            <moduli:dato id="stato_residenza_titolare" class="label_smlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_titolare">indirizzo </moduli:dato>
+            <moduli:dato id="civico_residenza_titolare" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_residenza_titolare" class="input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="email_titolare" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="telefono_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <div id="container_ditta">
+        <h3 class="riga_grigia">Dati della Ditta o Società</h3>
+        <moduli:gruppo id="dati_ditta_titolare_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:dato id="qualifica_persona_ditta_titolare" class="input_bigwidth write_enable_js">in qualità di</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="nome_ditta_titolare" class="input_bigwidth">della ditta/società</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="cf_piva_ditta_titolare" class="input_bigwidth">codice fiscale/ partita iva</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="cciaa_titolare">Iscritta alla C.C.I.A.A. di </moduli:dato>
+                <moduli:dato id="provincia_cciaa_titolare" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="numero_cciaa_titolare" class="input_xsmallwidth">n. </moduli:dato>
+            </div>
+            <div>
+                <moduli:dato id="sede_ditta_titolare">con sede in</moduli:dato>
+                <moduli:dato id="provincia_ditta_titolare" class="label_smlwidth input_xxsmallwidth">prov</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_ditta_titolare" class="input_bigwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_ditta_titolare" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+            </div>
+            <div>
+                <moduli:dato id="cap_ditta_titolare" class="input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="pec_email_ditta_titolare" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="tel_fisso_cellulare_ditta_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+            </div>
+        </moduli:gruppo>  
+    </div>  
+
+    <a name="chiede" class="anchor_menu" testo="Chiede"></a>
+    <h3>CHIEDE</h3>
+
+    <strong>a) Qualificazione dell’intervento (*)</strong>
+    <moduli:gruppo id="qualificazione_intervento" titolo="" class="dati_modulo">
+        <moduli:opzioni id="tipo_intervento" class="lista_checkbox_vertical">
+            <strong>Il rilascio del permesso di costruire per la seguente tipologia di intervento:</strong>
+            <div class="clear_both"><div class="float_left">a.1 </div><moduli:opzione id="interventi_art_10" class="elenco_prima"></moduli:opzione><strong>interventi di cui all’articolo 10</strong> del d.P.R. n. 380/2001</div>
+            <div class="clear_both"><div class="float_left">a.2 </div><moduli:opzione id="interventi_assogettati_scia" class="elenco_prima">interventi assoggettati a Segnalazione Certificata di Inizio Attività per i quali, ai sensi dell’art. 22, comma 7 del d.P.R. n. 380/2001 </moduli:opzione><moduli:dato id="specifica_pdc" class="input_bigwidth"> è facoltà dell’avente titolo richiedere il rilascio del permesso di costruire (specificare)</moduli:dato></div>
+            
+            <div class="clear_both"><div class="float_left">a.3 </div><moduli:opzione id="titolo_unico" class="elenco_prima"><label><strong>titolo unico</strong> - Procedimento ordinario - , ai sensi dell’articolo 7 del d.P.R. n. 160/2010</label></moduli:opzione></div>
+            <div class="clear_both"><div class="float_left">a.4 </div><moduli:opzione id="intervento_realizzato" class="elenco_prima"><label><strong>intervento realizzato</strong>, ai sensi dell’articolo 36, comma 1 ,<strong>e conforme alla disciplina urbanistica ed edilizia vigente sia al momento della realizzazione, sia al momento della presentazione della richiesta</strong></label></moduli:opzione></div>
+            <div class="clear_both"><div class="float_left">a.5 </div><moduli:opzione id="intervento_in_deroga" class="elenco_prima"></moduli:opzione><strong>intervento in deroga alle previsioni degli strumenti di pianificazione urbanistica vigenti, </strong>
+                <moduli:opzioni id="tipo_intervento_misura" class="lista_checkbox_vertical margin_l_10">
+                    <div class="clear_both"><div class="float_left">a.5.1 </div><moduli:opzione id="chiede_di_derogare" class="elenco_prima"></moduli:opzione>ai sensi dell’art. 14 del d.P.R. n. 380/2001. In particolare si chiede di derogare:
+                        <moduli:opzioni id="tipo_deroghe_art_14" class="lista_checkbox_vertical margin_l_10">
+                            <div class="clear_both"><div class="float_left">a.5.1.1 </div><moduli:opzione id="densita_ediliza" class="elenco_prima"></moduli:opzione><moduli:dato id="specifica_densita">alla densità edilizia (specificare)</moduli:dato></div>
+                            <div class="clear_both"><div class="float_left">a.5.1.2 </div><moduli:opzione id="altezza" class="elenco_prima"></moduli:opzione><moduli:dato id="specifica_altezza">all’altezza (specificare)</moduli:dato></div>
+                            <div class="clear_both"><div class="float_left">a.5.1.3 </div><moduli:opzione id="distanza" class="elenco_prima"></moduli:opzione><moduli:dato id="specifica_distanza">alla distanza tra i fabbricati (specificare)</moduli:dato></div>
+                        </moduli:opzioni>
+                    </div>
+                    <div class="clear_both"><div class="float_left">a.5.2 </div><moduli:opzione id="dest_uso" class="elenco_prima"></moduli:opzione>alle destinazioni d’uso ai sensi dell’art. 14 co. 1-bis del d.P.R. n. 380/2001 ristrutturazione edilizia, previa deliberazione di Consiglio Comunale che ne attesta l'interesse pubblico
+                    </div>
+                    <div class="clear_both"><div class="float_left">a.5.3 </div><moduli:opzione id="art_3_legge_55" class="elenco_prima"></moduli:opzione>ai sensi dell’art. 3 della LR 55/2012 
+                    </div>
+                </moduli:opzioni>
+            </div>
+            <div class="clear_both"><div class="float_left">a.6 </div><moduli:opzione id="variazione" class="elenco_prima"></moduli:opzione><strong>variazione essenziale e/o sostanziale </strong> al/alla
+                <moduli:opzioni id="tipo_variazione" class="lista_checkbox_vertical margin_l_10">
+                    <div class="clear_both"><div class="float_left">a.6.1 </div><moduli:opzione id="var_titolo_unico" class="elenco_prima">titolo unico</moduli:opzione><moduli:dato id="n_var_titolo_unico" class="input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_var_titolo_unico" tipo="data">del </moduli:dato></div>
+                    <div class="clear_both"><div class="float_left">a.6.2 </div><moduli:opzione id="var_perm_costruire" class="elenco_prima">permesso di costruire</moduli:opzione><moduli:dato id="n_var_perm_costruire" class="input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_var_titolo_unico" tipo="data">del </moduli:dato></div>
+                    <div class="clear_both"><div class="float_left">a.6.3 </div><moduli:opzione id="var_denuncia_inizio" class="elenco_prima">denuncia di inizio attività</moduli:opzione><moduli:dato id="n_var_denuncia_inizio" class="input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_var_titolo_unico" tipo="data">del </moduli:dato>
+                    <br /><br />(articolo 22, comma 3, d.P.R. n. 380/2001)</div>
+                </moduli:opzioni>
+            </div>
+            <div class="clear_both"><div class="float_left">a.7 </div><moduli:opzione id="mod_semplificata" class="elenco_prima"></moduli:opzione>Permesso di costruire convenzionato ai sensi dell'art. 28-bis del DPR 380/2001 e dell'art. 18bis della LR 11/2004 in caso di realizzazione e/o completamento di opere di urbanizzazione che possono essere soddisfatte in modalità semplificata
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+    
+    <a name="dichiarazioni" class="anchor_menu" testo="Dichiarazioni"></a>
+    
+    <h3 class="riga_grigia">DICHIARAZIONI</h3>
+    <p>
+    Il titolare, consapevole delle pene stabilite per false attestazioni e mendaci dichiarazioni ai sensi dell’articolo 76 del d.P.R. 28 dicembre 2000, n. 445 e degli artt. 483,495 e 496 del Codice Penale e che inoltre, qualora dal controllo effettuato emerga la non veridicità del contenuto della dichiarazione resa, decadrà dai benefici conseguenti al provvedimento conseguito sulla base della dichiarazione non veritiera ai sensi dell’art. 75 del d.P.R. n. 445/2000, sotto la propria responsabilità.
+    </p>
+    
+    <h3>DICHIARA</h3>
+    <strong>a) Titolarità dell'intervento</strong>
+    <moduli:gruppo id="titolarita_intervento" titolo="" class="dati_modulo">
+        <strong>di avere titolo alla presentazione di questa pratica edilizia in quanto</strong>
+        <div class="riga">
+            <moduli:dato id="titolo_persona" class=""></moduli:dato>
+        </div>
+        <div class="riga">dell’immobile interessato dall’intervento e di</div>
+        <moduli:opzioni id="altro_titolo" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">a.1 </div><moduli:opzione id="titolo_esclusivo" class="elenco_prima"></moduli:opzione>aver titolarità esclusiva all’esecuzione dell’intervento</div>
+            <div class="clear_both"><div class="float_left">a.2 </div><moduli:opzione id="no_titolo_esclusivo" class="elenco_prima"></moduli:opzione>non avere titolarità esclusiva all’esecuzione dell’intervento, ma di disporre comunque della dichiarazione di assenso dei terzi titolari di altri diritti reali o obbligatori</div>
+            <div class="clear_both"><div class="float_left">a.3 </div>sull'area/immobile gravano atti trascritti e/o registrati di qualsiasi natura (servitù attiva o passiva, atti unilaterali d'obbligo, convenzioni ecc..)
+                <moduli:opzioni id="gravano_atti" class="lista_checkbox_oriz margin_l_10">
+                    <moduli:opzione id="gravano_atti_si" class="">si</moduli:opzione>
+                    <moduli:opzione id="gravano_atti_no" class="">no</moduli:opzione>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>b) Localizzazione dell'intervento</strong>
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo dati_readable_js">
+        <strong>che l’intervento interessa l’immobile</strong>
+        <div class="riga">
+            <moduli:dato id="loc_int_via" class="label_bigwidth input_bigwidth">sito in (via, piazza, ecc.)</moduli:dato> <moduli:dato id="loc_int_n" class="label_smlwidth input_xsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_scala" class="label_smlwidth input_xsmallwidth">scala </moduli:dato>
+            <moduli:dato id="loc_int_piano" class="label_smlwidth input_xsmallwidth">piano </moduli:dato>
+            <moduli:dato id="loc_int_interno" class="label_smlwidth input_xsmallwidth">interno </moduli:dato>
+            <moduli:dato id="loc_int_cap" class="label_smlwidth input_xsmallwidth">cap </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tipo_catasto">censito al catasto: </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="catasto_foglio" class="label_smlwidth input_xsmallwidth">foglio n. </moduli:dato>
+            <moduli:dato id="catasto_map" class="label_smlwidth input_xsmallwidth">map </moduli:dato>
+            <moduli:dato id="catasto_sub" class="label_smlwidth input_xsmallwidth">sub </moduli:dato>
+            <moduli:dato id="catasto_sez" class="label_smlwidth input_xsmallwidth">sez </moduli:dato>
+            <moduli:dato id="catasto_sez_urb" class="label_smlwidth input_xsmallwidth">sez urb. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="destinazione_uso" class="label_bigwidth input_bigwidth">avente destinazione d'uso</moduli:dato>
+        </div>
+        <div class="riga">
+                (Ad es. residenziale, industriale, commerciale, ecc.)
+        </div>
+    </moduli:gruppo>
+
+    <strong>d) Opere su parti comuni o modifiche esterne</strong>
+    <moduli:gruppo id="opere_e_modifiche" titolo="" class="dati_modulo">
+        <moduli:opzioni id="tipo_variazione" class="lista_checkbox_vertical margin_l_10">
+            <div class="clear_both"><div class="float_left">d.1 </div><moduli:opzione id="no_parti_comuni" class="elenco_prima"></moduli:opzione><strong>non riguardano parti comuni</strong></div>
+            <div class="clear_both"><div class="float_left">d.2 </div><moduli:opzione id="parti_comuni" class="elenco_prima"></moduli:opzione><strong>riguardano le parti comuni di un fabbricato condominiale</strong></div>
+            <div class="clear_both"><div class="float_left">d.3 </div><moduli:opzione id="parti_comuni_no_condom" class="elenco_prima"></moduli:opzione>
+            riguardano parti comuni di un <strong>fabbricato con più proprietà, non costituito in condominio</strong>, e dichiara che l’intervento è stato approvato dai comproprietari delle parti comuni, come risulta da atto consegnato al progettista ovvero dalla sottoscrizione degli elaborati da parte di tutti i comproprietari corredata da copia di documento d’identità
+            </div>
+            <div class="clear_both"><div class="float_left">d.4 </div><moduli:opzione id="no_assenso" class="elenco_prima"></moduli:opzione>
+            riguardano parti dell’edificio di proprietà comune ma non necessitano di assenso perché, secondo l’art. 1102 c.c., apportano, a spese del titolare, le modificazioni necessarie per il miglior godimento delle parti comuni non alterandone la destinazione e senza impedire agli altri partecipanti di usufruirne secondo il loro diritto
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>e) Descrizione sintetica dell’intervento</strong>
+    <div class="riga">
+        <strong>che i lavori per i quali viene inoltrata la presente richiesta di permesso di costruire consistono in:</strong>
+        <moduli:dato tipo="longText" id="descrizione_intervento" class="readonly_js"></moduli:dato>
+    </div>
+
+
+    <strong>f) Regolarità urbanistica e precedenti edilizi (*)</strong>
+    <moduli:gruppo id="regolarita_urbanistica" titolo="" class="dati_modulo">
+        <moduli:opzioni id="tipo_interv_urban" class="lista_checkbox_vertical margin_l_10">
+            <div class="clear_both"><div class="float_left">f.1 </div><moduli:opzione id="nuova_costr" class="elenco_prima"></moduli:opzione><strong>che le opere riguardano un intervento di nuova costruzione su area libera</strong>
+            </div>
+            <div class="clear_both"><div class="float_left">f.2 </div><moduli:opzione id="stato_attuale" class="elenco_prima"></moduli:opzione><strong>che lo stato attuale dell’immobile risulta:</strong>
+                <moduli:opzioni id="tipo_stato_attuale" class="lista_checkbox_vertical margin_l_10">
+                    <div class="clear_both"><div class="float_left">f.2.1 </div><moduli:opzione id="conforme" class="elenco_prima"></moduli:opzione>pienamente conforme alla documentazione dello stato di fatto legittimato dal seguente titolo/pratica edilizia (o, in assenza, 
+                    <div class="riga margin_l_35">dal primo accatastamento)</div>
+
+                    </div>
+                    <div class="clear_both"><div class="float_left">f.2.2 </div><moduli:opzione id="non_conforme" class="elenco_prima">in difformità rispetto al seguente titolo/pratica edilizia (o, in assenza, dal primo accatastamento), tali opere sono state realizzate
+                        <div class="riga margin_l_35">
+                            <moduli:dato id="data_realizzo_opera" tipo="data" class="label_bigwidth input_xsmallwidth">in data</moduli:dato> 
+                        </div></moduli:opzione>
+                            <moduli:opzioni id="tipo_difformita" class="lista_checkbox_vertical margin_l_10">
+                                <div class="clear_both"><div class="float_left">f.2(1-2).1</div><moduli:opzione id="titolo_unico" class="elenco_prima">titolo unico (SUAP)</moduli:opzione><moduli:dato id="n_titolo_unico" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_titolo_unico" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both"><div class="float_left">f.2(1-2).2</div><moduli:opzione id="perm_costr" class="elenco_prima">permesso di costruire /  
+                                licenza edil. / conc. edilizia
+                                </moduli:opzione><moduli:dato id="n_perm_costr" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_perm_costr" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both"><div class="float_left">f.2(1-2).3</div><moduli:opzione id="autoriz_ediliza" class="elenco_prima">autorizzazione edilizia </moduli:opzione><moduli:dato id="n_autoriz_ediliza" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_autoriz_ediliza" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both"><div class="float_left">f.2(1-2).4</div><moduli:opzione id="com_edilizia" class="elenco_prima">comunicazione edilizia (art. 26 L. n. 47/1985)
+                                </moduli:opzione><moduli:dato id="n_com_edilizia" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_com_edilizia" tipo="data" class="label_smlwidth input_xsmallwidth">del </moduli:dato>
+                                </div>
+                                <div class="clear_both"><div class="float_left">f.2(1-2).5</div><moduli:opzione id="condono_edilizio" class="elenco_prima">condono edilizio </moduli:opzione><moduli:dato id="n_condono_edilizio" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_condono_edilizio" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both"><div class="float_left">f.2(1-2).6</div><moduli:opzione id="denuncia_inizio" class="elenco_prima">denuncia di inizio attività</moduli:opzione><moduli:dato id="n_denuncia_inizio" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_denuncia_inizio" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both"><div class="float_left">f.2(1-2).7</div><moduli:opzione id="segnalazione_cert" class="elenco_prima">segnalazione certificata    
+                                di inizio attività</moduli:opzione><moduli:dato id="n_segnalazione_cert" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_segnalazione_cert" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both margin_l_10"><div class="float_left">f.2(1-2).8</div><moduli:opzione id="com_edil_libera" class="elenco_prima">comunicazione edilizia libera</moduli:opzione><moduli:dato id="n_com_edil_libera" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_com_edil_libera" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both margin_l_10"><div class="float_left">f.2(1-2).9</div><moduli:opzione id="altro" class="elenco_prima">altro</moduli:opzione><moduli:dato id="n_altro" class="label_smlwidth input_xxsmallwidth">n. </moduli:dato><moduli:dato id="data_altro" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato>
+                                </div>
+                                <div class="clear_both margin_l_10"><div class="float_left">f.2(1-2).10</div><moduli:opzione id="primo_accat" class="elenco_prima">primo accatastamento</moduli:opzione>
+                                </div>
+                            </moduli:opzioni>
+                    </div>
+                    <div class="clear_both"><div class="float_left">f.2.3 </div><moduli:opzione id="non_reperiti_titoli" class="elenco_prima">non sono stati reperiti titoli abilitativi
+                            essendo l’immobile di remota costruzione
+                            <div class="riga margin_l_35"> e non interessato successivamente da interventi edilizi per i quali era necessario di munirsi di titoli abilitativi</div>
+                            </moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>g) Calcolo del contributo di costruzione (*)</strong>
+    <moduli:gruppo id="contributi_costruzione" titolo="" class="dati_modulo">
+        <strong>che l’intervento da realizzare</strong>
+        <moduli:opzioni id="tipo_interv_realiz" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">g.1 </div><moduli:opzione id="titolo_grat" class="elenco_prima">è a titolo gratuito,</moduli:opzione><moduli:dato id="titolo_rat_normat">ai sensi della seguente normativa</moduli:dato>
+            </div>
+            <div class="clear_both"><div class="float_left">g.2 </div><moduli:opzione id="titolo_oneroso" class="elenco_prima"></moduli:opzione><strong>è a titolo oneroso e pertanto</strong>
+            </div>
+            <div class="clear_both margin_l_10"><div class="float_left">g.2.1.1 </div><moduli:opzione id="calcolo_sportello" class="elenco_prima"></moduli:opzione><strong>chiede</strong> allo Sportello Unico di effettuare il calcolo del contributo di costruzione e a tal fine <strong>allega la documentazione tecnica necessaria</strong> alla sua determinazione
+            </div>
+            <div class="clear_both margin_l_10"><div class="float_left">g.2.1.2 </div><moduli:opzione id="calcolo_preventivo" class="elenco_prima"></moduli:opzione><strong>allega il prospetto di calcolo preventivo </strong>del contributo di costruzione a firma di tecnico abilitato
+            </div>
+            <div class="riga margin_l_10">
+                <strong>inoltre, relativamente al pagamento del contributo di costruzione </strong>
+            </div>
+            <div class="clear_both margin_l_10"><div class="float_left">g.2.2.1 </div><moduli:opzione id="versamento_contributo" class="elenco_prima"></moduli:opzione><strong>dichiara che il versamento </strong>del contributo di costruzione sarà effettuato al momento del ritiro del titolo abilitativo
+            </div>
+            <div class="clear_both margin_l_10"><div class="float_left">g.2.2.2 </div><moduli:opzione id="rateizzazione" class="elenco_prima"></moduli:opzione><strong>chiede la rateizzazione </strong>del contributo di costruzione secondo le modalità stabilite dal Comune
+            </div>
+            <div class="riga margin_l_10">
+                <strong>infine, relativamente agli oneri di urbanizzazione</strong>
+            </div>
+            <div class="clear_both margin_l_10"><div class="float_left">g.2.3.1 </div><moduli:opzione id="chiede_urbaniz" class="elenco_prima"></moduli:opzione><strong>chiede di eseguire direttamente</strong>, a scomputo di quanto dovuto, le opere di urbanizzazione e a tal fine allega lo schema di convenzione, il computo metrico estimativo e <strong>la proposta di progetto</strong> per la realizzazione delle stesse
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>h) Tecnici incaricati</strong>
+    <moduli:gruppo id="tecnici_incaricati" titolo="" class="dati_modulo">
+        <strong>di aver incaricato in qualità di progettista delle opere architettoniche, il tecnico indicato alla sezione 2 dell’allegato "SOGGETTI COINVOLTI" e dichiara inoltre </strong>
+        <moduli:opzioni id="tipi_tecnici" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">h.1 </div><moduli:opzione id="incarico_soggetti" class="elenco_prima">di aver incaricato, in qualità di progettista delle opere strutturali, di direttori dei lavori, e di altri tecnici,</moduli:opzione> 
+                <div class="riga margin_l_35">i soggetti indicati alla sezione 2 dell’allegato<strong> "SOGGETTI COINVOLTI"</strong></div>
+            </div>
+            <div class="clear_both"><div class="float_left">h.2 </div><moduli:opzione id="individuati_prima" class="elenco_prima">che il progettista delle opere strutturali, il/i direttore/i dei lavori e gli altri tecnici incaricati saranno individuati prima dell’inizio dei lavori</moduli:opzione>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>i) Impresa esecutrice dei lavori </strong>
+    <moduli:gruppo id="impresa_esecutrice" titolo="" class="dati_modulo">
+        <moduli:opzioni id="tipo_impresa" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">i.1 </div><moduli:opzione id="lavori_impresa" class="elenco_prima">che i lavori saranno eseguiti/sono stati eseguiti dalla/e impresa/e indicata/e alla sezione 3 dell’allegato</moduli:opzione> 
+                <div class="riga margin_l_35"><strong>"SOGGETTI COINVOLTI"</strong></div>
+            </div>
+            <div class="clear_both"><div class="float_left">i.2 </div><moduli:opzione id="impresa_individuata_prima" class="elenco_prima">che l’impresa esecutrice/imprese esecutrici dei lavori sarà/saranno individuata/e prima dell’inizio dei lavori</moduli:opzione>
+            </div>
+             <div class="clear_both"><div class="float_left">i.3 </div><moduli:opzione id="lavori_prima_persona" class="elenco_prima">che, in quanto opere di modesta entità che non interessano le specifiche normative di settore, i lavori  saranno eseguiti/sono stati </moduli:opzione>
+             <div class="riga margin_l_35">eseguiti in prima persona, senza alcun affidamento a ditte esterne(*)</div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>l) Rispetto degli obblighi in materia di salute e sicurezza nei luoghi di lavoro</strong>
+    <moduli:gruppo id="rispetto_sicurezza" titolo="" class="dati_modulo">
+        <strong>che l'intervento</strong>
+        <moduli:opzioni id="tipi_sicurezza" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">l.1 </div><moduli:opzione id="ricade" class="elenco_prima"></moduli:opzione><strong>ricade</strong> nell’ambito di applicazione del d.lgs. n. 81/2008
+            </div>
+            <div class="clear_both"><div class="float_left">l.2 </div><moduli:opzione id="non_ricade" class="elenco_prima"></moduli:opzione><strong>non ricade</strong> nell’ambito di applicazione del d.lgs. n. 81/2008
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>m) Diritti di terzi</strong>
+    <moduli:gruppo id="diritti_terzi" titolo="" class="dati_modulo">
+        <strong>di essere consapevole che il permesso di costruire non comporta limitazione dei diritti dei terzi</strong>
+    </moduli:gruppo>
+
+    <strong>n) Rispetto della normativa sulla privacy</strong>
+    <moduli:gruppo id="rispetto_privacy" titolo="" class="dati_modulo">
+        <strong>di aver letto l’informativa sul trattamento dei dati personali posta al termine del presente modulo</strong>
+    </moduli:gruppo>
+
+    <a name="asseverazione" class="anchor_menu" testo="Asseverazione"></a>
+
+    <h2 class="align_center">RELAZIONE TECNICA DI ASSEVERAZIONE</h2>
+    <h4 class="align_center">(art. 20, d.P.R. 6 giugno 2001, n. 380)</h4>
+
+    <h3 class="riga_grigia">Dati del Progettista</h3>
+    <moduli:gruppo id="progettista_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_progettista">Cognome e Nome</moduli:dato>
+            <moduli:dato id="codice_fiscale_progettista">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_progettista">nato a</moduli:dato>
+            <moduli:dato id="provincia_nascita_progettista" class="label_smlwidth input_xxsmallwidth">prov</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_progettista" class="input_smallwidth">stato</moduli:dato>
+            <moduli:dato id="data_nascita_progettista" class="label_smlwidth" tipo="data">nato il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_progettista">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_progettista" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            <moduli:dato id="stato_residenza_progettista" class="label_smlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_progettista">indirizzo </moduli:dato>
+            <moduli:dato id="civico_residenza_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_residenza_progettista" class="input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_studio_progettista">con studio in </moduli:dato>
+            <moduli:dato id="prov_studio_progettista" class="label_smlwidth input_xxsmallwidth">prov </moduli:dato>
+            <moduli:dato id="stato_studio_progettista" class="label_smlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_studio_progettista">indirizzo </moduli:dato>
+            <moduli:dato id="civico_studio_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_studio_progettista" class="input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="ordine_progettista" class="label_bigwidth">Iscritto all'ordine/collegio</moduli:dato>
+            <moduli:dato id="citta_ordine_progettista" class="label_smlwidth input_xsmallwidth">di</moduli:dato>
+            <moduli:dato id="n_ordine_progettista" class="label_smlwidth input_xsmallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="telefono_progettista" class="">Telefono</moduli:dato>
+            <moduli:dato id="fax_progettista" class="">Fax</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare_progettista" class="">Cellulare</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec_progettista" class="input_bigwidth label_bigwidth">posta elettronica certificata</moduli:dato>
+        </div>
+        
+    </moduli:gruppo>
+
+    <p><strong>N.b.</strong> I dati del progettista coincidono con quelli già indicati, nella sezione 2 dell’Allegato “Soggetti coinvolti”, per il progettista delle opere architettoniche</p>
+    <br /><br />
+    <br /><br />
+
+    <h3 class="riga_grigia">DICHIARAZIONI</h3>
+    <p><strong>Il progettista</strong>, in qualità di tecnico asseverante, preso atto di assumere la qualità di persona esercente un servizio di pubblica necessità ai sensi degli articoli 359 e 481 del Codice Penale e consapevole delle penalità previste in caso di dichiarazioni mendaci o che affermano fatti non conformi al vero, sotto la propria responsabilità </p>
+
+
+    <h3>DICHIARA</h3>
+
+    <strong>1) Tipologia di intervento e descrizione sintetica delle opere (*)</strong>
+    <moduli:gruppo id="tipo_interv_sint" titolo="" class="dati_modulo">
+        <div class="riga">
+            <strong>che i lavori riguardano l’immobile individuato nella richiesta di permesso di costruire </strong>di cui la presente relazione costituisce parte integrante e sostanziale; 
+        </div>
+        <div class="riga">
+            che le opere in progetto sono subordinate a rilascio del <strong>permesso di costruire </strong>in quanto rientrano nella seguente <strong>tipologia di intervento</strong>
+        </div>
+        <moduli:opzioni id="tipo_interv_nuovo_rist" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">1.1 </div><moduli:opzione id="nuova_costr" class="elenco_prima"></moduli:opzione><strong>Intervento di nuova costruzione</strong>
+                <div class="riga margin_l_35">(articolo 3, comma 1, lettera e) del d.P.R. n. 380/2001</div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.1 </div><moduli:opzione id="manufatti" class="elenco_prima"></moduli:opzione>costruzione di manufatti edilizi fuori terra o interrati, ovvero l'ampliamento di quelli esistenti all'esterno della sagoma esistente
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.2 </div><moduli:opzione id="urbanizzazione" class="elenco_prima"></moduli:opzione>urbanizzazione primaria e secondaria realizzati da soggetti diversi dal Comune
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.3 </div><moduli:opzione id="infra_impianti" class="elenco_prima"></moduli:opzione>realizzazione di infrastrutture e di impianti, anche per pubblici servizi, che comporti la trasformazione in via permanente di suolo inedificato
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.4 </div><moduli:opzione id="torri_tralicci" class="elenco_prima"></moduli:opzione>installazione di torri e tralicci per impianti radio-ricetrasmittenti e di ripetitori per i servizi di telecomunicazione
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.5 </div><moduli:opzione id="manufatti_leggeri" class="elenco_prima"></moduli:opzione>installazione di manufatti leggeri, anche prefabbricati, e di strutture di qualsiasi genere, quali roulottes, campers, case mobili, imbarcazioni, che siano utilizzati come abitazioni, ambienti di lavoro, oppure come depositi, magazzini e simili, e che non siano diretti a soddisfare esigenze meramente temporanee, salvo che siano installati, con temporaneo ancoraggio al suolo, all’interno di strutture ricettive all’aperto, in conformità alla normativa regionale di settore, e per la sosta ed il soggiorno di turisti
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.6 </div><moduli:opzione id="inter_pertinenziali" class="elenco_prima"></moduli:opzione>interventi pertinenziali che le norme tecniche degli strumenti urbanistici, in relazione alla zonizzazione e al pregio ambientale e paesaggistico delle aree, qualifichino come interventi di nuova costruzione, ovvero che comportino la realizzazione di un volume superiore al 20% del volume dell’edificio principale
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">1.1.7 </div><moduli:opzione id="depositi" class="elenco_prima"></moduli:opzione>realizzazione di depositi di merci o di materiali, la realizzazione di impianti per attività produttive all'aperto ove comportino l'esecuzione di lavori cui consegua la trasformazione permanente del suolo inedificato;
+            </div>
+            <div class="clear_both"><div class="float_left">1.2 </div><moduli:opzione id="ristr_urban" class="elenco_prima"></moduli:opzione><strong>Interventi di ristrutturazione urbanistica </strong>
+                <div class="riga margin_l_35">(articolo 3, comma 1, lettera f) del d.P.R. n. 380/2001)</div>
+
+            </div>
+            <div class="clear_both"><div class="float_left">1.3 </div><moduli:opzione id="ristr_urban" class="elenco_prima"></moduli:opzione><strong>Interventi di ristrutturazione edilizia </strong>
+                <div class="riga margin_l_35">(articolo 10, comma 1, lettera c) del d.P.R. n. 380/2001) come modificato dal DL 133/2014 convertito in L 164/2014</div>
+            </div>
+            <div class="clear_both"><div class="float_left">1.3 </div><moduli:opzione id="ristr_edilizia" class="elenco_prima"></moduli:opzione><strong>altro </strong>non indicato nei punti precedenti
+            </div>
+            e che consistono in:
+            <moduli:dato tipo="longText" id="descrizione_altro_intervento" class="readonly_js"></moduli:dato>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>2) Dati geometrici dell'immobile oggetto di intervento (*)</strong>
+    <moduli:gruppo id="tab_dati_geom" titolo="" class="dati_modulo">
+        <strong>che i dati geometrici dell’immobile oggetto di intervento sono i seguenti:</strong>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>esistente</th>
+                    <th>progetto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>superficie lorda di pavimento (s.l.p.)</td>
+                    <td>mq</td>
+                    <td><moduli:dato id="slp_esistente"></moduli:dato></td>
+                    <td><moduli:dato id="slp_progetto"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td>superficie coperta (s.c.)</td>
+                    <td>mq</td>
+                    <td><moduli:dato id="sc_esistente"></moduli:dato></td>
+                    <td><moduli:dato id="sc_progetto"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td>volumetria</td>
+                    <td>mc</td>
+                    <td><moduli:dato id="volumetria_esistente"></moduli:dato></td>
+                    <td><moduli:dato id="volumetria_progetto"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td>numero dei piani</td>
+                    <td>n</td>
+                    <td><moduli:dato id="n_piani_esistente"></moduli:dato></td>
+                    <td><moduli:dato id="n_piani_progetto"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td>altezza</td>
+                    <td>m</td>
+                    <td><moduli:dato id="altezza_esistente"></moduli:dato></td>
+                    <td><moduli:dato id="altezza_progetto"></moduli:dato></td>
+                </tr>
+            </tbody>
+        </table>
+    </moduli:gruppo>
+
+    <strong>3) Strumentazione urbanistica comunale vigente e in salvaguardia (*)</strong>
+    <moduli:gruppo id="tab_strum_urban" titolo="" class="dati_modulo dati_readable_js">
+        <strong>che l’area/immobile oggetto di intervento risulta individuata dal/è da realizzarsi su zone:</strong>
+        <div class="riga">
+            <moduli:dato id="zona_1" class="input_largewidth"></moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="zona_2" class="input_largewidth"></moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="zona_3" class="input_largewidth"></moduli:dato>
+        </div>
+        <div class="riga">
+            <strong>Con vincoli:</strong>
+        </div>
+        <div class="riga">
+            <moduli:dato id="vincolo_1" class="input_largewidth"></moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="vincolo_2" class="input_largewidth"></moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="vincolo_3" class="input_largewidth"></moduli:dato>
+        </div>
+
+        <!--
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>SPECIFICARE</th>
+                    <th>ZONA</th>
+                    <th>ART.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><moduli:opzione id="pat_pati"></moduli:opzione></td>
+                    <td>PAT/PATI</td>
+                    <td><moduli:dato id="pat_pati_1"></moduli:dato></td>
+                    <td><moduli:dato id="pat_pati_2"></moduli:dato></td>
+                    <td><moduli:dato id="pat_pati_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="pi"></moduli:opzione></td>
+                    <td>PI</td>
+                    <td><moduli:dato id="pi_1"></moduli:dato></td>
+                    <td><moduli:dato id="pi_2"></moduli:dato></td>
+                    <td><moduli:dato id="pi_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="prg"></moduli:opzione></td>
+                    <td>PRG</td>
+                    <td><moduli:dato id="prg_1"></moduli:dato></td>
+                    <td><moduli:dato id="prg_2"></moduli:dato></td>
+                    <td><moduli:dato id="prg_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="piano_partic"></moduli:opzione></td>
+                    <td>PIANO PARTICOLAREGGIATO</td>
+                    <td><moduli:dato id="piano_partic_1"></moduli:dato></td>
+                    <td><moduli:dato id="piano_partic_2"></moduli:dato></td>
+                    <td><moduli:dato id="piano_partic_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="piano_rec"></moduli:opzione></td>
+                    <td>PIANO DI RECUPERO</td>
+                    <td><moduli:dato id="piano_rec_1"></moduli:dato></td>
+                    <td><moduli:dato id="piano_rec_2"></moduli:dato></td>
+                    <td><moduli:dato id="piano_rec_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="pip"></moduli:opzione></td>
+                    <td>P.I.P</td>
+                    <td><moduli:dato id="pip_1"></moduli:dato></td>
+                    <td><moduli:dato id="pip_2"></moduli:dato></td>
+                    <td><moduli:dato id="pip_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="peep"></moduli:opzione></td>
+                    <td>P.E.E.P.</td>
+                    <td><moduli:dato id="peep_1"></moduli:dato></td>
+                    <td><moduli:dato id="peep_2"></moduli:dato></td>
+                    <td><moduli:dato id="peep_3"></moduli:dato></td>
+                </tr>
+                <tr>
+                    <td><moduli:opzione id="altro_strum"></moduli:opzione></td>
+                    <td>ALTRO</td>
+                    <td><moduli:dato id="altro_strum_1"></moduli:dato></td>
+                    <td><moduli:dato id="altro_strum_2"></moduli:dato></td>
+                    <td><moduli:dato id="altro_strum_3"></moduli:dato></td>
+                </tr>
+            </tbody>
+        </table>
+    -->
+
+
+    </moduli:gruppo>
+
+    <strong>4) Barriere architettoniche</strong>
+    <moduli:gruppo id="bar_archit" titolo="" class="dati_modulo">
+        <strong>che l’intervento</strong>
+        <moduli:opzioni id="tipo_bar_archit" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">4.1 </div><moduli:opzione id="non_sogg" class="elenco_prima"></moduli:opzione><strong>non è soggetto </strong>alle prescrizioni degli articoli 77 e seguenti del d.P.R. n. 380/2001 e del d.m. n. 236/1989
+            </div>
+                <div class="clear_both"><div class="float_left">4.2 </div><moduli:opzione id="edif_privato" class="elenco_prima"></moduli:opzione><strong>interessa un edificio privato aperto al pubblico</strong> e che <strong>le opere previste sono conformi all’articolo 82 del d.P.R. n. 380/2001</strong> come da 
+                <div class="riga margin_l_35">
+                    <strong>relazione e schemi dimostrativi allegati al progetto</strong>
+                </div>
+            </div>
+                <div class="clear_both"><div class="float_left">4.3 </div><moduli:opzione id="soggetto_prescriz" class="elenco_prima"></moduli:opzione><strong>è soggetto </strong>alle prescrizioni degli articoli 77 e seguenti del d.P.R. n. 380/2001 e del d.m. n. 236/1989 e dell’art. 6 della LR 16/07 
+                <div class="riga margin_l_35">
+                    secondo le prescrizioni tecniche della DGRV 1428/2011 e, come da <strong>relazione,  schemi dimostrativie e dichiarazione di conformità  allegati, </strong>soddisfa il requisito di: 
+                </div>
+                <moduli:opzioni id="tipo_requisito" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">4.3.1 </div><moduli:opzione id="access" class="elenco_prima"></moduli:opzione>accessibilità 
+                    </div>
+                    <div class="clear_both"><div class="float_left">4.3.2 </div><moduli:opzione id="visit" class="elenco_prima"></moduli:opzione>visitabilità
+                    </div>
+                    <div class="clear_both"><div class="float_left">4.3.3</div><moduli:opzione id="adatt" class="elenco_prima"></moduli:opzione>adattabilità
+                    </div>
+                </moduli:opzioni>
+            </div>
+            <div class="clear_both"><div class="float_left">4.4 </div><moduli:opzione id="infra_impianti" class="elenco_prima"></moduli:opzione>pur essendo <strong>soggetto</strong> alle prescrizioni degli articoli 77 e seguenti del d.P.R. n. 380/2001 e del d.m. n. 236/1989, non rispetta la normativa in 
+                <div class="riga margin_l_35">
+                    materia di barriere architettoniche, pertanto <strong>si richiede la deroga</strong>, ai sensi della sezione V dell’Allegato B alla DGRV n. 1428/20011,come meglio descritto nella <strong>relazione tecnica allegata e schemi dimostrativi allegati</strong>
+                </div>
+            
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>            
+
+
+    <strong>5) Sicurezza degli impianti</strong>
+    <moduli:gruppo id="sicu_impianti" titolo="" class="dati_modulo">
+        <strong>che l’intervento</strong>
+        <moduli:opzioni id="tipo_sicu_impianti" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">5.1 </div><moduli:opzione id="non_comporta" class="elenco_prima"></moduli:opzione><strong>non comporta </strong>l’installazione, la trasformazione o l’ampliamento di impianti tecnologici 
+            </div>
+            <div class="clear_both"><div class="float_left">5.2 </div><moduli:opzione id="comporta" class="elenco_prima"></moduli:opzione><strong>comporta </strong>l’installazione, la trasformazione o l’ampliamento dei seguenti impianti tecnologici
+                <div class="riga margin_l_35">
+                    <strong>(è possibile selezionare più di un’opzione)</strong>
+                </div>
+                <moduli:opzioni id="tipo_sicu_impianti_comporta" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">5.2.1 </div><moduli:opzione id="comporta_1" class="elenco_prima"></moduli:opzione>di produzione, trasformazione, trasporto, distribuzione, utilizzazione dell'energia elettrica, di protezione contro le scariche atmosferiche, di automazione di porte, cancelli e barriere
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.2 </div><moduli:opzione id="comporta_2" class="elenco_prima"></moduli:opzione>radiotelevisivi, antenne ed elettronici in genere
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.3 </div><moduli:opzione id="comporta_3" class="elenco_prima"></moduli:opzione>di riscaldamento, di climatizzazione, di condizionamento e di refrigerazione di qualsiasi natura o specie, comprese le opere di evacuazione dei prodotti della combustione e delle condense, e di ventilazione ed aerazione dei locali
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.4 </div><moduli:opzione id="comporta_4" class="elenco_prima"></moduli:opzione>idrici e sanitari di qualsiasi natura o specie
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.5 </div><moduli:opzione id="comporta_5" class="elenco_prima"></moduli:opzione>per la distribuzione e l'utilizzazione di gas di qualsiasi tipo, comprese le opere di evacuazione dei prodotti della combustione e ventilazione ed aerazione dei locali;
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.6 </div><moduli:opzione id="comporta_6" class="elenco_prima"></moduli:opzione>impianti di sollevamento di persone o di cose per mezzo di ascensori, di montacarichi, di scale mobili e simili
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.7 </div><moduli:opzione id="comporta_7" class="elenco_prima"></moduli:opzione>di protezione antincendio
+                    </div>
+                    <div class="clear_both"><div class="float_left">5.2.8 </div><moduli:opzione id="comporta_8" class="elenco_prima">altre tipologie di impianti, anche definite dalla corrispondente normativa regionale (*) </moduli:opzione><moduli:dato id="altro_5_2_8"></moduli:dato>
+                        <div class="riga">pertanto, ai sensi del <strong>d.m. 22 gennaio 2008, n. 37,</strong> l’intervento proposto:
+                            <moduli:opzioni id="scelta_soggetto_obbligo" class="lista_checkbox_vertical margin_l_35">
+                                <div class="clear_both"><div class="float_left">5.2.(1-8).1 </div><moduli:opzione id="soggetto_obbligo" class="elenco_prima"></moduli:opzione><strong>non è soggetto </strong>agli obblighi di presentazione del progetto
+                                </div>
+                                <div class="clear_both"><div class="float_left">5.2.(1-8).2 </div><moduli:opzione id="non_soggetto_obbligo" class="elenco_prima"></moduli:opzione><strong>è soggetto </strong>agli obblighi di presentazione del progetto e pertanto
+                                </div>
+                                <div class="clear_both margin_l_35"><div class="float_left">5.2.(1-8).2.1 </div><moduli:opzione id="non_soggetto_obbligo" class="elenco_prima"></moduli:opzione><strong>allega i relativi elaborati</strong>
+                                </div>
+                            </moduli:opzioni>
+                        </div>
+                    </div>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>  
+
+
+    <strong>6) Consumi energetici (*)</strong>
+    <moduli:gruppo id="consumi_energ" titolo="" class="dati_modulo">
+        <strong>che l’intervento, in materia di risparmio energetico,</strong>
+        <moduli:opzioni id="tipo_consumi_energ" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">6.1.1 </div><moduli:opzione id="consumi_energ_nosogg" class="elenco_prima"></moduli:opzione><strong>non è soggetto </strong>al deposito del progetto e della relazione tecnica di cui all’articolo 125 del d.P.R. n. 380/2001 e del d.lgs. n. 192/2005
+            </div>
+            <div class="clear_both"><div class="float_left">6.1.2 </div><moduli:opzione id="consumi_energ_sogg" class="elenco_prima"></moduli:opzione><strong>è soggetto </strong>all’applicazione dell’articolo 125 del d.P.R. n. 380/2001 e del d.lgs. n. 192/2005, pertanto la relazione tecnica sul rispetto delle prescrizioni in materia di risparmio energetico e la documentazione richiesta dalla legge
+            </div>
+                <div class="clear_both margin_l_35"><div class="float_left">6.1.2.1 </div><moduli:opzione id="cons_sogg_allegate" class="elenco_prima"></moduli:opzione><strong>sono allegate  </strong>alla presente richiesta di permesso di costruire
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">6.1.2.2 </div><moduli:opzione id="cons_sogg_noallegate" class="elenco_prima"></moduli:opzione><strong>saranno presentate in allegato </strong>alla comunicazione di inizio lavori
+                </div>
+        </moduli:opzioni>
+        <strong>che l’intervento, in relazione agli obblighi in materia di fonti rinnovabili</strong>
+        <moduli:opzioni id="tipo_consumi_energ_rin" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">6.2.1 </div><moduli:opzione id="consumi_energ_nosogg_rin" class="elenco_prima"></moduli:opzione><strong>non è soggetto </strong>all’applicazione del d.lgs. n. 28/2011, in quanto non riguarda edifici di nuova costruzione o edifici sottoposti ad una ristrutturazione rilevante
+            </div>
+            <div class="clear_both"><div class="float_left">6.2.2 </div><moduli:opzione id="consumi_energ_sogg_rin" class="elenco_prima"></moduli:opzione><strong>è soggetto </strong>all’applicazione del d.lgs. n. 28/2011, pertanto 
+            </div>
+                <div class="clear_both margin_l_35"><div class="float_left">6.2.2.1 </div><moduli:opzione id="cons_sogg_allegate_rin" class="elenco_prima"></moduli:opzione>il rispetto delle prescrizioni in materia di utilizzo di fonti di energia rinnovabili è <strong>indicato negli elaborati progettuali e nella relazione tecnica</strong> prevista dall’articolo 125 del d.P.R. n. 380/2001 e dal d.lgs. n. 192/2005 in materia di risparmio energetico
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">6.2.2.2 </div><moduli:opzione id="cons_sogg_noallegate_rin" class="elenco_prima"></moduli:opzione><strong>l’impossibilità tecnica</strong> di ottemperare, in tutto o in parte, agli obblighi previsti, è <strong>evidenziata nella relazione tecnica</strong> dovuta ai sensi dell’articolo 125 del d.P.R. n. 380/2001 e del d.lgs. n. 192/2005, con l’indicazione della non fattibilità di tutte le diverse opzioni tecnologiche disponibili
+                </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>7) Tutela dall’inquinamento acustico (*)</strong>
+    <moduli:gruppo id="inqui_acustico" titolo="" class="dati_modulo">
+        <strong>che l’intervento</strong>
+        <moduli:opzioni id="tipo_inqui_acustico" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">7.1 </div><moduli:opzione id="inqui_non_rientra" class="elenco_prima"></moduli:opzione><strong>non rientra  </strong>nell’ambito di applicazione dell’articolo 8 della l. n. 447/1995 
+            </div>
+            <div class="clear_both"><div class="float_left">7.2 </div><moduli:opzione id="inqui_rientra" class="elenco_prima"></moduli:opzione><strong>rientra  </strong>nell’ambito di applicazione dell’articolo 8 della l. n. 447/1995, integrato con i contenuti dell’articolo 4 del d.P.R. n. 227/2011 e pertanto <strong>si allega:</strong>
+                <moduli:opzioni id="inqui_acustico_allegati" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">7.2.1 </div><moduli:opzione id="acustico_all_1" class="elenco_prima"></moduli:opzione>documentazione di impatto acustico (art. 8, commi 2 e 4, legge n. 447/1995)
+                    </div>
+                    <div class="clear_both"><div class="float_left">7.2.2 </div><moduli:opzione id="acustico_all_2" class="elenco_prima"></moduli:opzione>valutazione previsionale di clima acustico (art. 8, comma 3, legge n. 447/1995)
+                    </div>
+                    <div class="clear_both"><div class="float_left">7.2.3 </div><moduli:opzione id="acustico_all_3" class="elenco_prima"></moduli:opzione>autocertificazione a firma del tecnico abilitato competente in acustica ambientale in cui si attesta il rispetto dei requisiti di protezione acustica in relazione alla zonizzazione acustica di riferimento (art. 8, comma 3-bis, legge n. 447/1995)
+                    </div>
+                    <div class="clear_both"><div class="float_left">7.2.4 </div><moduli:opzione id="acustico_all_4" class="elenco_prima"></moduli:opzione>dichiarazione sostitutiva dell’atto di notorietà, a firma del titolare, relativa al rispetto dei limiti stabiliti dal documento di classificazione acustica del territorio comunale di riferimento ovvero, ove questo non sia stato adottato, ai limiti individuati dal d.P.C.M. 14 novembre 1997 (art. 4, commi 1 e 2, DPR 227/2011)
+                    </div>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>  
+
+
+    <strong>8) Produzione di materiali di risulta (*)</strong>
+    <moduli:gruppo id="prod_materiali" titolo="" class="dati_modulo">
+        <strong>che le opere</strong>
+        <moduli:opzioni id="tipo_prod_materiali" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">8.1 </div><moduli:opzione id="tipo_prod_materiali_1" class="elenco_prima"></moduli:opzione>non sono soggette alla normativa relativa ai materiali da scavo (art. 41-bis D.L. n. 69 del 2013 e art. 184-bis d.lgs. n. 152 del 2006)
+            </div>
+            <div class="clear_both"><div class="float_left">8.2 </div><moduli:opzione id="tipo_prod_materiali_2" class="elenco_prima"></moduli:opzione><strong>comportano</strong> la produzione di materiali da scavo <strong>considerati come sottoprodotti</strong> ai sensi dell’articolo 184-bis, comma 1, del d.lgs. n. 152/2006 o dell’articolo 41-bis, comma 1, D.L. n. 69 del 2013, e inoltre
+                <div class="clear_both margin_l_35"><div class="float_left">8.2.1 </div><moduli:opzione id="tipo_prod_materiali_2_1" class="elenco_prima"></moduli:opzione><strong>le opere comportano</strong> la produzione di materiali da scavo per un <strong>volume superiore a 6000 mc e sono soggette a VIA o AIA</strong>, e pertanto, ai sensi dell’art. 184-bis, comma 2-bis, e del d.m. n. 161/2012
+                    <div class="clear_both margin_l_35"><div class="float_left">8.2.1.1 </div><moduli:opzione id="tipo_prod_materiali_2_1_1" class="elenco_prima"></moduli:opzione><strong>si allega/si comunicano gli estremi del</strong>  Provvedimento di VIA o AIA, comprensivo dell’assenso al Piano di Utilizzo  <moduli:dato id="allegato_8211">dei materiali da scavo, rilasciato da</moduli:dato> <moduli:dato id="prot_8211">con prot</moduli:dato> 
+                        <div class="riga">
+                            <moduli:dato id="data_8211" tipo="data" class="input_xsmallwidth">in data</moduli:dato>
+                        </div>
+                    </div>    
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">8.2.2 </div><moduli:opzione id="tipo_prod_materiali_2_2" class="elenco_prima"></moduli:opzione>le opere comportano la produzione di materiali da scavo per un <strong>volume inferiore o uguale a 6000 mc ovvero (pur superando tale soglia) non sono soggette a VIA o AIA</strong>, e pertanto
+                    <div class="clear_both margin_l_35"><div class="float_left">8.2.2.1 </div><moduli:opzione id="tipo_prod_materiali_2_2_1" class="elenco_prima"></moduli:opzione>allega <strong>autocertificazione del titolare</strong> resa all’ARPA ai sensi del comma 2 dell’art.  41-bis D.L. n. 69 del 2013 
+                    </div>    
+                </div> 
+            </div>
+            <div class="clear_both"><div class="float_left">8.3 </div><moduli:opzione id="tipo_prod_materiali_3" class="elenco_prima"></moduli:opzione><strong>comportano</strong> la produzione di materiali da scavo che saranno riutilizzati nello stesso luogo di produzione e pertanto 
+                <div class="clear_both margin_l_35"><div class="float_left">8.3.1 </div><moduli:opzione id="tipo_prod_materiali_4" class="elenco_prima"></moduli:opzione><strong>allega autocertificazione del titolare (che i materiali da scavo saranno riutilizzati nello stesso</strong> luogo di produzione)
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">8.3.2 </div><moduli:opzione id="tipo_prod_materiali_5" class="elenco_prima"></moduli:opzione>Verrà presentata con l’inizio lavori
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">8.4 </div><moduli:opzione id="tipo_prod_materiali_4" class="elenco_prima"></moduli:opzione>riguardano interventi di demolizione di edifici o altri manufatti preesistenti e producono rifiuti la cui gestione è disciplinata ai sensi della parte quarta del d.lgs. n. 152/ 2006
+            </div>
+            <div class="clear_both"><div class="float_left">8.5 </div><moduli:opzione id="tipo_prod_materiali_5" class="elenco_prima"></moduli:opzione><strong>comportano la produzione di materiali da scavo che saranno gestiti dall’interessato come rifiuti</strong>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>  
+
+
+    <strong>9) Prevenzione incendi</strong>
+    <moduli:gruppo id="prev_incendi" titolo="" class="dati_modulo">
+        <strong>che l'intervento</strong>
+        <moduli:opzioni id="tipo_prev_incendio" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">9.1 </div><moduli:opzione id="tipo_prev_incendio_1" class="elenco_prima"></moduli:opzione><strong>non è soggetto </strong>alle norme di prevenzione incendi
+            </div>
+            <div class="clear_both"><div class="float_left">9.2 </div><moduli:opzione id="tipo_prev_incendio_2" class="elenco_prima"></moduli:opzione><strong>è soggetto </strong>alle norme tecniche di prevenzione incendi e le stesse sono rispettate nel progetto (Allegato I DPR 151/11)
+            </div>
+            <div class="clear_both"><div class="float_left">9.3 </div><moduli:opzione id="tipo_prev_incendio_3" class="elenco_prima"></moduli:opzione>presenta caratteristiche tali da non consentire l’integrale osservanza delle regole tecniche di prevenzione incendi e pertanto
+                <div class="clear_both margin_l_35"><div class="float_left">9.3.1 </div><moduli:opzione id="tipo_prev_incendio_3_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>all’ottenimento della deroga
+                </div>
+            </div>
+            <strong>e che l'intervento</strong>
+            <div class="clear_both"><div class="float_left">9.4 </div><moduli:opzione id="tipo_prev_incendio_4" class="elenco_prima"></moduli:opzione><strong>non è soggetto alla valutazione del progetto </strong>da parte del Comando Provinciale dei Vigili del Fuoco ai sensi del d.P.R. n. 151/2011
+            </div>
+            <div class="clear_both"><div class="float_left">9.5 </div><moduli:opzione id="tipo_prev_incendio_5" class="elenco_prima"></moduli:opzione><strong>è soggetto alla valutazione del progetto </strong>da parte del Comando Provinciale dei Vigili del Fuoco, ai sensi dell’articolo 3 del d.P.R. n. 151/2011 e pertanto
+                <div class="clear_both margin_l_35"><div class="float_left">9.5.1 </div><moduli:opzione id="tipo_prev_incendio_5_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>alla valutazione del progetto
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">9.6 </div><moduli:opzione id="tipo_prev_incendio_6" class="elenco_prima"></moduli:opzione><strong>costituisce variante e il sottoscritto assevera che le modifiche non costituiscono variazione dei requisiti di sicurezza antincendio</strong>
+                <div class="riga margin_l_35">
+                    già approvati con parere del Comando Provinciale dei Vigili del fuoco rilasciato con 
+                </div>
+                <div class="riga margin_l_35">
+                    <moduli:dato id="prot_vigili_fuoco" class="input_xsmallwidth">prot </moduli:dato> <moduli:dato id="data_vigili_fuoco" class="input_xsmallwidth" tipo="data">in data </moduli:dato>
+                </div>
+              
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>10) Amianto</strong>
+    <moduli:gruppo id="amianto" titolo="" class="dati_modulo">
+        <strong>che le opere</strong>
+        <moduli:opzioni id="tipo_amianto" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">10.1 </div><moduli:opzione id="tipo_amianto_1" class="elenco_prima"></moduli:opzione><strong>non interessano </strong>parti di edifici con presenza di fibre di amianto
+            </div>
+            <div class="clear_both"><div class="float_left">10.2 </div><moduli:opzione id="tipo_amianto_2" class="elenco_prima"></moduli:opzione><strong>interessano  </strong>parti di edifici con presenza di fibre di amianto e che è stato predisposto, ai sensi dei commi 2 e 5 dell’articolo 256 del d.lgs. n. 81/2008:
+                <div class="clear_both margin_l_35"><div class="float_left">10.2.1 </div><moduli:opzione id="tipo_amianto_2_1" class="elenco_prima"></moduli:opzione>è stato predisposto il Piano di Lavoro di demolizione o rimozione dell’amianto in conformità all’Appendice 1 della DGRV 256/2011 in allegato alla presente relazione di asseverazione
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">10.2.2 </div><moduli:opzione id="tipo_amianto_2_2" class="elenco_prima"></moduli:opzione>il Piano di Lavoro di demolizione o rimozione dell’amianto sarà presentato 30 giorni prima dell’inizio dei lavori
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">10.3 </div><moduli:opzione id="tipo_amianto_3" class="elenco_prima"></moduli:opzione><strong>interessano </strong>parti di edifici con presenza di fibre di amianto ed è stata predisposta la notifica di cui all’articolo 250 del D.Lgs. n. 81/2008 in allegato  alla presente relazione di asseverazione 
+            </div>
+            <div class="clear_both"><div class="float_left">10.4 </div><moduli:opzione id="tipo_amianto_4" class="elenco_prima"></moduli:opzione><strong>interessano </strong>parti di edifici con presenza di fibre di amianto ma l’esposizione dei lavoratori alla polvere proveniente dall'amianto o dai materiali contenenti amianto è sporadica e di debole intensità ai sensi dell’art. 249, comma 2 del D.Lgs n. 81/2008;
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>11) Conformità igienico-sanitaria (*)</strong>
+    <moduli:gruppo id="igienico_san" titolo="" class="dati_modulo">
+        <strong>che l’intervento</strong>
+        <moduli:opzioni id="tipo_igienico_san" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">11.1 </div><moduli:opzione id="tipo_igienico_san_1" class="elenco_prima"></moduli:opzione><strong>non è assoggettato  </strong>alla verifica del rispetto dei requisiti igienico-sanitari
+            </div>
+            <div class="clear_both"><div class="float_left">11.2 </div><moduli:opzione id="tipo_igienico_san_2" class="elenco_prima"></moduli:opzione><strong>è assoggettato  </strong>alla verifica del rispetto dei requisiti igienico-sanitari e
+                <div class="clear_both margin_l_35"><div class="float_left">11.2.1 </div><moduli:opzione id="tipo_igienico_san_2_1" class="elenco_prima"></moduli:opzione>non comporta valutazioni tecnico-discrezionali e pertanto se ne autocertifica la conformità in merito ai requisiti igienico-sanitari definiti dai regolamenti locali
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">11.2.2 </div><moduli:opzione id="tipo_igienico_san_2_2" class="elenco_prima"></moduli:opzione>comporta valutazioni tecnico-discrezionali e pertanto 
+                    <div class="clear_both margin_l_35"><div class="float_left">11.2.2.1 </div><moduli:opzione id="tipo_igienico_san_2_2_1" class="elenco_prima"></moduli:opzione>si allega la documentazione necessaria per il rilascio del parere igienico-sanitario
+                    </div>
+                </div>
+            </div>
+
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>12) Interventi strutturali e/o in zona sismica (*)</strong>
+    <moduli:gruppo id="int_strutt" titolo="" class="dati_modulo">
+        <strong>che l’intervento</strong>
+        <moduli:opzioni id="tipo_int_strutt" class="lista_checkbox_vertical">    
+            <div class="clear_both"><div class="float_left">12.1 </div><moduli:opzione id="tipo_int_strutt_1" class="elenco_prima"></moduli:opzione><strong>non prevede </strong>la realizzazione di opere di conglomerato cementizio armato, normale e precompresso ed a struttura metallica
+            </div>
+            <div class="clear_both"><div class="float_left">12.2 </div><moduli:opzione id="tipo_int_strutt_2" class="elenco_prima"></moduli:opzione><strong>prevede</strong> la realizzazione di opere di conglomerato cementizio armato, normale e precompresso ed a struttura metallica; pertanto
+                <div class="clear_both margin_l_35"><moduli:opzione id="denuncia_interventi_1"></moduli:opzione>si allega la documentazione relativa alla denuncia di cui all’articolo 65 del d.P.R. n. 380/2001
+                </div>
+                <div class="clear_both margin_l_35"><moduli:opzione id="denuncia_interventi_2"></moduli:opzione>la documentazione tecnica relativa alla denuncia di cui all’articolo 65 del d.P.R. n. 380/2001 sarà allegata alla comunicazione di inizio lavori
+                </div>
+            </div>
+        <strong>e che l'intervento</strong>
+        <div class="clear_both"><div class="float_left">12.3 </div><moduli:opzione id="tipo_int_strutt_3" class="elenco_prima"></moduli:opzione>non prevede opere da denunciare o autorizzare ai sensi degli articoli 93 e 94 del d.P.R. n. 380/2001 o della corrispondente normativa regionale
+        </div>
+        <div class="clear_both"><div class="float_left">12.4 </div><moduli:opzione id="tipo_int_strutt_4" class="elenco_prima"></moduli:opzione>costituisce una variante non sostanziale riguardante parti strutturali relativa ad un progetto esecutivo delle strutture precedentemente presentato con
+        <div class="riga margin_l_35"><moduli:dato id="prot_prec_prog" class="input_xsmallwidth">prot</moduli:dato> <moduli:dato id="data_prec_prog" class="input_xsmallwidth" tipo="data">in data</moduli:dato></div>
+        </div>
+        <div class="clear_both"><div class="float_left">12.5 </div><moduli:opzione id="tipo_int_strutt_5" class="elenco_prima"></moduli:opzione>prevede opere in zona sismica 3  o 4  da denunciare ai sensi dell’articolo 93 del d.P.R. n. 380/2001 
+            <div class="riga margin_l_35">
+                o della corrispondente normativa regionale (DGRV n. 2122/2005) e pertanto
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">12.5.1 </div><moduli:opzione id="tipo_int_strutt_5_1" class="elenco_prima"></moduli:opzione>dichiara, che la progettazione e le calcolazioni sono conformi a quanto previsto dalle normative Tecniche per le costruzioni, emanate con DM 14/01/2008
+            </div>
+        </div>
+        <div class="clear_both"><div class="float_left">12.6 </div><moduli:opzione id="tipo_int_strutt_6" class="elenco_prima"></moduli:opzione><strong>prevede opere strutturali soggette ad autorizzazione sismica </strong>ai sensi dell’articolo 94 del d.P.R. n. 380/2001, della LR 13/2004 e LR 27/2003, 
+            <div class="riga margin_l_35">in quanto ricade in <strong>zona sismica 2</strong> e</div>
+            <div class="clear_both margin_l_35"><div class="float_left">12.6.1 </div><moduli:opzione id="tipo_int_strutt_6_1" class="elenco_prima"></moduli:opzione>allega la documentazione necessaria di cui alla DGRV 2122/2005 per il rilascio dell’autorizzazione sismica 
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">12.6.2 </div><moduli:opzione id="tipo_int_strutt_6_2" class="elenco_prima"></moduli:opzione><strong>chiede la contestuale convocazione delle conferenza di servizi</strong>
+                <moduli:opzioni id="tipo_int_strutt_si_no" class="lista_checkbox_oriz margin_l_35">
+                    <moduli:opzione id="tipo_int_strutt_si" class="elenco_prima">si</moduli:opzione><moduli:opzione id="tipo_int_strutt_no" class="elenco_prima">no</moduli:opzione>
+                </moduli:opzioni>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">12.6.3 </div><moduli:opzione id="tipo_int_strutt_6_3" class="elenco_prima"></moduli:opzione><strong>costituisce una variante ai lavori già autorizzati</strong>
+                <div class="clear_both margin_l_35"><div class="float_left">12.6.3.1 </div><moduli:opzione id="tipo_int_strutt_6_3_1" class="elenco_prima">con provvedimento regionale</moduli:opzione> 
+                <moduli:dato id="n_tipo_int_strutt_6_3_1" class="input_xxsmallwidth label_smlwidth">n.</moduli:dato> <moduli:dato id="data_tipo_int_strutt_6_3_1" class="input_xsmallwidth label_smlwidth" tipo="data">in data</moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">12.6.3.2 </div><moduli:opzione id="tipo_int_strutt_6_3_2" class="elenco_prima"></moduli:opzione>per decorrenza dei termini di silenzio assenso
+                </div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">12.6.4 </div><moduli:opzione id="tipo_int_strutt_6_4" class="elenco_prima"></moduli:opzione><strong>l’autorizzazione  sismica per l’inizio dei lavori verrà depositata prima dell’inizio dei lavori stessi</strong>
+            </div>
+        </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>13) Qualità ambientale dei terreni (*)</strong>
+    <moduli:gruppo id="qual_amb" titolo="" class="dati_modulo">
+        <strong>che l’intervento, in relazione alla qualità ambientale dei terreni,</strong>
+        <moduli:opzioni id="tipo_qual_amb" class="lista_checkbox_vertical">    
+            <div class="clear_both"><div class="float_left">13.1 </div><moduli:opzione id="tipo_qual_amb_1" class="elenco_prima"></moduli:opzione><strong>non richiede indagini ambientali preventive </strong>in relazione alle attività finora svolte sull’area interessata dall’intervento
+            </div>
+            <div class="clear_both"><div class="float_left">13.2 </div><moduli:opzione id="tipo_qual_amb_2" class="elenco_prima"></moduli:opzione>a seguito delle preventive analisi ambientali effettuate, <strong>non necessita di bonifica</strong>, pertanto 
+                <div class="clear_both margin_l_35"><div class="float_left">13.2.1 </div><moduli:opzione id="tipo_qual_amb_2_1" class="elenco_prima"></moduli:opzione><strong>si allegano i risultati delle analisi ambientali dei terreni</strong>
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <br /> <br /> <br /> <br />
+    <h3 class="riga_grigia">DICHIARAZIONI SUL RISPETTO DI OBBLIGHI IMPOSTI ESCLUSIVAMENTE DALLA NORMATIVA REGIONALE</h3>
+    <h4 class="riga_grigia">(ad es. tutela del verde, illuminazione, ecc.)</h4>
+     <br /> <br />
+    <strong>14) Quadri informativi aggiuntivi (schema tipo) (*)</strong>
+    <moduli:gruppo id="quadri_info" titolo="" class="dati_modulo">
+        <strong>che l’intervento/le opere in relazione </strong>
+        <moduli:opzioni id="tipo_quadri_info" class="lista_checkbox_vertical">    
+            <div class="clear_both"><div class="float_left">14.1 </div><moduli:opzione id="tipo_quadri_info_1" class="elenco_prima"></moduli:opzione><strong>ai lavori in quota, di cui alla LR 61/85 art. 79 bis e alla DGRV n. 97 del 31.01.2012:</strong>
+                <div class="clear_both margin_l_35"><div class="float_left">14.1.1 </div><moduli:opzione id="tipo_quadri_info_1_1" class="elenco_prima"></moduli:opzione><strong>non è soggetto </strong>alla realizzazione delle linee vita;
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">14.1.2 </div><moduli:opzione id="tipo_quadri_info_1_2" class="elenco_prima"></moduli:opzione><strong>sono previsti </strong>lavori in quota  e pertanto:
+                    <div class="clear_both margin_l_35"><div class="float_left">14.1.2.1 </div><moduli:opzione id="tipo_quadri_info_1_2_1" class="elenco_prima"></moduli:opzione>l’intervento rientra nei casi definiti al cap. 1.5 dell’Allegato B della DGRV n. 97/2012  e quindi la conformità deve essere verificata dall’ASL;
+                    </div>
+                    <div class="clear_both margin_l_35"><div class="float_left">14.1.2.2 </div><moduli:opzione id="tipo_quadri_info_1_2_2" class="elenco_prima"></moduli:opzione>le misure protettive e preventive progettate sono pienamente aderenti alle istruzioni tecniche regionali di cui al cap. 1.2, 1.3 e 1.4 dell’Allegato B della DGRV n. 97/2012 come da progetto allegato.
+                    </div>
+                </div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">14.2 </div><moduli:opzione id="tipo_quadri_info_2" class="elenco_prima"></moduli:opzione><strong>all’inquinamento luminoso:</strong>
+                <div class="clear_both margin_l_35"><div class="float_left">14.2.1 </div><moduli:opzione id="tipo_quadri_info_2_1" class="elenco_prima"></moduli:opzione><strong>non è soggetto</strong> alla LR 17/2009 
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">14.2.2 </div><moduli:opzione id="tipo_quadri_info_2_2" class="elenco_prima"></moduli:opzione><strong>è soggetto</strong>, pertanto si allega la documentazione necessaria
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <br /> <br /> 
+    <h3 class="riga_grigia">DICHIARAZIONI RELATIVE AI VINCOLI </h3>
+    <h4 class="riga_grigia">TUTELA STORICO-AMBIENTALE</h4>
+    <br /> 
+
+    <strong>15) Bene sottoposto ad autorizzazione paesaggistica</strong>
+    <moduli:gruppo id="aut_paesag" titolo="" class="dati_modulo">
+        <strong>che l’intervento, ai sensi della Parte III del d.lgs. n. 42/2004 (Codice dei beni culturali e del paesaggio),</strong>
+        <moduli:opzioni id="tipo_aut_paesag" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">15.1 </div><moduli:opzione id="tipo_aut_paesag_1" class="elenco_prima"></moduli:opzione><strong>non ricade </strong>in zona sottoposta a tutela
+            </div>
+            <div class="clear_both"><div class="float_left">15.2 </div><moduli:opzione id="tipo_aut_paesag_2" class="elenco_prima"></moduli:opzione><strong>ricade </strong>in zona tutelata e le opere comportano alterazione dei luoghi o dell’aspetto esteriore degli edifici e
+                <moduli:opzioni id="tipo_aut_paesag_2_" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">15.2.1 </div><moduli:opzione id="tipo_aut_paesag_2_1" class="elenco_prima"></moduli:opzione>è assoggettato <strong>al procedimento semplificato di autorizzazione paesaggistica</strong>, in quanto di lieve entità, secondo quanto previsto dal d.P.R. n. 139/2010, e pertanto
+                        <div class="clear_both margin_l_35"><div class="float_left">15.2.1.1 </div><moduli:opzione id="tipo_aut_paesag_2_1_1" class="elenco_prima"></moduli:opzione><strong>si allega la relazione paesaggistica semplificata </strong>e la documentazione necessaria ai fini del rilascio dell’autorizzazione paesaggistica semplificata
+                        </div>
+                    </div>
+                    <div class="clear_both"><div class="float_left">15.2.2 </div><moduli:opzione id="tipo_aut_paesag_2_2" class="elenco_prima"></moduli:opzione>è assoggettato al <strong>procedimento ordinario di autorizzazione paesaggistica</strong>, e pertanto
+                        <div class="clear_both margin_l_35"><div class="float_left">15.2.1.2 </div><moduli:opzione id="tipo_aut_paesag_2_1_2" class="elenco_prima"></moduli:opzione><strong>si allega la relazione paesaggistica </strong>e la documentazione necessaria ai fini del rilascio dell’autorizzazione paesaggistica
+                        </div>
+                    </div>
+                    <div class="clear_both"><div class="float_left">15.2.3 </div><moduli:opzione id="tipo_aut_paesag_2_3" class="elenco_prima"><label><strong>è stata rilasciata</strong> autorizzazione paesaggistica</label> </moduli:opzione>
+                    <div class=""><moduli:dato id="n_auth_paes" class="label_smlwidth input_xsmallwidth">n.</moduli:dato> <moduli:dato id="data_auth_paesag" class="label_smlwidth input_xsmallwidth" tipo="data">del </moduli:dato></div>
+                    </div>
+                </moduli:opzioni>
+            </div>
+            <div class="clear_both"><div class="float_left">15.3 </div><moduli:opzione id="tipo_aut_paesag_3" class="elenco_prima"></moduli:opzione><strong>ricade</strong> in zona tutelata ma l’intervento non è assoggettato ad autorizzazione in quanto ricorrono i presupposti per l’applicazione 
+                <div class="riga margin_l_35">dell’art. 149 del D-Lgs. n. 42/2004</div>
+            </div>
+            <div class="clear_both"><div class="float_left">15.4 </div><moduli:opzione id="tipo_aut_paesag_4" class="elenco_prima"></moduli:opzione>è assoggettato ad <strong>accertamento di compatibilità paesaggistica</strong> (art. 167, co. 4 e 5 e art. 181 co 1 quater D.Lgs 42/2004) per:
+                <moduli:opzioni id="tipo_aut_paesag_4_" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">15.4.1 </div><moduli:opzione id="tipo_aut_paesag_4_1" class="elenco_prima"></moduli:opzione>lavori realizzati in assenza o in difformità dell’autorizzazione paesaggistica, che non hanno determinato creazione di superfici utili o volumi né aumento di quelli legittimamente realizzati
+                    </div>
+                    <div class="clear_both"><div class="float_left">15.4.2 </div><moduli:opzione id="tipo_aut_paesag_4_2" class="elenco_prima"></moduli:opzione>impiego di materiali in difformità dall’autorizzazione paesaggistica
+                    </div>
+                    <div class="clear_both"><div class="float_left">15.4.3 </div><moduli:opzione id="tipo_aut_paesag_4_3" class="elenco_prima"></moduli:opzione>lavori configurabili quali interventi di manutenzione ordinaria o straordinaria ai sensi dell’art. 3 del DPR 380/2001
+                    </div>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>16) Bene sottoposto a parere della Soprintendenza</strong>
+    <moduli:gruppo id="parere_sopr" titolo="" class="dati_modulo">
+        <strong>che l’immobile oggetto dei lavori, ai sensi del Parte II, Titolo I, Capo I del d.lgs. n. 42/2004,</strong>
+        <moduli:opzioni id="tipo_parere_sopr" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">16.1 </div><moduli:opzione id="parere_sopr_1" class="elenco_prima"></moduli:opzione><strong>non è sottoposto a tutela</strong>
+            </div>
+            <div class="clear_both"><div class="float_left">16.2 </div><moduli:opzione id="parere_sopr_2" class="elenco_prima"></moduli:opzione><strong>è sottoposto a tutela </strong>e pertanto
+                <div class="clear_both margin_l_35"><div class="float_left">16.2.1 </div><moduli:opzione id="parere_sopr_2_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>ai fini del rilascio del parere/nulla osta
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">16.2.2 </div><moduli:opzione id="parere_sopr_2_2" class="elenco_prima">si allega il parere/nulla osta è stato rilasciato con</moduli:opzione>
+                    <moduli:dato id="prot_parere_sopr" class="label_smlwidth input_xsmallwidth">prot</moduli:dato> <moduli:dato id="data_parere_sopr" class="label_smlwidth input_xsmallwidth" tipo="data">in data</moduli:dato>
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>17) Bene in area protetta (*)</strong>
+    <moduli:gruppo id="area_prot" titolo="" class="dati_modulo">
+        <strong>che l’immobile oggetto dei lavori, ai sensi della legge n. 394/1991 (Legge quadro sulle aree protette) e della corrispondente normativa regionale,</strong>
+        <moduli:opzioni id="tipo_area_prot" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">17.1 </div><moduli:opzione id="tipo_area_prot_1" class="elenco_prima"></moduli:opzione><strong>non ricade in area tutelata</strong>
+            </div>
+            <div class="clear_both"><div class="float_left">17.2 </div><moduli:opzione id="tipo_area_prot_2" class="elenco_prima"></moduli:opzione><strong>ricade in area tutelata </strong>, ma le opere non comportano alterazione dei luoghi o dell’aspetto esteriore degli edifici
+            </div>
+            <div class="clear_both"><div class="float_left">17.3 </div><moduli:opzione id="tipo_area_prot_3" class="elenco_prima"></moduli:opzione><strong>è sottoposto alle relative disposizioni </strong>e pertanto
+                <div class="clear_both margin_l_35"><div class="float_left">17.3.1 </div><moduli:opzione id="tipo_area_prot_3_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>ai fini del rilascio del parere/nulla osta
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <br /> <br /> 
+    <h3 class="riga_grigia">TUTELA ECOLOGICA</h3>
+    <br /> 
+    <strong>18) Bene sottoposto a vincolo idrogeologico (*)</strong>
+    <moduli:gruppo id="vinc_idro" titolo="" class="dati_modulo">
+        <strong>che, ai fini del vincolo idrogeologico, l’area oggetto di intervento</strong>
+        <moduli:opzioni id="tipo_vinc_idro" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">18.1 </div><moduli:opzione id="tipo_vinc_idro_1" class="elenco_prima"></moduli:opzione><strong>non è sottoposto a tutela </strong>
+            </div>
+            <div class="clear_both"><div class="float_left">18.2 </div><moduli:opzione id="tipo_vinc_idro_2" class="elenco_prima"></moduli:opzione><strong>è sottoposto a tutela </strong>e l’intervento rientra nei casi eseguibili senza autorizzazione di cui al comma 5 dell’articolo 61 
+            <div class="riga margin_l_35">del d.lgs. n. 152/2006 e al r.d.l 3267/1923</div>
+            </div>
+            <div class="clear_both"><div class="float_left">18.3 </div><moduli:opzione id="tipo_vinc_idro_3" class="elenco_prima"></moduli:opzione><strong>è sottoposto a tutela </strong>ed è necessario il rilascio dell’autorizzazione di cui al comma 5 dell’articolo 61 del d.lgs. n. 152/2006 
+                <div class="riga margin_l_35">e al r.d.l 3267/1923, pertanto</div>
+                <div class="clear_both margin_l_35"><div class="float_left">18.3.1 </div><moduli:opzione id="tipo_vinc_idro_3_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>ai fini del rilascio dell’autorizzazione
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">18.4 </div><moduli:opzione id="tipo_vinc_idro_4" class="elenco_prima"></moduli:opzione><strong>è sottoposto a tutela </strong>e l’intervento rientra nel Piano Assetto Idrogeologico (PAI) che, ai fini della pericolosità idraulica-geologica-valanga, 
+                <div class="riga margin_l_35">classifica l’area come:</div>
+                <moduli:opzioni id="tipo_vinc_idro_4_" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">18.4.1 </div><moduli:opzione id="tipo_vinc_idro_4_1" class="elenco_prima"></moduli:opzione>P4
+                    </div>
+                    <div class="clear_both"><div class="float_left">18.4.2 </div><moduli:opzione id="tipo_vinc_idro_4_2" class="elenco_prima"></moduli:opzione>P3
+                    </div>
+                    <div class="clear_both"><div class="float_left">18.4.3 </div><moduli:opzione id="tipo_vinc_idro_4_3" class="elenco_prima"></moduli:opzione>P2
+                    </div>
+                    <div class="clear_both"><div class="float_left">18.4.4 </div><moduli:opzione id="tipo_vinc_idro_4_4" class="elenco_prima"></moduli:opzione>P1
+                    </div>
+                    <div class="clear_both"><div class="float_left">18.4.5 </div><moduli:opzione id="tipo_vinc_idro_4_5" class="elenco_prima"></moduli:opzione>zona di attenzione
+                    </div>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+
+    <strong>19) Bene sottoposto a vincolo idraulico (*)</strong>
+    <moduli:gruppo id="vinc_idraulico" titolo="" class="dati_modulo">
+        <strong>che, ai fini del vincolo idraulico, l’area oggetto di intervento</strong>
+        <moduli:opzioni id="tipo_vinc_idraulico" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">19.1 </div><moduli:opzione id="vinc_idraulico_1" class="elenco_prima"></moduli:opzione><strong>non è sottoposta a tutela </strong>
+            </div>
+            <div class="clear_both"><div class="float_left">19.2 </div><moduli:opzione id="vinc_idraulico_2" class="elenco_prima"></moduli:opzione><strong>è sottoposta a tutela  </strong>ed è necessario il rilascio dell’autorizzazione di cui al comma 2 dell’articolo 115 del d.lgs. 
+            <div class="riga margin_l_35">n. 152/2006 e al r.d. 523/1904, pertanto</div>
+                <div class="clear_both margin_l_35"><div class="float_left">19.2.1 </div><moduli:opzione id="vinc_idraulico_2_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>ai fini del rilascio dell’autorizzazione
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">19.2.2 </div><moduli:opzione id="vinc_idraulico_2_2" class="elenco_prima">l’autorizzazione è stata rilasciata con </moduli:opzione><moduli:dato id="prot_vinc_idraulico" class="label_smlwidth input_xsmallwidth">prot</moduli:dato> <moduli:dato id="data_vinc_idraulico" class="label_smlwidth input_xsmallwidth" >in data</moduli:dato>
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">19.3 </div><moduli:opzione id="vinc_idraulico_3" class="elenco_prima"></moduli:opzione>in merito alla superficie permeabile l’intervento:
+                <div class="riga margin_l_35">e al r.d.l 3267/1923, pertanto</div>
+                <moduli:opzioni id="vinc_idraulico_3_" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">19.3.1 </div><moduli:opzione id="vinc_idraulico_3_1" class="elenco_prima"></moduli:opzione>non comporta riduzione della superficie permeabile e pertanto non è dovuta la Verifica di Compatibilità Idraulica
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">19.3.2 </div>
+                        <moduli:opzione id="vinc_idraulico_3_2" class="elenco_prima">comporta riduzione della superficie permeabile inferiore </moduli:opzione>
+                        <moduli:dato id="mq_vinc_idraulico_3_2" class="label_smlwidth input_xsmallwidth">a mq</moduli:dato> pertanto non è dovuta 
+                    <div class="riga margin_l_70"> la Verifica di Compatibilità Idraulica</div>
+                    </div>
+                    <div class="clear_both"><div class="float_left">19.3.3 </div><moduli:opzione id="vinc_idraulico_3_3" class="elenco_prima"></moduli:opzione>comporta riduzione della superficie permeabile e pertanto si allega la Verifica di Compatibilità Idraulica
+                    </div>
+                </moduli:opzioni>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>20) Zona di conservazione “Natura 2000 (*)</strong>
+    <moduli:gruppo id="natura" titolo="" class="dati_modulo">
+        <strong>che, ai fini della zona speciale di conservazione appartenente alla rete “Natura 2000” </strong>
+        <div class="riga">(d.P.R. n. 357/1997e d.P.R. n. 120/2003 nonché della DGRV 3173/2006) l’ intervento</div>
+        <moduli:opzioni id="tipo_natura" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">20.1 </div><moduli:opzione id="tipo_natura_1" class="elenco_prima"></moduli:opzione><strong>non è soggetto a Valutazione d’incidenza (VINCA)</strong>
+            </div>
+            <div class="clear_both"><div class="float_left">20.2 </div><moduli:opzione id="tipo_natura_2" class="elenco_prima"></moduli:opzione><strong>è soggetto a Valutazione d’incidenza (VINCA), </strong>pertanto , in conformità all’Allegato A, par. 4 della DGRV 3173/2006
+                <div class="clear_both margin_l_35"><div class="float_left">20.2.1 </div><moduli:opzione id="tipo_natura_2_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione </strong>di screening, dalla quale risulta la non necessità di redigere la V.Inc.A.
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">20.2.2 </div><moduli:opzione id="tipo_natura_2_2" class="elenco_prima"></moduli:opzione>si allega la V.Inc.A. ai fini della sua approvazione
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">20.3 </div><moduli:opzione id="tipo_natura_3" class="elenco_prima"></moduli:opzione><strong>non è soggetto alla procedura di Valutazione d’incidenza Ambientale </strong>in quanto l’intervento rientra nelle fattispecie di esclusione di cui 
+                <div class="riga margin_l_35">all’Allegato A, par. 3 della DGRV 3173/2006, in particolare trattasi di:</div>
+                <moduli:opzioni id="tipo_natura_3_" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both"><div class="float_left">20.3.1 </div><moduli:opzione id="tipo_natura_3_1" class="elenco_prima"><label>intervento <strong>all'interno dei siti</strong> e relativi</label> </moduli:opzione><moduli:dato id="inter_interno" class="label_smlwidth input_xsmallwidth">a</moduli:dato>
+                    </div>
+                    <div class="clear_both"><div class="float_left">20.3.2 </div><moduli:opzione id="tipo_natura_3_2" class="elenco_prima"><label>intervento <strong>all'esterno dei siti</strong> e relativi</label></moduli:opzione> <moduli:dato id="inter_esterno" class="label_smlwidth input_xsmallwidth">a</moduli:dato>
+                    </div>
+                </moduli:opzioni>
+            </div>
+             <div class="clear_both"><div class="float_left">19.3 </div><moduli:opzione id="tipo_natura_4" class="elenco_prima"></moduli:opzione>non ricade in aree “Rete natura 2000”
+             </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>21) Fascia di rispetto cimiteriale  (*)</strong>
+    <moduli:gruppo id="risp_cim" titolo="" class="dati_modulo">
+        <strong>che in merito alla fascia di rispetto cimiteriale</strong> (articolo 338, testo unico delle leggi sanitarie 1265/1934)
+        <moduli:opzioni id="tipo_risp_cim" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">21.1 </div><moduli:opzione id="tipo_risp_cim" class="elenco_prima"></moduli:opzione><strong>l’intervento non ricade nella fascia di rispetto</strong>
+            </div>
+            <div class="clear_both"><div class="float_left">21.2 </div><moduli:opzione id="tipo_risp_cim_2" class="elenco_prima"></moduli:opzione><strong>l’intervento ricade nella fascia di rispetto ed è consentito </strong>in quanto trattasi di:
+                <div class="clear_both margin_l_35"><div class="float_left">21.2.1 </div><moduli:opzione id="tipo_risp_cim_2_1" class="elenco_prima"></moduli:opzione>recupero del patrimonio edilizio esistente ai sensi dell'art. 3, co. 1, lett. a), b), c), d) del DPR 380/2001;
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">21.2.2 </div><moduli:opzione id="tipo_risp_cim_2_2" class="elenco_prima"></moduli:opzione>ampliamento nella percentuale massima del 10% del volume esistente; 
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">21.3 </div><moduli:opzione id="tipo_risp_cim_3" class="elenco_prima"></moduli:opzione><strong>l’intervento ricade in fascia di rispetto cimiteriale e non è consentito, pertanto si allega la documentazione necessaria </strong>per la richiesta 
+                <div class="riga margin_l_35">di deroga, ai sensi dell’art. 338, co. 5 del testo unico delle leggi sanitarie 1265/1934, <strong>per soddisfare un interesse pubblico</strong></div>
+            
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>22) Aree a rischio di incidente rilevante (*)</strong>
+    <moduli:gruppo id="inc_rilev" titolo="" class="dati_modulo">
+        <strong>che in merito alle attività a rischio d’incidente rilevante </strong> (d.lgs n. 334/1999 e d.m. 9 maggio 2001):
+        <moduli:opzioni id="tipo_inc_rilev" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">22.1 </div><moduli:opzione id="tipo_inc_rilev_1" class="elenco_prima"></moduli:opzione><strong>nel comune non è presente un’attività a rischio d’incidente rilevante</strong>
+            </div>
+            <div class="clear_both"><div class="float_left">22.2 </div><moduli:opzione id="tipo_inc_rilev_2" class="elenco_prima"></moduli:opzione><strong>nel comune è presente un’attività a rischio d’incidente rilevante la relativa "area di danno" </strong>è individuata nella pianificazione comunale
+                <div class="clear_both margin_l_35"><div class="float_left">22.2.1 </div><moduli:opzione id="tipo_inc_rilev_2_1" class="elenco_prima"></moduli:opzione><strong>l’intervento non ricade nell’area di danno</strong>
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">22.2.2 </div><moduli:opzione id="tipo_inc_rilev_2_2" class="elenco_prima"></moduli:opzione><strong>l’intervento ricade in area di danno </strong>pertanto
+                    <div class="clear_both margin_l_35"><div class="float_left">22.2.2.1 </div><moduli:opzione id="tipo_inc_rilev_2_2_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>alla valutazione del progetto dal Comitato Tecnico Regionale
+                    </div>
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">22.3 </div><moduli:opzione id="tipo_inc_rilev_3" class="elenco_prima"></moduli:opzione>l’intervento verrà realizzato nelle vicinanze di <strong>un’attività a rischio d’incidente rilevante e la relativa "area di danno" non è individuata </strong>
+            <div class="riga margin_l_35">nella pianificazione comunale, pertanto </div>
+                <div class="clear_both"><div class="float_left">22.3.1 </div><moduli:opzione id="tipo_inc_rilev_3_1" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>alla valutazione del progetto da parte del Comitato Tecnico Regionale 
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>23) Altri vincoli di tutela ecologica (*)</strong>
+    <moduli:gruppo id="tut_eco" titolo="" class="dati_modulo">
+        <strong>che l’area/immobile oggetto di intervento risulta assoggettata ai seguenti vincoli:</strong>
+        <moduli:opzioni id="tipo_tut_eco" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">23.1 </div><moduli:opzione id="tipo_tut_eco_1" class="elenco_prima"></moduli:opzione><strong>fascia di rispetto dei depuratori </strong>(punto 1.2, allegato 4 della deliberazione 4 febbraio 1977 del Comitato dei Ministri per la tutela delle acque)
+            </div>
+            <div class="clear_both"><div class="float_left">23.2 </div><moduli:opzione id="tipo_tut_eco_2" class="elenco_prima">Altro </moduli:opzione>
+            <moduli:dato id="spec_altro_tut_eco" class="label_smlwidth">(specificare)</moduli:dato>
+                <div class="riga margin_l_35"><strong>In caso di area/immobile assoggettato ad uno o più dei sopracitati vincoli</strong></div>
+                <div class="clear_both margin_l_35"><div class="float_left">23.(1-2).1 </div><moduli:opzione id="tipo_tut_eco_2_1" class="elenco_prima"></moduli:opzione><strong>si allegano le autocertificazioni </strong>relative alla conformità dell’intervento per i relativi vincoli
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">23.(1-2).2 </div><moduli:opzione id="tipo_tut_eco_2_2" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria  </strong>ai fini del rilascio dei relativi atti di assenso
+                    <div class="riga margin_l_35"><strong>(l’opzione è ripetibile in base al numero di vincoli che insistono sull’area/immobile)</strong></div>
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <br /><br />
+    <h3 class="riga_grigia">TUTELA FUNZIONALE</h3>
+    <br />
+    
+    <strong>24) Vincoli per garantire il coerente uso del suolo e l’efficienza tecnica delle infrastrutture (*)</strong>
+    <moduli:gruppo id="vincoli_coerenza" titolo="" class="dati_modulo">
+        <strong>che l’area/immobile oggetto di intervento risulta assoggettata ai seguenti vincoli:</strong>
+        <moduli:opzioni id="tipo_vincoli_coerenza" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">24.1 </div><moduli:opzione id="tipo_vincoli_coerenza_1" class="elenco_prima"><label><strong>stradale </strong>(d.m. n. 1404/1968, d.P.R. n. 495/92) </label></moduli:opzione><moduli:dato id="spec_stradala" class="label_smlwidth">(specificare)</moduli:dato>
+            </div>
+            <div class="clear_both"><div class="float_left">24.2 </div><moduli:opzione id="tipo_vincoli_coerenza_2" class="elenco_prima"></moduli:opzione><strong>ferroviario </strong>(d.P.R. n. 753/1980)
+            </div>
+            <div class="clear_both"><div class="float_left">24.3 </div><moduli:opzione id="tipo_vincoli_coerenza_3" class="elenco_prima"></moduli:opzione><strong>elettrodotto </strong>(d.P.C.M. 23 aprile 1992)
+            </div>
+            <div class="clear_both"><div class="float_left">24.4 </div><moduli:opzione id="tipo_vincoli_coerenza_4" class="elenco_prima"></moduli:opzione><strong>gasdotto </strong>(d.m. 24 novembre 1984)
+            </div>
+            <div class="clear_both"><div class="float_left">24.5 </div><moduli:opzione id="tipo_vincoli_coerenza_5" class="elenco_prima"></moduli:opzione><strong>militare </strong>(d.lgs. n. 66/2010)
+            </div>
+            <div class="clear_both"><div class="float_left">24.6 </div><moduli:opzione id="tipo_vincoli_coerenza_6" class="elenco_prima"></moduli:opzione><strong>aeroportuale </strong>(piano di rischio ai sensi dell’art. 707 del Codice della navigazione, specifiche tecniche ENAC)
+            </div>
+
+            <div class="clear_both"><div class="float_left">24.7 </div><moduli:opzione id="tipo_vincoli_coerenza_7" class="elenco_prima">Altro </moduli:opzione>
+                <moduli:dato id="spec_altro_vincoli_coerenza" class="label_smlwidth">(specificare)</moduli:dato>
+                <div class="riga margin_l_35"><strong>In caso di area/immobile assoggettato ad uno o più dei sopracitati vincoli</strong></div>
+                <div class="clear_both margin_l_35"><div class="float_left">24.7.1 </div><moduli:opzione id="tipo_vincoli_coerenza_7_1" class="elenco_prima"></moduli:opzione><strong>si allegano le autocertificazioni </strong>relative alla conformità dell’intervento per i relativi vincoli
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">24.7.2 </div><moduli:opzione id="tipo_vincoli_coerenza_7_2" class="elenco_prima"></moduli:opzione><strong>si allega la documentazione necessaria </strong>ai fini del rilascio dei relativi atti di assenso
+                    <div class="riga margin_l_35"><strong>(l’opzione è ripetibile in base al numero di vincoli che insistono sull’area/immobile)</strong></div>
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <strong>25) Vincoli per l’edificabilità e la tutela del territorio agricolo (Titolo V, 43 -44-45, LR 11/2004).</strong>
+    <moduli:gruppo id="vinc_edif" titolo="" class="dati_modulo">
+        <strong>che l’area/immobile ricade in zona agricola e trattasi di </strong>
+        <moduli:opzioni id="tipo_vinc_edif" class="lista_checkbox_vertical">
+            <div class="clear_both"><div class="float_left">25.1 </div><moduli:opzione id="tipo_vinc_edif_1" class="elenco_prima"></moduli:opzione>un intervento che <strong>comporta</strong> la presentazione del piano aziendale in quanto:
+                <div class="clear_both margin_l_35"><div class="float_left">25.1.1 </div><moduli:opzione id="tipo_vinc_edif_1_1" class="elenco_prima"></moduli:opzione>nuova edificazione
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">25.1.2 </div><moduli:opzione id="tipo_vinc_edif_1_2" class="elenco_prima">variante sostanziale al piano aziendale approvato da Avepa in </moduli:opzione><moduli:dato id="data_tipo_vinc_edif_1_2" class="label_smlwidth input_xsmallwidth" tipo="data">data</moduli:dato> <moduli:dato id="n_tipo_vinc_edif_1_2" class="label_smlwidth input_xsmallwidth">n. </moduli:dato>
+                </div>
+            </div>
+            <div class="clear_both"><div class="float_left">25.2 </div><moduli:opzione id="tipo_vinc_edif_2" class="elenco_prima"></moduli:opzione>un intervento che <strong>non comporta</strong> la presentazione del piano aziendale ai sensi della DGRV 2879/2013 in quanto:
+                <div class="clear_both margin_l_35"><div class="float_left">25.2.1 </div><moduli:opzione id="tipo_vinc_edif_2_1" class="elenco_prima"></moduli:opzione>strutture di completamento collegate in modo diretto alla funzionalità delle strutture aziendali esistenti e non comporta la presentazione del 
+                    <div class="riga margin_l_35"> 
+                        piano aziendale (es. strutture di raccolta effluenti zootecni palabili e non, volumi tecnici delle connesse attrezzature, strutture di stoccaggio di insilati)</div>
+                    </div>
+                <div class="clear_both margin_l_35"><div class="float_left">25.2.2 </div><moduli:opzione id="tipo_vinc_edif_2_2" class="elenco_prima"></moduli:opzione>intervento già approvati da Avepa al quali vengono apportate variazioni di modesta entità che non ne alterano la tipologia, 
+                    <div class="riga margin_l_35">
+                        funzionalità, dimensionamento, idoneità tecnica e le finalità
+                    </div>
+                </div>
+                <div class="clear_both margin_l_35"><div class="float_left">25.2.3 </div><moduli:opzione id="tipo_vinc_edif_2_3" class="elenco_prima"></moduli:opzione>permesso di costruire in sanatoria per intervento edilizio realizzato in parziale difformità rispetto al progetto autorizzato per 
+                    <div class="riga margin_l_35">
+                        difformità di modesta entità (difformità di sagoma per lievi scostamenti rispetto le dimensioni previste nel progetto approvato ecc.)
+                    </div>
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>    
+
+    <br /><br />
+    <h3 class="riga_grigia">ASSEVERAZIONE</h3>
+    <p>Tutto ciò premesso, il sottoscritto tecnico, in qualità di persona esercente un servizio di pubblica necessità ai sensi degli artt.359 e 481 del Codice Penale,  esperiti i necessari accertamenti di carattere urbanistico, edilizio, statico, igienico ed a seguito del sopralluogo, consapevole delle penalità previste in caso di dichiarazioni mendaci o che affermano fatti non conformi al vero,</p>
+
+    <h3>ASSEVERA</h3>
+
+    <p>la conformità delle opere sopra indicate, compiutamente descritte negli elaborati progettuali, agli strumenti urbanistici approvati e non in contrasto con quelli adottati, la conformità al Regolamento Edilizio Comunale, al Codice della Strada, nonché al Codice Civile e assevera che le stesse rispettano le norme di sicurezza e igienico/sanitarie e le altre norme vigenti in materia di urbanistica, edilizia, e quanto vigente in materia, come sopra richiamato.</p>
+
+    <p>Il sottoscritto dichiara inoltre che l’allegato progetto è compilato in piena conformità alle norme di legge e dei vigenti regolamenti comunali, nei riguardi pure delle proprietà confinanti essendo consapevole che il permesso di costruire non comporta limitazione dei diritti dei terzi.</p>
+
+
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" label-firma="Il progettista" class="data-firma"/>
+    </div>
+
+    <br /><br /><br /><br />
+    <h3>INFORMATIVA SULLA PRIVACY (ART. 13 del d.lgs. n. 196/2003)</h3>
+
+    <p>Ai sensi dell’art. 13 del codice in materia di protezione dei dati personali si forniscono le seguenti informazioni:</p>
+
+    <p><strong>Finalità del trattamento: </strong> I dati personali dichiarati saranno utilizzati dagli uffici nell’abito del procedimento per il quale la presente dichiarazione viene resa.</p>
+
+    <p><strong>Modalità: </strong>Il trattamento avverrà sia con strumenti cartacei sia su supporti informatici a disposizione degli uffici.</p>
+
+    <p><strong>Ambito di comunicazione: </strong>I dati verranno comunicati a terzi ai sensi della l. n. 241/1990, ove applicabile, e in caso di verifiche ai sensi dell’art. 71 del d.P.R. n. 445/2000.</p>
+
+    <p><strong>Diritti: </strong>Il sottoscrittore può in ogni momento esercitare i diritti di accesso, rettifica, aggiornamento e integrazione dei dati ai sensi dell’art. 7 del d.lgs. n. 196/2003 rivolgendo le richieste al SUAP/SUE.</p>
+
+    <div class="dati_modulo">
+        <p><moduli:dato id="tit_suap_sue" class="label_bigwidth"><label><strong>Titolare: </strong>SUAP/SUE di</label></moduli:dato></p>
+    </div>
+    <br /><br /><br /><br />
+</moduli:modulo>

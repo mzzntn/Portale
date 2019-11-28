@@ -1,0 +1,210 @@
+<moduli:modulo id="modulo" 
+    titolo="Domanda di accesso ai documenti amministrativi in materia edilizia"
+    codice="Agg.11/04/2011 Mod. DAD/5414">
+    <moduli:gruppo id="dati_utente" titolo="Dati personali" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato-utente id="nome_cognome" size="50">Il/la sottoscritto/a</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_nascita" label-align="utente">nato/a a </moduli:dato-utente>
+            <moduli:dato-utente id="data_nascita" class="label_smlwidth">il</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="codice_fiscale">C.F.</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_residenza" label-align="utente">residente a </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="indirizzo_residenza" label-align="utente">in via/fraz. </moduli:dato-utente>
+            <moduli:dato-utente id="numero_telefono" class="label_smlwidth">n. tel. </moduli:dato-utente>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="riferimento">
+        in riferimento alla
+        <moduli:opzioni id="tipo" class="lista_checkbox">
+            <moduli:opzione id="concessione">concessione</moduli:opzione>
+            <moduli:opzione id="autorizzazione">autorizzazione</moduli:opzione>
+            <moduli:opzione id="licenza_edilizia">licenza ediliza</moduli:opzione>
+            <moduli:opzione id="dia">dia</moduli:opzione>
+            <moduli:opzione id="abuso_edilizio">abuso edilizio</moduli:opzione>
+            <moduli:opzione id="sanatoria">sanatoria</moduli:opzione>
+        </moduli:opzioni>
+        <div class="dati_modulo">
+            <div class="riga label_smlwidth">
+                <moduli:dato id="numero" size="6">n.</moduli:dato>
+                <moduli:dato id="dd" size="15">dd</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="intestata_a" size="40" class="lista_checkbox">intestata a</moduli:dato>
+                <moduli:dato id="per_eseguire_lavori" size="50" class="lista_checkbox">per eseguire i lavori di</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzioni id="sulla" class="lista_checkbox">sulla
+                    <moduli:opzione id="p_f">p.f.</moduli_opzione>
+                    <moduli:opzione id="p_ed">p.ed.</moduli_opzione>
+                </moduli:opzioni>
+                <moduli:dato id="descrizione_sulla"/>
+                <moduli:dato id="CC" class="lista_checkbox">C.C.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="sita_in" size="60" class="grow lista_checkbox">sita in</moduli:dato>
+            </div>
+        </div>
+        <p>
+            <b>consapevole delle sanzioni penali ai sensi dell’art. 76 del D.P.R. 445 del 28.12.2000 e s.m.</b>, nel caso di attestazioni non veritiere e falsità negli atti;
+        </p>
+    </moduli:gruppo>
+    <moduli:gruppo id="qualita">
+        <h3>Dichiarando la propria qualità</h3>
+        <div class="riga lista_checkbox">
+            <moduli:opzione id="concessionario">di concessionario</moduli:opzione>
+            <moduli:opzione id="intestatario_denuncia_inizio">di intestatario della denuncia inizio attività</moduli:opzione>
+        </div>
+        <moduli:opzione id="proprietario" class="lista_checkbox">di attuale proprietario della
+            <moduli:opzioni id="proprietario_della">
+                <moduli:opzione id="p_ed">
+                    <moduli:dato id="p_ed">p.ed.</moduli:dato>
+                    <moduli:dato id="p_m">p.m.</moduli:dato>
+                </moduli:opzione>
+                <moduli:opzione id="p_f" class="a_capo">
+                    <moduli:dato id="p_f">p.f.</moduli:dato>
+                    <moduli:dato id="C_C">C.C.</moduli:dato>
+                </moduli:opzione>
+            </moduli:opzioni>
+        </moduli:opzione>
+        
+        <div class="riga">
+            <moduli:opzione id="confinante_proprietario" class="lista_checkbox">di confinante in quanto proprietario della
+                <moduli:opzioni id="proprietario_della">
+                    <moduli:opzione id="p_ed">
+                        <moduli:dato id="p_ed">p.ed.</moduli:dato>
+                        <moduli:dato id="p_m">p.m.</moduli:dato>
+                    </moduli:opzione>
+                    <moduli:opzione id="p_f" class="a_capo">
+                        <moduli:dato id="p_f">p.f.</moduli:dato>
+                        <moduli:dato id="C_C">C.C.</moduli:dato>
+                    </moduli:opzione>
+                </moduli:opzioni>
+            </moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:opzione id="consulente_tecnico_incaricato" class="lista_checkbox">
+                consulente tecnico incaricato dal Tribunale
+                <moduli:allegato id="incarico" autohide="true" save_path="moduli/" class="riga">
+                    <label>(allegare incarico)</label> 
+                </moduli:allegato>
+            </moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:opzione id="tecnico_incaricato" class="lista_checkbox">di tecnico incaricato
+                <moduli:opzione id="concessionario_intestatario_dia" class="inline">dal concessionario/intestatario dia</moduli:opzione>
+                <moduli:opzione id="confinante" class="inline">dal confinante</moduli:opzione>
+                <moduli:allegato id="delega" autohide="true" save_path="moduli/" class="riga">
+                    <label>
+                        Nel caso di accesso a documenti amministrativi che <u>non costituiscono atti pubblici</u>, allegare delega
+                        del diretto interessato:
+                    <label>    
+                </moduli:allegato>
+            </moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:opzione id="legale_incaricato" class="lista_checkbox">di legale incaricato
+                <moduli:opzione id="dal_proprietario">dall'attuale proprietario</moduli:opzione>
+                <moduli:allegato id="delega" save_path="moduli/" autohide="true">
+                    <label>
+                        Nel caso di accesso a documenti amministrativi che <u>non costituiscono atti pubblici</u>, allegare delega
+                        del diretto interessato:
+                    </label>
+                </moduli:allegato>
+            </moduli:opzione>
+        </div>
+        <moduli:opzione id="titolare_interesse" class="lista_checkbox">
+            di titolare di un interesse diretto, concreto ed attuale alla pratica sopracitata
+            <moduli:dato id="in_quanto" class="riga input_bigwidth"> in quanto</moduli:dato>
+        </moduli:opzione>
+    </moduli:gruppo>
+    <fieldset>
+        <label>
+                per la seguente MOTIVAZIONE (da indicare <u>obbligatoriamente</u> ai sensi dell’ art. 13 del regolamento comunale in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi approvato con deliberazione consiliare n. 14 dd. 29.03.2011):
+        </label>
+        <moduli:dato id="motivazione" tipo="longText" />
+    </fieldset>
+    <moduli:opzioni id="chiede" class="righe">
+        <h3>Chiede</h3>
+        <moduli:opzione id="visione" class="lista_checkbox_vertical">
+            la visione della pratica depositata agli atti relativamente a:
+            <moduli:opzione id="conc_aut_lic_dia">concessione / autorizzazione / licenza ediliza / DIA</moduli:opzione>
+            <moduli:opzione id="elaborati">degli elaborati progettuali allegati al provvedimento</moduli:opzione>
+            <moduli:opzione id="relazione">della relazione tecnica</moduli:opzione>
+            <moduli:opzione id="altro">altro (da specificare)
+                <moduli:dato id="dettagli" />
+            </moduli:opzione>
+        </moduli:opzione>
+        <moduli:opzione id="rilascio" class="lista_checkbox_vertical">il rilascio di
+            <moduli:opzione id="copia">copia</moduli:opzione>
+            <moduli:opzione id="copia_conforme">
+                copia conforme all'originale (in tal caso anche la domanda va presentata
+                con marca da bollo, ai sensi del D.P.R. 642/1972)
+            </moduli:opzione>
+            <moduli:opzione id="conc_aut_lic_dia">
+                della concessione / autorizzazione / licenza edilizia / DIA
+            </moduli:opzione>
+            <moduli:opzione id="elaborati_progettuali">
+                degli elaborati progettuali allegati al provvedimento
+            </moduli:opzione>
+            <moduli:opzione id="relazione_tecnica">della relazione tecnica</moduli:opzione>
+            <moduli:opzione id="altro">altro (da specificare)
+                <moduli:dato id="dettagli"/>
+            </moduli:opzione>
+        </moduli:opzione>
+    </moduli:opzioni>
+
+    <moduli:data-firma id="data_firma" class="data-firma"/>
+    
+    <div class="clear_left">
+            <div>
+                <small>Da compilare dopo aver esercitato il diritto di accesso</small>
+            </div>
+            <div class="dati_modulo">
+                <div class="riga">
+                    <moduli:dato id="data" tipo="data" class="label_smlwidth">In data </moduli:dato>
+                    <moduli:dato-utente id="nome_cognome" class="inline">il sottoscritto</moduli:dato-utente>  
+                </div>
+                <div class="riga">   
+                    <moduli:dato id="incaricato" class="label_bigwidth">dinnanzi all'incaricato</moduli:dato>
+                </div>
+                <moduli:opzioni id="visionato_copia" class="lista_checkbox">
+                    <div class="riga">ha</div>
+                    <moduli:opzione id="visionato">visionato</moduli:opzione>
+                    <moduli:opzione id="ricevuto_copia">ricevuto copia</moduli:opzione> 
+                </moduli:opzioni>
+                <div class="riga">
+                    dei seguenti documenti:
+                    <moduli:dato id="documenti" tipo="longText" class="riga all_width" />
+                </div>
+                
+            </div>    
+            <moduli:data-firma  id="data_firma2" class="data-firma"/>
+
+            <moduli:gruppo id="articoli_1" class="clear_left">
+                Ai sensi dell'art. 38 D.P.R. 445 del 28 dicembre 2000 e s.m.:
+                <moduli:opzioni id="istanza" class="lista_checkbox_vertical">
+                    <moduli:opzione id="sottoscritta">l’istanza è stata sottoscritta dall’interessato in presenza del
+                        <moduli:dato id="dipendente">dipendente:</moduli:dato>
+                    </moduli:opzione>
+                    <moduli:opzione id="documento" class="long_label_check">
+                        l’istanza è stata presentata unitamente a copia fotostatica non autenticata di un documento di identità del sottoscrittore all’ufficio competente
+                    </moduli:opzione>
+                </moduli:opzioni>
+            </moduli:gruppo>
+            <moduli:gruppo id="articoli_2" class="clear_left">
+                
+                    Informativa ex. art. 13 del D.lgs. n° 196/2003: i dati sopra riportati sono prescritti dalle disposizioni vigenti ai fini del procedimento per il quale sono richiesti e verranno utilizzati esclusivamente per tale scopo.
+                
+                <hr>
+                NB.: <b>Con deliberazione del Consiglio Comunale n. 69 dd. 17.12.2003 è stata approvata la tariffa per ricerche di archivio, visura o rilascio copie di pratiche edilizie, pari a € 6,00</b>
+            </moduli:gruppo>
+    </div>    
+</moduli:modulo>
+

@@ -1,0 +1,27 @@
+<struct name="utente" external="true">
+   <element name='id' type='int' key='true' />	
+   <element name='dtCreazione' type='dateTime' />
+   <element name='dtModifica' type='dateTime' />
+   <element name='nome' type='text' />
+   <element name='cognome' type='text'  />
+   <element name='sesso' type='text' />
+   <element name='comuneNascita' type='text' />
+   <element name='provinciaNascita' type='text'  />
+   <element name='dataNascita' type='dateTime' />
+   <element name='indirizzo' type='text' />
+   <element name='civico' type='text' />
+   <element name='comune' type='text' />
+   <element name='provincia' type='text' />
+   <element name='email' type='email'  />
+   <element name='pec' type='email'  />
+   <element name='cf' type='text' />
+   <element name='p_iva' type='text' />
+   <element name='telefono' type='text' />
+   <element name='fax' type='text' />
+   <element name='cellulare' type='text' />
+   <element name='albo' type='text' />
+   <element name='n_albo' type='text' />
+   <element name='p_albo' type='text' />
+   <element name='master' type='portal_spider::attributo' />
+   <element name='ditta' type='portal_spider::ditta' />
+</struct>

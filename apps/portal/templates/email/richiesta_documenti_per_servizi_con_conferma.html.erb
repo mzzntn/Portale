@@ -1,0 +1,16 @@
+Gentile <%= utente.nome %> <%= utente.cognome %>,<br>
+hai richiesto l'attivazione <%
+if richiesti.length == 1
+%>del servizio "<%= richiesti.first %>"<%
+    else
+%>dei seguenti servizi:
+<% richiesti.each do |richiesto| %>
+- "<%= richiesto %>""
+<% end %><% end %>
+
+,per utilizzarlo devi effettuare una delle seguenti operazioni:<br>
+- Recarti presso l'URP del Comune di Acerra, munito di documento d'identità, e richiedere l'attivazione del servizio "Demografici OnLine" ;<br>
+- via Posta Elettronica, inviando all'indirizzo <%= doc_url %> copia del proprio documento d'identità in corso di validità: SI PRECISA CHE TALE INVIO DEVE ESSERE EFFETTUATO DALLA STESSA CASELLA DI POSTA UTILIZZATA PER LA REGISTRAZIONE.<br> 
+<br>
+Cordiali saluti, 
+<%= Spider.conf.get('ente.tipo') %> <%= Spider.conf.get('ente.nome') %>

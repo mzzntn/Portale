@@ -1,0 +1,64 @@
+<div id="box_servizi">
+	<h2 class="hide hidden mostra_in_stampa">Scheda A</h2>
+	<div sp:if="!@errori.blank?" id="errori">
+		<div class="alert alert-danger" sp:each="@errori |errore|">
+			{ errore }
+		</div>	
+	</div>
+	<div sp:if="@servizi_svolti.blank?" class="alert alert-info">
+		Non sono state inserite Esperienze Lavorative
+	</div>
+	<div sp:if="!@servizi_svolti.blank?" class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Esperienze Lavorative</h4>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered table-striped width_auto">
+				<thead>
+				    <tr class="heading_row">
+				    	<th>Amministrazione</th>
+				      	<th>Tipo</th>
+				      	<th>Punteggio</th>
+				      	<th>Note</th>
+				      	<th>Tip Contratto</th>
+				      	<th>Cat. Giuridica</th>
+						<th>Perc. lavorativa</th>
+				      	<th>Inizio</th>
+				      	<th>Fine</th>
+				      	<th class="nascondi_in_stampa"></th>
+				    </tr>
+				</thead>
+			  	<tbody>
+			  		<!-- tolto per problemi con @errori di tipo array
+					<tr sp:each_pair="@servizi_svolti |id,servizio|" class=" { (!@errori.blank? && !@errori[servizio['id_inc'].to_s].blank? ? 'error danger' : '') }" >
+					-->
+					<tr sp:each_pair="@servizi_svolti |id,servizio|" >
+						<td>{ servizio['amministrazione'] }</td>
+						<td>{ Moduli.tipo_amministrazione(servizio['tipo_amministrazione'])['nome'] }</td>
+						<td>{ servizio['punteggio'] }</td>
+						<td>{ servizio['note'] }</td>
+						<td>{ servizio['tipologia_contrattuale'] }</td>
+						<td>{ servizio['cat_giuridica'] }</td>
+                        <td>{ servizio['rid_lavorativa'] }</td>
+						<td>{ servizio['inizio_servizio'] }</td>
+						<td>{ servizio['fine_servizio'] }</td>
+						<td class="nascondi_in_stampa">
+							<a class="link_cancellazione_servizi" title="Cancella" id_modulo="{ @id_modulo.to_s }" id_servizio="{ servizio['id_inc'].to_s }" href="#" ><i class="glyphicon glyphicon-trash"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="nascondi_in_stampa">
+				Totale Punteggi: <span id="totale_punteggio_servizi">{ @totale_punteggio_servizi }</span>
+				<input type="hidden" id="totale_punteggio_servizi_form" name="totale_punteggio_servizi" value="{ @totale_punteggio_servizi }">
+			</div>
+		</div>
+                <p class="hide hidden mostra_in_stampa">
+                        Totale Punteggio Esperienze Lavorative: <span id="totale_punteggio_servizi">{ @totale_punteggio_servizi }</span><br/> 
+			(punteggio indicativo soggetto a verifica come da bando)
+                </p>
+		<p class="hide hidden mostra_in_stampa annotazioni">
+			Ai sensi del Testo Unico approvato con D.P.R. 28/12/2000, n. 445, le dichiarazioni rese e sottoscritte nella domanda di ammissione hanno valore di autocertificazione; nel caso di falsità in atti e dichiarazioni mendaci si applicano le sanzioni penali previste dall’art. 76 del Testo Unico approvato con D.P.R. 28/12/2000, n. 445, pertanto anche ogni scheda va firmata e datata.
+		</p>
+	</div>
+</div>

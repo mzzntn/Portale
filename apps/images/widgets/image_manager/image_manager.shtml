@@ -1,0 +1,17 @@
+<tpl:extend widget="files:manager">
+        <tpl:asset type="css" src="css/images.css" />
+        <tpl:asset type="js" src="js/image_manager.js" />
+        <tpl:before search=".div_archive">
+            <images:search id="search" sp:target-only="true"/>
+        </tpl:before>
+        <tpl:override-content search=".div_archive">
+            <images:archive id="archive" sp:target-only="true" />
+        </tpl:override-content>
+        <tpl:override-content search=".div_viewer">
+            <images:viewer id="viewer" sp:target-only="true" />
+        </tpl:override-content>
+        <tpl:before search=".button_files">
+            <a href="{ widget_params(:action => 'web') }" class="button_web { @active[:search] }">_(On the Web)</a>
+        </tpl:before>
+        <tpl:override-content search=".button_upload">_(Upload image)</tpl:override-content>
+</tpl:extend>

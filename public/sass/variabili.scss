@@ -1,0 +1,16 @@
+$default-border-radius: 5px !default;
+
+$main_color: #E2253F !default;
+$light_color: lighten($main_color,60%) !default;
+$middle_color: lighten($main_color,30%) !default;
+
+$shadow_color: darken($main_color,35%) !default;
+$shadow-h-offset: 1px !default;
+$shadow-v-offset: 1px !default;
+$shadow-blur: 1px !default;
+
+$text_color: #333333 !default;
+
+$border-top-radius: 5px !default;
+
+$stemma:image-url('css/stemma.png') !default;

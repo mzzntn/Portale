@@ -1,0 +1,19 @@
+<div>
+    <p class="lead">
+	    Grazie, { @utente.nome } { @utente.cognome }: è stata inviata una seconda e-mail per confermare i tuoi contatti<br>
+        Per attivare l'account, è necessario confermare 
+        <span class="contatti-pendenti">{ Spider::I18n.list(@contatti_pendenti) }</span>.
+    </p>
+    <p sp:if="@pendenti['email']" class="attesa-email" class="lead">
+        Riceverai a breve un'e-mail contenente le istruzioni per confermare l'indirizzo. Se non dovessi ricevere
+        l'e-mail di attivazione entro breve, ti preghiamo di controllare nella cartella "spam", o contattare l'amministratore 
+        scrivendo a <a href="mailto:{ Spider.conf.get('portal.email_amministratore') }">{ Spider.conf.get('portal.email_amministratore') }</a>.
+    </p>
+    <p sp:if="@pendenti['cellulare']" class="attesa-cellulare" class="lead">
+        <tpl:pass sp:if="@pendenti['email']">Inoltre, riceverai</tpl:pass>
+        <tpl:pass sp:if="!@pendenti['email']">Riceverai a breve</tpl:pass>
+        un SMS contenente il codice per confermare il numero di cellulare. Una volta ricevuto il codice, vai alla
+        <a href="{ Portal::PortalController.http_s_url('controllo_cellulare') }">pagina di controllo</a> per inserire il codice
+        e attivare l'account.
+    </p>
+</div>

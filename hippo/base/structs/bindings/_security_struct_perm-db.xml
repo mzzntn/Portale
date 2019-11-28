@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db"><table>_SECURITY_STRUCT_PERM</table><parentRef struct="_security_perm" table="_SECURITY_STRUCT_PERM_EXT__SECURITY_PERM" child_id="ID__SECURITY_STRUCT_PERM" parent_id="ID__SECURITY_PERM"/><bind element="user" dbField="ID_USER"/></binding>

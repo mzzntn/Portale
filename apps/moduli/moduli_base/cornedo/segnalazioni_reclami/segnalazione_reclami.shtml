@@ -1,0 +1,278 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    
+    
+    <br />
+    <h2>MODULO SEGNALAZIONI, RECLAMI O SUGGERIMENTI AL COMUNE</h2>
+    <br />
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo no_border dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_bigwidth">Il/la sottoscritto/a</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth label_mediumwidth">Residente a </moduli:dato>
+            <moduli:dato id="indirizzo_residenza" class="label_xsmlwidth input_mediumwidth">in via</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="numero_telefono" class="label_smlwidth">Telefono</moduli:dato>
+            <moduli:dato id="fax" class="label_smlwidth">fax</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email" class="label_smlwidth">e-mail</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <h3>SEGNALA QUANTO SEGUE</h3>
+    <moduli:gruppo id="manut_strade_marciapiedi" titolo="MANUTENZIONE STRADE/MARCIAPIEDI" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">la presenza di buca/manto stradale dissestato
+                <moduli:dato id="via_scelta_1_1" class="input_largewidth">in via</moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_1" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_1" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_2">la presenza di caditoia non funzionante in modo regolare
+                <moduli:dato id="via_scelta_1_2" class="input_largewidth">in via</moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_2" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_2" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_3">la presenza di pozzetto sporgente dal manto stradale
+                <moduli:dato id="via_scelta_1_3" class="input_largewidth">in via</moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_3" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_3" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_4">la carenza/mancanza di segnaletica
+                <moduli:dato id="via_scelta_1_4" class="input_largewidth">in via</moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_4" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_4" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_5">la presenza di buca/dissesto del marciapiedi
+                <moduli:dato id="via_scelta_1_5" class="input_largewidth">in via</moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_5" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_5" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="manut_verde_pubblico" titolo="MANUTENZIONE VERDE PUBBLICO" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">la mancata/cattiva manutenzione del verde pubblico
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="tipolog_scelta_1_1" class="input_largewidth">(indicare tipologia: giardino, aiuola, parco)</moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="via_scelta_1_1" class="input_largewidth">ubicato in via</moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_1" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_1" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_2">la mancata/cattiva manutenzione o la rottura di attrezzature/arredi (es. giostre, cestini, panchine, ecc.) nell'area verde
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="via_scelta_1_2" class="input_largewidth">in via</moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_2" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_2" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+    
+    <moduli:gruppo id="pub_illum_semafori" titolo="PUBBLICA ILLUMINAZIONE/SEMAFORI" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">il non funzionamento del palo dell’ illuminazione pubblica
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="via_scelta_1_1" class="input_largewidth">ubicato in via</moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="civico_scelta_1_1" class="input_xsmallwidth">all’altezza del civico</moduli:dato>
+                    <moduli:dato id="pressi_scelta_1_1" tipo="longText" class="input_mediumwidth adaptive_input">nei pressi di</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_2">il non funzionamento della linea dell’illuminazione pubblica
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="via_scelta_1_2" class="input_largewidth">di via</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_3">il non funzionamento del semaforo
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="via_scelta_1_3" class="input_largewidth">di via</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="pericolo" titolo="PERICOLO" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">la seguente situazione di pericolo
+                <moduli:dato id="pericolo_1_1" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="presso_1_1" tipo="longText" class="input_largewidth adaptive_input">presso</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="danni_patrimonio" titolo="DANNI AL PATRIMONIO" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">il seguente danneggiamento al patrimonio pubblico (indicare danni a elementi di arredo, alberature, edifici, strade, aree verdi, parchi, …):
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="danno_1_1" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="luogo_1_1" tipo="longText" class="input_largewidth adaptive_input">e precisare il luogo:</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="immob_comunali" titolo="IMMOBILI COMUNALI" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">la seguente disfunzione del servizio di riscaldamento/acqua calda (indicare il disservizio, e l'ora e la data dell’evento)
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="disf_scelta_1_1" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="pressi_scelta_1_1" tipo="longText" class="input_mediumwidth adaptive_input">presso l’immobile</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_2">la seguente anomalia (indicare situazioni che richiedono manutenzioni ordinarie o straordinarie, o altre presunte necessità di intervento)
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="anomalia_scelta_1_2" class="input_largewidth"></moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="pressi_scelta_1_2" tipo="longText" class="input_mediumwidth adaptive_input">presso l’immobile</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="violaz_degrado_ambient" titolo="VIOLAZIONI/DEGRADO AMBIENTALE" class="no_border dati_modulo">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">la segnalazione di degrado ambientale in materia di:
+            <moduli:opzione id="opzione_1_1">Acque</moduli:opzione>
+            <moduli:opzione id="opzione_1_2">Animali (es. derattizzazione/disinfestazione/carcasse sulla pubblica via/abbandono.....)</moduli:opzione>
+            <moduli:opzione id="opzione_1_3">Aria</moduli:opzione>
+            <moduli:opzione id="opzione_1_4">Impianti fognari e scarichi</moduli:opzione>
+            <moduli:opzione id="opzione_1_5">Inquinamento acustico/Rumore</moduli:opzione>
+            <moduli:opzione id="opzione_1_6">Igiene urbana</moduli:opzione>
+            <moduli:opzione id="opzione_1_7">Rifiuti</moduli:opzione>
+            <moduli:opzione id="opzione_1_8">Altro
+                <moduli:dato id="spec_1_8" tipo="longText" class="input_mediumwidth adaptive_input">(specificare)</moduli:dato>
+            </moduli:opzione>
+        </moduli:opzioni>
+        <div class="riga margin_l_35">
+            <moduli:dato id="via_violaz_degrado" class="input_largewidth label_smlwidth">in via</moduli:dato>
+            <moduli:dato id="civico_violaz_degrado" class="input_xsmallwidth label_smlwidth">al civico</moduli:dato>
+        </div>
+        <div class="riga margin_l_35">
+            <moduli:dato id="prop_violaz_degrado" class="input_largewidth label_mediumwidth">di proprietà di</moduli:dato>
+        </div>
+        <div class="riga margin_l_35">
+            <moduli:dato id="consistente_violaz_degrado" tipo="longText" class="input_mediumwidth adaptive_input">consistente in</moduli:dato>
+        </div>
+        <div class="riga">
+        (riportare la descrizione dell’evento, con esposizione dei fatti, localizzazione, proprietario/gestore del sito, eventuali controinteressati, data o periodo dell’inconveniente, ecc.)
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="raccolta_rifiuti" titolo="RACCOLTA RIFIUTI" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">il seguente disservizio
+                <moduli:dato id="diss_opzione_1_1" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_2">la mancata consegna del calendario annuale al seguente indirizzo:
+                <moduli:dato id="mancata_consegna_opzione_1_2" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="serv_cimiteriali" titolo="SERVIZI CIMITERIALI" class="no_border">
+        <moduli:opzioni id="scelta_9" class="lista_checkbox_vertical float_left">
+            Cimitero
+            <moduli:opzione id="opzione_1_1">del capoluogo</moduli:opzione>
+            <moduli:opzione id="opzione_1_2">di
+                <moduli:dato id="cimit_opzione_1_2" class="input_largewidth"></moduli:dato>
+            </moduli:opzione>
+            <div class="clear_both margin_l_35">
+                <moduli:dato id="presso_1_2" tipo="longText" class="input_largewidth adaptive_input">nei pressi di</moduli:dato>
+            </div>
+            <div class="clear_both margin_l_35">
+                (indicare la localizzazione, ove possibile: es. ingresso, campi per sepolture a terra, parcheggio, ecc.)
+            </div>
+            <moduli:opzione id="opzione_1_3">il mancato funzionamento del servizio lampade votive</moduli:opzione>
+            <moduli:opzione id="opzione_1_4">la seguente problematica relativa ai beni di proprietà comunale (es. manutenzione coperture, scrostamenti, infiltrazioni, ...)
+            <div class="clear_both margin_l_35">
+                <moduli:dato id="problematica_1_4" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+            </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="utilizzo_palestre" titolo="UTILIZZO PALESTRE" class="no_border">
+        <moduli:opzioni id="scelta_10" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">il mancato/carente svolgimento delle pulizie presso l'impianto di
+                <moduli:dato id="mancata_pulizia_1_1" tipo="longText" class="input_mediumwidth adaptive_input"></moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="giorno_1_1" tipo="data" class="input_xsmallwidth">il giorno</moduli:dato>
+                    <moduli:dato id="ore_1_1" class="input_xsmallwidth">alle ore</moduli:dato>
+                </div>
+            </moduli:opzione>
+            <moduli:opzione id="opzione_1_2">il seguente disservizio
+                <moduli:dato id="disserv_1_2" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="serv_scolastici" titolo="SERVIZI SCOLASTICI" class="no_border">
+        <moduli:opzioni id="scelta_11" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">il seguente disservizio (ad esempio: ritardo scuolabus, non conformità menu mensa scolastica, ecc.)
+                <moduli:dato id="disserv_serv_scolastici_1_1" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="disserv_scol_giorno_1_1" tipo="data" class="input_xsmallwidth">rilevato il giorno</moduli:dato>
+                    <moduli:dato id="disserv_scol_ore_1_1" class="input_xsmallwidth">alle ore</moduli:dato>
+                </div>
+                <div class="clear_both margin_l_35">
+                    <moduli:dato id="problematica_1_4" tipo="longText" class="input_largewidth adaptive_input">presso</moduli:dato>
+                </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="altro" titolo="ALTRO (da specificare)" class="no_border">
+        <moduli:opzioni id="scelta_1" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="opzione_1_1">
+                <moduli:dato id="altro_spec_1" tipo="longText" class="input_largewidth adaptive_input"></moduli:dato>
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+   
+    <moduli:allegato id="allegato_documento" autohide="true" save_path="moduli/" class="riga">
+        <label>Allegare foto o documenti</label> 
+    </moduli:allegato>
+
+
+
+    <div class="clear_both">
+        Cornedo Vicentino <moduli:data-firma id="data_firma_3" class="data-firma" label-firma="Nome e Cognome"/>
+    </div>
+    <div class="clear_both">
+        <sub>
+            Ai sensi dell’art. 13, del D. Lgs. n. 196/2003, i dati richiesti verranno utilizzati per la gestione dei suggerimenti e segnalazioni circa l’attività del Comune; potranno essere comunicati o diffusi all’esterno dell’Ente in relazione al procedimento avviato ed ai soggetti terzi coinvolti, e verranno trattati sia con strumenti cartacei e informatici.
+            Il cittadino, in ogni momento, potrà esercitare i diritti previsti dall’art. 7 del D. Lgs. n. 196/2003.
+        </sub>
+    </div>
+
+
+
+</moduli:modulo>

@@ -1,0 +1,200 @@
+<tpl:pass>
+<div class="row"> 
+  <div>
+    <fieldset id="dati_anagrafici">
+        <legend>Dati anagrafici { (@_parent.mode == :azienda ? "referente" : "") }</legend>
+        <div class="form-group">
+            <forms:element_row element=":nome" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":cognome" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":codice_fiscale" class="form-control"/>
+            <span id="help_block_cf" class="help-block h4 hide"></span>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":sesso" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":data_nascita" required="true" change-month="true" change-year="true" year-range="-150:+0" past-dates="true" class="form-control"/>
+        </div>
+        <tpl:pass sp:if="!@prov_tabellate">
+            <div class="form-group">
+                <forms:row required="true" element=":provincia_nascita">
+                    <forms:element_label element=":provincia_nascita" required="true"/>
+                    <div class="controls">
+                        <form:input id="provincia_nascita" required="true" class="form-control"/>
+                    </div>
+                </forms:row>
+            </div>
+        </tpl:pass>
+        <div class="form-group">
+            <forms:row required="true" element=":comune_nascita">
+                <forms:element_label element=":comune_nascita" required="true"/>
+                <div class="controls">
+                    <form:input id="comune_nascita" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <div class="form-group">
+            <forms:row required="true" element=":stato_nascita">
+            <label>Nazione Nascita (2 caratteri <a class="nomodal" target="_blank" href="https://it.wikipedia.org/wiki/ISO_3166-1_alpha-2">vedi codifica  ISO 3166 alpha 2)</a> *</label>
+                <!-- <forms:element_label element=":stato_nascita" required="true"/> -->
+                <div class="controls">
+                    <form:input id="stato_nascita" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <tpl:pass sp:if="!@prov_tabellate">
+            <div class="form-group">
+                <forms:row element=":provincia_residenza" required="true">
+                    <forms:element_label element=":provincia_residenza" required="true"/>
+                    <div class="controls">
+                        <form:input id="provincia_residenza" required="true" class="form-control"/>
+                    </div>
+                </forms:row>
+            </div>
+        </tpl:pass>
+        <tpl:pass sp:if="@prov_tabellate">
+            <div class="form-group">
+                <forms:row element=":provincia_residenza_tab" required="true">
+                    <forms:element_label element=":provincia_residenza_tab" required="true"/>
+                    <div class="controls">
+                        <form:input id="provincia_residenza_tab" required="true" class="form-control"/>
+                    </div>
+                </forms:row>
+            </div>
+        </tpl:pass>
+        <div class="form-group">
+            <forms:row element=":comune_residenza" required="true">
+                <forms:element_label element=":comune_residenza" required="true"/>
+                <div class="controls">
+                    <form:input id="comune_residenza" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <div class="form-group">
+            <forms:row element=":cap_residenza" required="true">
+                <forms:element_label element=":cap_residenza" required="true"/>
+                <div class="controls">
+                    <form:input id="cap_residenza" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <div class="form-group">
+            <forms:row element=":indirizzo_residenza" required="true">
+                <forms:element_label element=":indirizzo_residenza" required="true"/>
+                <div class="controls">
+                    <form:input id="indirizzo_residenza" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <!-- INDIRIZZO IN CAMPI SEPARATI -->
+        <div class="form-group">
+            <forms:row element=":civico_residenza" required="true">
+                <forms:element_label element=":civico_residenza" required="true"/>
+                <div class="controls">
+                    <form:input id="civico_residenza" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <div class="form-group">
+            <forms:row required="true" element=":stato_residenza">
+            <label>Nazione Residenza (2 caratteri <a class="nomodal" target="_blank" href="https://it.wikipedia.org/wiki/ISO_3166-1_alpha-2">vedi codifica  ISO 3166 alpha 2)</a> *</label>
+                <!-- <forms:element_label element=":stato_nascita" required="true"/> -->
+                <div class="controls">
+                    <form:input id="stato_residenza" required="true" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+        <div class="form-group">
+            <forms:row element=":note">
+                <forms:element_label element=":note"/>
+                <div class="controls">
+                    <form:input id="note" class="form-control"/>
+                </div>
+            </forms:row>
+        </div>
+
+    </fieldset>
+
+    <fieldset id="documento" sp:if="Spider.conf.get('portal.richiedi_documento')">
+        <legend>Documento di identificazione</legend>
+        <div class="form-group">
+            <forms:element_row element=":tipo_documento" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":numero_documento" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":data_documento" required="true" change-month="true" change-year="true" year-range="-100:+0" past-dates="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":documento_rilasciato" required="true" class="form-control"/>
+        </div>
+    </fieldset>
+    <fieldset id="professionista" sp:if="Spider.conf.get('portal.registrazione_professionista')">
+        <legend>Dati Professione</legend>
+        <div class="form-group">
+            <forms:element_row element=":albo" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":n_albo" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":p_iva" required="true" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":p_albo" required="true" class="form-control"/>
+        </div>
+    </fieldset>
+
+    <fieldset id="contatti">
+        <legend>Contatti</legend>
+        <div class="form-group">
+            <forms:element_row element=":email" required="@_parent.modifica_email_pendente ? false : true" class="form-control"/>
+        </div>
+
+        <div class="help-block" sp:if="@obj && @obj.email && Spider.conf.get('portal.conferma_cambio_email')">
+            Nota: se cambi indirizzo e-mail, dovrai confermare il nuovo indirizzo.
+        </div>
+        <div class="help-block" sp:if="!@obj && Spider.conf.get('portal.conferma_email')">
+            Nota: ti invieremo una e-mail a questo indirizzo per attivare l'account.
+        </div>
+        <div class="help-block" sp:if="@_parent.modifica_email_pendente">
+            In attesa di conferma
+            <tpl:pass sp:if="@_parent.email_precedente">
+                della modifica da { @_parent.email_precedente }
+            </tpl:pass>
+        </div>
+
+        <div class="form-group">
+            <forms:element_row element=":pec" required="@pec_obbligatoria" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":cellulare" required="@cellulare_obbligatorio && @_parent.modifica_cellulare_pendente.blank? ? true : false" class="form-control"/>
+        </div>
+        <div class="help-block" sp:if="@obj && @obj.cellulare_confermato">
+            Nota: questo numero di cellulare è confermato. Se cambi numero di cellulare, dovrai ripetere
+            la procedura di conferma.
+        </div>
+        <div class="help-block" sp:if="!@obj && Spider.conf.get('portal.conferma_cellulare')">
+            Nota: ti verrà inviato un codice a questo numero per attivare l'account.
+        </div>
+        <div class="help-block" sp:if="@_parent.modifica_cellulare_pendente">
+            In attesa di conferma
+            <tpl:pass sp:if="@_parent.cellulare_precedente">
+                della modifica da { @_parent.cellulare_precedente }
+            </tpl:pass>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":telefono" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <forms:element_row element=":fax" class="form-control"/>
+        </div>        
+    </fieldset>
+  </div>
+</div>
+</tpl:pass>

@@ -1,0 +1,28 @@
+Invio moduli <%= Spider.conf.get('portal.nome') %>
+
+Il modulo è presente negli allegati con formato pdf,
+ulteriori file caricati tramite la procedura on-line sono disponibili come allegati.
+<% if spid_auth %>I documenti sono stati prodotti a seguito di identificazione mediante SPID con identificativo <%= spid_code %>
+<% end %>
+
+Modulo: <%= nome_modulo %>
+<% unless nome_del_settore.blank? %>Settore: <%= nome_del_settore %><% end %>
+<% unless nome_del_procedimento.blank? %>Procedimento Amministrativo: <%= nome_del_procedimento %><% end %>
+<% unless nome_del_responsabile.blank? %>Responsabile Procedimento: <%= nome_del_responsabile %><% end %>
+
+<% unless totale_pagamenti.blank? %>
+Dettaglio pagamenti effettuati (totale Euro <%= totale_pagamenti %>)
+<% array_pagamenti_collegati.each do |pagamento_collegato| %>
+	<%= pagamento_collegato['tipo_dovuto'] %> Euro <%= pagamento_collegato['importo'] %> pagato <% unless pagamento_collegato['iuv'].blank? %> con IUV <%= pagamento_collegato['iuv'] %> <% end %> il <%= pagamento_collegato['data_pagamento'] %>
+<% end %>
+<% end %>
+
+Codice di controllo: <%= codice_controllo %>
+
+Utente: <%= nome_compilatore %> <%= cognome_compilatore %> (<%= cf_compilatore %>)
+<% if ditta_presente %>In nome e per conto di: <%= nominativo %> (<%= partita_iva %>) - <%= pec_azienda %> - <%= email_azienda %> 
+<% end %>
+Email: <%= email_compilatore %>
+Pec: <%= pec_compilatore %> 
+Telefono: <%= telefono_compilatore %>
+Cellulare: <%= cellulare_compilatore %>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>APPUNTAMENTI__ORARIO</table><bind element="operatore" dbField="ID_OPERATORE"/><bind element="orario_apertura" dbField="ORARIO_APERTURA"/><bind element="orario_chiusura" dbField="ORARIO_CHIUSURA"/><bind element="giorno" dbField="ID_GIORNO"/></binding>

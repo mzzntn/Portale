@@ -1,0 +1,65 @@
+<div>
+    <div sp:if="@controllo_non_attivo">
+        Siamo spiacenti, la verifica per questo tipo di contatto non è possibile. Ti preghiamo di 
+        <a href="mailto:{ Spider.conf.get('portal.email_amministratore') }">contattare l'amministratore</a> per confermare il contatto.
+    </div>
+    <div sp:if="@codice_non_corretto">
+        Codice non corretto.
+    </div>
+    <div sp:if="@cellulare_confermato">
+        Grazie, il tuo numero di cellulare è stato confermato.
+    </div>
+    <div sp:if="@email_confermata">
+        Grazie, il tuo indirizzo e-mail è stato confermato.
+    </div>
+    <div sp:if="@max_controlli">
+        Siamo spiacenti, non è possibile inviare altre conferme.<br> Ti preghiamo di 
+        <a href="mailto:{ Spider.conf.get('portal.email_amministratore') }">contattare l'amministratore</a>.<br><br>
+    </div>
+    <p sp:if="@no_pendenti">
+        Non hai modifiche pendenti in corso.
+    </p>
+    <div sp:if="!@errore && @pendente && !@cellulare_confermato && !@email_confermata">
+        <tpl:pass sp:if="@tipo == 'email'">
+            <p>
+                Abbiamo inviato l'e-mail di controllo all'indirizzo <strong>{ @pendente.dopo }</strong>.
+            </p>
+            <p>
+                Se non dovessi ricevere l'e-mail entro breve tempo, ti preghiamo di verificare l'indirizzo e-mail inserito. Se
+                l'indirizzo è corretto, ti preghiamo di controllare che l'e-mail di controllo non sia stata messa nella casella
+                "spam" del tuo programma di posta.
+            </p>
+            <p>
+                Se vuoi che inviamo una nuova e-mail di controllo, <a href="?invia">clicca qui</a>.
+            </p>
+        </tpl:pass>
+        <tpl:pass sp:if="@tipo == 'cellulare'">
+            <p sp:if="!@codice_non_corretto && @pendente">
+                Abbiamo inviato un SMS contenente un codice di controllo al numero <strong>{ @pendente.dopo }</strong>.
+            </p>
+            <p>
+                Per confermare il numero di cellulare, inserisci qui il codice di controllo ricevuto:
+                <form class="form-inline" action="{ Portal.http_s_url(:controllo_cellulare) }" method="post">
+                    <div class="form-group">
+                        <input type="text" name="controllo" size="15">
+                    </div>
+                    <input type="submit" class="btn btn-default" name="submit" value="Conferma numero">
+                </form>
+            </p>
+            <p sp:if="!@codice_non_corretto">
+                Se non dovessi ricevere il codice in tempi brevi, ti preghiamo di verificare con attenzione il numero
+                inserito dalla pagina "<a href="{ Portal.http_s_url(:dettagli_utente) }">I tuoi dati</a>"; se il numero è corretto,
+                ti preghiamo di <a href="mailto:{ Spider.conf.get('portal.email_amministratore') }">contattare l'amministratore</a>.
+            </p>
+            <p>
+                Per ripetere l'invio dell'SMS di controllo, <a href="?invia">clicca qui</a>.
+            </p>
+        </tpl:pass>
+    </div>
+    <div class="row col-lg-12 mt20">
+        <div class="back">
+            <a href="{ Portal::PortalController.http_s_url }" class="btn">Torna</a>
+        </div>
+    </div>
+</div>
+

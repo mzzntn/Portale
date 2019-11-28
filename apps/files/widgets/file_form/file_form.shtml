@@ -1,0 +1,12 @@
+<tpl:extend widget="forms:form">
+    <tpl:append search=".fields">
+        <div class="file" sp:if="@obj">
+            <label>File</label>
+            <a href="{ Spider::Files.http_url(:file) }/{ @obj.uuid }/{ @obj.name }" target="_blank">Vedi file</a>
+        </div>
+        <div class="file" sp:if="!@obj">
+            <label>File</label>
+            <input type="file" name="{ widget_param('file_upload') }">
+        </div>
+    </tpl:append>
+</tpl:extend>

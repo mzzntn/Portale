@@ -1,0 +1,9 @@
+if RUBY_VERSION == "1.9.3"
+		
+end
+
+if RUBY_VERSION >= "2"
+	
+end
+
+gem "crack", '~> 0.4.2'

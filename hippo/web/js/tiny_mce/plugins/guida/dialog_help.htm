@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Guida Editor</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+<body>
+
+<form onsubmit="ExampleDialog.insert();return false;" action="#">
+
+  <div id="container">
+    <h1>Guida in linea - Editor di testo</h1>
+    <div id="content">
+        <img src="css/img/editor.jpg" alt="editor di testo" class="center"><br>
+        L'editor permette di inserire non solo semplice testo, ma anche elementi quali immagini, tabelle, elenchi puntati, e formattarne l'aspetto
+        nel modo desiderato.<br>
+        Come si vede dalla figura in alto, la barra degli strumenti situata nella parte superiore dell'editor permette di effettuare
+        diverse operazioni di formattazione del testo e di inserire nuovi elementi.
+        In seguito vengono descritti nel dettaglio questi bottoni:
+        <ul>
+            <li class="space"><img src="css/img/ingrandisci.jpg" alt="ingrandisci"> <b>Attiva/Disattiva Modalit&agrave; a schermo intero:</b>
+                permette di ingrandire l'editor e di visualizzarlo a tutto schermo, in modo da ampliare lo spazio a disposizione e facilitare la scrittura.</li>
+        
+            <li class="space"><img src="css/img/HTMLmod.jpg" alt="modalit&agrave; HTML"> <b>Modifica sorgente HTML</b> (per utenti esperti): permette di passare
+                alla modalit&agrave; in formato HTML (HyperText Markup Language). Una volta premuto questo pulsante, il testo
+                contenuto all'interno dell'editor
+                visualizzer&agrave; il codice con i relativi <em>TAG</em> del linguaggio. Un utente che ha una buona conoscenza di questo linguaggio pu&ograve;
+                modificare in dettaglio il testo da inserire. <em>Si sconsiglia
+                vivamente l'uso di questa funzione per chi non ha dimestichezza con il linguaggio HTML.</em><br>
+                Per tornare alla modilt&agrave; normale basta cliccare nuovamente sullo stesso pulsante.</li>
+            
+            <li class="space"><img src="css/img/anteprima.jpg" alt="anteprima"> <b>Anteprima</b>: premendo su questo bottone si ha la possibilit&agrave; di
+                vedere, in una nuova finestra del browser utilizzato, l'anteprima dell'articolo scritto, per verificare se la formattazione e la grafica
+                corrispondono a quelle volute.<br>
+                Per uscire dalla modalit&agrave; anteprima &egrave; sufficiente chiudere la finestra cliccando sulla X in alto a destra.
+            </li>
+            
+            <li class="space"><img src="css/img/format.jpg" alt="formattazione testo"> <b>Formattazione testo:</b> questi 4 (quattro) pulsanti permettono di formattare il testo selezionato,  rispettivamente in:
+                <ul>
+                    <li><strike>barrato</strike></li>
+                    <li><b>grassetto</b></li>
+                    <li><em>italico</em></li>
+                    <li><u>sottolineato</u></li>
+                </ul>
+                <p class="info">Selezionare il testo che si desidera modificare e premere il rispettivo pulsante. Per annullare la formattazione si dovr&agrave;
+                riselezionare il testo e premere nuovamente il pulsante corrispondente all'effetto da eliminare.</p>
+            </li>
+            
+            <li class="space"><img src="css/img/allineamento.jpg" alt="allineamento"> <b>Allineamento testo:</b>
+                permette di allineare il testo selezionato nei seguenti metodi:
+                <ul>
+                    <li><b>a destra:</b> allinea il testo al lato destro della pagina
+                    <li><b>centrato:</b> allinea il testo al centro</li>
+                    <li><b>a sinistra:</b> allinea il testo al lato sinistro della pagina</li>
+                    <li><b>giustificato:</b> allinea il testo su entrambi i lati della pagina variando l'interspazio tra le parole in modo da utilizzare
+                    tutto lo spazio disponibile per ogni riga</li>
+                </ul>
+                <p class="info"> Selezionare la sezione di testo che si desidera modificare e premere il rispettivo pulsante.
+                Per annullare la modifica si dovr&agrave; riselezionare il testo e premere nuovamente il pulsante corrispondente all'effetto
+                da eliminare.</p>
+            </li>
+            
+            <li class="space"><img src="css/img/stile.jpg" alt="stile"> <b>Aspetto (importante):</b> permette di impostare l'aspetto e la formattazione del testo.
+            <ul>
+                <li><b>Stili:</b> permette di scegliere tra gli stili impostati per il sito. Si chiama "stile" un insieme di caratteristiche che determinano l'aspetto di un paragrafo. Viene
+                    contraddistinto da un nome e definisce diversi parametri quali:
+                    <ul>
+                        <li>la dimensione, il colore e l'aspetto dei caratteri</li>
+                        <li>la spaziatura delle righe</li>
+                        <li>proprit&agrave; dei bordi, cornici, filetti, colori dello sfondo, ecc...</li>
+                    </ul> 
+                </li>
+                <li><b>Formato:</b> applica un formato preimpostato al paragrafo. Il formato verr&agrave; applicato all'intero paragrafo su cui si trova il cursore.</li>
+                <li><b>Famiglia carattere:</b> applica al testo un carattere specifico.</li>
+                <li><b>Grandezza carattere:</b> varia la dimensione del testo. La dimensione &egrave; espressa in punti (pt), l'unit&agrave; di misura standard in tipografia. </li>
+            </ul>
+            
+            <p class="attention"><u>Si consiglia vivamente di utilizzare gli "Stili"</u> per creare il titolo, l'eventuale sottotitolo e/o occhiello, i paragrafi e le
+            altre sezioni del testo, e di <u>evitare l'utilizzo di "Famiglia carattere" e "Grandezza carattere"</u>.
+            In questo modo il testo seguir&agrave; sempre la grafica e lo stile generale del sito. Gli articoli e le pagine scritte con
+            l'editor saranno sempre formattate e organizzate in modo ottimale e visualmente armoniche con
+            le impostazioni ed il layout del portale Web.</p>
+            <p class="info">Cliccare sul men&ugrave; a tendina e scegliere l'aspetto desiderato, e inserire quindi il testo; oppure, selezionare il testo e scegliere l'aspetto per modificare del testo gi&agrave; inserito.</p>
+                 
+            <li class="space"><img src="css/img/pulizia.jpg" alt="indentazione"> <b>Pulizia</b>: il primo pulsante, raffigurante un pennello, ripulisce il codice eliminando automaticamente i tag HTML e gli script che possono creare problemi.<br>
+                <p class="attention"> Prima di pubblicare una pagina &egrave; buona norma pulire il codice utilizzando
+                il pulsante di pulizia, per evitare che la pagina sia visualizzata in maniera non corretta.</p>
+                
+                Il secondo pulsante permette di eliminare la formattazione dal testo; in questo modo vengono eliminate le propriet&agrave; applicate con i pulsanti di Formattazione, gli Stili, la Famiglia e la Grandezza carattere; il testo ritorna allo stato originale, quindi con grandezza, colore, e stile normali (di default).
+            </li>
+            
+            <li class="space"><img src="css/img/linee_guida.jpg" alt="linee guida"> <b>Mostra/Nascondi linee guida:</b> Attivando e disattivando questa
+                modalit&agrave; l'utente pu&ograve; visualizzare o meno le linee guida e gli elementi invisivibili nell'editor di testo, quali linee
+                senza bordo e linee dei paragrafi. Attivando la visualizzazione, queste linee verranno visualizzate come linee tratteggiate. Una volta
+                pubblicata la pagina queste linee non sarrano visibili nel documento.
+            </li>
+           
+            <li class="space"><img src="css/img/importa.jpg" alt="importa"> <b>Incolla come testo semplice/da Word</b>:
+                questi 2 pulsanti permettono di "importare" testo copiato (CRTL+C) da un documento di testo in formato .txt o da un documento Word in
+                formato .doc.<br>
+                <div class="info">Le operazioni da eseguire per l'importazione si dividono nel sequente modo:
+                    <ol>
+                        <li>Aprire il documento con Notepad se &egrave; un documento di testo, o con Microsoft Word se si tratta di un documento .doc</li>
+                        <li>Selezionare il testo desiderato da importare nel sito Web da pubblicare</li>
+                        <li>Premere con il pulsante destro del mouse sopra la parte selezionata e selezionare COPIA (scorciatoia da tastiera: CRTL+C)</li>
+                        <li>Ritornare all'editor di testo del portale e premere sul relavito pulsante a seconda del tipo di testo copiato</li>
+                        <li>Incollare il testo appena copiato nella nuova finestra apparsa premendo con il pulsante destro del mouse sopra lo spazio
+                        dedicato e selezionando INCOLLA (scorciatoia da tastiera: CRTL+V)</li>
+                        <li>Cliccare su Inserisci</li>
+                    </ol>
+                </div>
+                In questo modo l'editor di testo generer&agrave; automanticamente il codice HTML per correggere la formattazione e le impostazioni riferite
+                a Word e non si creeranno conflitti nella visualizzazione del documento da pubblicare nel portale.
+                <p class="attention">Per quanto l'editor faccia il possibile per trasformare il testo incollato da Microsoft Word in codice HTML valido, &egrave; possibile che il risultato differisca dall'originale. Si consiglia quindi, quando possibile, di evitare l'utilizzo di questa funzione.</p>
+            </li>
+            
+            <li class="space"><img src="css/img/undo.jpg" alt="annulla"> <b>Annulla e Ripristina:</b> premendo su questo pulsante si potr&agrave; annullare
+                l'ultima operazione eseguita nel testo e quindi ripristinare lo stato precedente. Quindi se si commette un errore nella formattazione,
+                nell'insermento di un'immagine o in qualsiasi altra operazione, baster&agrave; premere una o pi&ugrave;
+                volte sul pulsante Annulla per ritornare allo stato precedente l'errore. <br>
+                In pulsante Ripristina funziona nel verso opposto. Se ci si accorge di aver premuto
+                sul bottone Annulla una volta di troppo, baster&agrave; premere su Ripristina per tornare allo stato precedente all'annullamento.
+            </li>
+            
+            <li class="space"><img src="css/img/trova.jpg" alt="trova"> <b>Trova e Trova/Sostituisci:</b> permettono di cercare all'interno del testo
+                una parola. L'opzione di sostituzione permette, in aggiunta, di sostituire
+                le occorrenze della parola cercata con altro testo.
+            </li>
+            
+            <li class="space"><img src="css/img/elenco.jpg" alt="elenco"> <b>Elenco puntato e Elenco numerato:</b> permettono di creare un elenco.<br>
+                Elenco puntato:
+                <ul>
+                    <li>primo elemento della lista</li>
+                    <li>secondo elemento della lista</li>
+                    <li>terzo elemento della lista</li>
+                </ul>
+                Elenco numerato:
+                <ol>
+                    <li>primo elemento della lista numerata</li>
+                    <li>secondo elemento della lista numerata</li>
+                    <li>terzo elemento della lista numerata</li>
+                </ol>
+                <p class="info">Per aggiungere un nuovo punto all'elenco baster&agrave; premere il tasto della tastiera Enter (Invio), l'editor andr&agrave; a capo e
+                creer&agrave; un ulteriore punto alla lista.<br> Per terminare l'elenco, premere nuovamente il tasto Enter.<br>
+                Per togliere l'elenco dal testo selezionato baster&agrave; cliccare nuovamente sul pulsante relativo all'elenco precedentemente inserito.</p>
+            </li>           
+            
+			<li class="space"><img src="css/img/internalink.jpg" alt="link interno"> <b>Link interno a Pagina:</b> permet
+			te di inserire un collegamento ipertestuale che fa riferimento ad una pagina interna del portale comunale (quindi del CMS
+			). Una volta premuto il pulsante raffigurante una catena collegata ad una pagina bianca, apparir&agrave; una nuova finestra contentente una lista delle pagine precedentemente create e quindi presenti nel CMS. In basso a tale lista sono presen
+			ti due filtri: <br>            <img src="css/img/internalink-finestra.jpg" alt="editorLinkInterno" class="center"><br>
+			            <em>Un filtro per capolettera </em>che permette di setacciare le voci delle pagine a seconda della prima lett
+			era; es.: cliccando sulla lettera 'C', saranno visualizzate le pagine Comune, Cittadini, Case, ecc...quindi tutte le pagi
+			ne con titolo che inizia con la lettera C.<br>
+			Il <em>filtro completo</em> permette di scrivere il testo desiderato per cercare la pagina che si intende collegare.<br>
+			Una volta trovato il titolo della pagina a cui si intende creare un collegamento ipertestuale, baster&agrave; selezionarla dalla lista e cliccare sul pulsante in basso a sinistra <em>Inserisci</em>. Se invece si desidera annullare l'inserimen
+			to del link interno baster&agrave; cliccare in <em>Anulla</em>.
+			</li>
+			 
+
+            <li class="space"><img src="css/img/link.jpg" alt="URL"> <b>Inserisci/modifica collegamento:</b> permette di inserire un collegamento ipertestuale che
+                fa riferimento ad un'altra pagina Web. Un collegamento
+                ipertestuale permette all'utente che consulta il portale di visualizzare altre informazioni (pagine, documenti, immagini, ecc.).<br>
+                Una volta premuto il primo pulsante, raffigurante una catena, apparir&agrave; una nuova finestra contenente diversi
+                campi da compilare:<br>
+                <img src="css/img/editorLink.jpg" alt="editorLink" class="center"><br>
+                In seguito viene riportata la descrizione dei campi principali:
+                <ul>
+                    <li><b>URL collegamento:</b> (Uniform Resource Locator) &egrave; una sequenza di caratteri che identifica univocamente l'indirizzo
+                        di una risorsa in Internet, come una pagina Web, un documento o un'immagine.
+                        All'interno dello spazio &egrave; necessario inserire l'URL della pagina Web di riferimento. Premendo sull'icona
+                        a forma di finestrellla a destra apparir&agrave; un File Manager che permette di selezionare i documenti o le pagine
+                        presenti nel portale Web, quindi le pagine interne</li>
+                    <li><b>Ancore:</b> (per utenti esperti) vengono chiamate &agrave;ncore i link interni ad una pagina Web. È possibile utilizzarle per creare
+                        un indice interno al documento.</li>
+                    <li><b>Target:</b> permette di definire dove verr&agrave; aperto il link una volta cliccato:
+                        <ul>
+                            <li>nella stessa finestra</li>
+                            <li>in una nuova finestra (_blank)</li>
+                            <li>nel frame o nella finestra genitore della finestra o frame dov'&egrave; posizionato il link (_parent)</li>                            
+                            <li>nel frame o finestra più importante (_top)</li>
+                        </ul>
+                    </li>
+                    <li><b>Titolo:</b> definisce l'etichetta del link</li>
+                    <li><b>Classe:</b> definisce la classe CSS del collegamento</li>
+                </ul>
+                <br>
+                Il pulsante che rappresenta una catena spezzata permette di eliminare un link da un collegamento ipertestuale precedentemente creato.<br>
+                Il pulsate con un'&agrave;ncora permette di creare un &agrave;ncora, utilizzabile poi da <em>Inserisci Collegamento</em> per muoversi all'interno della pagina.
+            </li>
+            
+            <li class="space"><img src="css/img/immagine.jpg" alt="immagine"> <b>Inserisci/modifica immagine:</b> permette di inserire un'immagine gi&agrave; presente sul sito o sul Web, oppure caricarne una dal proprio disco fisso. Una volta premuto il pulsante apparir&agrave; una nuova finestra contenente diversi
+                campi da compilare:<br>
+                <img src="css/img/editorImmagine.jpg" alt="editorImmagine" class="center"><br>
+                In seguito viene riportata la descrizione dei campi principali:
+                <ul>
+                    <li><b>URL immagine:</b> &egrave; l'indirizzo che identifica univocamente la posizione dell'immagine nel Web.
+                        All'interno dello spazio &egrave; necessario inserire l'URL dell'immagine di riferimento. Premendo sull'icona
+                        a forma di finestrella a destra apparir&agrave; un File Manager che permette di selezionare le immagini gi&agrave; presenti nel sito, oppure caricarne una nuova.</li>
+                    <li><b>Descrizione immagine:</b> definisce un testo alternativo, visualizzato quando il browser dell'utente non può caricare l'immagine. In base alle norme sull'accessibilit&agrave;, questo campo &egrave; obbligatorio: se non viene inserito, verr&agrave; visualizzato un avviso. </li>
+                    <li><b>Titolo:</b> definisce l'etichetta visualizzata quando si passa con il mouse sopra l'immagine.</li>
+                    <li><b>Anteprima:</b> in questo riquadro si pu&ograve; visionare l'immagine in anteprima.</li>
+                </ul>
+                Una volta inserita l'immagine e impostati i vari parametri, cliccando in Inserisci, l'immagine verr&agrave; aggiunta al documento. Da qui sar&agrave; poi possibile, se si desidera, spostarla in un'altra posizione.
+            </li>
+        
+            <li class="space"><img src="css/img/colore_testo.jpg" alt="colore testo"> <b>Seleziona colore testo e sfondo</b> (<em>per utenti esperti</em>):
+                permette di modificare il colore del testo e lo sfondo che lo contorna con una colore a scelta.
+                <p class="info">Per cambiare il colore del testo selezionare la porzione di testo da colorare,
+                premere nel pulsante relativo e scegliere il colore disponibile dalla tavolozza colori che apparir&agrave;.
+                </p>
+            </li>
+                
+            <li class="space"><img src="css/img/tabella.jpg" alt="tabella"> <b>Inserisci una nuova tabella</b>  (<em>per utenti esperti</em>):
+            permette di inserire una tabella di grandezza desiderata e con il numero di colonne e righe richiesto.
+            Una volta premuto il pulsante apparir&agrave; una nuova finestra contenente diversi campi da compilare:<br>
+                <img src="css/img/editorTabella.jpg" alt="editorTabella" class="center"><br>
+                In seguito viene riportata la descrizione dei campi principali:
+                <ul>
+                    <li><b>Colonne/Righe:</b> permette di impostare il numero di colonne righe che formeranno la tabella da creare</li>
+                    <li><b>Padding celle:</b> definisce lo spazio tra i bordi e i dati contenuti nella cella.</li>
+                    <li><b>Spaziatura celle:</b> definisce lo spazio tra una cella e l'altra.</li>
+                    <li><b>Allineamento:</b> imposta l'allineamento della tabella all'interno del documento. Il funzionamento &egrave; analogo a quello dei pulsanti di allineamento visti in precedenza.</li>
+                    <li><b>Larghezza/Lunghezza:</b> permette di impostare la larghezza e l'altezza in pixel della tabella.</li>
+                    <li><b>Classe:</b> definisce la classe CSS della tabella.</li>
+                </ul>
+                Una volta impostati i vari parametri, cliccando in Inserisci, verr&agrave; aggiunta la tabella nel documento
+                in fase di sviluppo. Sar&agrave; poi possibile spostare la tabella all'interno del documento, e modificarla con i pulsati descritti al punto seguente.
+                <p class="attention"><u>Le tabelle devono essere utilizzate esclusivamente per visualizzare elenchi di dati</u>, e non per posizionare gli elementi nella pagina; inoltre, l'utilizzo di tabelle con dimensione fissa può causare risultati inaspettati.
+            </li>
+            
+            <li class="space"><img src="css/img/celle_tabella.jpg" alt="celle tabella"> <b>Modifica tabella:</b>
+                I pulsanti per modificare la tabella saranno disponibili una volta selezionata una tabella nel documento.
+                Questi pulsandi permettono rispettivamente di:
+                <ul>
+                    <li>inserire una riga nella parte superiore della tabella, creando quindi una nuova prima riga </li>
+                    <li>inserire una riga nella parte inferiore della tabella, creando quindi una nuova ultima riga </li>
+                    <li>eliminare la riga sulla quale &egrave; posizionato il cursore di scrittura </li>
+                    <li>inserire una colonna nella parte sinistra della tabella, creando quindi una nuova prima colonna </li>
+                    <li>inserire una colonna nella parte destra della tabella, creando quindi una nuova ultima colonna </li>
+                    <li>elimianare la colonna sulla quale &egrave; posizionato il cursore di scrittura </li>
+                </ul>
+            </li>
+                
+            <li class="space"><img src="css/img/char.jpg" alt="carattere speciale"> <b>Inserisci carattere speciale:</b>
+                permette di inserire un carattere speciale nel testo selezionandolo da una tabella.<br>
+                <img src="css/img/charmap.jpg" alt="mappa dei caratteri"><br>
+                Per aggiungere un elemento speciale all'interno del documento &egrave; sufficiente selezionarlo dalla tabella; essa si chiuder&agrave;
+                automaticamente inserendo il nuovo carattere nella posizione del cursore di scrittura.
+            </li>
+        </ul>
+    </div>
+</div>
+	
+	<div class="mceActionPanel">
+		<br>
+		<div style="float: right">
+			<input type="button" id="cancel" name="cancel" value="Chiudi" onclick="tinyMCEPopup.close();" />
+		</div>
+	</div>
+</form>
+
+</body>
+</html>

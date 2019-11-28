@@ -1,0 +1,7 @@
+id "images"
+name "Images"
+version "0.1"
+author "Ivan Pirlik"
+depends "files"
+gems 'flickraw-cached', 'rmagick'
+gems_optional 'geokit'

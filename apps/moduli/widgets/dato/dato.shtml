@@ -1,0 +1,6 @@
+<div class="dato">
+    <div class="input">
+        <label sp:if="!@label.blank?" for="{ @input.full_id }-input" class="{ @label_align }">{ @label }</label>
+        <sp:run obj="@input" />
+    </div>
+</div>

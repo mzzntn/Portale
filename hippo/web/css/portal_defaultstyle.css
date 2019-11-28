@@ -1,0 +1,45 @@
+/* portale */
+	div#register{		
+	}
+    div#register div.textbox{
+      background-color: #f5f5f5;
+      border: 1px solid #d5d5d5;
+
+    }
+
+/* box per delibere e calcolo ici */
+ 
+    div#pageBox{
+      background-color: #f0f0f0;
+    }
+
+    div#pageBox div.leftTopCorner{
+      background: #f0f0f0 url('img/box_ltcorner.gif') top left no-repeat;
+    }
+
+    div#pageBox div.rightTopCorner{
+      background: #f0f0f0 url('img/box_rtcorner.gif') top right no-repeat;
+    }
+
+    div#pageBox div.leftBottomCorner{
+      background: #f0f0f0 url('img/box_lbcorner.gif') bottom left no-repeat;
+    }
+     
+    div#pageBox div.rightBottomCorner{
+      background: #f0f0f0 url('img/box_rbcorner.gif') bottom right no-repeat;
+    }
+ 
+    div#pageBox div.boxContent{
+      background-color: #fafafa;
+    }
+
+    div#pageBox h3,h4,h5{
+      border-bottom: 5px solid #f0f0f0;
+    }
+    
+    div#pageBox div#iciCalculator, div#pageBox div#imuCalculator{
+      border-left: 1px solid #d5d5d5;
+    }
+    
+    div#pageBox div#iciStuff, div#pageBox div#imuStuff{
+    }

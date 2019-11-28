@@ -1,0 +1,215 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="" >
+
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+
+<h3>DOMANDA PER LA RICHIESTA DI ATTIVAZIONE/RINUNCIA DEL SERVIZIO  DELLA MENSA SCOLASTICA COMUNALE PER L’ a.s. 2015/2016</h3>
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="sottoscritto" class="label_bigwidth">IO SOTTOSCRITTO/A </moduli:dato>
+            <moduli:dato id="luogo_nascita" class="label_smlwidth">NATO/A a</moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">IL</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale" class="input_mediumwidth_220">CODICE FISCALE</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza" class="input_largewidth">RESIDENTE A</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="via_residenza" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">in VIA</moduli:dato>
+            <moduli:dato id="numero_residenza" class="label_smlwidth input_smallwidth">n.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="tel_cel" class="label_smlwidth input_mediumwidth ">TEL./CELL</moduli:dato>
+            <moduli:dato id="email" class="label_smlwidth input_mediumwidth">e-mail</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec" class="input_mediumwidth">(eventuale) PEC</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="cod_iban" class="input_bigwidth">codice IBAN </moduli:dato>
+            <div class="riga"><strong>IMPORTANTE : da indicare in caso di eventuale rimborso spettante</strong></div>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:opzione id="chiede" class="align_center"><label><h4 class="inline">CHIEDO L’ATTIVAZIONE DEL SERVIZIO DI MENSA SCOLASTICA PER </h4></label></moduli:opzione>
+
+    <moduli:gruppo id="figlio_1" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="sottoscritto" class="label_smlwidth input_mediumwidth">FIGLIO/A</moduli:dato>
+            <moduli:dato id="luogo_nascita" class="label_smlwidth">nato/a a</moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale" class="input_mediumwidth_220">CODICE FISCALE</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola" class="input_largewidth">SCUOLA</moduli:dato>
+            <moduli:dato id="classe" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sez" class="label_smlwidth input_xxsmallwidth">SEZ</moduli:dato>
+        </div>
+        <div class="riga">
+            Se Scuola Primaria selezionare il n. dei pasti a settimana
+            <moduli:opzioni id="n_pasti" class="lista_input_oriz">
+                <moduli:opzione id="5">n. 5</moduli:opzione>
+                <moduli:opzione id="4">n. 4</moduli:opzione>
+                <moduli:opzione id="3">n. 3</moduli:opzione>
+                <moduli:opzione id="2">n. 2</moduli:opzione>
+                <moduli:opzione id="1">n. 1</moduli:opzione>
+            </moduli:opzioni>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="figlio_2" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="sottoscritto" class="label_smlwidth input_mediumwidth">FIGLIO/A</moduli:dato>
+            <moduli:dato id="luogo_nascita" class="label_smlwidth">nato/a a</moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale" class="input_mediumwidth_220">CODICE FISCALE</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola" class="input_largewidth">SCUOLA</moduli:dato>
+            <moduli:dato id="classe" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sez" class="label_smlwidth input_xxsmallwidth">SEZ</moduli:dato>
+        </div>
+        <div class="riga">
+            Se Scuola Primaria selezionare il n. dei pasti a settimana
+            <moduli:opzioni id="n_pasti" class="lista_input_oriz">
+                <moduli:opzione id="5">n. 5</moduli:opzione>
+                <moduli:opzione id="4">n. 4</moduli:opzione>
+                <moduli:opzione id="3">n. 3</moduli:opzione>
+                <moduli:opzione id="2">n. 2</moduli:opzione>
+                <moduli:opzione id="1">n. 1</moduli:opzione>
+            </moduli:opzioni>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="figlio_3" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="sottoscritto" class="label_smlwidth input_mediumwidth">FIGLIO/A</moduli:dato>
+            <moduli:dato id="luogo_nascita" class="label_smlwidth">nato/a a</moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale" class="input_mediumwidth_220">CODICE FISCALE</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola" class="input_largewidth">SCUOLA</moduli:dato>
+            <moduli:dato id="classe" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sez" class="label_smlwidth input_xxsmallwidth">SEZ</moduli:dato>
+        </div>
+        <div class="riga">
+            Se Scuola Primaria selezionare il n. dei pasti a settimana
+            <moduli:opzioni id="n_pasti" class="lista_input_oriz">
+                <moduli:opzione id="5">n. 5</moduli:opzione>
+                <moduli:opzione id="4">n. 4</moduli:opzione>
+                <moduli:opzione id="3">n. 3</moduli:opzione>
+                <moduli:opzione id="2">n. 2</moduli:opzione>
+                <moduli:opzione id="1">n. 1</moduli:opzione>
+            </moduli:opzioni>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="figlio_4" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="sottoscritto" class="label_smlwidth input_mediumwidth">FIGLIO/A</moduli:dato>
+            <moduli:dato id="luogo_nascita" class="label_smlwidth">nato/a a</moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale" class="input_mediumwidth_220">CODICE FISCALE</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola" class="input_largewidth">SCUOLA</moduli:dato>
+            <moduli:dato id="classe" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sez" class="label_smlwidth input_xxsmallwidth">SEZ</moduli:dato>
+        </div>
+        <div class="riga">
+            Se Scuola Primaria selezionare il n. dei pasti a settimana
+            <moduli:opzioni id="n_pasti" class="lista_input_oriz">
+                <moduli:opzione id="5">n. 5</moduli:opzione>
+                <moduli:opzione id="4">n. 4</moduli:opzione>
+                <moduli:opzione id="3">n. 3</moduli:opzione>
+                <moduli:opzione id="2">n. 2</moduli:opzione>
+                <moduli:opzione id="1">n. 1</moduli:opzione>
+            </moduli:opzioni>
+        </div>
+    </moduli:gruppo>
+
+    <h3>DICHIARO</h3>
+
+    <moduli:opzioni id="dichiarazioni" class="lista_checkbox_vertical">
+        <moduli:opzione id="disp_attuative">DI ESSERE A CONOSCENZA DELLE “DISPOSIZIONI ATTUATIVE PER L’EROGAZIONE DEL SERVIZIO DI MENSA SCOLASTICA” (IN ALLEGATO)</moduli:opzione>
+        <moduli:opzione id="attestaz_isee">DI ESSERE IN POSSESSO DELL’ ATTESTAZIONE I.S.E.E PER FIGLIO/A/I, IN CORSO DI VALIDITA’, REDATTA PER LA SEGUENTE </moduli:opzione>
+        <div class="riga margin_l_20">PRESTAZIONE SOCIALE AGEVOLATA (barrare la casella interessata):</div>
+        <moduli:opzioni id="prestazioni_agevolate" class="lista_checkbox_vertical margin_l_20">
+            <moduli:opzione id="prestazioni_agevolate_1">Contributi economici per servizi scolastici</moduli:opzione>
+            <moduli:opzione id="prestazioni_agevolate_2">Contributi e integrazioni a rette per asili nido</moduli:opzione>
+            <moduli:opzione id="prestazioni_agevolate_3">Contributi economici per servizio trasporto e mobilità </moduli:opzione>
+            <moduli:opzione id="prestazioni_agevolate_4">Mensa scolastica</moduli:opzione>
+            <moduli:opzione id="prestazioni_agevolate_5">Asili nido</moduli:opzione>
+        </moduli:opzioni>
+    </moduli:opzioni>
+    <div class="riga lista_checkbox">
+        <moduli:dato id="n_prot" class="input_largewidth label_smlwidth">PRESENTATA CON PROT. N</moduli:dato>
+        <br /><br /><div class="align_center">Indicare il numero di Protocollo del CAAF o dell’ INPS</div>
+    </div>
+    <div class="riga lista_checkbox">
+        <moduli:dato id="val_isee" class="input_mediumwidth_220 label_smlwidth">VALORE I.S.E.E. €</moduli:dato>
+        <moduli:dato id="scad_al" class="input_mediumwidth_220 label_smlwidth">SCADENZA AL </moduli:dato>
+    </div>
+    <moduli:opzioni id="scelta_dich" class="lista_checkbox_vertical">
+        <moduli:opzione id="scelta_dich_1">DI ALLEGARE ATTESTAZIONE  I.S.E.E IN CORSO DI VALIDITA’ ;</moduli:opzione>
+        <moduli:allegato id="allegato_attestazione_isee" autohide="true" save_path="moduli/" class="riga margin_l_20">
+            <label><sup>(non obbligatorio)</sup></label> 
+        </moduli:allegato>
+        <moduli:opzione id="scelta_dich_2"><label>DI <u>NON</u> PRESENTARE ATTESTAZIONE  I.S.E.E  E DI ESSERE CONSAPEVOLE CHE SARA’ APPLICATA LA TARIFFA MASSIMA</label></moduli:opzione>
+        <moduli:opzione id="scelta_dich_3">
+            <div class="align_center"><h4><u>RINUNCIO AL SERVIZIO DI MENSA SCOLASTICA PER</u></h4></div>
+            <div class="align_center"><i>Scrivere i dati di ogni figlio/a che NON usufruirà del servizio di mensa comunale</i></div>
+            <div class="riga">
+                <moduli:dato id="figlio_no_mensa_nome_1" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">FIGLIO/A</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_data_1" class="label_smlwidth input_xsmallwidth">Data nascita</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_scuola_1" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">SCUOLA</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="figlio_no_mensa_nome_2" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">FIGLIO/A</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_data_2" class="label_smlwidth input_xsmallwidth">Data nascita</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_scuola_2" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">SCUOLA</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="figlio_no_mensa_nome_3" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">FIGLIO/A</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_data_3" class="label_smlwidth input_xsmallwidth">Data nascita</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_scuola_3" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">SCUOLA</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="figlio_no_mensa_nome_4" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">FIGLIO/A</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_data_4" class="label_smlwidth input_xsmallwidth">Data nascita</moduli:dato>
+                <moduli:dato id="figlio_no_mensa_scuola_4" tipo="longText" class="label_smlwidth input_mediumwidth_220 adaptive_input">SCUOLA</moduli:dato>
+            </div>
+        </moduli:opzione>
+        <moduli:opzione id="scelta_dich_4">DI ALLEGARE COPIA DEL DOCUMENTO D’IDENTITA' IN CORSO DI VALIDITA'</moduli:opzione>
+        <moduli:allegato id="allegato_documento_identita" autohide="true" save_path="moduli/" class="riga margin_l_20">
+            <label><sup>(non obbligatorio)</sup></label> 
+        </moduli:allegato>
+    </moduli:opzioni>
+    <br /><br />
+    <div class="riga align_center">DICHIARO, INFINE</div>
+        <moduli:opzioni id="dich_infine" class="lista_checkbox_vertical">
+            <moduli:opzione id="compil_ver">di aver compilato in modo veritiero ed in ogni sua parte la presente dichiarazione e che quanto in essa contenuto è accertabile (art. 43 del D.P.R
+                <div class="riga margin_l_20">. n. 445/2000) ovvero documentabile su richiesta dell’Amministrazione, consapevole sia delle responsabilità penali previste (art.76 del D.P.R. n.445/2000) per falsità in atti e dichiarazioni mendaci, sia della circostanza che, sui dati dichiarati, potranno essere effettuati controlli (art.71 del D.P.R. n.445/2000) diretti ad accertare la veridicità delle informazioni fornite, mediante gli strumenti consentiti dall’ordinamento;</div>
+            </moduli:opzione>
+            <moduli:opzione id="essere_infor">di essere informato/a che i dati personali raccolti sulla base della presente dichiarazione, potranno essere trattati (anche con strumenti informatici) 
+                <div class="riga margin_l_20">solo ed esclusivamente nell’ambito del procedimento per il quale la medesima viene resa, nel rispetto di quanto prevede la normativa di cui al d.lgs. 196/2003;</div>
+            </moduli:opzione>
+            <moduli:opzione id="autor_dati">di autorizzare il trattamento dei dati per la realizzazione di indagini di gradimento eseguite direttamente dall’Amministrazione Comunale o
+                <div class="riga margin_l_20">tramite società specializzata. </div>
+            </moduli:opzione>
+        </moduli:opzioni>
+
+
+</moduli:modulo>

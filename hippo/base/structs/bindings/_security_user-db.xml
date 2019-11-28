@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>_SECURITY_USER</table><bind element="login" dbField="LOGIN"/><bind element="password" dbField="PASSWORD"/><mmbind element="groups" table="_SECURITY_GROUP_REF__SECURITY_USER" local_id="ID__SECURITY_USER" remote_id="ID__SECURITY_GROUP"/></binding>

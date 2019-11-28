@@ -1,0 +1,7 @@
+<binding type="db" external="true">
+    <table>portal__utente__serviziprivati</table>
+   <bind element='id' dbField='id' />
+   <bind element='utente' dbField='utente_id'  />
+   <bind element='servizio' dbField='servizio_id'  />
+   <bind element='stato' dbField='stato_id'  />
+</binding>

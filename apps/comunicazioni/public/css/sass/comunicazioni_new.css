@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* variabili dei demografici, che importano quelle del portal*/
+/* Includo le variabili del portal per poterle usare */
+/* IMMAGINI */
+/*gagliardetto di sfondo allo stemma del comune*/
+/*stemma del comune*/
+/*barretta che divide nel navigatore*/
+/*punta freccia a sinistra navigatore grande*/
+/*punta freccia grigio scuro dettagli utente*/
+/*barretta che divide nel navigatore piccolo*/
+/*punta freccia a sinistra piccola*/
+/*altezza header sotto i 768px */
+/* FONT */
+/* default "Helvetica Neue", Helvetica, Arial, sans-serif */
+/* Georgia, "Times New Roman", Times, serif */
+/* default 14px */
+/* default @font-family-sans-serif */
+/* COLORI */
+/*colore visible_footer*/
+/*bordo grigio chiaro, per esempio del bottone avanti/indietro*/
+/* colore di riempimento grigio chiaro, per esempio del bottone avanti/indietro*/
+/*colore di riempimento scuro*/
+/*colore di riempimento meno scuro*/
+/*colori bottoni*/
+/*bottone invio colore sfondo verde*/
+/*bottone invio hover e focus colore sfondo verde*/
+/*colore background*/
+/*colore bianco del testo*/
+/*colore quando hover e focus*/
+/*bottoni con colori di bootstrap ridefiniti*/
+/*social*/
+/* colori cerchio di sfondo */
+/* alert */
+/* RESPONSIVE */
+/*perchè il navigatore non si spezzi fra 981px e 1027px*/
+/* variabili specifiche per comunicazioni */
+/* STILI DI COMUNICAZIONI */
+/* line 7, ../../sass/comunicazioni_new.scss */
+#elenco_comunicazioni .bordo_servizio .btn-success {
+  float: right;
+}
+@media (max-width: 576px) {
+  /* line 7, ../../sass/comunicazioni_new.scss */
+  #elenco_comunicazioni .bordo_servizio .btn-success {
+    float: left;
+  }
+}
+@media (max-width: 910px) {
+  /* line 13, ../../sass/comunicazioni_new.scss */
+  #elenco_comunicazioni .bordo_servizio .container_img {
+    width: 100px !important;
+  }
+}
+/* line 19, ../../sass/comunicazioni_new.scss */
+#elenco_comunicazioni .da_leggere {
+  font-weight: 700;
+}
+
+@media (max-width: 910px) {
+  /* line 24, ../../sass/comunicazioni_new.scss */
+  #dettaglio_comunicazione .container_img {
+    width: 100px;
+  }
+}

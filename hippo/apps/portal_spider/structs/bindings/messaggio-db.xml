@@ -1,0 +1,8 @@
+<binding type="db" external="true">
+    <table>spider__messenger__message</table>
+    <bind element="id" dbField="ID" />
+    <bind element="ticket" dbField="TICKET" />
+    <bind element="backend_response" dbField="BACKEND_RESPONSE" />
+    <bind element="sent" dbField="SENT" />
+    <bind element="stato" dbField='STATUS_ID' />
+</binding>

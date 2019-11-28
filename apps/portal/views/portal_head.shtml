@@ -1,0 +1,29 @@
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--- Bootstrap mobile first: to ensure proper rendering and touch zooming -->
+    <!-- shiv solution per problemi html5 semantico per IE < 9 --> 
+    <!--[if lt IE 9]>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  	<![endif]-->
+    <title>{ Spider.conf.get('portal.nome') } - Portale dei servizi</title>
+    <link rel="Shortcut Icon" type="image/ico" href="/public/img/css/favicon.ico" />
+    
+    
+
+    <meta property="og:url"                content="{ (@og_url.blank? ? '' : @og_url) }" />
+    <meta property="og:type"               content="{ (@og_type.blank? ? '' : @og_type) }" />
+    <meta property="og:title"              content="{ (@og_title.blank? ? '' : @og_title) }" />
+    <meta property="og:description"        content="{ (@og_description.blank? ? '' : @og_description) }" />
+    <meta property="og:image"              content="{ (@og_image.blank? ? '' : @og_image) }" />
+    <meta property="og:locale"             content="it_IT" />
+    <meta property="og:site_name"          content="{ (@og_site_name.blank? ? '' : @og_site_name) }" />
+
+    <meta sp:if="( (defined?(Comunicazioni::CanaleComunicazione::Facebook) != nil) && (!Spider.conf.get('comunicazioni.app_id_facebook').blank?) )" property="fb:app_id" content="{ Spider.conf.get('comunicazioni.app_id_facebook') }" />
+    <meta sp:if="( (defined?(Comunicazioni::CanaleComunicazione::Facebook) != nil) && (!Spider.conf.get('comunicazioni.page_id_facebook').blank?) )" property="fb:pages" content="{ Spider.conf.get('comunicazioni.page_id_facebook') }" />
+    <meta itemprop="image" content="{ (@og_image.blank? ? '' : @og_image) }"/>    
+    
+    <tpl:output-assets type="css" />
+    <tpl:output-assets type="js" />
+</head>

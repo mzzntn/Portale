@@ -1,0 +1,54 @@
+.myHTML.fullscreen{
+  height: 100%;
+  margin: 0px;
+  border: 0px;
+}
+
+.myHTML.toolbar{
+  background-color: #efefde;
+  padding: 1px 1px 2px 1px;
+  vertical-align: middle;
+  font-family: 'Microsoft Sans Serif' , Tahoma, Arial, Verdana, Sans-Serif;
+  font-size: 12px;
+}
+
+IMG.myHTML.button{
+  background-color: #efefde;
+  border: 1px solid #efefde;
+  color: ButtonText;
+  padding: 1px;
+  margin: 0px;
+  width: 18px;
+  height: 18px;
+}
+
+IMG.myHTML.button:hover{
+  border: 1px solid;
+  border-color: blue;
+  background: #AAAAFF;
+  filter: alpha(opacity = 75);
+  -moz-opacity: 0.75;
+}
+
+IMG.myHTML.button.pressed    {
+  padding: 2px 0px 0px 2px;
+  border: 1px solid;
+  border-color: blue;
+  background: #CCCCFF;
+
+}
+
+.myHTML.separator{
+  position: relative;
+  margin: 3px;
+  border-left: 1px solid #8888FF;
+  border-right: 1px solid #BBBBFF;
+  width: 0px;
+  height: 16px;
+  padding: 0px;
+}
+
+*.myHTML.button{
+	width: 18px;
+	height: 18px;
+}

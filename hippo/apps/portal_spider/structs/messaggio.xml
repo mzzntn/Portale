@@ -1,0 +1,7 @@
+<struct name="messaggio" external="true">
+    <element name="id" type="int" key="true" />
+    <element name="ticket" type="text" />
+    <element name="backend_response" type="text" />
+    <element name="sent" type="text" />
+    <element name="stato" type= "text" />
+</struct>

@@ -1,0 +1,7 @@
+id "portal"
+name "Portal"
+version "1.0.3"
+author "Ivan Pirlik"
+gems "nokogiri", "compass", "yui-compressor"
+description "Portale dei servizi"
+git_repo_rw 'ssh://mapweb.it/var/git/spiderapps/portal.git'

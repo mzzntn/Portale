@@ -1,0 +1,31 @@
+<struct name="setup">
+  <element name="applicazione" type="text"/>
+  <element name="codice" type="text"/>
+  <element name="valore" type="longText"/>
+  <element name="note" type="longText"/>
+  <element name="tipo" type="inline">
+    <struct>
+      <element name="id" type="text"/>
+      <element name="descr" type="text"/>
+    </struct>
+    <data>
+      <row><id>Bool</id><descr>true/false</descr></row>
+      <row><id>String</id><descr>testo</descr></row>
+      <row><id>Integer</id><descr>numero</descr></row>
+      <row><id>Array</id><descr>elenco</descr></row>
+      <row><id>Hash</id><descr>elenco chiave valore</descr></row>
+      <row><id>Email</id><descr>email</descr></row>
+    </data>
+  </element>
+  <element name="accesso" type="inline">
+    <struct>
+      <element name="id" type="text"/>
+      <element name="descr" type="text"/>
+    </struct>
+    <data>
+      <row><id>SU</id><descr>Super Utente</descr></row>
+      <row><id>AM</id><descr>Amministratore</descr></row>
+      <row><id>AS</id><descr>Operatore</descr></row>
+    </data>
+  </element>
+</struct>

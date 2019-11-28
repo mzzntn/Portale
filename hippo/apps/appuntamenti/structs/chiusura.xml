@@ -1,0 +1,4 @@
+<struct name='chiusura'>
+	<element name='operatore' type='appuntamenti::operatore' />
+	<element name='giorno_chiusura' label='Giorno di chiusura' type='dateTime' />
+</struct>

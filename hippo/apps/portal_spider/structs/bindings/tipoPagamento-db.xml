@@ -1,0 +1,9 @@
+<binding type="db" external="true">
+    <table>pagamenti__tipodovuto</table>
+    <bind element="id" dbField="ID" />
+    <bind element="applicazione" dbField="APPLICAZIONE_ID" />
+    <bind element="titolo" dbField="TITOLO" />
+    <bind element="descrizione" dbField="DESCRIZIONE" />
+    <bind element="tipo_elemento" dbField="TIPO_ELEMENTO" />
+    <bind element="modalita_pagamento_id" dbField="MODALITA_PAGAMENTO_ID" />
+</binding>

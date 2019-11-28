@@ -1,0 +1,42 @@
+<div id="container">
+    <tpl:assets widgets="core:crud,core:list,forms:datetime,forms:htmlarea" />
+    <tpl:asset name="bootstrap-modal" />
+    <tpl:asset type="js" src="js/gestione_comunicazioni.js" />
+    
+    <tpl:asset type="css" src="sass/gestione_comunicazioni.scss" />
+    
+    
+    <div id="sidebar">
+        <div id="menu">
+            <ul>
+                <li>
+                    <a class="{ (@sezione == 'elenco' ? 'active' : '') }" href="{ Comunicazioni::GestioneComunicazioniController.https_url }">Elenco Comunicazioni</a>
+                </li>
+                <li sp:if="(defined?(Comunicazioni::CanaleComunicazione::Facebook) != nil)" id="facebook_link">
+                    <span id="facebook_status"></span>
+                    <input type="hidden" name="fb_page_id" id="fb_page_id" value="{ Spider.conf.get('comunicazioni.page_id_facebook') }">
+                    <input type="hidden" name="fb_app_id" id="fb_app_id" value="{ Spider.conf.get('comunicazioni.app_id_facebook') }">
+                </li>
+                <li sp:if="( (defined?(Comunicazioni::CanaleComunicazione::Twitter) != nil) && (defined?(::AuthBox)) && (Spider.conf.get('auth_box.twitter_admin')) )" id="twitter_link" >
+                    <a sp:if="( @messaggio_login_twitter.include?('Connetti') )" href="{ AuthBox.redirect_auth_url(:id => 'twitter_admin') }">{ @messaggio_login_twitter } Twitter</a>
+                    <a sp:if="( @messaggio_login_twitter.include?('Connesso a ') )" class="twitter_active" href="#"><span id="twitter_connesso">{ @messaggio_login_twitter }</span> Twitter</a>
+                </li>
+                <li sp:if="Spider.conf.get('comunicazioni.abilita_segnalazioni') == 'true'">
+                    <a class="{ (@sezione == 'elenco_segnalazioni' ? 'active' : '') }" href="{ Comunicazioni::GestioneComunicazioniController.https_url('elenco_segnalazioni') }">Elenco Segnalazioni</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- tag per facebook -->
+    <div id="fb-root"></div>
+
+    <div id="content">
+        <tpl:include src="/core/admin/_breadcrumb" />
+        <div sp:if="!@errore_autenticazione_app.blank?" class="alert alert-error">
+            { @errore_autenticazione_app }
+        </div>
+
+        <sp:yield />
+    </div>
+</div>

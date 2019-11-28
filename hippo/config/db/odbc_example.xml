@@ -1,0 +1,7 @@
+<engine dbType='mysql'>
+<connection type='mysql'>
+<dsn>dsn (nome odbc)</dsn>
+<user>utente</user>
+<password>password</password>
+</connection>
+</engine>

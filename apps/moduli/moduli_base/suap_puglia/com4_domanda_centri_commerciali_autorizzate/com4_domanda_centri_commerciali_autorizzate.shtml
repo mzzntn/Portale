@@ -1,0 +1,1053 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <a name="richiesta" class="anchor_menu" testo="Richiesta" ></a>
+
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+    
+    
+
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            <moduli:dato id="cognome_leg_rap_titolare" class="readonly_js">Cognome</moduli:dato>
+            <moduli:dato id="nome_leg_rap_titolare" class="readonly_js">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_leg_rap_titolare" class="readonly_js">C. F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_leg_rap_titolare" class="label_mediumwidth input_xsmallwidth" tipo="data">Data di nascita </moduli:dato>
+            <moduli:dato id="cittadinanza_leg_rap_titolare" class="">Cittadinanza</moduli:dato>
+            <div class="float_left">Sesso </div><moduli:opzione id="sesso_leg_rap_titolare_m" class="elenco_prima label_xsmlwidth">M</moduli:opzione>
+            <moduli:opzione id="sesso_leg_rap_titolare_f" class="label_xsmlwidth" >F</moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_leg_rap_titolare" class="label_bigwidth input_smallwidth">Luogo di nascita: Stato </moduli:dato>
+            <moduli:dato id="provincia_nascita_leg_rap_titolare" class="label_smlwidth input_smallwidth">Provincia</moduli:dato>
+            <moduli:dato id="luogo_nascita_leg_rap_titolare" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="prov_residenza_leg_rap_titolare" class="label_bigwidth input_smallwidth">Residenza: Provincia </moduli:dato>
+            <moduli:dato id="citta_residenza_leg_rap_titolare" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <moduli:dato id="indirizzo_residenza_leg_rap_titolare" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="solo_civico_residenza_leg_rap_titolare" class="label_xsmlwidth input_xsmallwidth">N. </moduli:dato>
+            <moduli:dato id="cap_residenza_leg_rap_titolare" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div> 
+    </moduli:gruppo>
+
+    <div class="riga">
+        <strong>in qualità di legale rappresentante della società:</strong>
+    </div>
+    
+    <moduli:gruppo id="dati_ditta_titolare_1" titolo="" class="dati_modulo dati_readable_js no_border">
+        <div class="riga">
+            <moduli:dato id="cod_fiscale_ditta_titolare" class="input_codfiscwidth">Cod. fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="p_iva_ditta_titolare" class="label_xbigwidth input_codfiscwidth">Partita IVA (se diversa da C.F.)</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="nome_ditta_titolare" class="label_xbigwidth input_largewidth">denominazione o ragione sociale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="sede_ditta_titolare" class="label_xbigwidth input_mediumwidth">con sede nel Comune di</moduli:dato>
+            <moduli:dato id="provincia_ditta_titolare" class="label_bigwidth input_smallwidth">Provincia</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_ditta_titolare" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="civico_ditta_titolare" class="label_xsmlwidth input_xxsmallwidth">N.</moduli:dato>
+            <moduli:dato id="cap_ditta_titolare" class="label_xsmlwidth input_xxsmallwidth">C.A.P.</moduli:dato>
+            <moduli:dato id="tel_fisso_cellulare_ditta_titolare" class="label_xsmlwidth input_xsmallwidth">Tel.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="numero_cciaa_titolare" class="label_xbigwidth input_mediumwidth_220">N.d'iscrizione al Registro Imprese</moduli:dato>
+            <moduli:dato id="cciaa_titolare" class="label_smlwidth input_mediumwidth_220">CCIAA di</moduli:dato>
+        </div> 
+    </moduli:gruppo>
+   
+    <moduli:gruppo id="scia_trasmessa" titolo="" class="dati_modulo dati_readable_js no_border">
+        <moduli:opzioni id="scia_tipo" class="lista_checkbox_vertical ">
+            <div class="clear_both margin_l_35"><div class="float_left">A</div>
+                <div class="margin_l_35"><strong class="float_left width_50">AUTORIZZAZIONI</strong>
+                    <moduli:opzione id="scia_tipo_A" class="elenco_prima"></moduli:opzione>
+                    <div class="riga">
+                        <strong>Trasmette SCIA relativa a:</strong>
+                    </div>
+                    <moduli:opzioni id="tipi_A" class="lista_checkbox_vertical ">
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">centro commerciale</div>
+                            <moduli:opzione id="scelta_A_1" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">area commerciale integrata</div>
+                            <moduli:opzione id="scelta_A_2" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">struttura isolata</div>
+                            <moduli:opzione id="scelta_A_2" class="elenco_prima"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">B</div>
+                <div class="margin_l_35"><strong class="float_left width_50">VARIAZIONI</strong>
+                    <moduli:opzione id="scia_tipo_B" class="elenco_prima"></moduli:opzione>
+                    <moduli:opzioni id="tipi_B" class="lista_checkbox_vertical ">
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">B1 TRASFERIMENTO DI SEDE</div>
+                            <moduli:opzione id="scelta_B_1" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">B2 AMPLIAMENTO DI SUPERFICIE DI VENDITA</div>
+                            <moduli:opzione id="scelta_B_2" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">B3 ESTENSIONE DEL SETTORE MERCEOLOGICO ALIMENTARE</div>
+                            <moduli:opzione id="scelta_B_3" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">B4 MODIFICA DI MODALITA' INSEDIATIVA</div>
+                            <moduli:opzione id="scelta_B_4" class="elenco_prima"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+            </div>
+        </moduli:opzioni>
+
+    </moduli:gruppo>
+
+    <br /><br />
+    <div class="riga center_text">
+        <strong><i>dichiara quanto contenuto nella rispettiva sezione:</i></strong>
+    </div>
+    
+
+    <br /><br />
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            INDIRIZZO DELL' ESERCIZIO
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_loc" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+            <moduli:dato id="loc_int_cap" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_via" class="label_bigwidth input_mediumwidth">Via, Viale, Piazza, ecc</moduli:dato>
+            <moduli:dato id="loc_int_n" class="label_xsmlwidth input_xxsmallwidth">N.</moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <br /><br />
+    <div id="sezione_evento_A" class="hide { ( @sezione_attiva == 'A' ? 'mostra_in_stampa' : '' ) }">
+        <div class="center_text"><strong>SEZIONE A</strong> - <i>AUTORIZZAZIONI</i></div>
+        <moduli:gruppo id="sezione_comune_a" titolo="" class="dati_modulo no_border">
+            <div class="riga">
+                SETTORE O SETTORI MERCEOLOGICI E SUPERFICI DI VENDITA
+            </div>
+            <moduli:opzioni id="SETTMERC" class="lista_checkbox_vertical margin_l_35">
+                <div class="clear_both">
+                    <strong class="float_left width_30">Alimentare e misto</strong>
+                        <moduli:opzione id="SM01" class="elenco_prima "> </moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_a_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                        
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">Non alimentare beni persona</strong>
+                        <moduli:opzione id="SM02" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_a_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">Non alimentare altri beni</strong>
+                        <moduli:opzione id="SM03" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_a_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                        <moduli:opzione id="SM04" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_a_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">&nbsp;</strong>
+                        <div class="float_left">
+                            Sup. vendita totale
+                        </div>
+                        <div class="float_left width_30 margin_l_10">
+                            <moduli:dato id="sup_vendita_tot_a_mq" class="label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+            </moduli:opzioni>
+        
+            <div class="riga">
+                <strong>Tabelle speciali</strong>
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">
+                    <moduli:opzioni id="SPECIAL" class="lista_checkbox">
+                        <div class="float_left">Generi di monopolio</div><moduli:opzione id="SP01" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">Farmacie</div><moduli:opzione id="SP02" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">Carburanti</div><moduli:opzione id="SP03" class="elenco_prima"></moduli:opzione>
+                    </moduli:opzioni>
+                </div>
+                <div class="width_30 float_left">
+                    <moduli:dato id="tab_speciali_mq" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                </div>
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">
+                    SUPERFICIE COMPLESSIVA DELL'ESERCIZIO
+                </div>
+                <div class="width_30 float_left">
+                    <moduli:dato id="sup_compl_esercizio" class="label_xsmlwidth input_xsmallwidth">mq.</moduli:dato>
+                </div>
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">
+                    (compresa la superficie adibita ad altri usi)
+                </div>
+            </div>
+            <br /><br />
+            <div class="riga">
+                ARTICOLAZIONE DELLA STRUTTURA
+            </div>
+            <moduli:opzioni id="articolazione_struttura" class="lista_checkbox_vertical margin_l_35">
+                <div class="clear_both">
+                    <strong class="float_left width_50">esercizi di vicinato (sup. vend. < 250 mq)</strong>
+                    <moduli:dato id="articolazione_struttura_1" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">medie strutture M1 (sup. vend. 251-600 mq)</strong>
+                    <moduli:dato id="articolazione_struttura_2" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">medie strutture M2 (sup. vend. 601-1500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_3" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">medie strutture M3 (sup. vend. 1501-2500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_4" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">grandi strutture G1 (sup. vend. 2501-4500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_5" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_5_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">grandi strutture G2 (sup. vend. 4.500-1500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_6" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_6_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+            </moduli:opzioni>
+            <div class="riga">Di cui allega le relative domande di autorizzazione per le medie e grandi strutture di vendita</div>
+        </moduli:gruppo>
+        <moduli:gruppo id="sezione_a" titolo="" class="dati_modulo no_border">
+            
+        </moduli:gruppo>
+
+    </div>
+
+    <a name="sezione" class="anchor_menu" testo="Sezione" ></a>
+    <br />
+
+    <div id="sezione_evento_B" class="hide { ( @sezione_attiva == 'B' ? 'mostra_in_stampa' : '' ) }">
+        <moduli:gruppo id="sezione_comune_b" titolo="" class="dati_modulo no_border">
+            <div class="center_text"><strong>SEZIONE B</strong> - <i>VARIAZIONI</i></div>
+            <div class="riga">
+                SETTORE O SETTORI MERCEOLOGICI E SUPERFICI DI VENDITA
+            </div>
+            <moduli:opzioni id="SETTMERC" class="lista_checkbox_vertical margin_l_35">
+                <div class="clear_both">
+                    <strong class="float_left width_30">Alimentare e misto</strong>
+                        <moduli:opzione id="SM01" class="elenco_prima "> </moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_b_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                        
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">Non alimentare beni persona</strong>
+                        <moduli:opzione id="SM02" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_b_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">Non alimentare altri beni</strong>
+                        <moduli:opzione id="SM03" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_b_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                        <moduli:opzione id="SM04" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left width_30">
+                            <moduli:dato id="settore_merce_b_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_30">&nbsp;</strong>
+                        <div class="float_left">
+                            Sup. vendita totale
+                        </div>
+                        <div class="float_left width_30 margin_l_10">
+                            <moduli:dato id="sup_vendita_tot_b_mq" class="label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                </div>
+            </moduli:opzioni>
+        
+            <div class="riga">
+                <strong>Tabelle speciali</strong>
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">
+                    <moduli:opzioni id="SPECIAL" class="lista_checkbox">
+                        <div class="float_left">Generi di monopolio</div><moduli:opzione id="SP01" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">Farmacie</div><moduli:opzione id="SP02" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">Carburanti</div><moduli:opzione id="SP03" class="elenco_prima"></moduli:opzione>
+                    </moduli:opzioni>
+                </div>
+                <div class="width_30 float_left">
+                    <moduli:dato id="tab_speciali_mq" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                </div>
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">
+                    SUPERFICIE COMPLESSIVA DELL'ESERCIZIO
+                </div>
+                <div class="width_30 float_left">
+                    <moduli:dato id="sup_compl_esercizio" class="label_xsmlwidth input_xsmallwidth">mq.</moduli:dato>
+                </div>
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">
+                    (compresa la superficie adibita ad altri usi)
+                </div>
+            </div>
+            <br /><br />
+            <div class="riga">
+                ARTICOLAZIONE DELLA STRUTTURA
+            </div>
+            <moduli:opzioni id="articolazione_struttura" class="lista_checkbox_vertical margin_l_35">
+                <div class="clear_both">
+                    <strong class="float_left width_50">esercizi di vicinato (sup. vend. < 250 mq)</strong>
+                    <moduli:dato id="articolazione_struttura_1" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">medie strutture M1 (sup. vend. 251-600 mq)</strong>
+                    <moduli:dato id="articolazione_struttura_2" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">medie strutture M2 (sup. vend. 601-1500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_3" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">medie strutture M3 (sup. vend. 1501-2500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_4" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">grandi strutture G1 (sup. vend. 2501-4500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_5" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_5_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+                <div class="clear_both">
+                    <strong class="float_left width_50">grandi strutture G2 (sup. vend. 4.500-1500 mq.)</strong>
+                    <moduli:dato id="articolazione_struttura_6" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                    <div class="float_left width_30">
+                        <moduli:dato id="articolazione_struttura_6_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                    </div>
+                </div>
+            </moduli:opzioni>
+            <div class="riga">Di cui allega le relative domande di autorizzazione per le medie e grandi strutture di vendita</div>
+        </moduli:gruppo>
+        <moduli:gruppo id="sezione_b" titolo="" class="dati_modulo no_border">
+            
+            <h4 class="center_text">SUBIRA' LE VARIAZIONI DI CUI ALLE SEZIONI:</h4>
+            <div>
+                <div class="width_30 float_left">&nbsp;</div>
+                <div class="float_left width_50">
+                    <moduli:opzioni id="sez_variaz_b" class="lista_input_oriz ">
+                        <div class="">
+                            <strong class="float_left">B1</strong>
+                            <moduli:opzione id="sez_variaz_b1" class="input_xsmallwidth"></moduli:opzione>
+                        </div>
+                        <div class="">
+                            <strong class="float_left">B2</strong>
+                            <moduli:opzione id="sez_variaz_b2" class="input_xsmallwidth"></moduli:opzione>
+                        </div>
+                        <div class="">
+                            <strong class="float_left">B3</strong>
+                            <moduli:opzione id="sez_variaz_b3" class="input_xsmallwidth"></moduli:opzione>
+                        </div>
+                        <div class="">
+                            <strong class="float_left">B4</strong>
+                            <moduli:opzione id="sez_variaz_b4" class="input_xsmallwidth"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+            </div>
+            <div id="sezione_b1" class="riga">
+                <div class=""><i><strong>SEZIONE B1</strong> - TRASFERIMENTO DI SEDE *</i></div><br />
+                <div class="riga">
+                    SARA' TRASFERITO AL NUOVO INDIRIZZO:
+                </div>
+
+                <div class="riga">
+                    <moduli:dato id="nuovo_indirizzo_esercizio" class="label_bigwidth input_mediumwidth">Via, Viale, Piazza, ecc</moduli:dato>
+                    <moduli:dato id="nuovo_civico_esercizio" class="label_xsmlwidth input_xxsmallwidth">N.</moduli:dato>
+                    <moduli:dato id="nuovo_cap_esercizio" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+                </div>
+                <div class="riga">
+                    SUPERFICIE DI VENDITA ORIGINARIA<br />
+                    <moduli:opzioni id="sup_vendita_orig" class="lista_checkbox_vertical margin_l_35">
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Alimentare e misto</strong>
+                            <div class="float_left">
+                                <moduli:dato id="sup_vendita_orig_1_mq" class=" label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                <div class="float_left ">con ampliamento</div>
+                                <moduli:opzione id="sup_vendita_orig_1_ampl" class="float_left elenco_prima"></moduli:opzione>
+                                <div class="float_left ">con riduzione</div>
+                                <moduli:opzione id="sup_vendita_orig_1_rid" class="float_left elenco_prima"></moduli:opzione>
+                            </div>  
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare beni persona</strong>    
+                            <div class="float_left">
+                                <moduli:dato id="sup_vendita_orig_2_mq" class=" label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                <div class="float_left ">con ampliamento</div>
+                                <moduli:opzione id="sup_vendita_orig_2_ampl" class="float_left elenco_prima"></moduli:opzione>
+                                <div class="float_left ">con riduzione</div>
+                                <moduli:opzione id="sup_vendita_orig_2_rid" class="float_left elenco_prima"></moduli:opzione>
+                            </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare altri beni</strong>
+                            <div class="float_left">
+                                <moduli:dato id="sup_vendita_orig_mq" class=" label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                <div class="float_left ">con ampliamento</div>
+                                <moduli:opzione id="sup_vendita_orig_3_ampl" class="float_left elenco_prima"></moduli:opzione>
+                                <div class="float_left ">con riduzione</div>
+                                <moduli:opzione id="sup_vendita_orig_3_rid" class="float_left elenco_prima"></moduli:opzione>
+                            </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                            <div class="float_left">
+                                <moduli:dato id="sup_vendita_orig_4_mq" class=" label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                <div class="float_left ">con ampliamento</div>
+                                <moduli:opzione id="sup_vendita_orig_4_ampl" class="float_left elenco_prima"></moduli:opzione>
+                                <div class="float_left ">con riduzione</div>
+                                <moduli:opzione id="sup_vendita_orig_4_rid" class="float_left elenco_prima"></moduli:opzione>
+                            </div>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+                <div class="riga">
+                    NUOVA SUPERFICIE DI VENDITA<br />
+                    <moduli:opzioni id="nuova_sup_vendita" class="lista_checkbox_vertical margin_l_35">
+                        <div class="clear_both">
+                            <strong class="float_left width_50">Alimentare e misto</strong>
+                                <moduli:opzione id="SM01" class="elenco_prima "> </moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_50">Non alimentare beni persona</strong>
+                                <moduli:opzione id="SM02" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_50">Non alimentare altri beni</strong>
+                                <moduli:opzione id="SM03" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_50">Non alimentare beni a basso impatto</strong>
+                                <moduli:opzione id="SM04" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_50">Grandi strutture G1 (sup. vend. 2501-4500 mq.)</strong>
+                                <moduli:opzione id="nuova_sup_vendita_5" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_5_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_50">Grandi strutture G2 (sup. vend. 4.500-1500 mq.)</strong>
+                                <moduli:opzione id="nuova_sup_vendita_6" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_6_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">&nbsp;</strong>
+                                <div class="float_left">
+                                    Sup. vendita totale
+                                </div>
+                                <div class="float_left width_30 margin_l_10">
+                                    <moduli:dato id="nuova_sup_vendita_tot_mq" class="label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+                <div class="riga">
+                    <strong>Tabelle speciali</strong>
+                </div>
+                <div class="riga">
+                    
+                        <moduli:opzioni id="tab_speciali_b1" class="lista_checkbox">
+                            <div class="float_left">Generi di monopolio</div><moduli:opzione id="SP01" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Farmacie</div><moduli:opzione id="SP02" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Carburanti</div><moduli:opzione id="SP03" class="elenco_prima"></moduli:opzione>
+                        </moduli:opzioni>
+                </div>
+                <div class="riga">
+                        <moduli:dato id="tab_speciali_mq_b1" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                        <div class="float_left ">con ampliamento</div>
+                        <moduli:opzione id="sup_vendita_orig_b1_ampl" class="float_left elenco_prima"></moduli:opzione>
+                        <div class="float_left ">con riduzione</div>
+                        <moduli:opzione id="sup_vendita_orig_b1_rid" class="float_left elenco_prima"></moduli:opzione>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        SUPERFICIE COMPLESSIVA DELL'ESERCIZIO
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="sup_compl_esercizio_b1" class="label_xsmlwidth input_xsmallwidth">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        (compresa la superficie adibita ad altri usi)
+                    </div>
+                </div>
+                <div class="riga">
+                    Di cui allega le relative domande di autorizzazione per le medie e grandi strutture di vendita
+                </div>
+                <sub>
+                    * La sezione B1 va compilata anche in caso di contestuale ampliamento (per le medie strutture fino ai limiti consentiti) o riduzione di superficie di vendita dell'esercizio  trasferito. Non è pertanto necessario compilare la sezione B2.
+                </sub><br /> 
+            </div>
+            <br />
+            <div id="sezione_b2" class="riga">
+                <div class=""><i><strong>SEZIONE B2</strong> - AMPLIAMENTO DI SUPERFICIE DI VENDITA</i></div><br />
+                <div class="riga">
+                    LA SUPERFICIE DELL' ESERCIZIO INDICATO NELLA SEZ. B SARA' AMPLIATA A:
+                </div>
+                <div class="riga">
+                    <moduli:opzioni id="nuova_sup_vendita_b2" class="lista_checkbox_vertical margin_l_35">
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Alimentare e misto</strong>
+                                <moduli:opzione id="SM01" class="elenco_prima "> </moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_b2_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare beni persona</strong>
+                                <moduli:opzione id="SM02" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_b2_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare altri beni</strong>
+                                <moduli:opzione id="SM03" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_b2_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                                <moduli:opzione id="SM04" class="elenco_prima"></moduli:opzione>
+                                <div class="float_left width_30">
+                                    <moduli:dato id="nuova_sup_vendita_b2_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">&nbsp;</strong>
+                                <div class="float_left">
+                                    Sup. vendita totale
+                                </div>
+                                <div class="float_left width_30 margin_l_10">
+                                    <moduli:dato id="nuova_sup_vendita_b2_tot_mq" class="label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                                </div>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+                <br />
+                <div class="riga">
+                    ARTICOLAZIONE DELLA STRUTTURA
+                </div>
+                <moduli:opzioni id="articolazione_struttura_b2" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_50">esercizi di vicinato (sup. vend. < 250 mq)</strong>
+                        <moduli:dato id="articolazione_struttura_b2_1" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b2_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M1 (sup. vend. 251-600 mq)</strong>
+                        <moduli:dato id="articolazione_struttura_b2_2" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b2_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M2 (sup. vend. 601-1500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b2_3" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b2_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M3 (sup. vend. 1501-2500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b2_4" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b2_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">grandi strutture G1 (sup. vend. 2501-4500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b2_5" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b2_5_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">grandi strutture G2 (sup. vend. 4.500-1500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b2_6" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b2_6_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                </moduli:opzioni>
+                <div class="riga">
+                    <strong>Tabelle speciali</strong>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        <moduli:opzioni id="tab_speciali_b2" class="lista_checkbox">
+                            <div class="float_left">Generi di monopolio</div><moduli:opzione id="SP01" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Farmacie</div><moduli:opzione id="SP02" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Carburanti</div><moduli:opzione id="SP03" class="elenco_prima"></moduli:opzione>
+                        </moduli:opzioni>
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="tab_speciali_mq" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                    </div>
+                </div>
+
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        SUPERFICIE COMPLESSIVA DELL'ESERCIZIO
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="sup_compl_esercizio_b2" class="label_xsmlwidth input_xsmallwidth">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        (compresa la superficie adibita ad altri usi)
+                    </div>
+                </div>
+                <sub>
+                    Di cui allega le relative domande di autorizzazione per le medie e grandi strutture di vendita
+                </sub><br />    
+            </div>
+
+
+            <div id="sezione_b3" class="riga">
+                <div class=""><i><strong>SEZIONE B3</strong> - ESTENSIONE DI SETTORE MERCEOLOGICO *</i></div><br />
+                <div class="riga">
+                    SARA' AGGIUNTO IL SETTORE
+                </div>
+                <div class="riga">
+                    <moduli:opzioni id="estens_settore_b3" class="lista_checkbox_vertical margin_l_35">
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Alimentare e misto</strong>
+                                <moduli:opzione id="estens_settore_b3_1" class="elenco_prima "> </moduli:opzione>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare beni persona</strong>
+                                <moduli:opzione id="estens_settore_b3_2" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare altri beni</strong>
+                                <moduli:opzione id="estens_settore_b3_3" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                                <moduli:opzione id="estens_settore_b3_4" class="elenco_prima"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+                <div class="riga">
+                    <strong>Tabelle speciali</strong>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        <moduli:opzioni id="tab_speciali_b3" class="lista_checkbox">
+                            <div class="float_left">Generi di monopolio</div><moduli:opzione id="generi_monopolio_b3" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Farmacie</div><moduli:opzione id="farmaci_b3" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Carburanti</div><moduli:opzione id="carburanti_b3" class="elenco_prima"></moduli:opzione>
+                        </moduli:opzioni>
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="tab_speciali_mq_b3" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <strong>con la seguente ridistribuzione della superficie:</strong>
+                </div>
+                <br />
+                <div class="riga">
+                    SUPERFICIE DI VENDITA PREVISTA
+                </div>
+                <moduli:opzioni id="sup_prevista_b3" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Alimentare e misto</strong>
+                            <moduli:opzione id="settore_merce_b3_1" class="elenco_prima "> </moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b3_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                            
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni persona</strong>
+                            <moduli:opzione id="settore_merce_b3_2" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b3_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare altri beni</strong>
+                            <moduli:opzione id="settore_merce_b3_3" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b3_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                            <moduli:opzione id="settore_merce_b3_4" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b3_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">&nbsp;</strong>
+                            <div class="float_left">
+                                Sup. vendita totale
+                            </div>
+                            <div class="float_left width_30 margin_l_10">
+                                <moduli:dato id="sup_vendita_tot_mq_b3_prevista" class="label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                </moduli:opzioni>
+                <div class="riga">
+                    ARTICOLAZIONE DELLA STRUTTURA
+                </div>
+                <moduli:opzioni id="articolazione_struttura_b3" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_50">esercizi di vicinato (sup. vend. < 250 mq)</strong>
+                        <moduli:dato id="articolazione_struttura_b3_1" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b3_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M1 (sup. vend. 251-600 mq)</strong>
+                        <moduli:dato id="articolazione_struttura_b3_2" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b3_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M2 (sup. vend. 601-1500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b3_3" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b3_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M3 (sup. vend. 1501-2500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b3_4" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b3_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">grandi strutture G1 (sup. vend. 2501-4500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b3_5" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b3_5_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">grandi strutture G2 (sup. vend. 4.500-1500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b3_6" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b3_6_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                </moduli:opzioni>
+                <div class="riga">
+                    <strong>Tabelle speciali</strong>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        <moduli:opzioni id="tab_speciali_b3" class="lista_checkbox">
+                            <div class="float_left">Generi di monopolio</div><moduli:opzione id="generi_monopolio_b3_artic" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Farmacie</div><moduli:opzione id="farmaci_b3_artic" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Carburanti</div><moduli:opzione id="carburanti_b3_artic" class="elenco_prima"></moduli:opzione>
+                        </moduli:opzioni>
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="tab_speciali_mq_b3_artic" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        SUPERFICIE COMPLESSIVA DELL'ESERCIZIO
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="artic_sup_compl_esercizio" class="label_xsmlwidth input_xsmallwidth">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        (compresa la superficie adibita ad altri usi)
+                    </div>
+                </div>    
+                <div class="riga">Di cui allega le relative domande di autorizzazione per le medie e grandi strutture di vendita</div>
+                <br />
+                <sub>* Per acquisire il settore alimentare è necessario possedere i requisiti professionali.</sub>
+                <br />
+            </div>
+
+            <div id="sezione_b4" class="riga">
+                <div class="riga"><i><strong>SEZIONE B4</strong> - MODIFICA DI MODALITA' INSEDIATIVA</i></div>
+                <div class="riga">
+                    LA STRUTTURA INDICATA NELLA SEZ. B SI TRASFORMERA'
+                </div>
+                <div class="riga">
+                    <moduli:opzioni id="tipo_trasf" class="lista_checkbox_vertical margin_l_35">
+                        <div class="clear_both">
+                            <strong class="float_left width_50">IN AREA COMMERCIALE INTEGRATA</strong>
+                            <moduli:opzione id="tipo_trasf_1" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both">
+                            <strong class="float_left width_50">IN CENTRO COMMERCIALE</strong>
+                            <moduli:opzione id="tipo_trasf_2" class="elenco_prima"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+                <div class="riga">
+                    <strong>con la seguente ridistribuzione della superficie:</strong>
+                </div>
+
+                <div class="riga">
+                    SUPERFICIE DI VENDITA PREVISTA
+                </div>
+                <moduli:opzioni id="sup_prevista" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Alimentare e misto</strong>
+                            <moduli:opzione id="settore_merce_b4_1" class="elenco_prima "> </moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b4_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                            
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni persona</strong>
+                            <moduli:opzione id="settore_merce_b4_2" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b4_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare altri beni</strong>
+                            <moduli:opzione id="settore_merce_b4_3" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b4_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                            <moduli:opzione id="settore_merce_b4_4" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left width_30">
+                                <moduli:dato id="settore_merce_b4_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">&nbsp;</strong>
+                            <div class="float_left">
+                                Sup. vendita totale
+                            </div>
+                            <div class="float_left width_30 margin_l_10">
+                                <moduli:dato id="sup_vendita_tot_mq_b4_prevista" class="label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                            </div>
+                    </div>
+                </moduli:opzioni>
+                <div class="riga">
+                    ARTICOLAZIONE DELLA STRUTTURA
+                </div>
+                <moduli:opzioni id="articolazione_struttura_b4" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_50">esercizi di vicinato (sup. vend. < 250 mq)</strong>
+                        <moduli:dato id="articolazione_struttura_b4_1" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b4_1_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M1 (sup. vend. 251-600 mq)</strong>
+                        <moduli:dato id="articolazione_struttura_b4_2" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b4_2_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M2 (sup. vend. 601-1500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b4_3" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b4_3_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">medie strutture M3 (sup. vend. 1501-2500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b4_4" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b4_4_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">grandi strutture G1 (sup. vend. 2501-4500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b4_5" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b4_5_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_50">grandi strutture G2 (sup. vend. 4.500-1500 mq.)</strong>
+                        <moduli:dato id="articolazione_struttura_b4_6" class="label_xsmlwidth input_xxsmallwidth">n.</moduli:dato>
+                        <div class="float_left width_30">
+                            <moduli:dato id="articolazione_struttura_b4_6_mq" class="float_right label_xsmlwidth input_xsmallwidth">mq. </moduli:dato>
+                        </div>
+                    </div>
+                </moduli:opzioni>
+                <div class="riga">
+                    <strong>Tabelle speciali</strong>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        <moduli:opzioni id="tab_speciali_b4" class="lista_checkbox">
+                            <div class="float_left">Generi di monopolio</div><moduli:opzione id="generi_monopolio_b4_artic" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Farmacie</div><moduli:opzione id="farmaci_b4_artic" class="elenco_prima"></moduli:opzione>
+                            <div class="float_left">Carburanti</div><moduli:opzione id="carburanti_b4_artic" class="elenco_prima"></moduli:opzione>
+                        </moduli:opzioni>
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="tab_speciali_mq_b4_artic" class="label_xsmlwidth input_xsmallwidth width_30">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        SUPERFICIE COMPLESSIVA DELL'ESERCIZIO
+                    </div>
+                    <div class="width_30 float_left">
+                        <moduli:dato id="sup_compl_esercizio_b1" class="label_xsmlwidth input_xsmallwidth">mq.</moduli:dato>
+                    </div>
+                </div>
+                <div class="riga">
+                    <div class="width_50 float_left">
+                        (compresa la superficie adibita ad altri usi)
+                    </div>
+                </div>
+                <div class="riga">
+                    Di cui allega le relative domande di autorizzazione per le medie e grandi strutture di vendita
+                </div>
+                <br /><br />
+                <div class="riga">
+                    <strong>IL SOTTOSCRITTO DICHIARA CHE SONO STATI COMPILATI ANCHE:</strong>
+                </div>
+                <div class="riga">
+                    <moduli:opzioni id="compilati_anche_b4" class="lista_checkbox margin_l_70">
+                        <div class="float_left">QUADRO AUTOCERTIFICAZIONE</div><moduli:opzione id="quadro_cert_b4" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">ALLEGATI: A</div><moduli:opzione id="alleg_a_b4" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">B</div><moduli:opzione id="alleg_b_b4" class="elenco_prima"></moduli:opzione>
+                    </moduli:opzioni>
+                </div>        
+            </div>
+        </moduli:gruppo>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_1" class="data-firma" label-firma="FIRMA del Titolare o Legale Rappresentante"/>
+        </div>
+    </div>
+
+    
+
+    <!--    <a name="autocertificazione" class="anchor_menu" testo="Autocertificazione" ></a>    
+    <br /><br />
+    <tpl:include src="../comuni/_autocertificazione" />
+    <br /><br />-->
+    <tpl:include src="../comuni/_note_modulo" />
+    <br /><br />
+<!--    <a name="allegati" class="anchor_menu" testo="Allegati" ></a>
+    <br /><br />
+    <tpl:include src="../comuni/_noteattivita" />
+    <br /><br />-->
+    <a name="noteattivita" class="anchor_menu" testo="Note attivita" ></a>
+    <br /><br />
+    <tpl:include src="../comuni/_noteattivita" />
+    
+    
+</moduli:modulo>

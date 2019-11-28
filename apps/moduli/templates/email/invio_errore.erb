@@ -1,0 +1,10 @@
+Invio moduli <%= Spider.conf.get('portal.nome') %>
+
+Si è verificato un errore durante l'invio del modulo <%= modulo %>
+
+Error: <%= exception.message %>
+
+Backtrace:
+<% exception.backtrace.each do |bt| %>
+<%= bt %>
+<% end %>

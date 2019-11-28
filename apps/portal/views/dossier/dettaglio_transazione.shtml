@@ -1,0 +1,24 @@
+<div>
+	<legend>Dettaglio transazione</legend>
+
+	<div class="well well-small">
+		<h4 class="titolo_well">Informazioni generali</h4>
+		<strong>Applicazione: </strong>Pagamenti On-Line<br />
+		<strong>Tipo transazione: </strong>Pagamento anticipo iscrizioni on-line<br />
+		<strong>Data Ora: </strong> { @dati_transazione.obj_created.strftime("%d/%m/%Y %H:%M:%S") }<br />
+	</div>
+	<div class="well well-small">
+		<h4 class="titolo_well">Dati transazione</h4>
+		<strong>Id Pagamento</strong> 2356<br />
+		<strong>Descrizione: </strong> Pagamento Iscrizioni Scolastica 2014 utente Andrea Grazian<br />
+		<strong>Importo totale</strong> { @dati_transazione.importo_decimale.lformat } €<br />
+		<strong>Sistema Pagamento: </strong> Unicredit<br />
+	</div>
+
+	<div class="row col-lg-12 mt20">
+        <div class="back">
+	    	<a href="{ Portal::DossierController.http_s_url('vedi_dati?id_srv='+@id_srv) }" class="btn">Indietro</a>
+	    </div>
+    </div>
+
+</div>

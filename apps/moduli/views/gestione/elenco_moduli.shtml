@@ -1,0 +1,24 @@
+<div>
+	<legend>Elenco Moduli On Line <span sp:if="!@settore_abilitato.blank?">: Settore { @settore_abilitato }</span>
+								  <!--- DA FINIRE  
+								  <span sp:if="@tipi_moduli_presenti">
+									<a class="btn btn-primary" href="{ Moduli::GestioneModuliController.http_s_url('ricompila_moduli') }">Rigenera Moduli</a>
+								  </span>
+								  -->
+	</legend>
+	    <div sp:if="!@esito_azione.nil?" class="alert alert-success">
+  			{ @esito_azione }	
+    	</div>
+    	<div sp:if="!@errore.nil?" class="alert alert-error">
+  			{ @errore }	
+		</div>
+		
+		
+    <core:crud id="elenco_tipi_modulo" model="Moduli::TipoModulo" new-link="@url_nuovo_tipo_modulo" edit-link="@url_gestione_tipo_modulo">
+      	<sp:attribute widget="table" name="elements" value="id,nome,descrizione,settore,stato_visualizzazione,disponibile_dal,disponibile_al,tipo_compilazione,solo_pratiche,per_iscrizioni_scolastiche" />
+  	</core:crud>
+
+    <div class="row form-actions" sp:if="@settore_selezionato.blank?">
+        <a class="btn" href="{ Moduli::GestioneModuliController.http_s_url }">Indietro</a>
+    </div>
+</div>

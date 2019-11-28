@@ -1,0 +1,111 @@
+
+<div id="gestione_nuova_applicazione">
+    <legend>{ @titolo_legend } <span sp:if="!@lingua_corrente.blank?">( Lingua { @lingua_corrente } )</span></legend>
+    <div sp:if="@errori" class="alert alert-error width_50">
+    	<ul>
+        	<li sp:each="@errori |errore|">{ errore.gsub("_"," ") }</li>
+    	</ul>
+    </div>
+    <form method="post" class="form-horizontal" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{ @comunicazione_id }" />
+        <div sp:if="@azione == 'modifica'" class="alert alert-info">
+            Comunicazione inviata il { (@dati['data_invio'].blank? ? @dati['data_da'] : @dati['data_invio']) }
+            <span sp:if="!@dati['canali'].blank?">tramite i canali: <strong sp:each="@dati['canali'] |canale_pubblicato|">{ canale_pubblicato },</strong><br /></span>
+            si ricorda che la nuova selezione dei canali genererà una nuova pubblicazione tramite essi.
+        </div>
+
+        <div class="control-group { @titolo_error }">
+            <label class="control-label" for="titolo">Titolo</label>
+            <div class="controls">
+                <input type="text" class="input-xxlarge" name="dati[titolo]" id="titolo_comunicazione" value="{ @dati['titolo'] }" placeholder="Titolo" />
+                <span class="help-block">
+                    Oggetto della mail/Titolo della comunicazione
+                </span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="immagine">Immagine</label>
+            <div class="controls">
+                    <div sp:if="!dati['immagine'].blank?" class="container_img">
+                        <img src="{ Comunicazioni::ComunicazioniController.https_url('download_immagine?id_com='+@comunicazione_id.to_s+'&t_img=mini') }" alt="Immagine comunicazione">
+                    </div>
+
+                    
+                    <div class="row">
+                        <div sp:if="dati['immagine'].blank?" class="span3">
+                            <input type="file" name="dati[immagine]" />
+                        </div>
+                        <div class="span7">
+                            <label for="testo_breve">Testo Breve</label>
+                            <textarea class="input-xxlarge" name="dati[testo_breve]" id="testo_breve_comunicazione">{ ( @dati['testo_breve'].blank? ? "" : @dati['testo_breve'] ) }</textarea> 
+                            <span id="errore_numero_caratteri"></span>
+                                <div class="help-block">
+                                    Testo della news per Sito e Portale, testo sms. 
+                                    <span sp:if="!@help_message_testo.blank?">
+                                        { @help_message_testo } 
+                                    </span>
+                                    (Massimo 300 caratteri)
+                                </div>
+                        </div>
+                    </div>
+                    <div sp:if="!dati['immagine'].blank?" class="sostituzione_immagine">
+                         <input type="file" name="dati[immagine]" />
+                    </div>
+                    <div sp:if="!dati['immagine'].blank?" class="sostituzione_immagine">
+                        <div class="alert alert-info width_50">Caricare una nuova immagine per sostituire quella esistente</div>
+                        <label class="checkbox">
+                            <input name="dati[rimuovi_immagine]" type="checkbox" value="true"> Rimuovi</input>
+                        </label>    
+                    </div>
+            </div>  
+        </div>
+
+
+        <div class="control-group { @testo_error }">
+            <label class="control-label" for="testo">Testo</label>
+            <div class="controls">
+                <forms:htmlarea id="html_messaggio" full-page="true">
+                    <wparam:value>{ @testo_html }</wparam:value>
+                </forms:htmlarea>
+            </div>
+        </div>
+
+        <div class="control-group { @data_da_error }">
+        	<label class="control-label" for="data_da">Data pubblicazione</label>
+			<div class="controls">
+				<forms:datetime id="data_da" change-month="true" change-year="true" value="@dati['data_da']"  />
+        	</div>
+        </div>
+
+        <div class="control-group { @data_a_error }">
+        	<label class="control-label" for="data_a">Data scadenza</label>
+			<div class="controls">
+        		<forms:datetime id="data_a" change-month="true" change-year="true" value="@dati['data_a']" />
+        	</div>
+        </div>
+
+        <legend>Scegli canale/i di pubblicazione</legend>
+        <div class="control-group">
+            <div class="controls">
+                <tpl:pass sp:each="@canali_pubblicazione |canale|" >
+                    <div class="lista_scelta_canale">
+                        <input type="checkbox" name="dati[{ canale.dettagli_canale_comunicazione[:id] }]" id="{ canale.dettagli_canale_comunicazione[:id] }" sp:attr-if="!@dati[canale.to_s].blank?,checked,checked"  /> { canale.dettagli_canale_comunicazione[:nome] }
+                        <select sp:if="canale.dettagli_canale_comunicazione[:id] == 'cms' && !newslist_presenti.blank?" name="dati[extra_params_cms][newslist]"  class="margin_left15">    
+                            <option sp:each="newslist_presenti |newslist_presente|" value="{ newslist_presente.id }">{ newslist_presente.label }</option>
+                        </select>
+                    </div>
+                    
+                </tpl:pass>    
+            </div>
+        </div>
+        <input sp:if="!@dati['id'].blank?" type="hidden" name="dati[id]" value="{ @dati['id'] }" />
+        <div class="row form-actions">
+			<div class="span1 offset4">
+            	<input type="submit" class="btn" name="submit" value="Prosegui">
+        	</div>
+        </div>
+    </form>
+
+
+</div>

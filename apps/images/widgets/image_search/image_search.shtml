@@ -1,0 +1,26 @@
+<div>
+    <tpl:asset type="js" src="js/image_search.js" />
+    <form method="post" class="search-form">
+        <div class="row">
+            <label>_(Search on Flickr):</label>
+            <!-- <select name="{ widget_param('engine') }">
+                            <option value="flickr" sp:attr-if="@engine == 'flickr',selected">Flickr</option>
+                            <option value="panoramio" sp:attr-if="@engine == 'panoramio',selected">Panoramio</option>
+                        </select> -->
+            <input type="text" name="{ widget_param('search_q') }" value="{ @search_q }">
+            <input type="submit" name="submit" value="_(Ok)">
+        </div>
+        <div class="row free-checkbox-row">
+            <input type="checkbox" name="{ widget_param('free') }" sp:attr-if="@free,checked">
+            _(Only images with a public license)
+        </div>
+    </form>
+    <div class="results">
+        <images:browser id="search_browser" images="@images" />
+        <div class="pagination" sp:if="@page">
+            <a sp:if="@page > 1" href="{ widget_params(:page => @page - 1) }" class="back">_(Previous)</a>
+            <span class="current-page">_(Page %s of %s) % @page, @total_pages</span>
+            <a sp:if="@page < @total_pages" href="{ widget_params(:page => @page + 1) }" class="next">_(Next)</a>
+        </div>
+    </div>
+</div>

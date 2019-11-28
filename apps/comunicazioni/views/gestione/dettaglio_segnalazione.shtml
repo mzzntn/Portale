@@ -1,0 +1,44 @@
+<div>
+	<legend>Dettaglio Segnalazione</legend>
+	<div>
+		Segnalatore: <strong>{ @segnalazione.nome } { @segnalazione.cognome }</strong><br />
+		E-Mail: <strong>{ @segnalazione.email }</strong>
+	</div>
+	<div>	
+		Indirizzo: <strong>{ @segnalazione.indirizzo }</strong>
+	</div>
+	<div sp:if="!@extra_params.blank?">
+		<div sp:each_pair="@extra_params |key_param, value_param|"> { (key_param.gsub('_',' ').gsub(/\w+/, &:capitalize)) }: <strong> { ( value_param.blank? ? "" : value_param ) } </strong></div>
+	</div>
+	<div>
+		Tipologia Richiesta: <strong>{ @segnalazione.tipologia_richiesta }</strong>
+	</div>
+	<div>
+		Testo Segnalazione: <div class="well width_50"><strong>{ @segnalazione.testo_segnalazione }</strong></div>
+	</div>
+	<br />
+	<form method="post" class="form-horizontal">
+		<div class="control-group">
+            <label class="control-label" for="titolo">Cambia stato: </label>
+            <div class="controls">
+                <select name="tipo_stato">
+					<option sp:each="@stati |stato|" value="{ stato.id }" sp:attr-if="segnalazione.stato == stato,selected,selected">{ stato }</option>
+				</select>
+            </div>
+        </div>
+		<div class="control-group">
+            <label class="control-label" for="titolo">Note:</label>
+            <div class="controls">
+                <textarea rows="8" cols="100" class="input-xxlarge"></textarea>
+            </div>
+        </div>
+        <div class="row form-actions">
+			<div class="span1 offset4">
+            	<input type="submit" class="btn btn-primary" name="submit" value="Salva">
+        	</div>
+        	<div class="span1">
+        		<a class="btn" href="{ Comunicazioni::GestioneComunicazioniController.https_url('elenco_segnalazioni') }">Indietro</a>
+        	</div>
+        </div>
+    </form>
+</div>

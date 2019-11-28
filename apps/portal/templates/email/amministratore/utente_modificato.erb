@@ -1,0 +1,11 @@
+L'utente <%=utente.nome%> <%=utente.cognome%> ha modificato i suoi dati, e deve essere riconfermato.
+I dati cambiati sono:
+<%
+  cambiati.each do |k, v|
+%>
+- <%= k %>, da '<%= v[0] %>' a '<%= v[1] %>'
+<%
+  end
+%>
+Puoi confermarlo dall'amministrazione del portale, alla pagina <%=link_amministrazione%>
+

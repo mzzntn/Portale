@@ -1,0 +1,21 @@
+//@import "compass";
+
+body {
+	font-size: 12pt;
+}
+
+#sidebar, #header, .breadcrumb, #tabs, #button_visualizza{
+	display: none;
+}
+
+#spider-admin #container{
+	background: transparent;
+	border-bottom: none;
+	#content{
+		margin-left: 5px;
+	}
+}
+
+#graduatoria_completa{
+	display: block;
+}

@@ -1,0 +1,8 @@
+<struct name="tipoPagamento" external="true">
+    <element name="id" type="int" key="true" />
+    <element name="applicazione" type="portal_spider::applPagamento" />
+    <element name="titolo" type="text" />
+    <element name="descrizione" type="text" />
+    <element name="tipo_elemento" type="text" />
+    <element name="modalita_pagamento_id" type="text" />
+</struct>

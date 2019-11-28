@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="mb10">
+        <a href="{ Portal::PortalController.http_s_url('dettagli_utente') }" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }">I tuoi dati</a>
+    </div>
+    <div class="mb10">
+        <a href="{ Portal::PortalController.http_s_url('servizi') }" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }">Gestisci Servizi</a>
+    </div>
+    <div class="mb10" sp:if="@notifiche_attive">
+        <a href="{ Portal::PortalController.http_s_url('notifiche') }" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }">Gestisci Notifiche</a>
+    </div>
+    <div class="mb10" sp:if="!Spider.conf.get('notifiche.cron').blank?">
+        <a href="{ Portal::PortalController.http_s_url('notifiche') }" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }">Attivazione Notifiche</a>
+    </div>
+    <div class="mb10" sp:if="Spider.conf.get('portal.abilita_dossier_cittadini')">
+        <a href="{ Portal::PortalController.http_s_url('dossier_utente') }" class="btn btn-success { (@layout_web ? '' : 'btn-lg') }">Dossier personale</a>
+    </div>
+    <!---<div class="col-lg-2 mb10">
+        <a href="{ Portal::PortalController.http_s_url('autenticazione/logout') }" class="btn btn-logout">Logout</a>
+    </div>-->
+</div> 

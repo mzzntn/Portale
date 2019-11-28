@@ -1,0 +1,21 @@
+<div>
+    <tpl:asset name="plupload" />
+    <tpl:asset name="jquery-ui-progressbar" />
+    <tpl:asset type="js" src="js/file_upload.js" />
+    <tpl:asset type="css" src="css/files.css" />
+    <div class="content">
+        <button type="button" id="choose_button" class="choose_button" >_(Choose file)...</button>
+        <div class="filelist" style="display: none">
+            <div class="row">
+                <label>_(File):</label> <span class="data file_name"></span>
+            </div>
+            <div class="row">
+                <label>_(Size):</label> <span class="data file_size"></span>
+            </div>
+        </div>
+        <div class="progressbar"></div>
+        <div class="buttons" style="display:none">
+            <a href="#" class="upload_button">_(Upload)</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<tpl:asset type="css" src="sass/auth_box.scss" />
+	<!-- <tpl:asset type="js" src="js/auth_box.js" /> -->
+	<head>
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  	<meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+	  	<title>Autenticazione</title>
+	  	<tpl:output-assets type="js" />
+	  	<tpl:output-assets type="css" />
+	</head>
+  	<body>
+    	<sp:yield />
+  	</body>
+</html>

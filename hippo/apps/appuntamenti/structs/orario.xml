@@ -1,0 +1,20 @@
+<struct name='orario'>
+	<element name='operatore' type='appuntamenti::operatore' />
+	<element name='orario_apertura' label='Orario di apertura' type='time' />
+	<element name='orario_chiusura' label='Orario di chiusura' type='time' />
+	<element name='giorno' label='Giorno della settimana' type='inline' >
+	  <struct>
+	    <element name='id' type='id' />
+	    <element name='giorno' type='text' />
+	  </struct>
+	  <data>
+	    <row><id>1</id><giorno><![CDATA[Luned&igrave;]]></giorno></row>
+	    <row><id>2</id><giorno><![CDATA[Marted&igrave;]]></giorno></row>
+	    <row><id>3</id><giorno><![CDATA[Mercoled&igrave;]]></giorno></row>
+	    <row><id>4</id><giorno><![CDATA[Gioved&igrave;]]></giorno></row>
+	    <row><id>5</id><giorno><![CDATA[Venerd&igrave;]]></giorno></row>
+	    <row><id>6</id><giorno>Sabato</giorno></row>
+	    <row><id>7</id><giorno>Domenica</giorno></row>
+	  </data>
+	</element>
+</struct>

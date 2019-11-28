@@ -1,0 +1,71 @@
+<div>
+	<legend>Dettaglio comunicazione:</legend>
+	<span class="label">Titolo:</span>
+	<div class="well well-small width_50">
+		{ @comunicazione.titolo }
+	</div>
+	<div class="row">
+		<div sp:if="!@comunicazione.immagine.blank?" class="span4">
+	        <img src="{ Comunicazioni::GestioneComunicazioniController.https_url('download_immagine?id_com='+@comunicazione.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione">
+	    </div>
+	    <div class="span5">
+			<span class="label">Testo Breve:</span>
+			<div class="well well-small">
+				{ (@comunicazione.testo_breve.blank? ? "" : @comunicazione.testo_breve) }
+			</div>
+		</div>
+	</div>
+	<span class="label">Testo:</span>
+	<div class="well well-small width_50">
+		{ @comunicazione.testo }
+	</div>
+	<div class="row">
+		<div class="span2">
+	    	<span class="label">Stato comunicazione:</span>
+			<div class="well well-small width_100px">
+				{ @comunicazione.stato }
+			</div>
+	    </div>
+	    <div class="span2">
+	    	<span class="label">Data pubblicazione:</span>
+			<div class="well well-small width_100px">
+				{ @comunicazione.data_da.lformat(:short) }
+			</div>
+	    </div>
+	    <div class="span2">
+	    	<span class="label">Data scadenza:</span>
+			<div class="well well-small width_100px ">
+				{ @comunicazione.data_a.lformat(:short) }
+			</div>	
+	    </div>
+	    <div sp:if="!@comunicazione.pubblica.blank?" class="span3">
+	    	<span class="label">Tipologia Comunicazione:</span>
+			<div class="well well-small width_100px ">
+				<tpl:pass sp:if="@comunicazione.pubblica == true">Pubblica</tpl:pass>
+				<tpl:pass sp:if="@comunicazione.pubblica == false">Privata</tpl:pass>
+			</div>	
+	    </div>
+    </div>
+	<div class="row">
+		<div class="span3">
+			<span class="label">Canali di pubblicazione scelti:</span>
+			<div class="well well-small" >
+				<div sp:each="@comunicazione.canali_pubblicazione.split(',') |canale|" >
+					{ ( Comunicazioni.canale_comunicazione(canale).respond_to?(:dettagli_canale_comunicazione) ? Comunicazioni.canale_comunicazione(canale).dettagli_canale_comunicazione[:nome] : canale.capitalize+" (Canale Non Attivo)" ) }
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="row form-actions">
+		<div sp:if="!@pubblicabile" class="alert alert-warning">Per proseguire devi abilitare i canali di comunicazione selezionati nella comunicazione.</div>
+		<div class="span1 offset4">
+			<a href="{ Comunicazioni::GestioneComunicazioniController.https_url(@comunicazione.id.to_s+'/modifica_comunicazione?m=t') }" class="btn">
+				Modifica</a>
+		</div>
+		<div sp:if="@comunicazione.stato == 'salvata'" class="span2">
+			<input type="button" sp:if="!@pubblicabile" class="btn" value="Prosegui" disabled="disabled"/>
+			<a sp:if="@pubblicabile" href="{ Comunicazioni::GestioneComunicazioniController.https_url(@comunicazione.id.to_s+'/scelta_destinatari') }" class="btn" >
+				Prosegui</a>
+		</div>		
+	</div>
+</div>

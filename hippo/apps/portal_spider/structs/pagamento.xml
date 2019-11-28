@@ -1,0 +1,9 @@
+<struct name="pagamento" external="true">
+    <element name="id" type="int" key="true" />
+    <element name="utente" type="portal_spider::utente" />
+    <element name="importo" type="money" />
+    <element name="descrizione" type="text" />
+    <element name="elemento" type="text" />
+    <element name="applicazione" type="text" />
+    <element name="stato" type= "text" />
+</struct>

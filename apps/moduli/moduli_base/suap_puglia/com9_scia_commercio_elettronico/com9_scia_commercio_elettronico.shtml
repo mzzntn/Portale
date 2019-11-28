@@ -1,0 +1,515 @@
+</moduli:modulo>
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <a name="richiesta" class="anchor_menu" testo="Richiesta" ></a>
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            <moduli:dato id="cognome_leg_rap_titolare" class="readonly_js">Cognome</moduli:dato>
+            <moduli:dato id="nome_leg_rap_titolare" class="readonly_js">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_leg_rap_titolare" class="readonly_js">C. F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_leg_rap_titolare" class="label_mediumwidth input_xsmallwidth" tipo="data">Data di nascita </moduli:dato>
+            <moduli:dato id="cittadinanza_leg_rap_titolare" class="">Cittadinanza</moduli:dato>
+            <div class="float_left">Sesso </div><moduli:opzione id="sesso_leg_rap_titolare_m" class="elenco_prima label_xsmlwidth">M</moduli:opzione>
+            <moduli:opzione id="sesso_leg_rap_titolare_f" class="label_xsmlwidth" >F</moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_leg_rap_titolare" class="label_bigwidth input_smallwidth">Luogo di nascita: Stato </moduli:dato>
+            <moduli:dato id="provincia_nascita_leg_rap_titolare" class="label_smlwidth input_smallwidth">Provincia</moduli:dato>
+            <moduli:dato id="luogo_nascita_leg_rap_titolare" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="prov_residenza_leg_rap_titolare" class="label_bigwidth input_smallwidth">Residenza: Provincia </moduli:dato>
+            <moduli:dato id="citta_residenza_leg_rap_titolare" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <moduli:dato id="indirizzo_residenza_leg_rap_titolare" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="solo_civico_residenza_leg_rap_titolare" class="label_xsmlwidth input_xsmallwidth">N. </moduli:dato>
+            <moduli:dato id="cap_residenza_leg_rap_titolare" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div> 
+    </moduli:gruppo>
+
+    <div class="riga">
+        <strong>in qualità di legale rappresentante della società:</strong>
+    </div>
+    
+    <moduli:gruppo id="dati_ditta_titolare_1" titolo="" class="dati_modulo dati_readable_js no_border">
+        <div class="riga">
+            <moduli:dato id="cod_fiscale_ditta_titolare" class="input_codfiscwidth">Cod. fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="p_iva_ditta_titolare" class="label_xbigwidth input_codfiscwidth">Partita IVA (se diversa da C.F.)</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="nome_ditta_titolare" class="label_xbigwidth input_largewidth">denominazione o ragione sociale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="sede_ditta_titolare" class="label_xbigwidth input_mediumwidth">con sede nel Comune di</moduli:dato>
+            <moduli:dato id="provincia_ditta_titolare" class="label_bigwidth input_smallwidth">Provincia</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_ditta_titolare" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="civico_ditta_titolare" class="label_xsmlwidth input_xxsmallwidth">N.</moduli:dato>
+            <moduli:dato id="cap_ditta_titolare" class="label_xsmlwidth input_xxsmallwidth">C.A.P.</moduli:dato>
+            <moduli:dato id="tel_fisso_cellulare_ditta_titolare" class="label_xsmlwidth input_xsmallwidth">Tel.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="numero_cciaa_titolare" class="label_xbigwidth input_mediumwidth_220">N.d'iscrizione al Registro Imprese</moduli:dato>
+            <moduli:dato id="cciaa_titolare" class="label_smlwidth input_mediumwidth_220">CCIAA di</moduli:dato>
+        </div> 
+    </moduli:gruppo>
+    
+
+    <moduli:gruppo id="scia_trasmessa" titolo="" class="dati_modulo dati_readable_js no_border">
+        <div class="riga">
+            <strong>Trasmette SCIA relativa a:</strong>
+        </div>
+        <moduli:opzioni id="scia_tipo" class="lista_checkbox_vertical ">
+            <div class="clear_both margin_l_35"><div class="float_left">A</div>
+                <div class="margin_l_35"><strong class="float_left width_50">AVVIO ATTIVITA' DI VENDITA</strong>
+                    <moduli:opzione id="scia_tipo_A" class="elenco_prima"></moduli:opzione>
+                </div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">B</div>
+                <div class="margin_l_35"><strong class="float_left width_50">SUBINGRESSO</strong>
+                    <moduli:opzione id="scia_tipo_B" class="elenco_prima"></moduli:opzione>
+                </div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">C</div>
+                <div class="margin_l_35"><strong class="float_left width_50">VARIAZIONI</strong>
+                    <moduli:opzione id="scia_tipo_C" class="elenco_prima"></moduli:opzione>
+                    <moduli:opzioni id="tipi_C" class="lista_checkbox_vertical ">
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">C1 TRASFERIMENTO DI SEDE</div>
+                            <moduli:opzione id="scelta_C_1" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">C2 VARIAZIONE DEL SETTORE MERCEOLOGICO</div>
+                            <moduli:opzione id="scelta_C_C_2" class="elenco_prima"></moduli:opzione>
+                        </div>
+                        <div class="clear_both margin_l_10">
+                            <div class="float_left width_50">C3 VARIAZIONE DEL SITO WEB</div>
+                            <moduli:opzione id="scelta_C_3" class="elenco_prima"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+            </div>
+            <div class="clear_both margin_l_35"><div class="float_left">D</div>
+                <div class="margin_l_35"><strong class="float_left width_50">CESSAZIONE ATTIVITA'</strong>
+                    <moduli:opzione id="scia_tipo_D" class="elenco_prima"></moduli:opzione>
+                </div>
+            </div>
+        </moduli:opzioni>
+    </moduli:gruppo>
+
+    <br /><br />
+    <div class="riga center_text">
+        <strong><i>dichiara quanto contenuto nella rispettiva sezione:</i></strong>
+    </div>
+    <div class="riga">
+        Copia del presente modello va contestualmente presentata al Registro Imprese della CCIAA della Provincia dove è ubicato l'esercizio.<br />
+        La segnalazione ha efficacia dalla data della presentazione all'amministrazione competente.
+    </div>
+
+    <br /><br />
+
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            INDIRIZZO DELL' ESERCIZIO
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_loc" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+            <moduli:dato id="loc_int_cap" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="loc_int_via" class="label_bigwidth input_mediumwidth">Via, Viale, Piazza, ecc</moduli:dato>
+            <moduli:dato id="loc_int_n" class="label_xsmlwidth input_xxsmallwidth">N.</moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <br /><br />
+
+    <moduli:gruppo id="sezione_comune" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            SETTORE O SETTORI MERCEOLOGICI
+        </div>
+        <moduli:opzioni id="settore_merce" class="lista_checkbox_vertical margin_l_35">
+            <div class="clear_both">
+                <strong class="float_left width_30">Alimentare e misto</strong>
+                    <moduli:opzione id="SM01" class="elenco_prima "> </moduli:opzione>                   
+            </div>
+            <div class="clear_both">
+                <strong class="float_left width_30">Non alimentare beni persona</strong>
+                    <moduli:opzione id="SM02" class="elenco_prima"></moduli:opzione>
+            </div>
+            <div class="clear_both">
+                <strong class="float_left width_30">Non alimentare altri beni</strong>
+                    <moduli:opzione id="SM03" class="elenco_prima"></moduli:opzione>
+            </div>
+            <div class="clear_both">
+                <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                    <moduli:opzione id="SM04" class="elenco_prima"></moduli:opzione>
+            </div>
+        </moduli:opzioni>
+        <br />
+        <div class="sezione_comune_A sezione_comune_B hide">
+            <div class="riga center_text">
+                L'ATTIVITA' VIENE SVOLTA INSIEME AD ALTRA ATTIVITA'
+            </div>
+            <div class="riga">
+                <div class="width_50 float_left">&nbsp;</div>
+                <div class="float_left">
+                    <moduli:opzioni id="insieme_altra_att" class="lista_checkbox">
+                        <div class="float_left">SI</div><moduli:opzione id="insieme_altra_att_si" class="elenco_prima"></moduli:opzione>
+                        <div class="float_left">NO</div><moduli:opzione id="insieme_altra_att_no" class="elenco_prima"></moduli:opzione>
+                    </moduli:opzioni>
+                </div>
+            </div>
+
+            <div class="riga">
+                <div class="float_left">SE <strong>SI</strong> INDICARE SE AVVIENE IN LOCALE SEPARATO</div><moduli:opzione id="locale_separato_si" class="elenco_prima"></moduli:opzione>
+            </div>
+            <div class="riga margin_l_35">
+                <moduli:dato id="spec_att_si" class="label_xxbigwidth input_xxsmallwidth">SPECIFICARE IL TIPO DI ATTIVITA' TRA QUELLE INDICATE (1)</moduli:dato>
+            </div>
+            <div class="riga">
+                UBICAZIONE DEPOSITO MERCI UTILIZZATO
+            </div>
+            <moduli:opzioni id="tipo_ubicazione_deposito" class="lista_checkbox_vertical">
+                <div class="clear_both">
+                    <div class="float_left">IN PROPRIO</div>
+                    <moduli:opzione id="ubic_dep_merci_proprio" class="elenco_prima"></moduli:opzione>
+                    <moduli:dato id="ubic_dep_merci_proprio_ind" tipo="longText" class="input_largewidth adaptive_input">INDICARE L'INDIRIZZO</moduli:dato>
+                </div>
+                <div class="clear_both">
+                    <div class="float_left">O DI TERZI</div>
+                    <moduli:opzione id="ubic_dep_merci_terzi" class="elenco_prima"></moduli:opzione>
+                    <moduli:dato id="ubic_dep_merci_terzi_ind" tipo="longText" class="input_largewidth adaptive_input">INDICARE L'INDIRIZZO</moduli:dato>
+                </div>
+            </moduli:opzioni>
+            <div class="riga">
+                <moduli:dato id="sito_web_1" class="label_xbigwidth input_largewidth"><label><strong>SPECIFICARE SITO WEB</strong></label></moduli:dato>
+                <moduli:opzioni id="tipo_sito_web" class="lista_checkbox_vertical">
+                    <div class="clear_both">
+                        <div class="float_left width_30">SITO INDIVIDUALE</div>
+                        <moduli:opzione id="sito_web_individ" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left width_30">SITO COLLETTIVO</div>
+                        <moduli:opzione id="sito_web_collet" class="elenco_prima"></moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+
+            </div>
+        </div>
+        
+    </moduli:gruppo>
+    <a name="sezione" class="anchor_menu" testo="Sezione" ></a>
+    <br /><br /><br />
+    <div id="sezione_evento_A" class="hide { ( @sezione_attiva == 'A' ? 'mostra_in_stampa' : '' ) }">
+        <moduli:gruppo id="sezione_a" titolo="" class="dati_modulo no_border">
+            <div class="center_text"><strong>SEZIONE A</strong> - <i>AVVIO DELL'ATTIVITA'</i></div>
+
+            <div class="riga">
+                <moduli:dato id="sito_web_2" class="label_xbigwidth input_largewidth"><label><strong>SPECIFICARE SITO WEB</strong></label></moduli:dato>
+            </div>
+
+            <div class="riga">
+                (1) APPORTARE NELL'APPOSITA CASELLA IL CODICE DI RIFERIMENTO DELL'ATTIVITA' CORRISPONDENTE COME DA TABELLA SEGUENTE:
+            </div>
+            
+            <div class="float_left width_50">
+                <div>01 Commercio al dettaglio</div>
+                <div>02 Commercio all'ingrosso</div>
+                <div>03 Commercio su aree pubbliche</div>
+                <div>04 Agricoltura e pesca</div>
+                <div>05 Attività Manufatturiere</div>
+            </div>
+            <div class="float_left">
+                <div>06 Costruzioni</div>
+                <div>07 Servizi</div>
+                <div>08 Alberghi/Ristoranti</div>
+                <div>09 Altro</div>
+            </div>
+
+            <div class="riga">
+                <moduli:dato id="altro_tipo_attivita" class="label_xxbigwidth input_largewidth"><label><strong>Specificare se barrata la casella "altro"</strong></label></moduli:dato>
+            </div>
+        </moduli:gruppo>
+    </div>
+    <br /><br /><br />
+
+    <div id="sezione_evento_B" class="hide { ( @sezione_attiva == 'B' ? 'mostra_in_stampa' : '' ) }">
+        <moduli:gruppo id="sezione_b" titolo="" class="dati_modulo no_border">
+            <div class="center_text"><strong>SEZIONE B</strong> - <i>AVVIO PER SUBINGRESSO *</i></div>
+
+            <div class="riga">
+                SUBENTRA A 
+            </div>
+            <div class="riga">
+                <moduli:dato id="sez_b_denom" class="label_mediumwidth input_largewidth">denominazione</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="sez_b_cf" class="label_mediumwidth input_codfiscwidth">Cod. fiscale</moduli:dato>
+            </div>
+            <div class="riga">
+                <div>A seguito di:</div>
+                <moduli:opzioni id="tipo_subentro" class="lista_checkbox_vertical margin_l_70">
+                    <div class="clear_both">
+                        <div class="float_left">- compravendita</div>
+                        <moduli:opzione id="tipo_subentro_1" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">- affitto d'azienda</div>
+                        <moduli:opzione id="tipo_subentro_2" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">- donazione</div>
+                        <moduli:opzione id="tipo_subentro_3" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">- fusione d'azienda</div>
+                        <moduli:opzione id="tipo_subentro_4" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">- fallimento</div>
+                        <moduli:opzione id="tipo_subentro_5" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">- successione</div>
+                        <moduli:opzione id="tipo_subentro_6" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">- altre cause</div>
+                        <moduli:opzione id="tipo_subentro_7" class="elenco_prima"></moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+            </div>
+            <div class="riga">
+                <moduli:dato id="altro_tipo_subentro" class="label_xxbigwidth input_largewidth"><label><strong>Specificare se barrata la casella "altro"</strong></label></moduli:dato>
+            </div>
+            <sub>
+                * Si rammenta che a norma dell'art. 2556 c.c. per i contratti di trasferimento, di proprietà o gestione di un'azienda commerciale occorre la registrazione dell'atto presso il notaio.
+            </sub><br />
+            <sub>
+                ** Fornire le indicazioni richieste facendo riferimento alla nota (1) della precedente Sezione A - AVVIO ATTIVITA'
+            </sub>
+
+        </moduli:gruppo>
+
+    </div>
+
+    <div id="sezione_evento_C" class="hide { ( @sezione_attiva == 'C' ? 'mostra_in_stampa' : '' ) }">
+        <moduli:gruppo id="sezione_c" titolo="" class="dati_modulo no_border">
+            <div class="center_text"><strong>SEZIONE C</strong> - <i>VARIAZIONI</i></div><br />
+
+            <h4 class="center_text">SUBIRA' LE VARIAZIONI DI CUI ALLE SEZIONI:</h4>
+            <div>
+                <div class="width_30 float_left">&nbsp;</div>
+                <div class="float_left width_50">
+                    <moduli:opzioni id="sez_variaz_c" class="lista_input_oriz ">
+                        <div class="">
+                            <strong class="float_left">C1</strong>
+                            <moduli:opzione id="sez_variaz_c1" class="input_smallwidth"></moduli:opzione>
+                        </div>
+                        <div class="">
+                            <strong class="float_left">C2</strong>
+                            <moduli:opzione id="sez_variaz_c2" class="input_smallwidth"></moduli:opzione>
+                        </div>
+                        <div class="">
+                            <strong class="float_left">C3</strong>
+                            <moduli:opzione id="sez_variaz_c3" class="input_smallwidth"></moduli:opzione>
+                        </div>
+                    </moduli:opzioni>
+                </div>
+            </div>
+            <br /><br />
+
+            <div id="sezione_c1" class="riga">
+                <div class=""><i><strong>SEZIONE C1</strong> - TRASFERIMENTO DI SEDE</i></div><br />
+                <div class="riga">
+                    SARA' TRASFERITO AL NUOVO INDIRIZZO:
+                </div>
+
+                <div class="riga">
+                    <moduli:dato id="nuovo_comune_esercizio" class="label_smlwidth input_largewidth">Comune </moduli:dato>
+                    <moduli:dato id="nuovo_cap_esercizio" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+                </div>
+                <div class="riga">
+                    <moduli:dato id="nuovo_indirizzo_esercizio" class="label_bigwidth input_mediumwidth">Via, Viale, Piazza, ecc</moduli:dato>
+                    <moduli:dato id="nuovo_civico_esercizio" class="label_xsmlwidth input_xxsmallwidth">N.</moduli:dato>
+                </div>
+
+                <br />
+                <div class="riga">
+                    SETTORE O SETTORI MERCEOLOGICI
+                </div>
+
+                <moduli:opzioni id="settore_merce_trasferito" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Alimentare e misto</strong>
+                            <moduli:opzione id="SM01" class="elenco_prima "> </moduli:opzione>                   
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni persona</strong>
+                            <moduli:opzione id="SM02" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare altri beni</strong>
+                            <moduli:opzione id="SM03" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                            <moduli:opzione id="SM04" class="elenco_prima"></moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+            </div>
+
+            <br /><br />
+            <div id="sezione_c2" class="riga">
+                <div class=""><i><strong>SEZIONE C2</strong> - VARIAZIONE DI SETTORE MERCEOLOGICO</i></div><br />
+                <moduli:opzioni id="modifica_settori" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <div class="float_left">IL SETTORE ALIMENTARE SARA' SOSTITUITO CON IL SETTORE NON ALIMENTARE</div>
+                            <moduli:opzione id="alim_no_alim" class="elenco_prima "> </moduli:opzione>                   
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left">IL SETTORE NON ALIMENTARE SARA' SOSTITUITO CON IL SETTORE ALIMENTARE</div>
+                            <moduli:opzione id="no_alim_alim" class="elenco_prima"></moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+                <br />
+                <div class="riga">
+                    SETTORE O SETTORI MERCEOLOGICI
+                </div>
+                <moduli:opzioni id="settore_merce_trasferito_c2" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Alimentare e misto</strong>
+                            <moduli:opzione id="settore_merce_trasferito_1_c2" class="elenco_prima "> </moduli:opzione>                   
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni persona</strong>
+                            <moduli:opzione id="settore_merce_trasferito_2_c2" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare altri beni</strong>
+                            <moduli:opzione id="settore_merce_trasferito_3_c2" class="elenco_prima"></moduli:opzione>
+                    </div>
+                    <div class="clear_both">
+                        <strong class="float_left width_30">Non alimentare beni a basso impatto</strong>
+                            <moduli:opzione id="settore_merce_trasferito_4_c2" class="elenco_prima"></moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+            </div>
+
+            <br /><br />
+            <div id="sezione_c3" class="riga">
+                <div class=""><i><strong>SEZIONE C3</strong> - VARIAZIONE SITO WEB</i></div><br />
+                <strong>IL SITO WEB SARA' SOSTITUITO DAL SEGUENTE (1)</strong>
+                <moduli:opzioni id="tipo_nuovo_sito" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_both">
+                        <div class="float_left width_30">SITO INDIVIDUALE</div>
+                            <moduli:opzione id="nuovo_sito_individ" class="elenco_prima "> </moduli:opzione>                   
+                    </div>
+                    <div class="clear_both">
+                        <div class="float_left width_30">SITO COLLETTIVO</div>
+                            <moduli:opzione id="nuovo_sito_collet" class="elenco_prima"></moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+                <div class="riga">
+                    <moduli:dato id="spec_sito_web" class="label_xbigwidth input_largewidth"><label><strong>SPECIFICARE SITO WEB</strong></label></moduli:dato>
+                </div>
+                <sub class="riga">
+                    (1) IL SITO WEB DEVE ESSERE SEMPRE QUELLO DI APPARTENENZA DEL SOGGETTO CHE SVOLGE EFFETTIVAMENTE ATTIVITA' DI VENDITA SUL TERRITORIO ITALIANO E CHE PERTANTO COMUNICA AL PROPRIO COMUNE DI VOLER INIZIARE TALE FORMA SPECIALE DI VENDITA AL DETTAGLIO TRAMITE COMMERCIO ELETTRONICO
+                </sub>
+                
+            </div>
+
+        </moduli:gruppo>
+    </div>
+
+    <div id="sezione_evento_D" class="hide { ( @sezione_attiva == 'D' ? 'mostra_in_stampa' : '' ) }">
+        <moduli:gruppo id="sezione_d" titolo="" class="dati_modulo no_border">
+            <div class="center_text"><strong>SEZIONE D</strong> - <i>CESSAZIONE DI ATTIVITA'</i></div><br />
+
+            <div class="riga">
+                <moduli:dato id="data_cessazione_sez_d" class="label_mediumwidth input_smallwidth" tipo="data">CESSA DAL </moduli:dato> PER
+            </div>
+            <div class="riga ">
+                <moduli:opzioni id="motivo_cessazione" class="lista_checkbox_vertical margin_l_35">
+                    <div class="clear_left">
+                        <div class="width_50 float_left">- trasferimento in proprietà o gestione dell'impresa</div>
+                        <moduli:opzione id="motivo_cessazione_1" class="elenco_prima "> </moduli:opzione>
+                    </div>
+                    <div class="clear_left">
+                        <div class="width_50 float_left">- chiusura definitiva dell'esercizio</div>
+                        <moduli:opzione id="motivo_cessazione_2" class="elenco_prima "> </moduli:opzione>
+                    </div>
+                </moduli:opzioni> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="sito_web_sez_d" class="label_xbigwidth input_largewidth"><label><strong>SITO WEB</strong></label></moduli:dato>
+            </div>
+            <moduli:opzioni id="sito_web_sez_d_tipo" class="lista_checkbox_vertical margin_l_35">
+                <div class="clear_both">
+                    <div class="float_left width_30">SITO INDIVIDUALE</div>
+                        <moduli:opzione id="sito_web_sez_d_tipo_ind" class="elenco_prima "> </moduli:opzione>                   
+                </div>
+                <div class="clear_both">
+                    <div class="float_left width_30">SITO COLLETTIVO</div>
+                        <moduli:opzione id="sito_web_sez_d_tipo_collet" class="elenco_prima"></moduli:opzione>
+                </div>
+            </moduli:opzioni>
+            <div class="riga">
+                <moduli:dato id="spec_sito_web_sez_d" class="label_xbigwidth input_largewidth"><label><strong>SPECIFICARE SITO WEB</strong></label></moduli:dato>
+            </div>
+            
+            <div class="riga">
+                <strong>IL SOTTOSCRITTO DICHIARA CHE SONO STATI COMPILATI ANCHE:</strong>
+            </div>
+            <div class="riga">
+                <moduli:opzioni id="compilati_anche" class="lista_checkbox margin_l_70">
+                    <div class="float_left">QUADRO AUTOCERTIFICAZIONE</div><moduli:opzione id="quadro_cert" class="elenco_prima"></moduli:opzione>
+                    <div class="float_left">ALLEGATI: A</div><moduli:opzione id="alleg_a" class="elenco_prima"></moduli:opzione>
+                    <div class="float_left">B</div><moduli:opzione id="alleg_b" class="elenco_prima"></moduli:opzione>
+                </moduli:opzioni>
+            </div>        
+        </moduli:gruppo>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_1" class="data-firma" label-firma="FIRMA del Titolare o Legale Rappresentante"/>
+        </div>
+    </div>
+
+    <br /><br />
+    <div class="riga center_text"><strong><i>INDICARE PER ESTESO, AI SENSI DEL D.P.R. 581/95, QUALUNQUE SIA LA SEZIONE</i></strong></div>
+    <div class="riga center_text"><strong><i>COMPILATA (ESCLUSA LA D), L'ATTIVITA' ESERCITATA O CHE SI INTENDE ESERCITARE</i></strong></div>
+    <div class="riga center_text"><strong><i>FACENDO RIFERIMENTO AI PRODOTTI INCLUSI NELL'ALLEGATO C </i></strong></div>
+    <div class="riga">
+        <moduli:dato id="attivita_prevalente_sez_d" tipo="longText" class="label_bigwidth input_largewidth adaptive_input">Attività prevalente:</moduli:dato>
+    </div>
+    <div class="riga">
+        <moduli:dato id="attivita_secondaria_sez_d" tipo="longText" class="label_bigwidth input_largewidth adaptive_input">Attività secondaria:</moduli:dato>
+    </div>
+    <br />
+
+   <!--    <a name="autocertificazione" class="anchor_menu" testo="Autocertificazione" ></a>    
+    <br /><br />
+    <tpl:include src="../comuni/_autocertificazione" />
+    <br /><br />-->
+    <tpl:include src="../comuni/_note_modulo" />
+    <br /><br />
+<!--    <a name="allegati" class="anchor_menu" testo="Allegati" ></a>
+    <br /><br />
+    <tpl:include src="../comuni/_noteattivita" />
+    <br /><br />-->
+    <a name="noteattivita" class="anchor_menu" testo="Note attivita" ></a>
+    <br /><br />
+    <tpl:include src="../comuni/_noteattivita" />
+
+</moduli:modulo>

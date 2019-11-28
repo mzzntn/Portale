@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>OPERATORE</table><bind element="login" dbField="LOGIN"/><bind element="password" dbField="PASSWORD"/><bind element="descrizione" dbField="DESCRIZIONE"/><bind element="note" dbField="NOTE"/><bind element="start_user" dbField="START_USER"/><bind element="settore" dbField="ID_SETTORE"/></binding>

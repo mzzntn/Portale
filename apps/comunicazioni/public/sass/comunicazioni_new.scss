@@ -1,0 +1,29 @@
+/* variabili dei demografici, che importano quelle del portal*/
+@import "variabili_comunicazioni";
+/* STILI DI COMUNICAZIONI */
+
+#elenco_comunicazioni{
+    .bordo_servizio{
+        .btn-success{
+            float: right;
+            @media (max-width: $screen-sm){
+                float: left;
+            }
+        }
+        .container_img{
+            @media (max-width: $break-910){
+                width: 100px !important;
+            }
+        }
+    }
+    .da_leggere{
+        font-weight: 700;
+    }
+}
+#dettaglio_comunicazione{
+    .container_img{
+        @media (max-width: $break-910){
+            width: 100px;
+        }
+    }
+}

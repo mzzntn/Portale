@@ -1,0 +1,55 @@
+<div>
+	<legend>Firma Modulo</legend>
+	<div class="row">
+		<strong>Completa l'inoltro della pratica con la firma della ricevuta</strong>
+	</div>
+	<div class="row">
+		<div class="alert alert-info col-lg-10 col-md-10">Per completare l'invio della pratica è necessario apporre la firma sul documento finale prodotto dal sistema seguendo questa procedura:</div>
+	</div>
+	<div class="row">
+		<div sp:if="@errore" class="alert alert-error alert-danger col-lg-12 col-md-12">{ @errore }</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8 col-md-8" id="modulo_preview_div">
+			<object data="{ Moduli::ModuliController.http_s_url('download_pdf_preview?nome_file='+@nome_file_temp) }" type="application/pdf" width="100%" height="400">
+        	<embed src="{ Moduli::ModuliController.http_s_url('download_pdf_preview?nome_file='+@nome_file_temp) }" type="application/pdf" width="100%" height="400"/>
+    		</object>
+		</div>
+		<div id="istruzioni_firma" class="col-lg-4 col-md-4">
+			<span id="tipo_firma" class="hide">{ @tipo_firma }</span>
+			<form class="form-horizontal" method="post" id="form_upload_documento_identita" enctype="multipart/form-data">
+				<ol>
+					<li><strong>prendi visione</strong> del documento generato qui a fianco</li>
+					<li><strong>scarica</strong> sul tuo dispositivo/pc il documento generato cliccando sul tasto <br />
+						<a href="{ Moduli::ModuliController.http_s_url('download_modulo?nome_file='+@nome_file_temp) }" class="btn btn-success nomodal" id="scarica_doc_generato">Scarica il documento generato 
+						<i class="icon-download-alt icon-white"></i></a>
+						<br /><br />
+					</li>
+					<li><strong>apponi la firma digitale</strong> al documento usando il tuo strumento di firma (dike, aruba sign, etc.) 
+						<span sp:if="@tipo_firma == 'p7m_pdf'">ovvero in caso di indisponibilità della firma digitale occorre sottoscrivere il documento in modalità cartacea e allegare copia del documento di validità del/dei firmatario/i 
+						</span>
+					</li>
+					<li>
+						<strong>carica il documento</strong> firmato digitalmente cliccando su "Sfoglia"
+						<input type="file" name="upload_modulo_firmato" id="upload_modulo_firmato">
+						<strong><h3 id="doc_valido" class="hide text-success">Documento Valido</h3></strong>
+						<strong><h3 id="doc_non_valido" class="hide text-danger">Documento Non Valido!</h3></strong>
+					</li>
+					<br /><br />
+					<li><strong>clicca</strong> sul tasto "Invia" <br /> 
+						<button type="submit" class="btn btn-primary" id="invia_doc_firmati" name="invia_doc_firmati">Invia</button>
+					</li>
+				</ol>
+				
+			</form>
+		</div>
+	</div>
+	<br /><br />
+	<div class="row">
+		<div class="back col-sm-2">
+        	<a href="{ @link_indietro }" class="btn">Indietro</a>
+    	</div>
+    </div>
+
+
+</div>

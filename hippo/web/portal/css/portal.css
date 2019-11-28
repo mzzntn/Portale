@@ -1,0 +1,108 @@
+/* paginatore js */
+:not(.spider.components.table) .page_navigation.pagination {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 20px; }
+  :not(.spider.components.table) .page_navigation.pagination .active_page {
+    font-size: 120%;
+    font-weight: 700; }
+  :not(.spider.components.table) .page_navigation.pagination ul.lista_pagine {
+    list-style: none;
+    overflow: hidden;
+    display: none; }
+  :not(.spider.components.table) .page_navigation.pagination .active a {
+    font-size: 120%;
+    font-weight: 700;
+    cursor: default; }
+  :not(.spider.components.table) .page_navigation.pagination li.previous_link, :not(.spider.components.table) .page_navigation.pagination li.next_link {
+    border-left-width: 1px;
+    border-radius: 3px 0 0 3px; }
+:not(.spider.components.table) .sel_pagine {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 20px; }
+  :not(.spider.components.table) .sel_pagine button {
+    color: #049cdb; }
+  :not(.spider.components.table) .sel_pagine .dropdown-menu {
+    min-width: 30px; }
+    :not(.spider.components.table) .sel_pagine .dropdown-menu.lista_pagine {
+      max-height: 300px;
+      overflow-y: scroll; }
+
+#portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul, #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ol {
+  padding-left: 18px; }
+  #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul li, #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ol li {
+    padding: initial;
+    list-style: outside none none; }
+#portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul li {
+  list-style-type: initial; }
+#portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ol li {
+  list-style-type: decimal; }
+#portal_container #portal_main #portal_content #link_trasparenza .form-group .alert {
+  margin-bottom: 0px;
+  height: 3.5rem; }
+#portal_container #portal_main #portal_content ul.nav-tabs > li {
+  padding: 0; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .pagination {
+  margin-bottom: 5px;
+  margin-left: 20px; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .pagination .active_page a {
+  cursor: default;
+  font-size: 120%;
+  font-weight: 700;
+  padding: 4px 12px; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .btn-group.sel_pagine {
+  vertical-align: bottom;
+  margin-bottom: 10px;
+  margin-left: 20px; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .btn-group.sel_pagine button {
+  color: #11b476; }
+#portal_container #portal_main #portal_content textarea.form-control {
+  height: auto; }
+
+.btn-bigger {
+  padding: 9px;
+  font-size: 1.1em; }
+
+.control-label-right {
+  display: block;
+  margin-bottom: 0;
+  padding-top: 7px;
+  text-align: right; }
+
+.pagination > .active_page > a, .pagination > .active_page > a:hover, .pagination > .active_page > a:focus, .pagination > .active_page > span, .pagination > .active_page > span:hover, .pagination > .active_page > span:focus {
+  background-color: #11b476;
+  border-color: #11b476;
+  color: #fff;
+  cursor: default;
+  z-index: 2; }
+
+input[type="checkbox"].form-control {
+  height: 26px; }
+
+div.modal-dialog {
+  margin: 120px auto; }
+
+.fw input.btn {
+  background-color: #f1f2f2;
+  border-bottom: 1px solid #bcbec0;
+  border-left: 1px solid #bcbec0;
+  border-top: 1px solid #bcbec0;
+  color: #11b476;
+  font-size: 1.1em;
+  margin-right: 17px;
+  padding: 9px; }
+
+div.back input.btn {
+  background-color: #f1f2f2;
+  border-bottom: 1px solid #bcbec0;
+  border-right: 1px solid #bcbec0;
+  border-top: 1px solid #bcbec0;
+  font-size: 1.1em;
+  margin-left: 17px;
+  padding: 9px; }
+
+.ui-autocomplete {
+  z-index: 10; }
+
+/*# sourceMappingURL=portal_nuovo.css.map */

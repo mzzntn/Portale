@@ -1,0 +1,4 @@
+<struct name='settore'>
+<element name='nome' type='text' />
+</struct>
+

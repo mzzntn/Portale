@@ -1,0 +1,80 @@
+<header id="portal_top">
+    <div id="header_border_fixed"></div>
+    <div id="contenuto_header" class="row">
+        <div id="ente" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div id="img_sfondo_stemma">
+                <a href="{ Portal.http_s_url }">
+                <div id="img_stemma"></div>
+                </a>
+            </div>
+            <div id="testo_ente">
+                <!--- Se servono n righe racchiudere i testi dentro dei div -->
+                { Spider.conf.get('portal.nome') }
+            </div>
+        </div>
+        
+        <nav id="topbar" class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+            <div class="row">
+                
+
+                <div class="{ (@utente_portale.blank? ? 'col-lg-offset-3 col-md-offset-3' : 'col-lg-offset-1 col-md-offset-1') } col-lg-2 col-md-2 text-center"><a href="{ Portal::PortalController.http_s_url('servizi_pubblici') }">SERVIZI<br />PUBBLICI</a></div>
+                
+                <div class="col-lg-2 col-md-2 text-center"><a href="{ Portal::PortalController.http_s_url('servizi_privati') }">SERVIZI<br />PRIVATI</a></div>
+                
+                <div sp:if="!@url_sito.blank?" class="col-lg-2 col-md-2 text-center"><a href="{ ( !@url_sito.blank? ? @url_sito : '' ) }">SITO<br />UFFICIALE</a></div>
+                
+                <div sp:if='@utente_portale.blank?' class="col-lg-2 col-md-2 text-center"><a href="{ Portal::PortalController.http_s_url('autenticazione') }">ACCEDI<br />
+                    <span sp:if="Spider.conf.get('portal.registrazione_utenti') == true">REGISTRATI</span></a></div>
+                
+                <div sp:if='@utente_portale' class="col-lg-2 col-md-2 text-center">
+                    <a href="{ Portal::PortalController.http_s_url }" title="Sezione Privata">CIAO<br />{ @utente_portale.nome }</a>
+                </div>
+                <!-- icona composta per nuove comunicazioni private-->
+                <div sp:if='!@num_com_non_lette.blank? && @num_com_non_lette > 0' class="col-lg-1 col-md-1 com_private_link">
+                    <a href="{ Comunicazioni::ComunicazioniController.http_s_url('elenco_privato') }" title="Nuove Comunicazioni">
+                        <span class="fa fa-envelope" aria-hidden="true">
+                        </span>
+                        <sup><span class="badge">{ @num_com_non_lette }</span></sup>
+                    </a>
+                </div>
+                
+                
+                <div sp:if='@utente_portale' class="col-lg-1 col-md-1 logout_link">
+                    <a href="{ Portal::PortalController.http_s_url('autenticazione/logout') }" title="Logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </nav>
+         
+        <!--- Small devices <992px)  -->
+        <div id="topbar-responsive" class="hidden-lg hidden-md col-sm-4 col-sm-offset-2 col-xs-6">
+            <div class="row">
+                <div class="col-sm-4 col-xs-4 utente">
+                    <a href="{ (@utente_portale.blank? ? Portal::PortalController.http_s_url('autenticazione') : Portal::PortalController.http_s_url('dettagli_utente') ) }" title="autenticazione"><i class="fa fa-user fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <!-- icona composta per nuove comunicazioni private-->
+                <div sp:if='!@num_com_non_lette.blank? && @num_com_non_lette > 0' class="col-sm-4 col-xs-4 com_private_link">
+                    <a href="{ Comunicazioni::ComunicazioniController.http_s_url('elenco_privato') }" title="Nuove Comunicazioni">
+                        <span class="fa fa-envelope fa-2x" aria-hidden="true">
+                        </span>
+                        <sup><span class="badge">{ @num_com_non_lette }</span></sup>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-xs-4 menu">
+                    <a href="#my-menu" title="menu"><i id="my-button" class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sub_bar_header" class="hidden-sm hidden-xs" style="text-align: center;font-size: ">
+            <span sp:if="Spider.conf.get('portal.abilita_gdpr_utente')" style="padding: 5px" class="label label_informativa_gdpr"><a style="color: #66b3ff;font-size: 1.5rem;font-weight: bold;" href="{ Portal::PortalController.http_s_url('informativa_gdpr') }">Informativa Trattamento Dati</a></span>
+            <span sp:if="Spider.conf.get('portal.abilita_translate')" id="google_translate_element"></span>
+        </div>
+            
+                 
+
+    </div>
+
+    <!-- includo qui il menu laterale responsive che deve essere presente in tutte le pagine del sito -->
+    <tpl:include src="_menu_responsive" />
+    
+</header>

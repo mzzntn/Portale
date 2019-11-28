@@ -1,0 +1,377 @@
+/* definisco nuove variabili per l'installazione corrente oppure ridefinisco
+* le variabili del portale e le variabili di bootstrap senza !default
+*/
+
+$main-color: #E2253F;
+$link-color: $main-color; 
+$link-hover-color: #e75065;
+$stemma: '/public/img/stemma.png' !default; /*stemma del comune*/
+$height_stemma: 91px !default;
+$width_stemma: 91px !default;
+$sfondo_stemma: '/public/img/sfondo_stemma.png'; /* sfondo stemma */
+$gray_visfoot: #202A2E;
+$text_ente_font_family: 'Titillium Web';
+
+
+
+
+/* includo i fogli di stile delle varie applicazioni per poter usare variabili e mixin (compresi quelli bootstrap che sono in portal_new) */
+@import "apps/portal/public/sass/portal_new.scss"; /* include variabili_portal e bootstrap3 */
+@import "apps/comunicazioni/public/sass/comunicazioni_new.scss"; /*include variabili_comunicazioni */
+/*@import "demografici/sass/demografici_new.scss"; /*include variabili_demografici */
+@import "apps/moduli/public/sass/moduli_new.scss"; /*include variabili_moduli */
+/*@import "pagamenti/sass/pagamenti_new.scss"; /*include variabili_pagamenti */
+/*@import "muse/sass/muse_new.scss"; /*include variabili_muse */
+
+
+
+body {
+  font-family: $text_ente_font_family,sans-serif;
+}
+
+#regione_top{
+    background-color: #E2253F;
+    overflow: hidden;
+    font-weight: 700;
+    a{
+        color: #fff;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+#regione_top{
+    z-index: 80000; /* questo fa scorrere il corpo della pagina sotto alla testata */
+    width: 100%;
+    background-color: #E2253F;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    color: #fff;
+    height: 48px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 48px;
+    overflow: hidden;
+    margin: 0px;
+    a {
+        color: #fff;
+        font-weight: 700;
+    }
+    a:hover{
+        text-decoration: none;
+        color: #f8cfd5;
+    }
+    
+    a.link-servizi {
+      font-size: 16px;
+      &:before {
+        content: url('https://dev-aws.flexcmp.com/Alessandria/TemplatesUSR/assets/img/usr.png');
+        position: absolute;
+        top: 10px;
+        right: 134px;
+      }
+    }
+}
+
+
+
+/* testata grigia quando scorre su */
+@mixin header_scuro(){    
+    top: 0;
+    position: fixed; /* fa scorrere le scritte sotto */
+    z-index: 8000; /* questo fa scorrere il corpo della pagina sotto alla testata */
+    width: 82%;
+    margin-left: 9%;
+    margin-right: 9%;
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;  
+
+    #regione_top{
+        display: none;
+    }
+    #header_border_fixed{
+        top: 0;
+    }
+    #contenuto_header{
+        padding-top: 0;
+        #ente{
+            #img_sfondo_stemma{
+                margin-top: 2px;
+                height: 75px;
+                -webkit-transition: height 0.1s;
+                -moz-transition: height 0.1s;
+                transition: height 0.1s;
+                width: 65px;
+                -webkit-transition: width 0.1s;
+                -moz-transition: width 0.1s;
+                transition: width 0.1s;
+                @media (max-width: $screen-md){
+                    margin-left: 1px;
+                    margin-top: 0px;
+                }
+                #img_stemma{
+                    background-position: 7px 3px; /* 6p dal bordo left e 16px dal bordo top */
+                    background-size: 77%;  /* setta la width al 90%, l'altezza viene settata a auto */
+                    height: 70px;
+                    -webkit-transition: background-size 0.1s;
+                    -moz-transition: background-size 0.1s;
+                    transition: background-size 0.1s;
+                }
+            }
+            
+            #testo_ente{
+                color: #fff;
+                /*margin-left: 72px;*/
+                /*@media all and (min-width: 690px){ 
+             	   margin-top: 17px;
+            	}
+                @media all and (min-width: 1px) and (max-width: 689px){
+                	margin-top: 3px;
+                }*/
+                h3.testo_ente_big{
+                 	margin: 0px;
+                 	line-height: 0.8em;
+                }
+                h3.testo_ente_big a{
+                	font-weight: $font_weight_bold;
+                	font-family: $text_ente_font_family;
+                	color: #fff;
+                	font-size: 0.8em;
+                }
+                @media all and (min-width: 1px) and (max-width: 525px){
+                    h3.testo_ente_big{
+                        display: none;
+                    }
+                }
+            }
+        }
+        /* personalizzazione colori e link su testata */
+        #topbar{
+            /*padding-top: 0px;*/
+            a{
+                color: $link-white;
+            }
+            a:hover{
+                color: $link-color_light;
+                //text-decoration: underline;
+            }
+        }
+        #topbar-responsive{
+            a{
+                color: $link-white;
+            }
+            a:hover{
+                color: $link-color_light;
+            }
+	    	.badge{
+		        padding: 3px 6px;
+	            font-size: 10px;
+	            margin-left: 30px;
+	        	margin-top: -80px;
+	        	background-color: $main_color;
+				color: #fff;
+				border: 1px solid #fff;
+	        }
+        }
+    }
+    /* allargo se la dimensione della finestra si riduce */
+
+    @media (max-width: $screen-lg) {
+        width: 88%;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    /* sotto i 980px tolgo i margini */ 
+    @media (max-width: 980px) {
+        width: 100%;  
+        margin-left: 0;
+        margin-right: 0; 
+    }
+    /* sotto i 980px tolgo i margini */ 
+    @media (max-width: $screen-md) {
+        width: 96%;   
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+/* HEADER BIANCO */
+header {
+    #header_border_fixed{
+        height: 114px; 
+        top: 48px;
+    }
+    #contenuto_header {
+        padding-top: 48px;
+        #ente {
+            #img_sfondo_stemma{
+                background-image: none;
+                #img_stemma{
+                    background-image: $stemma;
+                    margin-top: 9px;
+                }
+            }
+            #testo_ente{
+                margin-left: 100px;
+            	/*margin-top: 44px;
+            	@media all and (min-width: 811px) and (max-width: 1450px){
+                    margin-top: 32px;
+                }
+                @media all and (min-width: 250px) and (max-width: 810px){
+                    margin-top: 20px;
+                }*/
+                h3.testo_ente_big{
+                    margin: 0 0 0 10px;
+                }
+            	h3.testo_ente_big a{
+                	font-weight: $font_weight_bold;
+                	color: $text_color;
+                }
+            }
+        }
+    }
+    /* header fisso con effetto javascript, questi sono gli stili applicati quando si fa lo scroll */
+    &.header_fixed_top_shrink {
+        @include header_scuro;
+    }
+}
+
+#top{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    div.head{
+        float: left;
+        width: 100%;
+        div.intestazione{
+            ul{
+                list-style: none;
+                margin: 0;
+                @media screen and (min-width: 1px) and (max-width: 768px){
+                    padding-left: 0;
+                    /*margin: 0;*/
+                }
+                @media screen and (min-width: 769px) and (max-width: 1024px){
+                    margin: 0;
+                }
+                li{
+                    float: left;
+                     margin-left: 5px;
+                }
+                li.nome_ente{
+                    margin-left: 13px;
+                    margin-top: 30px;
+                    @media screen and (min-width: 769px) and (max-width: 1024px){
+                        margin-top: 8px;
+                    }
+                    @media screen and (min-width: 1px) and (max-width: 768px){
+                        width: auto;
+                        margin-top: 10px;
+                        font-size: 0.7em;
+                    }
+                    @media screen and (min-width: 1px) and (max-width: 479px){
+                        font-size: 0.5em;
+                    }
+                }
+                a{
+                    color: $text_color;
+                }
+                h1, h2{
+                    margin: 0;
+                    @media screen and (min-width: 1px) and (max-width: 768px){
+                        /*font-size: 1.5em;*/
+                    }
+                }
+                h1{
+                    @media screen and (min-width: 1px) and (max-width: 479px){
+                        float: left;
+                        margin-left: 4px;
+                    }
+                }
+                h2{
+                    @media screen and (min-width: 1px) and (max-width: 479px){
+                        float: left;
+                    }
+                }
+            }
+            @media screen and (min-width: 1px) and (max-width: 560px){
+                /*max-width: 260px;*/
+            }
+        }
+        div.social_cerca{
+            margin-right: 10px;
+            margin-top: 20px;
+            @media screen and (min-width: 480px) and (max-width: 1024px){
+                margin-top: 20px;
+            }
+            @media screen and (min-width: 1px) and (max-width: 560px){
+                float: left;
+                margin-top: 5px;
+                padding-bottom: 10px;
+                margin-left: 13px;
+            }
+            div.social_sopra{
+                margin-left: 78px;
+                @media screen and (min-width: 1px) and (max-width: 1023px){
+                    margin-left: 98px;
+                }
+                @media screen and (min-width: 1px) and (max-width: 768px){
+                    display: none;
+                    width: 0;
+                    height: 0;
+                }
+                p.seguici{
+                    font-size: 0.85em; 
+                    margin-top: 0;
+                    margin-right: 4px;
+                    float: left;
+                    @media screen and (min-width: 1px) and (max-width: 1023px){
+                        display: none;
+                    }
+                }
+                ul{
+                    list-style: none;
+                    li{
+                        float: left;
+                    }
+                }
+                ul.sopra{
+                    margin-top: 0;
+                    padding-bottom: 11px;
+                    li{
+                        padding-right: 4px;
+                        font-size: 0.85em; 
+                        div.social{
+                            width: 20px;
+                            height: 20px;
+                            @media screen and (min-width: 1px) and (max-width: 768px){
+                                display: none;
+                                width: 0;
+                                height: 0;
+                            }
+                            li{
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+footer#portal_bottom{
+	a{
+        text-decoration: underline;
+		color: #fff;
+        &:hover {
+          color: #d2d4cf;
+        }
+	}
+}

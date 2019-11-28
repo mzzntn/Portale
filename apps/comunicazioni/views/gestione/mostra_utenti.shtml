@@ -1,0 +1,44 @@
+<div>
+
+	<legend>Lista utenti filtrata: <span id="num_utenti_aggiornato">{ @utenti.length }</span> utenti</legend>
+	<!-- Imposto il numero di utenti per pagina che viene passato al js -->
+	<input type='hidden' id='items_per_page' value="7" /> 
+	<!-- Imposto il numero di link alle pagine da mostrare nella navbar --> 
+	<input type='hidden' id='max_page_in_navbar' value="10"/>
+	<!-- the input fields that will hold the variables we will use -->  
+	<input type='hidden' id='current_page' />  
+	<input type='hidden' id='show_per_page' />  
+		<table sp:if="@utenti.length > 0" class="table table-bordered table-striped width_auto pagination_content">
+			<thead>
+		    <tr class="heading_row">
+				<th>Utente</th>
+				<th>C. Fiscale</th>
+				<th>E-Mail</th>
+				<th>Cellulare</th>
+				<th></th>
+		    </tr>
+		  	</thead>
+		  	<tbody>
+		    	<tr sp:each="@utenti |utente|" class="paginated_element">
+		    		<td>
+		    			{ utente.nome } { utente.cognome }
+		    		</td>
+		    		<td>
+			      		{ utente.codice_fiscale }
+			     	</td>
+			    	<td>
+			      		{ utente.email }
+			     	</td>
+			     	<td>
+			      		{ utente.cellulare }
+			     	</td>
+			     	<td>
+			      		<span class="link_cancellazione" utente-id="{ utente.id }">Elimina</span>
+			     	</td>
+		    	</tr>		
+		   </tbody>
+		</table>
+    <!-- div che contiene il navigatore -->  
+	<div class="page_navigation pagination"><ul></ul></div>  
+
+</div>	

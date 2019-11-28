@@ -1,0 +1,207 @@
+<div>
+    <legend>{ @azione } Tipologia di Modulo</legend>
+
+    <div sp:if="@errori" class="alert alert-error width_50">
+        <ul>
+            <li sp:each="@errori |errore|">{ errore }</li>
+        </ul>
+    </div>
+    <form method="post" class="form-horizontal" id="new_tipo" >
+        <div class="control-group { @campo_errore['nome'] }">
+            <label class="control-label" for="nome">Nome</label>
+            <div class="controls">
+                <input type="text" id="nome" class="input-xxlarge" name="dati[nome]" value="{ @dati['nome'] }" placeholder="Nome" />
+            </div>
+        </div>
+            
+        <div class="control-group { @campo_errore['descrizione'] }">
+            <label class="control-label" for="descrizione">Descrizione</label>
+            <div class="controls">
+                <textarea id="descrizione" class="input-xxlarge" name="dati[descrizione]" rows="5">{ @dati['descrizione'] }</textarea>
+            </div>
+        </div>
+        
+        <div class="control-group" sp:if="!@url_modulo_utente.blank?">
+            <label class="control-label" for="url_modulo">Vedi Modulo</label>
+            <div class="controls">
+                <a href="{ @url_modulo_utente }" target="blank">{ @url_modulo_utente }</a>
+            </div>
+        </div>
+
+        <div class="control-group { @campo_errore['stato_visualizzazione'] }">
+            <label class="control-label" for="stato_visualizzazione">Stato Pubblicazione</label>
+            <div class="controls">
+                <select id="stato_visualizzazione" name="dati[stato_visualizzazione]">
+                    <option value="visibile" sp:attr-if="dati['stato_visualizzazione'] == 'visibile', selected, selected">Visibile a Tutti</option>
+                    <option value="test" sp:attr-if="dati['stato_visualizzazione'] == 'test', selected, selected">In fase di test</option>
+                </select>
+                <span class="help-block">Selezionare 'In fase di test' per non mostrare agli utenti il modulo finchè non è ultimato e testato.
+                <br />Selezionare 'Visibile a Tutti' per mostrarlo a tutti gli utenti una volta terminata la fase di test.
+                </span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="settore">Settore</label>
+            <div class="controls">
+                <select id="settore" name="dati[settore]">
+                    <option>Selezionare settore..</option>
+                    
+                    <option sp:each="@settori_modulo |settore|"  value="{ settore.id }" sp:attr-if="((@dati['settore'] == settore) || (@settore_da_crud.to_s == settore.id.to_s)),selected,selected">{ settore.nome }</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="procedimento">Procedimento</label>
+            <div class="controls">
+                <select id="procedimento" name="dati[procedimento]">
+                    <option>Selezionare procedimento..</option>
+                    <option sp:each="@procedimenti_modulo |procedimento|"  value="{ procedimento.id }" sp:attr-if="@dati['procedimento'] == procedimento, selected, selected">{ procedimento.nome }</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="responsabile">Responsabile</label>
+            <div class="controls">
+                <select id="responsabile" name="dati[responsabile]">
+                    <option>Selezionare responsabile..</option>
+                    <option sp:each="@responsabili_modulo |responsabile|"  value="{ responsabile.id }" sp:attr-if="@dati['responsabile'] == responsabile, selected, selected">{ responsabile.nome }</option>
+                </select>
+            </div>
+        </div>
+        
+
+        <div class="control-group { @campo_errore['date'] }">
+            <label class="control-label" for="disponibile_dal">Disponibile Dal</label>
+            <div class="controls">
+                <forms:datetime id="disponibile_dal" change-month="true" change-year="true" value="@dati['disponibile_dal']" />
+                Ore
+                <input type="text" id="ore_dal" class="input-xsmall" name="dati[ore_dal]" value="{ @dati['ore_dal'] }" placeholder="HH:MM" />
+            </div>
+        </div>
+        <div class="control-group { @campo_errore['date'] }">
+            <label class="control-label" for="disponibile_al">Fino al</label>
+            <div class="controls">
+                <forms:datetime id="disponibile_al" change-month="true" change-year="true" value="@dati['disponibile_al']" />
+                Ore
+                <input type="text" id="ore_al" class="input-xsmall" name="dati[ore_al]" value="{ @dati['ore_al'] }" placeholder="HH:MM" />
+            </div>
+        </div>
+                 
+        <div class="control-group">
+            <label class="control-label" for="responsabile">Firma Ricevuta Generata</label>
+            <div class="controls">
+                <select id="tipo_firma" name="dati[tipo_firma]">
+                    <option value="" sp:attr-if="@dati['tipo_firma'].blank?, selected, selected"></option>
+                    <option value="solo_p7m" sp:attr-if="(@dati['tipo_firma'] == 'solo_p7m'), selected,selected">Solo p7m</option>
+                    <option value="p7m_pdf" sp:attr-if="(@dati['tipo_firma'] == 'p7m_pdf'), selected,selected">p7m o pdf</option>
+                </select>
+            </div>
+        </div>
+            
+        <div class="control-group { @campo_errore['tipo_compilazione'] }">
+            <label class="control-label" for="tipo_compilazione">Tipo compilazione</label>
+            <div class="controls">
+                <select id="tipo_compilazione" name="dati[tipo_compilazione]">
+                    <!-- <option value="">Selezionare il tipo di compilazione...</option> -->
+                    <option value="molti" sp:attr-if="dati['tipo_compilazione'] == 'molti', selected, selected">Molte volte</option>
+                    <option value="uno" sp:attr-if="dati['tipo_compilazione'] == 'uno', selected, selected">Una volta</option>
+                </select>
+                <span class="help-block">Indica se gli utenti possono compilare/inviare una o più volte lo stesso modulo</span>
+            </div>
+        </div>
+        <div class="control-group { @campo_errore['mail_destinatari'] }">
+            <label class="control-label" for="tipo_compilazione">E-mail destinatari del modulo</label>
+            <div class="controls">
+                <input type="text" id="mail_destinatari" class="input-xxlarge" name="dati[mail_destinatari]" value="{ @dati['mail_destinatari'] }" placeholder="email1;email2;...;emailN" />
+                <span class="help-block">Inserire gli indirizzi mail separati dal ';'</span>
+            </div>
+        </div>
+        <div sp:if="@webservice_abilitato">
+            <div class="control-group { @campo_errore['classifica'] }">
+                <label class="control-label" for="classifica">Codice della classifica</label>
+                <div class="controls">
+                    <input type="text" id="classifica" class="input-xxlarge" name="dati[classifica]" value="{ @dati['classifica'] }" placeholder="Codice della classifica per protocollazione" />
+                </div>
+            </div>
+            <div class="control-group { @campo_errore['tipo_documento'] }">
+                <label class="control-label" for="tipo_documento">Tipologia del tipo di documento</label>
+                <div class="controls">
+                    <input type="text" id="tipo_documento" class="input-xxlarge" name="dati[tipo_documento]" value="{ @dati['tipo_documento'] }" placeholder="Codice della classifica del tipo di documento per protocollazione" />
+                </div>
+            </div>
+            <div class="control-group { @campo_errore['in_carico_a'] }">
+                <label class="control-label" for="in_carico_a">Codice dell’unità operativa</label>
+                <div class="controls">
+                    <input type="text" id="in_carico_a" class="input-xxlarge" name="dati[in_carico_a]" value="{ @dati['in_carico_a'] }" placeholder="Codice dell’unità operativa" />
+                    <span class="help-block">Normalmente nome della codifica dell'ufficio di destinazione</span>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="mail_a_compilatore">E-mail compilatore</label>
+            <div class="controls">
+                <input type="checkbox" id="mail_a_compilatore" name="dati[mail_a_compilatore]" sp:attr-if="@dati['mail_a_compilatore'],checked,checked"/>
+                <span class="help-block">Invio e-mail in copia al compilatore del modulo</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="solo_pratiche">Solo da Procedimenti Amministrativi?</label>
+            <div class="controls">
+                <input type="checkbox" id="solo_pratiche" name="dati[solo_pratiche]" sp:attr-if="@dati['solo_pratiche'],checked,checked"/>
+                <span class="help-block">Non gestibile in Modulistica On-line ma solo da Procedimenti Amministrativi</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="per_iscrizioni_scolastiche">Solo da Servizi su Richiesta?</label>
+            <div class="controls">
+                <input type="checkbox" id="per_iscrizioni_scolastiche" name="dati[per_iscrizioni_scolastiche]" sp:attr-if="@dati['per_iscrizioni_scolastiche'],checked,checked"/>
+                <span class="help-block">Non gestibile in Modulistica On-line ma collegato all'iscrizione ai Servizi su Richiesta</span>
+            </div>
+        </div>
+        <div class="control-group" sp:if="!@servizi_su_richiesta.blank?">
+            <label class="control-label" for="servizio">Servizi Su Richiesta</label>
+            <div class="controls">
+                <select id="servizio" name="dati[servizio]">
+                    <option value="tutti" sp:attr-if="(@dati['servizio'] == servizio),selected,selected">Tutti i Servizi</option>
+                    <option sp:each="@servizi_su_richiesta |servizio|"  value="{ servizio.codice }" sp:attr-if="(@dati['servizio'] == servizio.codice),selected,selected">{ servizio.descrizione }</option>
+                </select>
+            </div>
+        </div>
+        <div sp:if="!@cat_giuridiche.blank?" class="control-group">
+            <label class="control-label" for="cat_giuridica">Categoria Giuridica</label>
+            <div class="controls">
+                <select id="cat_giuridica" name="dati[cat_giuridica]">
+                    <option value="">Selezionare Categoria..</option>
+                    <option sp:each="@cat_giuridiche |categoria|"  value="{ categoria.id }" sp:attr-if="(@dati['cat_giuridica'] == categoria.id.to_s), selected, selected">{ categoria.nome }</option>
+                </select>
+            </div>
+        </div>
+        
+        <div sp:if="@admin_portal" class="control-group { @campo_errore['tipo'] }" hide hidden>
+            <label class="control-label" for="tipo">Template NO EDITOR</label>
+            <div class="controls">
+                <select id="tipo" class="input-xxlarge" name="dati[tipo]">
+                    <option value="">Scegli il template..</option>
+                    <option sp:each_pair="@tipi_modulo |tipo, nome|" value="{ tipo }" sp:attr-if="@dati['tipo'] == tipo,selected,selected">{ nome }</option>
+                </select>
+                <span class="help-block">Non selezionare il template se si vuole creare un nuovo modulo tramite Editor.</span>
+            </div>
+        </div>
+        <div class="row form-actions">
+                <div class="span1">
+                    <a class="btn" href="{ Moduli::GestioneModuliController.http_s_url }">Indietro</a>
+                </div>
+                <div class="span1 offset2">
+                    <input type="submit" class="btn" name="submit_salva" id="button_salva" value="Salva">
+                </div>
+                <div class="span2" sp:if="@pagamenti_attivi">
+                    <input type="submit" class="btn" name="submit_importi" id="button_importi" value="Gestione Importi">
+                </div>
+                <div class="span2 ">
+                    <input type="submit" class="btn" name="submit_editor" id="button_editor" value="Gestione Testo">
+                </div>
+        </div>
+    </form>
+
+</div>

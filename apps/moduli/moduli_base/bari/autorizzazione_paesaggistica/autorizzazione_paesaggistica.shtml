@@ -1,0 +1,709 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+    <hr />
+    <table class="full_row_no_border">
+    	<tr>
+    		<td rowspan="2"><h2 class="font_40"><strong>AP</strong></h2></td>
+    		<td colspan="2" class="center_text"><h2>Istanza di Autorizzazione Paesaggistica</h2></td>
+    	</tr>
+    </table>
+    <moduli:gruppo id="check_box_tipo" class="dati_modulo no_border">
+		<moduli:opzioni id="check_tipo_insegna" class="lista_checkbox_vertical float_center checkbox_esclusivi1">
+			<div class="riga">
+				<moduli:opzione id="insegna_di_esercizio" class="label_auto"><label><strong>Procedimento ORDINARIO</strong></label></moduli:opzione>
+                <div class="float_left">(ex art. 146 D. Lgs. n. 42/2004 e ss.mm.ii./art. 5.01 NTA del P.U.T.T./P.)</div>
+			</div>
+			<div class="riga">
+				<moduli:opzione id="targa_pubblicitaria" class="label_auto"><label><strong>Procedimento SEMPLIFICATO</strong></label></moduli:opzione>
+                <div class="float_left">(ex D.P.R. n. 139/2010 e ss.mm.ii.)</div>
+			</div>
+    	</moduli:opzioni>
+	</moduli:gruppo>
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo dati_readable_js no_border">
+        <table class="full_row align_center">
+            <thead>
+                <tr>
+                    <th colspan="10">DATI IDENTIFICATIVI DELL'IMMOBILE</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>ex frazione</td>
+                <td colspan="2"><moduli:dato id="sezione"></moduli:dato></td>
+                <td>via, p.zza</td>
+                <td colspan="6"><moduli:dato id="loc_int_via" class="input_mediumwidth"></moduli:dato></td>
+            </tr>
+            <tr>
+                <td>civico</td>
+                <td><moduli:dato id="loc_int_n" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>bis</td>
+                <td><moduli:dato id="loc_int_bis" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>scala</td>
+                <td><moduli:dato id="loc_int_scala" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>piano</td>
+                <td><moduli:dato id="loc_int_piano" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>interno</td>
+                <td><moduli:dato id="loc_int_interno" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+            </tr>
+            <tr>
+                <th colspan="5">Censito al NCEU</th>
+                <th colspan="5">Censito in NCT</th>
+            </tr>
+            <tr>
+                <td>foglio</td>
+                <td>particella</td>
+                <td>sub.</td>
+                <td colspan="2">cat.</td>
+                <td>foglio</td>
+                <td>particella</td>
+                <td colspan="3">superficie</td>
+            </tr>
+            <tr>
+                <td><moduli:dato id="catasto_foglio" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_map" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_sub" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td colspan="2"><moduli:dato id="destinazione_uso_codice" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_foglio" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_map" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td colspan="3"><moduli:dato id="superficie" class="label_xsmlwidth"></moduli:dato></td></td>
+            </tr>
+        </table>
+        <br />
+        <moduli:dato id="destinazione_prg" tipo="longText" class="label_auto input_largewidth adaptive_input"><label>Zona omogenea secondo il vigente strumento urbanistico:</label></moduli:dato>
+    </moduli:gruppo>
+    <h3 class="riga_grigia">Dati del Titolare</h3>
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_titolare" class="input_largewidth">Cognome e Nome</moduli:dato>
+            <moduli:dato id="codice_fiscale_titolare" class="label_auto input_codfiscwidth">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_titolare" class="input_mediumwidth">nato a</moduli:dato>
+            <moduli:dato id="provincia_nascita_titolare" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+            <moduli:dato id="stato_nascita_titolare" class="label_auto input_smallwidth">stato</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_titolare" tipo="data" class="input_xsmallwidth">nato il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_titolare" class="input_mediumwidth">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_titolare" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="stato_residenza_titolare" class="label_xsmlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_titolare" class="input_mediumwidth">indirizzo</moduli:dato>
+            <moduli:dato id="civico_residenza_titolare" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+            <moduli:dato id="cap_residenza_titolare" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="email_titolare" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="telefono_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+        </div>
+    </moduli:gruppo>
+    
+    <div id="container_ditta">
+        <h3 class="riga_grigia">Dati della Ditta o Società</h3>
+        <moduli:gruppo id="dati_ditta_titolare_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:dato id="qualifica_persona_ditta_titolare" class="input_bigwidth write_enable_js">in qualità di</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="nome_ditta_titolare" class="input_bigwidth">della ditta/società</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="cf_piva_ditta_titolare">codice fiscale/ partita iva</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="cciaa_titolare" class="input_mediumwidth">Iscritta alla C.C.I.A.A. di </moduli:dato>
+                <moduli:dato id="provincia_cciaa_titolare" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="numero_cciaa_titolare" class="label_xsmlwidth input_smallwidth">n.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="sede_ditta_titolare" class="input_mediumwidth">con sede in</moduli:dato>
+                <moduli:dato id="provincia_ditta_titolare" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_ditta_titolare" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_ditta_titolare" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_ditta_titolare" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="pec_email_ditta_titolare" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="tel_fisso_cellulare_ditta_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+            </div>
+        </moduli:gruppo>
+    </div>
+    <div id="container_dati_progettista">
+        <h3 class="riga_grigia">Dati del Progettista</h3>
+        <moduli:gruppo id="progettista_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:dato id="cognome_nome_progettista" class="input_largewidth">Cognome e Nome</moduli:dato>
+                <moduli:dato id="codice_fiscale_progettista" class="label_auto input_codfiscwidth">codice fiscale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="luogo_nascita_progettista" class="input_mediumwidth">nato a</moduli:dato>
+                <moduli:dato id="prov_nascita_progettista" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="stato_nascita_progettista" class="label_auto input_smallwidth">stato</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="data_nascita_progettista" tipo="data" class="input_xsmallwidth">nato il</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_progettista" class="input_mediumwidth">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_progettista" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+                <moduli:dato id="stato_residenza_progettista" class="label_auto input_smallwidth">stato </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_progettista" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_residenza_progettista" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_progettista" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_studio_progettista" class="input_mediumwidth">con studio in</moduli:dato>
+                <moduli:dato id="prov_studio_progettista" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="stato_studio_progettista" class="label_auto input_smallwidth">stato</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_studio_progettista" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_studio_progettista" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_studio_progettista" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="ordine_progettista" class="input_mediumwidth">iscritto all'ordine/collegio</moduli:dato>
+                <moduli:dato id="citta_ordine_progettista" class="label_xsmlwidth input_xxsmallwidth">di</moduli:dato>
+                <moduli:dato id="n_ordine_progettista" class="label_xsmlwidth input_smallwidth">al n.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="email_progettista" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="telefono_progettista" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+            </div>
+        </moduli:gruppo>
+    </div>  
+    <div id="container_dati_asseverante">
+        <h3 class="riga_grigia">atto di delega degli altri soggetti aventi titolo o comunque interessati al rilascio dell'Autorizzazione Paesaggistica</h3>
+        <p>La presente pratica edilizia è sottoscritta in solido dal sottoscritto soggetto avente titolo, che delega l'istante:<br />a) alla presentazione della domanda di autorizzazione paesaggistica; b) a essere unico intestatario del provvedimento finale.</p>
+        <moduli:gruppo id="asseverante_1" titolo="" class="dati_modulo">
+            <div class="riga">
+                <moduli:dato id="cognome_nome_asseverante" class="input_largewidth">Cognome e Nome</moduli:dato>
+                <moduli:dato id="codice_fiscale_asseverante" class="label_auto input_codfiscwidth">codice fiscale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="luogo_nascita_asseverante" class="input_mediumwidth">nato a</moduli:dato>
+                <moduli:dato id="prov_nascita_asseverante" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="stato_nascita_asseverante" class="label_auto input_smallwidth">stato</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="data_nascita_asseverante" tipo="data" class="input_xsmallwidth">nato il</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_asseverante" class="input_mediumwidth">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_asseverante" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+                <moduli:dato id="stato_residenza_asseverante" class="label_auto input_smallwidth">stato </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_asseverante" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_residenza_asseverante" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_asseverante" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <moduli:opzioni id="in_qualita" class="lista_checkbox_oriz checkbox_esclusivi2">
+                <div class="riga">
+                    <label>in qualità di</label>
+                    <moduli:opzione id="comproprietario_asseverante">Comproprietario</moduli:opzione>
+                    <moduli:opzione id="nudo_proprietario_asseverante">Nudo proprietario</moduli:opzione>
+                    <moduli:opzione id="usufruttuario_asseverante" class="label_mediumwidth">Usufruttuario</moduli:opzione>
+                    <moduli:opzione id="legale_rappresentante_asseverante" class="label_bigwidth">Legale rappresentante</moduli:opzione>
+                </div>
+                <div class="riga margin_l_117">
+                    <moduli:opzione id="altro_asseverante" class="label_xsmlwidth">Altro</moduli:opzione>
+                    <moduli:dato id="altro_specificare_asseverante" class="label_auto input_bigwidth">(specificare) </moduli:dato> 
+                </div>
+            </moduli:opzioni>
+            <div class="riga">
+                <moduli:dato id="atto_notaio_asseverante" tipo="longText" class="input_mediumwidth_220 adaptive_input">giusto atto del Notaio</moduli:dato>
+                <moduli:dato id="atto_notaio_rep_asseverante" class="label_auto input_smallwidth">rep.</moduli:dato>
+                <moduli:dato id="atto_notaio_racc_asseverante" class="label_auto input_smallwidth">racc.</moduli:dato>
+                <moduli:dato id="atto_notaio_del_asseverante" class="label_xsmlwidth input_xsmallwidth">del</moduli:dato>
+            </div>
+            <!--
+            <moduli:allegato id="allegato_documento_identita_asseverante" autohide="true" save_path="moduli/" class="riga">
+                <label>Allegare copia del documento di riconoscimento</label> 
+            </moduli:allegato>
+            -->
+        </moduli:gruppo>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_1" class="data-firma"/>
+        </div>
+    </div>
+    
+    <div id="container_presentata_per_conto">
+        <p><b>Il sottoscritto richiedente, meglio generalizzato sopra,</b></p>
+        <h3 class="riga_grigia"><strong>Per Conto</strong></h3>
+        <moduli:gruppo id="presentata_per_conto" class="dati_modulo">
+            <moduli:opzioni id="per_conto" class="lista_checkbox_vertical checkbox_esclusivi3">
+                <moduli:opzione id="per_conto_proprio">proprio</moduli:opzione>
+                <moduli:opzione id="per_conto_soggetto_delegante">del/i soggetto/i delegante/i indicato/i in precedenza</moduli:opzione>
+                <div class="riga">
+                    <moduli:opzione id="per_conto_ditta_societa_impresa">della Ditta/Società/Impresa</moduli:opzione>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_nome" class="input_bigwidth"></moduli:dato>
+                </div>
+                <div class="riga margin_l_35">
+                    <moduli:dato id="per_conto_ditta_societa_impresa_piva" class="label_auto input_smallwidth">P.I.</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_sede" class="label_auto input_mediumwidth">con sede in</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_prov" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                </div>
+                <div class="riga margin_l_35">
+                    <moduli:dato id="per_conto_ditta_societa_impresa_via" class="input_mediumwidth">via</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_civico" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_bis" class="label_auto input_xxsmallwidth">/</moduli:dato> 
+                </div>
+            </moduli:opzioni>
+        </moduli:gruppo>
+    </div>
+	<div id="container_avente_titolo_presentazione_istanza">
+        <h3 class="riga_grigia">AVENTE TITOLO AI SENSI DELL’ART. 146 DEL D.LGS. n. 42/04 e ss.mm.ii., IN QUANTO</h3>
+        <moduli:gruppo id="avente_titolo_presentazione_istanza" class="dati_modulo">
+            <moduli:opzioni id="avente_titolo" class="lista_checkbox_vertical checkbox_esclusivi4">
+                <moduli:opzione id="avente_titolo_proprietario_esclusivo">proprietario esclusivo</moduli:opzione>
+                <div class="riga">
+                    <moduli:opzione id="avente_titolo_delegato_ditta" class="float_left">delegato dalla Ditta</moduli:opzione>
+                    <moduli:dato id="avente_titolo_delegato_ditta_nome" class="float_left input_mediumwidth"></moduli:dato>
+                    in qualità di Rappresentante Legale
+                </div>
+                <div class="riga">
+                    <moduli:opzione id="avente_titolo_delegato_condominio" class="float_left">delegato dal Condominio dello stabile di</moduli:opzione>
+                    <moduli:dato id="avente_titolo_delegato_condominio_nome" class="float_left input_mediumwidth"></moduli:dato>
+                    in qualità di Amministratore/delegato
+                </div>
+                <!--
+                <div class="clear_both margin_l_35">
+                    allegare la delibera di assemblea condominiale nel quale viene rilasciato il nulla osta dei condomini sui lavori (solo per i lavori che interessano parti condominiali)
+                    <moduli:allegato id="allegato_documento_identita" autohide="true" save_path="moduli/" class="riga"></moduli:allegato>
+                </div>
+                -->
+                <moduli:opzione id="avente_titolo_comproprietario">compropietario con i/il soggetto/i delegante/i elencato/i</moduli:opzione>
+                <moduli:opzione id="avente_titolo_locatario_comodatario">locatario/comodatario, a tale scopo autorizzato dal/i proprietario/i delegante/i elencato/i</moduli:opzione>
+            </moduli:opzioni>
+        </moduli:gruppo>
+        <h3>CHIEDE</h3>
+        <moduli:gruppo id="avente_titolo_presentazione_istanza_1" class="dati_modulo no_border">
+            <div class="justify_div font_15 margin_l_10">il rilascio dell’autorizzazione paesaggistica per la seguente tipologia di intervento (descrizione sintetica delle opere):
+            </div>
+            <div class="riga align_center">
+                <moduli:dato id="chiede_descrizione_sintetica" tipo="longText" class="label_mediumwidth all_width"></moduli:dato>
+            </div>
+    	</moduli:gruppo>
+    	<moduli:gruppo id="domicilio_speciale" class="dati_modulo">
+    	<div class="riga">
+    		Il sottoscritto elegge <strong>domicilio speciale</strong><sup>1</sup> per qualsiasi comunicazione inerente la presente domanda
+    	</div>
+    	<div class="riga">
+    		<moduli:dato id="domicilio_speciale_presso" class="label_auto input_bigwidth">Presso</moduli:dato>
+    	</div>
+    	<div class="riga">
+    		<moduli:dato id="domicilio_speciale_in" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">In</moduli:dato>
+    		<moduli:dato id="domicilio_speciale_via" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">Via</moduli:dato>
+    		<moduli:dato id="domicilio_speciale_civico" class="label_auto input_xsmallwidth">civ.</moduli:dato>
+    		<moduli:dato id="domicilio_speciale_cap" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato>
+    	</div>
+    	</moduli:gruppo>
+    	<div class="justify_div font_15"><strong>Consapevole che le dichiarazioni mendaci e le falsità in atti comportano le sanzioni previste dall'art. 76 del D.P.R. n. 445/2000 e la decadenza dai benefici conseguiti con il provvedimento emanato sulla base della dichiarazione non veritiera;</strong></div>
+    </div>
+    <div id="container_dichiara">
+    	<moduli:gruppo id="dichiara" class="dati_modulo no_border">
+	    	<h3>DICHIARA</h3>
+	    	<ol class="alpha">
+	    		<li>che i dati personali riportati sono veritieri</li>
+	    		<li>di essere legittimato, secondo le vigenti norme, alla presentazione della domanda di autorizzazione paesaggistica</li>
+	    		<li>lo stato attuale dell’immobile/dell’unità immobiliare, oggetto della presente istanza, risulta legittimato nei seguenti atti:
+	    			<ul>
+    					<li>
+    						<moduli:opzioni id="opere_conformi" class="lista_checkbox_vertical">
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_licenza_concedilizia_pdc" class="label_xxbigwidth">Licenza/Concessione Edilizia/ Permesso di Costruire</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_licenza_concedilizia_pdc_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_licenza_concedilizia_pdc_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_autedilizia" class="label_xxbigwidth">Autorizzazione Edilizia</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_autedilizia_pdc_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_autedilizia_pdc_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_accconf_art36" class="label_xxbigwidth">Accertamento conformità ex art. 36 D.P.R. n.380/01</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_accconf_art36_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_accconf_art36_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_dia" class="label_xxbigwidth">D.I.A.</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_dia_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_dia_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_scia" class="label_xxbigwidth">S.C.I.A.</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_scia_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_scia_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_cil" class="label_xxbigwidth">C.I.L.</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_cil_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_cil_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_cel" class="label_xxbigwidth">C.E.L.</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_cel_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_cel_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_domanda_condono_l_47" class="label_xxbigwidth">Domanda di Condono Edilizio – L. 47/85</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_domanda_condono_l_47_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_domanda_condono_l_47_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_domanda_condono_l_724" class="label_xxbigwidth">Domanda di Condono Edilizio – L. 724/94</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_domanda_condono_l_724_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_domanda_condono_l_724_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_domanda_condono_l_326" class="label_xxbigwidth">Domanda di Condono Edilizio – L. 326/03</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_domanda_condono_l_326_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_domanda_condono_l_326_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_ce_pdc_in_sanatoria_l_47" class="label_xxbigwidth">C.E. o P.d.C. in sanatoria Legge n. 47/85</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_47_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_47_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_ce_pdc_in_sanatoria_l_724" class="label_xxbigwidth">C.E. o P.d.C. in sanatoria Legge n.724/94</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_724_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_724_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_pdc_in_sanatoria_l_326" class="label_xxbigwidth">P.d.C. in sanatoria  Legge n.326/03</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_pdc_in_sanatoria_l_326_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_pdc_in_sanatoria_l_326_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_primo_accatastamento" class="label_xxbigwidth">Primo accatastamento - estremi denuncia catastale</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_primo_accatastamento_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_primo_accatastamento_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_abitabilita" class="label_smlwidth">ABITABILITA' intestata a</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_abitabilita_intestata_a" tipo="longText" class="input_mediumwidth_220 adaptive_input"></moduli:dato>
+                                    <moduli:dato id="opere_conformi_abitabilita_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="opere_conformi_abitabilita_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <br />
+                                <h4>OVVERO</h4>
+                                <br />
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_preesistente_1942" class="label_xxbigwidth">Preesistente al 1942</moduli:opzione>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_preesistente_1967" class="label_xxbigwidth">Preesistente al 01.9.1967 – solo interventi extra moenia</moduli:opzione>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_altro">Altro</moduli:opzione>
+                                    <moduli:dato id="opere_conformi_altro_motivo" tipo="longText" class="input_bigwidth adaptive_input"></moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="opere_conformi_sanzioni_art34_dpr_280" class="label_auto">che sull’immobile sussistono interventi in parziale difformità sanzionati ai sensi dell’art. 34, c.2, D.P.R. n.380/2001</moduli:opzione>
+                                </div>
+                            </moduli:opzioni>
+						</li>
+    				</ul>
+	    		</li>
+	    		<li>che per le opere in oggetto è stata presentata allo Sportello Unico per l’Edilizia del Comune di Bari<sup>2</sup>:
+	    			<ul>
+	    				<li>
+	    					<moduli:opzioni id="container_istanza_al_sue" class="lista_checkbox_vertical checkbox_esclusivi5">
+								<div class="riga">
+									<moduli:opzione id="istanza_al_sue_per_pdc" class="label_xxbigwidth">Istanza di Permesso di Costruire</moduli:opzione>
+                                    <moduli:dato id="istanza_al_sue_per_pdc_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="istanza_al_sue_per_pdc_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+								</div>
+                                <div class="riga">
+                                    <moduli:opzione id="istanza_al_sue_per_dia" class="label_xxbigwidth">D.I.A.</moduli:opzione>
+                                    <moduli:dato id="istanza_al_sue_per_dia_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="istanza_al_sue_per_dia_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="istanza_al_sue_per_scia" class="label_xxbigwidth">S.C.I.A.</moduli:opzione>
+                                    <moduli:dato id="istanza_al_sue_per_scia_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="istanza_al_sue_per_scia_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+                                <div class="riga">
+                                    <moduli:opzione id="istanza_al_sue_per_cil" class="label_xxbigwidth">C.I.L.</moduli:opzione>
+                                    <moduli:dato id="istanza_al_sue_per_cil_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                                    <moduli:dato id="istanza_al_sue_per_cil_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+                                </div>
+							</moduli:opzioni>
+	    				</li>
+	    			</ul>
+	    		</li>
+	    	</ol>
+	    </moduli:gruppo>
+    	<h3 class="align_left">COMUNICA</h3>
+    	<moduli:gruppo id="comunica" class="dati_modulo no_border">
+    		<div class="riga">che per la stesura del progetto è incaricato il tecnico i cui dati anagrafici e fiscali risultano indicati nello spazio denominato "Dati del Progettista"</div>
+    	</moduli:gruppo>
+    	<h3 class="align_left">SOLLEVA</h3>
+    	<div>il Comune di BARI da ogni responsabilità nei confronti dei terzi.</div>
+	    <div class="data-firma" id="data_firma_2">
+	        <div class="firma">
+	            <label>Firma del richiedente<br /><sub>allegare copia documento di identità come da art. 38 del D.P.R. n.445/2001</sub></label>
+	            <span class="spazio-firma">&nbsp;</span>
+	        </div>
+	    </div>
+	    <br />
+	    <br />
+	    <p>Il sottoscritto dichiara di aver preso visione dell'informativa<sup>3</sup> ai sensi del  d. lgs n. 196/2003 e di dare il consenso al trattamento dei dati personali.</p>
+	    <div class="riga">
+        	<moduli:data-firma id="data_firma_3" class="data-firma" label-firma="Firma del richiedente"/>
+    	</div>
+    	<br />
+    	<br />
+    	<br />
+    	<br />
+    	<br />
+    	<br />
+    	<br />
+    	<hr class="bigwidth align_center"></hr>
+    	<p>
+    		<sup>1</sup><small> Compilare solo in caso di indirizzo diverso da quello già riportato.</small><br />
+            <sup>2</sup><small><strong>Si evidenzia che il mancato inoltro della pratica edilizia finalizzato alla preventiva verifica urbanistico-edilizia da parte del competente ufficio comporterà la sospensione del procedimento di autorizzazione paesaggistica secondo quanto previsto dall’art. 4 c. 2 del D.P.R. n. 139/2010</strong></small><br />
+    		<sup>3</sup><small><u> INFORMATIVA TRATTAMENTO DEI DATI PERSONALI AI SENSI DELL'ART. 13 DEL D.LGS. 196/2003.</u><br />
+    		I dati personali forniti saranno oggetto di trattamento da parte del Comune per il perseguimento delle sole finalità istituzionali nel rispetto delle disposizioni vigenti. Il trattamento dei dati avverrà mediante strumenti informatici e su supporti cartacei, nell'ambito del procedimento avviato con la presente domanda.</small>
+    	</p>
+    </div>
+    
+    <h3 class="align_left">ASSEVERAZIONE</h3>
+    <moduli:gruppo id="asseverazione" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_progettista" class="label_auto input_mediumwidth_220">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="ordine_progettista" class="label_auto input_mediumwidth_220">tecnico progettista iscritto nell'albo professionale</moduli:dato>
+            <moduli:dato id="citta_ordine_progettista" class="label_auto input_xxsmallwidth">della provincia di </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="n_ordine_progettista" class="label_auto input_smallwidth">al progressivo</moduli:dato>
+            <div class="float_left">, titolare della redazione degli elaborati tecnici e grafici relativi all’istanza di Autorizzazione paesaggistica,</div>
+        </div>
+        <div class="riga">consapevole della responsabilità penale che assume ai sensi dell'art. 76 del T.U. approvato con D.P.R. 445/2000, nel caso di dichiarazioni non veritiere e falsità degli atti:
+        </div>
+    </moduli:gruppo>
+    <h3 class="align_left">DICHIARA</h3>
+    <p>la veridicità, la esattezza e la completezza degli elaborati tecnici allegati alla presente.</p>
+    <h3 class="align_left">DICHIARA INOLTRE CHE:</h3>
+    <moduli:gruppo id="dichiara_inoltre" class="dati_modulo no_border">
+    	<ol class="decimal">
+            <li><u>Con riferimento alla destinazione urbanistica:</u>
+                <div class="riga">
+                    <div class="float_left">Che l'immobile oggetto di intervento <strong>ricade nella zona omogenea</strong></div>
+                    <moduli:dato id="dichiara_inoltre_ricade_zona_omogenea" class="input_xxsmallwidth"></moduli:dato>
+                    <strong>secondo il vigente strumento urbanistico generale </strong>
+                    <div class="float_left">ed è assoggettato al PUG/PRG, Regolamento Edilizio, N.T.A. nonché ai seguenti strumenti urbanistici (specificare):
+                    </div>
+                    <moduli:dato id="dichiara_inoltre_ricade_zona_omogeneaspecificare" class="input_bigwidth"></moduli:dato>
+                </div>
+            </li>
+            <li><u>Con riferimento alla destinazione d'uso dell'immobile:</u>
+                <moduli:opzioni id="dichiara_inoltre_destinazione_uso" class="lista_checkbox_vertical checkbox_esclusivi10">
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_destinazione_uso_compatibile"></moduli:opzione>
+                        <div class="float_left">l’intervento in oggetto <strong>NON MODIFICA</strong> la destinazione d’uso esistente</div>
+                        <div class="riga margin_l_35">
+                            <div class="float_left">dell'immobile che è la seguente:</div>
+                            <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_compatibile_tipo" class="input_smallwidth"></moduli:dato>
+                            <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_compatibile_antebarra" class="label_auto input_xxsmallwidth">(</moduli:dato>
+                            <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_compatibile_postbarra" class="label_auto input_xxsmallwidth">/</moduli:dato>
+                            <div class="float_left">)</div>
+                        </div>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_destinazione_uso_non_compatibile"></moduli:opzione>
+                        <div class="float_left">l’intervento in oggetto <strong>MODIFICA</strong> la destinazione d’uso esistente dell’immobile</div>
+                    </div>
+                    <div class="riga margin_l_35">
+                        <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_non_compatibile_da" class="label_auto input_smallwidth">da</moduli:dato>
+                        <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_non_compatibile_da_antebarra" class="label_auto input_xxsmallwidth">(</moduli:dato>
+                        <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_non_compatibile_da_postbarra" class="label_auto input_xxsmallwidth">/</moduli:dato>
+                        <div class="float_left">)</div>
+                        <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_non_compatibile_a" class="label_auto input_smallwidth">a</moduli:dato>
+                        <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_non_compatibile_a_antebarra" class="label_auto input_xxsmallwidth">(</moduli:dato>
+                        <moduli:dato id="dichiara_inoltre_ricade_zona_destinazione_uso_non_compatibile_a_postbarra" class="label_auto input_xxsmallwidth">/</moduli:dato>
+                        <div class="float_left">)</div>,
+                    </div>
+                    <div class="riga margin_l_35">
+                        compatibile con la destinazione urbanistica della zona in cui è allocato l’immobile oggetto di intervento.
+                    </div>
+                </moduli:opzioni>   
+            </li>
+            <li><u>Con riferimento al vincolo di tutela storico, artistico, archeologico, monumentale ai sensi della Parte II del  d. lgs 42/2004 e ss.mm.ii.</u>
+                <moduli:opzioni id="dichiara_inoltre_vincoli_parte_2_dlgs_42" class="lista_checkbox_vertical checkbox_esclusivi11">
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_vincoli_parte_2_dlgs_42_senza_vincoli_tutele">l'immobile NON è assoggettato ai vincoli e alle tutele sopra riportate</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_vincoli_parte_2_dlgs_42_con_vincoli_tutele">l'immobile è assoggettato a tali vincoli e tutele e pertanto deve essere acquisita l'autorizzazione/parere/nulla osta</moduli:opzione>
+                        <div class="float_left margin_l_35">dell'autorità preposta al vincolo.</div>
+                    </div>
+                </moduli:opzioni>
+            </li>
+            <li><u>Con riferimento alla tutela paesaggistica ai sensi della Parte III del d. lgs 42/2004 e ss.mm.ii.:</u>
+                <moduli:opzioni id="dichiara_inoltre_vincoli_parte_3_dlgs_42" class="lista_checkbox_vertical">
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_vincoli_parte_3_dlgs_42_putt_p">l'immobile è assoggettato ai vincoli e alle tutele di cui al P.U.T.T./P</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_vincoli_parte_3_dlgs_42_pptr">l'immobile è assoggettato ai vincoli e alle tutele di cui al P.P.T.R.</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_vincoli_parte_3_dlgs_42_art_142_etc">l'immobile rientra tra quelli tutelati dalla legge, a termini dell'articolo 142, o in base alla legge,</moduli:opzione>
+                        <div class="float_left margin_l_35">a termini degli articoli 136, 143, comma 1, lettera d), e 157.</div>
+                    </div>
+                </moduli:opzioni>
+            </li>
+            <li><u>Con riferimento al Piano di Recupero del Centro Storico – Piano Particolareggiato (Bari Vecchia):</u>
+                <moduli:opzioni id="dichiara_inoltre_recupero_centro_storico" class="lista_checkbox_vertical checkbox_esclusivi12">
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_recupero_centro_storico_non_assogettato">l'immobile non è assoggettato al piano</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_recupero_centro_storico_assoggettato">l'immobile è assoggettato al piano (come meglio specificato nella relazione tecnica illustrativa </moduli:opzione>
+                        <div class="float_left margin_l_35">allegata che ne dimostra altresì la conformità alle NTA del P.P. vigente).</div>
+                    </div>
+                </moduli:opzioni>
+            </li>
+            <li><u>Con riferimento al PAI (Piano Assetto Idrogeologico):</u>
+                <moduli:opzioni id="dichiara_inoltre_pai" class="lista_checkbox_vertical checkbox_esclusivi13">
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_pai_non_ricade_area_vincolata">l’immobile non ricade in area vincolata (si allega stralcio carta idrogeomorfologica e IGM estratta dal sito dell’A.d.B. Puglia)</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_pai_ricade_area_pericolosa_frana">l’immobile ricade in area a pericolosità da FRANA per cui deve essere acquisito il parere dell’A.d.B. Puglia</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_pai_ricade_area_pericolosa_idraulica">l’immobile ricade in area a pericolosità IDRAULICA per cui deve essere acquisito dell’A.d.B. Puglia</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_pai_interessata_reticolo_adb_non_riportato_carta_igm">l’immobile, pur non ricadendo in area vincolata, è interessata da reticolo A.d.B. non riportato nella carta IGM ma presente nella carta</moduli:opzione>
+                        <div class="float_left margin_l_35">
+                            idrogeomorfologica, pertanto alla presente è allegato studio di compatibilità, in n. 3 copie, secondo i modelli standard della stessa A.d.B., a firma di un tecnico abilitato (a discrezione del Comune sarà valutata l’opportunità di richiedere eventuale verifica alla stessa A.d.B.)
+                         </div>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_pai_interessata_reticolo_adb_riportato_carta_igm">l’immobile, pur non ricadendo in area vincolata, è interessata da reticolo A.d.B. riportato nella carta IGM e pertanto si allega</moduli:opzione>
+                        <div class="float_left margin_l_35">
+                            studio di compatibilità idrogeologica in n. 3 copie per il quale, a cura del Comune, sarà acquisito il parere dell’A.d.B. Puglia.
+                        </div>
+                    </div>
+                </moduli:opzioni>
+            </li>
+            <li><u>Con riferimento al vincolo per scopi idrogeologici di cui al R.D. n. 3267/1923:</u>
+                <moduli:opzioni id="dichiara_inoltre_riferimento_vincolo_scopi_idreologici" class="lista_checkbox_vertical checkbox_esclusivi14">
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_riferimento_vincolo_scopi_idreologici_ricade_area_vincolata">l’immobile non ricade in area vincolata</moduli:opzione>
+                    </div>
+                    <div class="riga">
+                        <moduli:opzione id="dichiara_inoltre_riferimento_vincolo_scopi_idreologici_ricade_area_vincolata_richiesta_aut_adb_puglia">l’immobile ricade in area vincolata per cui deve essere acquisita l’autorizzazione dell’AdB della Puglia.</moduli:opzione>
+                    </div>
+                </moduli:opzioni>
+            </li>
+            <li><u>Con riferimento all’entità dell’intervento:</u>
+                <div class="riga">
+                    <moduli:dato id="dichiara_inoltre_riferimento_entita_intervento" class="label_auto input_xxsmallwidth">che le opere previste ricadono nell’elenco delle opere di "lieve entità" di cui all'allegato 1, punto</moduli:dato>
+                    del D.P.R. n. 139/2010 e ss.mm.ii.
+                    <div class="float_left">(barrare se non si tratta di procedura semplificata)</div>
+                </div>
+            </li>
+        </ol>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_4" class="data-firma" label-firma="Il PROGETTISTA <sub>(timbro e firma)</sub>"/>
+        </div>
+    </moduli:gruppo>
+    <br />
+    <br />
+    <h3 class="center_text">DOCUMENTAZIONE DA ALLEGARE OBBLIGATORIAMENTE ALLA DOMANDA DI A.P.</h3>
+    <p class="center_text">(il n. di copie, variabile a seconda del tipo di procedimento, è precisato di seguito)</p>
+    <ul class="dash margin_l_117">
+        <li><strong>PROCEDIMENTO ORDINARIO</strong></li>
+        <li><strong>PROCEDIMENTO SEMPLIFICATO</strong></li>
+        <li><strong>ACCERTAMENTO DI COMPATIBILITÀ PAESAGGISTICA</strong></li>
+    </ul>
+    <ul class="square">
+        <li>Dichiarazione sostitutiva dell’atto di notorietà o documentazione attestante il titolo di proprietà o altro titolo</li>
+    	<li>
+    		Relazione paesaggistica <strong>(n. x copie)</strong> redatta ai sensi del D.P.C.M. 12 Dicembre 2005 corredata da estratti cartografici, che descriva dettagliatamente gli aspetti storico-critici, tipologici, materici, tecnologici, strutturali, urbanistici e paesaggistici dell’intervento specifico riguardo alla sua conformità al quadro normativo vigente   (P.P.T.R. Puglia - P.U.T.T./P. - D.Lgs. n. 42/2004)
+    	</li>
+    	<li>
+            Elaborato grafico <strong>(n. x copie)</strong> a firma congiunta di tecnico abilitato e del titolare dell’istanza, contenente: stralcio di P.R.G., aerofotogrammetrico, catastale, stralci P.U.T.T./P., situazione attuale e situazione in progetto (piante - prospetti - sezioni)
+    	</li>
+    	<li>
+    		Relazione tecnico-descrittiva a firma di tecnico abilitato <strong>(n. x copie)</strong>, con particolare riferimento ai materiali di finitura esterni che si intende utilizzare;
+    	</li>
+        <li>
+            Esauriente documentazione fotografica <strong>(n. x copie)</strong> a colori dell’area e/o dell’immobile oggetto d’intervento, con visioni panoramiche della zona, a firma congiunta di tecnico abilitato e del titolare dell’istanza, con allegata planimetria indicante i punti di vista fotografici
+        </li>
+        <li>
+            Simulazione dettagliata dello stato dei luoghi a seguito della realizzazione del progetto resa mediante rendering computerizzato o manuale comprendente un adeguato intorno dell’area di intervento <strong>(n. x copie)</strong> non allegare in caso di Accertamento di Compatibilità
+        </li>
+        <li>
+            Copia del titolo edilizio (licenza edilizia, concessione edilizia, permesso di costruire, ecc.) dell’immobile interessato dalla proposta progettuale con allegati elaborati grafici di progetto
+        </li>
+        <li>
+            <strong><u>Attestazione di versamento in originale</u></strong> dei diritti di segreteria per autorizzazione paesaggistica pari a € 115,00 da effettuarsi sul c/c n° 18298703 intestato al “Comune di Bari” con la causale “Diritti di segreteria per autorizzazione paesaggistica” (i versamenti effettuati non sono soggetti a rimborso in caso di non accoglimento ovvero diniego delle istanze presentate)
+        </li>
+        <li>Copia di Documento d’Identità del richiedente e del progettista.</li>
+    </ul>
+    <br />
+    <p>In caso di:</p>
+    <ul class="dash">
+        <li><strong>Procedimento Ordinario (x= 5)</strong></li>
+        <li><strong>Procedimento Semplificato (x= 4)</strong></li>
+        <li><strong>Accertamento di Compatibilità Paesaggistica (x= 5)</strong></li>
+    </ul>
+    <br />
+    <table class="full_row">
+        <thead>
+            <tr rowspan="3">
+                <th colspan="3">
+                    <strong><u>Ripartizione Urbanistica ed Edilizia Privata</u></strong>
+                    <br />
+                    <i>Pos Ambiente, Recupero e Riuso del Territorio</i>
+                    <br />
+                    <label>Via Abbrescia n. 86 - Bari - 4° Piano</label>
+                </th>
+            </tr>
+        </thead>
+        <tr>
+            <td><strong>Responsabile del Procedimento</strong></td>
+            <td><strong>Arch. Giovanni BIANCOFIORE</strong></td>
+            <td>tel. 080/5773103 - fax 080/5773106</td>
+        </tr>
+        <tr>
+            <td colspan="3">Orario di ricevimento Ufficio Paesaggio e Ambiente</td>
+        </tr>
+        <tr>
+            <td>Lunedì  /  Giovedì</td>
+            <td>ore   09.00  -  12.00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Martedì  /  Giovedì</td>
+            <td>ore   16.00  -  17.30</td>
+            <td></td>
+        </tr>
+    </table>
+
+</moduli:modulo>

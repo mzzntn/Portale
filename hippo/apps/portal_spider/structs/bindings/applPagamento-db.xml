@@ -1,0 +1,6 @@
+<binding type="db" external="true">
+    <table>pagamenti__applicazione</table>
+    <bind element="id" dbField="ID" />
+    <bind element="nome" dbField="NOME" />
+    <bind element="codice" dbField="CODICE" />
+</binding>

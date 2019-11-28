@@ -1,0 +1,160 @@
+<moduli:gruppo id="quadro_autocertificazioni" titolo="" class="dati_modulo no_border break">
+    <sup class="float_right">
+        <strong>QUADRO AUTOCERTIFICAZIONE</strong>
+    </sup>
+    <div class="center_text">
+        <strong>IL SOTTOSCRITTO DICHIARA INOLTRE:</strong>
+    </div>
+    <div class="center_text">
+        (Da compilare per chi sottoscrive le sezioni A,B,C, salvo in caso di riduzione di superficie di vendita o eliminazione di un settore)
+    </div>
+    <ol class="decimal">    
+        <moduli:opzioni id="autocert_persona" class="lista_checkbox_vertical">
+            <li class="clear_left">
+                <moduli:opzione id="autocert_persona_1">di essere in possesso dei requisiti previsti dall'art. 71 del D.Lvo n. 59/2010 (vedi nota 1)</moduli:opzione>
+            </li>
+            <li class="clear_left">
+                <moduli:opzione id="autocert_persona_2" class="label_auto">che non sussistono nei propri confronti "cause di divieto, di decadenza o di sospensione di cui all'art. 10 della legge 31.5.1965
+                </moduli:opzione>
+                <div class="float_left margin_l_35">, n. 575" (antimafia) (2);</div>
+            </li>
+            <li class="clear_left">
+                <moduli:opzione id="autocert_persona_3" class="label_auto">di aver rispettato - relativamente al locale dell'esercizio:
+                </moduli:opzione>
+                <ul>    
+                <moduli:opzioni id="autocert_persona_3_tipi" class="lista_checkbox_vertical">
+                    <li class="clear_left">
+                        <moduli:opzione id="autocert_persona_3_1">i regolamenti locali di polizia urbana;</moduli:opzione>
+                    </li>
+                    <li class="clear_left">
+                        <moduli:opzione id="autocert_persona_3_2">i regolamenti locali di polizia annonaria e igienico sanitaria;</moduli:opzione>
+                    </li>
+                    <li class="clear_left">
+                        <moduli:opzione id="autocert_persona_3_3">i regolamenti edilizi;</moduli:opzione>
+                    </li>
+                    <li class="clear_left">
+                        <moduli:opzione id="autocert_persona_3_4">le norme urbanistiche e quelle relative alla destinazione d'uso.</moduli:opzione>
+                    </li>
+                </moduli:opzioni>
+                </ul>
+                <div class="riga">
+                    <moduli:dato id="event_annot" tipo="longText" class="label_auto input_mediumwidth adaptive_input">(Eventuali annotazioni)</moduli:dato>
+                </div>
+            </li>
+            <li class="clear_left">
+                <moduli:opzione id="autocert_persona_4" class="label_auto">di essere a conoscenza che per il commercio di determinati prodotti posti in vendita nell'esercizio vanno rispettate le relative norme speciali;
+                </moduli:opzione>
+            </li>
+        </moduli:opzioni>
+    </ol>
+    
+    <div class="riga center_text">
+        <strong><i>(DA COMPILARE SOLO PER IL COMMERCIO DEL SETTORE ALIMENTARE)</i></strong>
+    </div>
+    <div class="riga">
+        <strong><i>Solo per le imprese individuali</i></strong>
+    </div>
+
+    <moduli:opzioni id="autocert_commercio_alimentare" class="lista_checkbox_vertical">
+        <div class="clear_left">
+            <div class="float_left">5</div>
+            <moduli:opzione id="autocert_commercio_alimentare_5" class="elenco_prima">che è in possesso di uno dei seguenti requisiti professionali:</moduli:opzione>
+        </div>
+        <div class="clear_left">
+            <div class="float_left">5.1</div>
+            <moduli:opzione id="autocert_commercio_alimentare_5_1" class="elenco_prima">aver frequentato con esito positivo il corso professionale per il commercio del settore alimentare</moduli:opzione>
+            <div class="float_left mezza_colonna">
+                <moduli:dato id="com_alimentare_5_1_nome" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">nome dell'Istituto</moduli:dato>
+                <moduli:dato id="com_alimentare_5_1_oggetto" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">oggetto del corso</moduli:dato>
+            </div>
+            <div class="float_left mezza_colonna">
+                <moduli:dato id="com_alimentare_5_1_sede" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">sede</moduli:dato><br /><br />
+                <moduli:dato id="com_alimentare_5_1_anno" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">anno di conclusione</moduli:dato>
+            </div>
+        </div>
+        <div class="clear_left">
+            <div class="float_left">5.2</div>
+            <moduli:opzione id="autocert_commercio_alimentare_5_2" class="elenco_prima">di aver esercitato in proprio l'attività di vendita dei prodotti del settore alimentare</moduli:opzione>
+            <div class="riga">
+                <moduli:dato id="com_alimentare_5_2_tipo_att" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">tipo di attività</moduli:dato>
+                <moduli:dato id="com_alimentare_5_2_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_2_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="com_alimentare_5_2_n_cciaa" class="label_auto input_mediumwidth_220">n. iscrizione Registro Imprese</moduli:dato>
+                <moduli:dato id="com_alimentare_5_2_cciaa_di" class="label_smlwidth input_codfiscwidth">CCIAA di</moduli:dato>
+                <moduli:dato id="com_alimentare_5_2_n_rea" class="label_smlwidth input_smallwidth">n. R.E.A</moduli:dato>
+            </div>
+        </div>
+        <div class="clear_left">
+            <div class="float_left">5.3</div>
+            <moduli:opzione id="autocert_commercio_alimentare_5_3" class="elenco_prima">di aver prestato la propria opera presso imprese esercenti l'attività di vendita</moduli:opzione>
+            <div class="riga">di prodotti del settore alimentare o nel settore della somministrazione di alimenti e bevande</div>
+            <div class="float_left mezza_colonna">
+                <moduli:dato id="com_alimentare_5_3_nome_imp_1" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">nome impresa</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_nome_imp_2" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">nome impresa</moduli:dato>
+            </div>
+            <div class="float_left mezza_colonna">
+                <moduli:dato id="com_alimentare_5_3_sede_imp_1" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">sede impresa</moduli:dato><br /><br />
+                <moduli:dato id="com_alimentare_5_3_sede_imp_2" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">sede impresa</moduli:dato>
+            </div>
+            <div class="riga">
+                <div class="float_left">quale dipendente qualificato, regolarmente iscritto all'INPS,</div>
+                <moduli:dato id="com_alimentare_5_3_1_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_1_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+            <div class="riga">
+                <div class="float_left">addetto all'amministrazione, regolarmente iscritto all'INPS,</div>
+                <moduli:dato id="com_alimentare_5_3_2_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_2_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+            <div class="riga">
+                <div class="float_left">addetto alla vendita, regolarmente iscritto all'INPS,</div>
+                <moduli:dato id="com_alimentare_5_3_3_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_3_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+            <div class="riga">
+                <div class="float_left">addetto alla preparazione degli alimenti, regolarmente iscritto all'INPS,</div>
+                <moduli:dato id="com_alimentare_5_3_4_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_4_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+            <div class="riga">
+                <div class="float_left">socio lavoratore, regolarmente iscritto all'INPS,</div>
+                <moduli:dato id="com_alimentare_5_3_5_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_5_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+            <div class="riga">
+                <div class="float_left">quale coadiutore familiare, regolarmente iscritto all'INPS,</div>
+                <moduli:dato id="com_alimentare_5_3_6_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                <moduli:dato id="com_alimentare_5_3_6_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+            </div>
+        </div>
+        <div class="clear_left">
+            <div class="float_left">5.4</div>
+            <moduli:opzione id="autocert_commercio_alimentare_5_4" class="elenco_prima">di essere in possesso del seguente diploma di scuola secondaria superiore o di laurea, anche triennale, o di altra scuola ad indirizzo </moduli:opzione>
+            <div class="riga margin_l_35">professionale,  almeno triennale, purche' nel corso di studi siano previste materie attinenti al commercio, alla preparazione o alla </div>
+            <div class="riga margin_l_35">somministrazione degli alimenti:</div>
+            <div class="riga margin_l_35"><moduli:dato id="com_alimentare_5_4" tipo="longText" class="input_bigwidth adaptive_input"></moduli:dato></div>
+        </div>
+    </moduli:opzioni>
+
+    <div class="riga">
+        <strong><i>Solo per le società</i></strong>
+    </div>
+
+    <moduli:opzioni id="autocert_societa" class="lista_checkbox_vertical">
+        <div class="clear_left">
+            <div class="float_left">6</div>
+            <moduli:opzione id="autocert_societa_1" class="elenco_prima">Che i requisiti professionali sono posseduti</moduli:opzione>
+            <moduli:dato id="com_alimentare_5_3_6_dal" class="label_smlwidth input_mediumwidth">dal Sig.</moduli:dato>
+            <div class="riga margin_l_35">che ha compilato la dichiarazione di cui all'allegato B.</div>
+        </div>
+    </moduli:opzioni>
+
+    <div class="riga">
+        <strong><i>Il sottoscritto è consapevole che le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi comportano l'applicazione delle sanzioni penali previste dal D.P.R. 28/12/2000, n. 445</i></strong>
+    </div>
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma" label-firma="FIRMA del Titolare o Legale Rappresentante"/>
+    </div>
+</moduli:gruppo>

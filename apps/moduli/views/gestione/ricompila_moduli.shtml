@@ -1,0 +1,15 @@
+<div>
+        <legend>Rigenera Moduli</legend>
+            <form method="post" class="form-horizontal" id="rigenera_moduli" >
+                <p>Vuoi rigenerare i moduli?</p>
+                <div class="row form-actions">
+                    <div class="span1">
+                        <a class="btn" href="{ Moduli::GestioneModuliController.http_s_url }">Indietro</a>
+                    </div>
+                    <div class="span1 offset5">
+                        <input type="submit" class="btn" name="submit" id="button_salva" value="Rigenera">
+                    </div>
+                </div>
+            </form>
+    
+    </div>

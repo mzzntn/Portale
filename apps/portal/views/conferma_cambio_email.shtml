@@ -1,0 +1,19 @@
+<div>
+    <div sp:if="!@errore">
+        Grazie, { @utente.nome } { @utente.cognome }, la tua e-mail è stata cambiata.<br><br>
+        <a href="{ Portal.http_s_url }">Torna</a>
+    </div>
+    <div sp:if="@errore">
+        <div>
+            Siamo spiacenti, il codice di controllo non è corretto.
+        </div>
+        <div>
+            Puoi richiedere l'invio di una nuova e-mail di controllo dalla <a href="{ Portal.http_s_url('dettagli_utente') }">pagina dei tuoi dati</a>.
+        </div>
+        <div class="row col-lg-12 mt20">
+            <div class="back">
+                <a href="{ Portal::PortalController.http_s_url }" class="btn">Torna</a>
+            </div>
+        </div>
+</div>
+

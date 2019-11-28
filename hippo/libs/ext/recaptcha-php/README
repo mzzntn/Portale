@@ -1,0 +1,18 @@
+reCAPTCHA README
+================
+
+The reCAPTCHA PHP Lirary helps you use the reCAPTCHA API. Documentation
+for this library can be found at
+
+	http://recaptcha.net/plugins/php
+
+Domain Name: 	globalkey.mapweb.it
+
+This is a global key. It will work across all domains.
+Public Key: 	...
+
+Use this in the JavaScript code that is served to your users
+Private Key: 	...
+
+Use this when communicating between your server and our server. Be sure to keep it a secret.
+	Delete these keys https://www.google.com/recaptcha/admin/delete?siteid=315864410

@@ -1,0 +1,136 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <a name="dati_utente" class="anchor_menu" testo="Dati Utente"></a>
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+    <p>
+    Oggetto: ISTANZA DI ACCESSO FORMALE AD ATTI E DOCUMENTI AI SENSI DELLA LEGGE 7/8/1990, n. 241 e D.P.R. 12/4/2006, N. 184
+    </p>
+    <moduli:gruppo id="titolare_1" titolo="Dati personali" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_titolare" size="50">Il/la sottoscritto/a</moduli:dato>
+            <moduli:dato id="codice_fiscale_titolare" class="label_smlwidth">C.F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_titolare">nato/a a </moduli:dato>
+            <moduli:dato id="provincia_nascita_titolare" class="label_smlwidth">prov </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_titolare" tipo="data">data </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_titolare">residente a </moduli:dato>
+            <moduli:dato id="prov_residenza_titolare" class="label_smlwidth">prov </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cap_residenza_titolare" >cap </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_titolare">in via/fraz. </moduli:dato>
+            <moduli:dato id="civico_residenza_titolare">n civico </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email_titolare">indirizzo email</moduli:dato>
+            <moduli:dato id="telefono_titolare" class="label_bigwidth">recapito telefonico </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare_titolare">cellulare </moduli:dato>
+            <moduli:dato id="fax_titolare" class="label_smlwidth">fax </moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <p class="clear_both">
+        <moduli:dato id="tipo_referenza" class="big_input">In qualità di:</moduli:dato>
+    </p>
+
+    <moduli:opzioni id="tipo_richiesta" class="lista_checkbox_vertical checkbox_esclusivi1">
+        <h3>Chiede</h3>
+        <moduli:opzione id="prendere_visione">di prendere visione</moduli:opzione>
+        <moduli:opzione id="legale_rappresentante">il rilascio di copia semplice</moduli:opzione>
+        <moduli:opzione id="delegato">il rilascio di copia autentica</moduli:opzione>
+    </moduli:opzioni>
+    
+    <p class="clear_both">del/i seguente/i atto/i e documento/i</p>
+    <div class="riga">
+        <moduli:dato tipo="longText" id="documenti" class="adaptive_input"></moduli:dato>
+    </div>
+
+    <h3 >Dichiara</h3>
+    <p class="clear_both">
+        Che la presente richiesta di accesso è motivata per la tutela della seguente situazione giuridicamente rilevante:<br />
+        (specificare la propria posizione rispetto al titolare dell’atto, indicando l’interesse diretto, concreto e attuale corrispondente a una situazione giuridicamente
+        rilevante tutelata e collegata dal documento al quale è richiesto l’accesso ai sensi dell’art.2, comma 1 del D.P.R.184/2006)
+    </p>
+
+    <div class="riga">
+        <moduli:dato tipo="longText" id="dichiarazione_posizione" class="adaptive_input"></moduli:dato>
+    </div>
+
+    <moduli:opzioni id="allegati" class="lista_checkbox_vertical readonly_js">
+        Allega:
+        <moduli:opzione id="documentazione_legittima">documentazione atta a comprovare la propria legittimazione ad esercitare il diritto e/o ritirare i documenti</moduli:opzione>
+        <moduli:opzione id="delega">delega dell'interessato</moduli:opzione>
+        <moduli:opzione id="fotocopia_identita">fotocopia della carta d'identità</moduli:opzione>
+        <!--
+        <moduli:opzione id="allegato_non_previsto">allegato non previsto</moduli:opzione>
+        <moduli:dato id="descrizione_all_altro" class="input_mediumwidth adaptive_input" tipo="longText"></moduli:dato>
+        -->
+    </moduli:opzioni>
+    
+    
+
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma"/>
+    </div>
+
+    <div class="clear_both">
+        Ai sensi della Delibera di Giunta n. 121 del 28/05/2014 è previsto il versamento dei seguenti importi
+        per diritti di ricerca e visura per l'accesso agli atti amministrativi di competenza del servizio edilizia privata:
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>TIPO DI PRATICHE</th>
+                    <th>Importo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Archivio corrente edilizia privata e archivio municipale (pratiche dal 1952)</td>
+                    <td>Euro 50,00</td>
+                </tr>
+                <tr>
+                    <td>Archivio pratiche ante 1951</td>
+                    <td>Euro 70,00</td>
+                </tr>
+                <tr>
+                    <td>Archivio pratiche piani urbanistici</td>
+                    <td>Euro 50,00</td>
+                </tr>
+                <tr>
+                    <td>Archivio pratiche controlli edilizi</td>
+                    <td>Euro 50,00</td>
+                </tr>
+                <tr>
+                    <td>Archivio pratiche demanio turistico</td>
+                    <td>Euro 50,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <p class="clear_both">Da eseguire: 
+        <moduli:opzioni id="tipo_pagamento" class="lista_checkbox_vertical checkbox_esclusivi2">
+            <moduli:opzione id="conto_bancario">sul Conto Corrente Bancario di tesoreria IBAN: IT64O03069209101000030043 - Cassa di Risparmio di Venezia,
+                                                intestato al Comune di Chioggia;</moduli:opzione>
+            <moduli:opzione id="conto_postale">sul Conto Corrente Postale n. 13582309 di tesoreria intestato al Comune di Chioggia - Corso del Popolo 1193,
+                                                da effettuarsi presso qualsiasi sportello postale.</moduli:opzione>
+        </moduli:opzioni>
+    </p>
+
+    <div class="clear_both"> 
+    <strong> Nota Bene: in caso di richiesta in copia autentica, sarà necessario portare all'atto del ritiro una marca da bollo di euro 16,00 per perfezionare la richiesta stessa. </strong>
+    </strong>
+
+
+</moduli:modulo>

@@ -1,0 +1,7 @@
+<div>
+	<div class="testata_modulo">
+		<div class="align_center">
+			<img  alt="logo comune" src="{ Moduli::ModuliController.download_img_b64('logo_toscolano.png') }" width="110" />
+		</div>
+	</div>
+</div>

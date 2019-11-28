@@ -1,0 +1,9 @@
+<engine dbType='pgsql'>
+<connection type='pgsql'>
+<server>ipserver</server>
+<name>nome_db</name>
+<user>utente</user>
+<pass>password</pass>
+<charset>UTF8</charset>
+</connection>
+</engine>

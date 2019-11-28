@@ -1,0 +1,56 @@
+<div id="gestione_notifiche" class="col-lg-10">
+	<div class="row">
+        <h3 class="verde">Attivazione Notifiche</h3>
+    </div>
+	<div sp:if="!@active_apps_present">
+		<div class="alert alert-info space20">
+	    	Non sono attualmente presenti applicazioni con gestione delle notifiche.
+	    </div>
+	</div>
+	<div sp:if="@active_apps_present">
+		<form method="post">
+			<div class="row">
+				<div sp:if="@errori" class="alert alert-danger col-lg-10">
+			    	<ul>
+			        	<li sp:each="@errori |errore|">{ errore }</li>
+			    	</ul>
+			    </div>
+			</div>
+			<div class="row">
+				<div class="alert alert-info col-lg-10">
+					Questa sezione definisce se si desiderano <strong>ricevere delle notifiche per alcuni servizi. </strong><br/>
+					Ad esempio, se si volesse ottenere una notifica via mail o sms in prossimità della scadenza della carta di identità, è possibile selezionare il metodo più appropriato nella relativa sezione qui in basso.
+				</div>
+			</div>
+			<div>
+				<div class="row mb40">
+					<span class="lead verde"><strong>Utente: { @utente.nome } { @utente.cognome }</strong></span><br>
+					<div class="form-inline">
+						<div class="form-group mt10">
+							<label for="email_utente">Email</label>
+							<input type="email" class="form-control mr10" size="40" name="email_utente" id="email_utente" value="{ @utente.email }">
+						</div>
+						<div class="form-group mt10">
+							<label for="cellulare_utente">Cellulare</label>
+							<input type="text" class="form-control" name="cellulare_utente" id="cellulare_utente" value="{ @utente.cellulare }">
+						</div>
+					</div>
+				</div>
+				<div class="row mb40" sp:each="@notifiche |notifica|">
+					<span class="lead verde"><strong>{ notifica.applicazione.nome_breve }</strong></span><span class="lead"> ({ notifica.applicazione.descrizione })</span><br>
+					<div class="form-inline">
+						<label class="checkbox-inline">
+							<input type="checkbox" name="{ notifica.applicazione.codice }[email]" sp:attr-if="notifica.notifica_email == true,checked,checked" value="true" id="{ notifica.applicazione.codice }[email]"> Email
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" name="{ notifica.applicazione.codice }[sms]" sp:attr-if="notifica.notifica_sms == true,checked,checked" value="true" id="{ notifica.applicazione.codice }[sms]"> Sms
+						</label>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<input type="submit" class="btn btn-success" name="salva_notifiche" value="Salva"></input>		  
+	        </div>
+	    </form>
+	</div>
+</div>

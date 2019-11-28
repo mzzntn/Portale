@@ -1,0 +1,6 @@
+<struct name="servizio" external="true">
+    <element name="id" type="text" key="true" />
+    <element name="nome" type="text" />
+    <element name="accesso" type="text" />
+    <element name="url" type="text" />
+</struct>

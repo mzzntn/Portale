@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spider::Images \n"
+"POT-Creation-Date: 2011-07-01 16:47+0200\n"
+"PO-Revision-Date: 2010-06-09 16:39+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: models/image.rb:42
+msgid "Image"
+msgstr ""
+
+#: models/image.rb:42
+msgid "Images"
+msgstr ""
+
+#: models/image.rb:47
+msgid "Tags"
+msgstr ""
+
+#: models/image.rb:48
+msgid "License"
+msgstr ""
+
+#: models/image.rb:49
+msgid "Copies"
+msgstr ""
+
+#: models/image.rb:50
+msgid "Label"
+msgstr ""
+
+#: models/image.rb:52
+msgid "Width"
+msgstr ""
+
+#: models/image.rb:53
+msgid "Height"
+msgstr ""
+
+#: models/tag.rb:4
+msgid "Image Tag"
+msgstr ""
+
+#: models/tag.rb:4
+msgid "Image Tags"
+msgstr ""
+
+#: widgets/image_archive/image_archive.shtml:4
+msgid "Folders"
+msgstr ""
+
+#: widgets/image_manager/image_manager.shtml:14
+msgid "On the Web"
+msgstr ""
+
+#: widgets/image_manager/image_manager.shtml:16
+msgid "Upload image"
+msgstr ""
+
+#: widgets/image_search/image_search.shtml:5
+msgid "Search on Flickr"
+msgstr ""
+
+#: widgets/image_search/image_search.shtml:11
+msgid "Ok"
+msgstr ""
+
+#: widgets/image_search/image_search.shtml:15
+msgid "Only images with a public license"
+msgstr ""
+
+#: widgets/image_search/image_search.shtml:21
+msgid "Previous"
+msgstr ""
+
+#: widgets/image_search/image_search.shtml:22
+msgid "Page %s of %s"
+msgstr ""
+
+#: widgets/image_search/image_search.shtml:23
+msgid "Next"
+msgstr ""
+
+#: widgets/image_viewer/image_viewer.shtml:5
+#: widgets/image_viewer/image_viewer.shtml:36
+msgid "Dimensions"
+msgstr ""
+
+#: widgets/image_viewer/image_viewer.shtml:13
+msgid "Original"
+msgstr ""
+
+#: widgets/image_viewer/image_viewer.shtml:23
+msgid "Folder"
+msgstr ""
+
+#: widgets/image_viewer/image_viewer.shtml:32
+msgid "Caption"
+msgstr ""
+
+#: widgets/image_viewer/image_viewer.shtml:44
+msgid "Keep ratio"
+msgstr ""

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>RSS Alessandria</title>
+    <link>https://portale.comune.alessandria.it/portal/servizi/comunicazioni/feed_rss</link>
+    <description>Feed RSS di Alessandria</description>
+    <pubDate>Mon, 09 Sep 2019 10:39:45 +0200</pubDate>
+    <item>
+      <title>Variazione di Bilancio: nuovi fondi per il taglio dell’erba</title>
+      <link>https://portale.comune.alessandria.it:443/portal/servizi/comunicazioni/4/pubblica</link>
+      <description>Variazione di Bilancio: nuovi fondi per il taglio dell’erba</description>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0200</pubDate>
+      <dc:date>2019-09-09T00:00:00+02:00</dc:date>
+    </item>
+    <dc:date>2019-09-09T10:39:45+02:00</dc:date>
+  </channel>
+</rss>

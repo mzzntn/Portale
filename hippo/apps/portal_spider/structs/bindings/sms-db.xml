@@ -1,0 +1,7 @@
+<binding type="db" external="true">
+    <table>spider__messenger__sms</table>
+    <bind element="id" dbField="ID_SMS" />
+    <bind element="messaggio" dbField="MESSAGE_ID" />
+    <bind element="to" dbField="TO_FIELD" />
+    <bind element="text" dbField="TEXT" />
+</binding>

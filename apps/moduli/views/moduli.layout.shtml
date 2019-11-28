@@ -1,0 +1,17 @@
+<div class="moduli_layout">
+    <tpl:asset type="css" src="sass/moduli_new.scss" runmode="devel" />
+    <!-- bisogna ricompilare il css di stampa se viene fatta una modifica al file stampa.scss   
+    <tpl:asset type="css" src="sass/stampa_new.scss" runmode="devel" order="14" /> 
+    -->
+
+  	<!--ATTENZIONE: AGGIUNGERE QUI L'ASSET PER LA TESTATA DEI MODULI -->
+
+  	<tpl:asset type="js" name="bootstrap-3-modal" />
+  	<!-- errore visualizzato quando non si trovano degli allegati nella cartella del modulo -->
+  	<div sp:if="!@errore_allegati.blank?" class="alert alert-error alert-danger">
+    	{ @errore_allegati }
+    </div>
+    <tpl:assets widgets="moduli:modulo" />
+    <tpl:asset type="js" src="js/moduli.js" />
+    <sp:yield />    
+</div>

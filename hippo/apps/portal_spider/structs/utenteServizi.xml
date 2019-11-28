@@ -1,0 +1,6 @@
+<struct name="utenteServizi" external="true">
+   <element name='id' type='int' key='true' />	
+   <element name='utente' type='portal_spider::utente' />
+   <element name='servizio' type='portal_spider::servizio' />
+   <element name='stato' type='text' />
+</struct>

@@ -1,0 +1,23 @@
+<sp:template>
+    <tpl:asset type="js" src="js/admin_portal.js" />
+    <tpl:asset type="css" src="sass/admin_portal.scss" />
+    <core:admin id="admin" full-page="false">
+        <admin:model>Portal::Gdpr</admin:model>
+            <sp:attribute widget="switcher.portal_gdpr.table" name="elements" value="id,titolo" />
+            <sp:attribute widget="switcher.portal_gdpr.form" name="show_submit_and_new" value="false" />
+            <sp:attribute widget="switcher.portal_gdpr" name="allow_create" value="false" />
+        <admin:model>Portal::Servizio</admin:model>
+			<sp:attribute widget="switcher.portal_servizio.table" name="elements" value="id,nome,url,descrizione,gestibile,accesso,posizione,richiede_strong_auth" />
+        <admin:model>Portal::SuperUser</admin:model>
+        <admin:model>Portal::UtenteLogin</admin:model>
+        	<sp:attribute widget="switcher.portal_utentelogin.table" name="elements" value="id,username,nome,cognome,obj_created,stato,codice_fiscale,sesso" />
+        	<sp:attribute widget="switcher.portal_utentelogin.table" name="labels" value="Id,,,,Data Registrazione" />
+        	<sp:attribute widget="switcher.portal_utentelogin.table" name="sort" value="id,desc" />
+        <admin:model>Portal::Ditta</admin:model>
+            <sp:attribute widget="switcher.portal_ditta" name="allow_create" value="false" />
+        <admin:model>Portal::Gruppo</admin:model>
+        <admin:model>Portal::Amministratore</admin:model>
+        
+    </core:admin>
+</sp:template>
+

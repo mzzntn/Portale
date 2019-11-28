@@ -1,0 +1,702 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+<!--     <div>
+        <div class="float_left">{ sigla_modulo }</div>
+        <div>
+            <h4>ISTANZA DI</h4>
+            <h3>AGIBILITA’ </h3>
+            <span>Art. 24 e 25 del D.P.R. 6.6.2001 n. 380 e ss.mm.ii. – L.R. 7.4.2014 n. 12 e ss.mm.ii</span>
+        </div>
+    </div>
+
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" tipo="longText" class="input_mediumwidth adaptive_input">Sig./Sig.ra</moduli:dato>
+        </div>
+        <div class="riga">
+             <moduli:dato id="citta_nascita" tipo="longText" class="label_smlwidth input_mediumwidth adaptive_input">Nato a </moduli:dato>
+             <moduli:dato id="data_nascita" tipo="data" class="label_smlwidth input_xsmallwidth">il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale" class="label_xsmlwidth input_mediumwidth">C.F</moduli:dato>
+            <moduli:dato id="citta_residenza">residente in </moduli:dato>
+        </div>
+       <div class="riga">
+           
+            <moduli:dato id="via_residenza" tipo="longText" class="label_smlwidth input_mediumwidth adaptive_input">via</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_smlwidth input_smallwidth">n </moduli:dato>
+            <moduli:dato id="cap_residenza" class="label_smlwidth input_xsmallwidth">C.A.P.</moduli:dato>
+        </div>
+    </moduli:gruppo>
+ -->
+
+    <tpl:include src="../testata_modulo/_testata_modulo" />
+    <hr />
+    <div class="margin_l_20">
+        <h2 class="float_left font_40">AGIB</h2>
+        <h2 class="float_center">Istanza di Agibilità</h2>
+    </div>
+    <br />
+    <br />
+    <h3 class="margin_l_20 center_text">Art. 24 e 25 del D.P.R. 6.6.2001 n. 380 e ss.mm.ii. – L.R. 7.4.2014 n. 12 e ss.mm.ii</h3>
+    <moduli:gruppo id="oggetto_territoriale_1" titolo="" class="dati_modulo no_border">
+        <table class="full_row align_center">
+            <thead>
+                <tr>
+                    <th colspan="10">DATI IDENTIFICATIVI DELL'IMMOBILE</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>ex frazione</td>
+                <td colspan="2"><moduli:dato id="sezione"></moduli:dato></td>
+                <td>via, p.zza</td>
+                <td colspan="6"><moduli:dato id="loc_int_via" class="input_mediumwidth"></moduli:dato></td>
+            </tr>
+            <tr>
+                <td>civico</td>
+                <td><moduli:dato id="loc_int_n" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>bis</td>
+                <td><moduli:dato id="loc_int_bis" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>scala</td>
+                <td><moduli:dato id="loc_int_scala" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>piano</td>
+                <td><moduli:dato id="loc_int_piano" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td>interno</td>
+                <td><moduli:dato id="loc_int_interno" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+            </tr>
+            <tr>
+                <th colspan="5">Censito al NCEU</th>
+                <th colspan="5">Censito in NCT</th>
+            </tr>
+            <tr>
+                <td>foglio</td>
+                <td>particella</td>
+                <td>sub.</td>
+                <td colspan="2">cat.</td>
+                <td>foglio</td>
+                <td>particella</td>
+                <td colspan="3">superficie</td>
+            </tr>
+            <tr>
+                <td><moduli:dato id="catasto_foglio" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_map" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_sub" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td colspan="2"><moduli:dato id="destinazione_uso_codice" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_foglio" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td><moduli:dato id="catasto_map" class="label_xsmlwidth input_xxsmallwidth"></moduli:dato></td>
+                <td colspan="3"><moduli:dato id="superficie" class="label_xsmlwidth"></moduli:dato></td></td>
+            </tr>
+        </table>
+
+        <br />
+        <moduli:dato id="destinazione_prg" tipo="longText" class="label_auto input_largewidth adaptive_input"><label>Zona omogenea secondo il vigente strumento urbanistico:</label></moduli:dato>
+    </moduli:gruppo>
+
+    <h3 class="riga_grigia">Dati del Titolare</h3>
+    <moduli:gruppo id="titolare_1" titolo="" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_titolare" class="input_largewidth">Cognome e Nome</moduli:dato>
+            <moduli:dato id="codice_fiscale_titolare" class="label_auto input_codfiscwidth">codice fiscale</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_titolare" class="input_mediumwidth">nato a</moduli:dato>
+            <moduli:dato id="provincia_nascita_titolare" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+            <moduli:dato id="stato_nascita_titolare" class="label_auto input_smallwidth">stato</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_titolare" tipo="data" class="input_xsmallwidth">nato il</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="citta_residenza_titolare" class="input_mediumwidth">residente in </moduli:dato>
+            <moduli:dato id="prov_residenza_titolare" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="stato_residenza_titolare" class="label_xsmlwidth input_smallwidth">stato </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza_titolare" class="input_mediumwidth">indirizzo</moduli:dato>
+            <moduli:dato id="civico_residenza_titolare" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+            <moduli:dato id="cap_residenza_titolare" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+        </div>
+        <div class="riga">
+            <moduli:dato id="email_titolare" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="telefono_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <div id="container_ditta">
+        <h3 class="riga_grigia">Dati della Ditta o Società</h3>
+        <moduli:gruppo id="dati_ditta_titolare_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:dato id="qualifica_persona_ditta_titolare" class="input_bigwidth write_enable_js">in qualità di</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="nome_ditta_titolare" class="input_bigwidth">della ditta/società</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="cf_piva_ditta_titolare">codice fiscale/ partita iva</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="cciaa_titolare" class="input_mediumwidth">Iscritta alla C.C.I.A.A. di </moduli:dato>
+                <moduli:dato id="provincia_cciaa_titolare" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="numero_cciaa_titolare" class="label_xsmlwidth input_smallwidth">n.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="sede_ditta_titolare" class="input_mediumwidth">con sede in</moduli:dato>
+                <moduli:dato id="provincia_ditta_titolare" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_ditta_titolare" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_ditta_titolare" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_ditta_titolare" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="pec_email_ditta_titolare" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="tel_fisso_cellulare_ditta_titolare" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+            </div>
+        </moduli:gruppo>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="container_dati_progettista">
+        <h3 class="riga_grigia">Dati dell' Asseverante</h3>
+        <moduli:gruppo id="progettista_1" titolo="" class="dati_modulo dati_readable_js">
+            <div class="riga">
+                <moduli:dato id="cognome_nome_progettista" class="input_largewidth">Cognome e Nome</moduli:dato>
+                <moduli:dato id="codice_fiscale_progettista" class="label_auto input_codfiscwidth">codice fiscale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="luogo_nascita_progettista" class="input_mediumwidth">nato a</moduli:dato>
+                <moduli:dato id="prov_nascita_progettista" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="stato_nascita_progettista" class="label_auto input_smallwidth">stato</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="data_nascita_progettista" tipo="data" class="input_xsmallwidth">nato il</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_progettista" class="input_mediumwidth">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_progettista" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+                <moduli:dato id="stato_residenza_progettista" class="label_auto input_smallwidth">stato </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_progettista" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_residenza_progettista" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_progettista" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_studio_progettista" class="input_mediumwidth">con studio in</moduli:dato>
+                <moduli:dato id="prov_studio_progettista" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="stato_studio_progettista" class="label_auto input_smallwidth">stato</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_studio_progettista" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_studio_progettista" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_studio_progettista" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <div class="riga">
+                <moduli:dato id="ordine_progettista" class="input_mediumwidth">iscritto all'ordine/collegio</moduli:dato>
+                <moduli:dato id="citta_ordine_progettista" class="label_xsmlwidth input_xxsmallwidth">di</moduli:dato>
+                <moduli:dato id="n_ordine_progettista" class="label_xsmlwidth input_smallwidth">al n.</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="email_progettista" class="input_bigwidth">PEC / posta elettronica</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="telefono_progettista" class="input_bigwidth">Telefono fisso/ cellulare </moduli:dato>
+            </div>
+        </moduli:gruppo>
+    </div>  
+    <div id="container_dati_asseverante">
+        <h3 class="riga_grigia">atto di delega degli altri soggetti aventi titolo o comunque interessati al rilascio della certificazione di agibilità</h3>
+        <p>La presente pratica edilizia è sottoscritta in solido dal sottoscritto soggetto avente titolo, che delega l’istante:<br />a) alla presentazione dell’Istanza di Agibilità; b) a essere unico intestatario del provvedimento finale.</p>
+        <moduli:gruppo id="asseverante_1" titolo="" class="dati_modulo">
+            <div class="riga">
+                <moduli:dato id="cognome_nome_asseverante" class="input_largewidth">Cognome e Nome</moduli:dato>
+                <moduli:dato id="codice_fiscale_asseverante" class="label_auto input_codfiscwidth">codice fiscale</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="luogo_nascita_asseverante" class="input_mediumwidth">nato a</moduli:dato>
+                <moduli:dato id="prov_nascita_asseverante" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                <moduli:dato id="stato_nascita_asseverante" class="label_auto input_smallwidth">stato</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="data_nascita_asseverante" tipo="data" class="input_xsmallwidth">nato il</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="citta_residenza_asseverante" class="input_mediumwidth">residente in </moduli:dato>
+                <moduli:dato id="prov_residenza_asseverante" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+                <moduli:dato id="stato_residenza_asseverante" class="label_auto input_smallwidth">stato </moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:dato id="indirizzo_residenza_asseverante" class="input_mediumwidth">indirizzo</moduli:dato>
+                <moduli:dato id="civico_residenza_asseverante" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                <moduli:dato id="cap_residenza_asseverante" class="label_auto input_xsmallwidth">C.A.P.</moduli:dato> 
+            </div>
+            <moduli:opzioni id="in_qualita" class="lista_checkbox_oriz checkbox_esclusivi1">
+                <div class="riga">
+                    <label>in qualità di</label>
+                    <moduli:opzione id="comproprietario_asseverante">Comproprietario</moduli:opzione>
+                    <moduli:opzione id="nudo_proprietario_asseverante">Nudo proprietario</moduli:opzione>
+                    <moduli:opzione id="usufruttuario_asseverante" class="label_mediumwidth">Usufruttuario</moduli:opzione>
+                    <moduli:opzione id="legale_rappresentante_asseverante" class="label_bigwidth">Legale rappresentante</moduli:opzione>
+                </div>
+                <div class="riga margin_l_117">
+                    <moduli:opzione id="altro_asseverante" class="label_xsmlwidth">Altro</moduli:opzione>
+                    <moduli:dato id="altro_specificare_asseverante" class="label_auto input_bigwidth">(specificare) </moduli:dato> 
+                </div>
+            </moduli:opzioni>
+            <div class="riga">
+                <moduli:dato id="atto_notaio_asseverante" tipo="longText" class="input_mediumwidth_220 adaptive_input">giusto atto del Notaio</moduli:dato>
+                <moduli:dato id="atto_notaio_rep_asseverante" class="label_auto input_smallwidth">rep.</moduli:dato>
+                <moduli:dato id="atto_notaio_racc_asseverante" class="label_auto input_smallwidth">racc.</moduli:dato>
+                <moduli:dato id="atto_notaio_del_asseverante" class="label_xsmlwidth input_xsmallwidth">del</moduli:dato>
+            </div>
+            <!--
+            <moduli:allegato id="allegato_documento_identita_asseverante" autohide="true" save_path="moduli/" class="riga">
+                <label>Allegare copia del documento di riconoscimento</label> 
+            </moduli:allegato>
+            -->
+        </moduli:gruppo>      
+        <div class="riga">
+            <moduli:data-firma id="data_firma_1" class="data-firma"/>
+        </div>  
+    </div>
+    <div id="container_presentata_per_conto">
+        <h3 class="riga_grigia"><strong>Presentata per Conto</strong></h3>
+        <moduli:gruppo id="presentata_per_conto" class="dati_modulo">
+            <moduli:opzioni id="per_conto" class="lista_checkbox_vertical checkbox_esclusivi2">
+                <moduli:opzione id="per_conto_proprio">proprio</moduli:opzione>
+                <moduli:opzione id="per_conto_soggetto_delegante">del/i soggetto/i delegante/i indicato/i in precedenza</moduli:opzione>
+                <div class="riga">
+                    <moduli:opzione id="per_conto_ditta_societa_impresa">della Ditta/Società/Impresa</moduli:opzione>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_nome" class="input_bigwidth"></moduli:dato>
+                </div>
+                <div class="riga margin_l_35">
+                    <moduli:dato id="per_conto_ditta_societa_impresa_piva" class="label_auto input_smallwidth">P.I.</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_sede" class="label_auto input_mediumwidth">con sede in</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_prov" class="label_xsmlwidth input_xxsmallwidth">prov.</moduli:dato>
+                </div>
+                <div class="riga margin_l_35">
+                    <moduli:dato id="per_conto_ditta_societa_impresa_via" class="input_mediumwidth">via</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_civico" class="label_xsmlwidth input_xsmallwidth">n.</moduli:dato>
+                    <moduli:dato id="per_conto_ditta_societa_impresa_bis" class="label_auto input_xxsmallwidth">/</moduli:dato> 
+                </div>
+            </moduli:opzioni>
+        </moduli:gruppo>
+    </div>
+
+    <div id="container_avente_titolo_presentazione_istanza">
+        <h3 class="riga_grigia">Avente Titolo alla presentazione dell'Istanza di Agibilità in quanto:</h3>
+        <moduli:gruppo id="avente_titolo_presentazione_istanza" class="dati_modulo">
+            <moduli:opzioni id="avente_titolo" class="lista_checkbox_vertical checkbox_esclusivi3">
+                <moduli:opzione id="avente_titolo_proprietario_esclusivo">proprietario esclusivo</moduli:opzione>
+                <div class="riga">
+                    <moduli:opzione id="avente_titolo_delegato_ditta" class="float_left">delegato dalla Ditta</moduli:opzione>
+                    <moduli:dato id="avente_titolo_delegato_ditta_nome" class="float_left input_mediumwidth"></moduli:dato>
+                    in qualità di Rappresentante Legale
+                </div>
+                <div class="riga">
+                    <moduli:opzione id="avente_titolo_delegato_condominio" class="float_left">delegato dal Condominio dello stabile di</moduli:opzione>
+                    <moduli:dato id="avente_titolo_delegato_condominio_nome" class="float_left input_mediumwidth"></moduli:dato>
+                    in qualità di Amministratore/delegato
+                </div>
+                <!--
+                <div class="clear_both margin_l_35">
+                    allegare la delibera di assemblea condominiale nel quale viene rilasciato il nulla osta dei condomini sui lavori (solo per i lavori che interessano parti condominiali)
+                    <moduli:allegato id="allegato_documento_identita" autohide="true" save_path="moduli/" class="riga"></moduli:allegato>
+                </div>
+                -->
+                <moduli:opzione id="avente_titolo_comproprietario">compropietario con i/il soggetto/i delegante/i elencato/i</moduli:opzione>
+                <moduli:opzione id="avente_titolo_locatario_comodatario">locatario/comodatario, a tale scopo autorizzato dal/i proprietario/i delegante/i elencato/i</moduli:opzione>
+            </moduli:opzioni>
+        </moduli:gruppo>
+    </div>
+    <br />
+    <div id="container_richiede">
+        <moduli:gruppo id="richiede" class="dati_modulo no_border">
+            <moduli:opzioni id="chiede_opt" class="lista_checkbox_vertical checkbox_esclusivi4">
+                <moduli:opzione id="chiede_opt_certificato"><strong>CHIEDE IL RILASCIO DEL CERTIFICATO DI AGIBILITÀ</strong></moduli:opzione>
+                <moduli:opzione id="chiede_opt_avvalere_art25"><strong class="">Intende avvalersi della procedura prevista dall'art. 25 comma 5/bis del D.P.R. 380/01 e ss.mm.ii e dalla L.R. n. 12 del 07/04/2014,</strong></moduli:opzione>
+            </moduli:opzioni>
+            <moduli:opzioni id="richiede_opt" class="lista_checkbox_vertical checkbox_esclusivi5">
+                <strong class="margin_l_35">pertanto costituisce parte integrante della presente istanza la Dichiarazione di Agibilità del Direttore Lavori/Tecnico Incaricato </strong>(AGIB_Mod_2)
+                <moduli:opzione id="richiede_opt_intero_edificio">Per l'intero edificio</moduli:opzione>
+                <moduli:opzione id="richiede_opt_singole_porzioni_ui">Per singole porzioni o unità immobiliari</moduli:opzione>
+                <moduli:opzione id="richiede_opt_altro">Per singole porzioni o unità immobiliari</moduli:opzione>
+                <div class="riga">
+                    <moduli:opzione id="altro" class="label_xsmlwidth">Altro</moduli:opzione>
+                    <moduli:dato id="altro_specificare" class="label_auto input_bigwidth">(specificare) </moduli:dato> 
+                </div>
+            </moduli:opzioni>
+            <div class="clear_both">
+                <!-- <label class="float_left">I cui lavori sono terminati in data</label> -->
+                <moduli:dato id="richiede_data_ultimazione_lavori" class="label_auto input_xsmallwidth">I cui lavori sono terminati in data</moduli:dato>
+                come da comunicazione presentata
+            </div>
+        </moduli:gruppo>
+    </div>
+    <br />
+    <h4>Consapevole che le dichiarazioni mendaci e le falsità in atti comportano le sanzioni previste dall'art. 76 del D.P.R. n. 445/2000 e la decadenza dai benefici conseguiti con il provvedimento emanato sulla base della dichiarazione non veritiera</h4>
+    <br />
+    <h3>DICHIARA</h3>
+    <ol class="alpha">
+        <li>che i dati personali riportati sono veritieri;</li>
+        <li>di essere legittimato, secondo le vigenti norme, alla presentazione dell'Istanza di Agibilità;</li>
+        <li>l'avvenuta prosciugatura dei muri e la salubrità degli ambienti;</li>
+        <li>che le opere realizzate risultano conformi a:</li>
+    </ol>
+    <moduli:gruppo id="container_opere_conformi_intestato" class="dati_modulo no_border">
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia1" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox1 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero1" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data1" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia2" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox2 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero2" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data2" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia3" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox3 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero3" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data3" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia4" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox4 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero4" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data4" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia5" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox5 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero5" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data5" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia6" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox6 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero6" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data6" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia7" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox7 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero7" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data7" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia8" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox8 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero8" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data8" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia9" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox9 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero9" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data9" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga">
+            <div class="ui-widget float_left">
+                <moduli:dato id="scelta_tipologia10" class="label_auto input_mediumwidth"></moduli:dato>
+                <select class="input_combobox10 hide">
+                    <option value=""></option>
+                    <option value="tip1">Licenza/Concessione Edilizia/ Permesso di Costruire</option>
+                    <option value="tip2">Autorizzazione Edilizia</option>
+                    <option value="tip3">Accertamento conformità ex art. 36 D.P.R. n.380/01</option>
+                    <option value="tip4">D.I.A.</option>
+                    <option value="tip5">S.C.I.A.</option>
+                    <option value="tip6">C.I.L.</option>
+                    <option value="tip7">C.E.L.</option>
+                    <option value="tip8">Variante</option>
+                    <option value="tip9">C.E. o P.d.C. in sanatoria Legge n. 47/85</option>
+                    <option value="tip10">C.E. o P.d.C. in sanatoria Legge n.724/94</option>
+                    <option value="tip11">P.d.C. in sanatoria  Legge n.326/03</option>
+                </select>
+            </div>
+            <moduli:dato id="tipologia_numero10" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="tipologia_data10" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+            
+        <!--
+        <moduli:opzioni id="opere_conformi" class="lista_checkbox_vertical margin_l_35">
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_licenza_concedilizia_pdc" class="label_xxbigwidth">Licenza/Concessione Edilizia/ Permesso di Costruire</moduli:opzione>
+                <moduli:dato id="opere_conformi_licenza_concedilizia_pdc_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_licenza_concedilizia_pdc_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_autedilizia" class="label_xxbigwidth">Autorizzazione Edilizia</moduli:opzione>
+                <moduli:dato id="opere_conformi_autedilizia_pdc_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_autedilizia_pdc_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_accconf_art36" class="label_xxbigwidth">Accertamento conformità ex art. 36 D.P.R. n.380/01</moduli:opzione>
+                <moduli:dato id="opere_conformi_accconf_art36_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_accconf_art36_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_dia" class="label_xxbigwidth">D.I.A.</moduli:opzione>
+                <moduli:dato id="opere_conformi_dia_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_dia_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_scia" class="label_xxbigwidth">S.C.I.A.</moduli:opzione>
+                <moduli:dato id="opere_conformi_scia_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_scia_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_cil" class="label_xxbigwidth">C.I.L.</moduli:opzione>
+                <moduli:dato id="opere_conformi_cil_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_cil_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_cel" class="label_xxbigwidth">C.E.L.</moduli:opzione>
+                <moduli:dato id="opere_conformi_cel_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_cel_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_variante1" class="label_xxbigwidth">Variante</moduli:opzione>
+                <moduli:dato id="opere_conformi_variante1_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_variante1_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_ce_pdc_in_sanatoria_l_47" class="label_xxbigwidth">C.E. o P.d.C. in sanatoria Legge n. 47/85</moduli:opzione>
+                <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_47_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_47_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_ce_pdc_in_sanatoria_l_724" class="label_xxbigwidth">C.E. o P.d.C. in sanatoria Legge n.724/94</moduli:opzione>
+                <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_724_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_ce_pdc_in_sanatoria_l_724_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_pdc_in_sanatoria_l_326" class="label_xxbigwidth">P.d.C. in sanatoria  Legge n.326/03</moduli:opzione>
+                <moduli:dato id="opere_conformi_pdc_in_sanatoria_l_326_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+                <moduli:dato id="opere_conformi_pdc_in_sanatoria_l_326_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+            </div>
+            <div class="riga">
+                <moduli:opzione id="opere_conformi_precedenti_cia_rilasciati">Precedenti certificati di agibilità rilasciati per l'immobile:</moduli:opzione>
+            </div>
+        </moduli:opzioni>
+        -->
+        <moduli:opzioni id="opere_conformi" class="lista_checkbox_vertical margin_l_35">
+        <div class="riga">
+                <moduli:opzione id="opere_conformi_precedenti_cia_rilasciati">Precedenti certificati di agibilità rilasciati per l'immobile:</moduli:opzione>
+            </div>
+        </moduli:opzioni>
+        <div class="riga margin_l_70">
+            <!-- <label class="float_left">intestato a</label> -->
+            <moduli:dato id="opere_conformi_intestato1" tipo="longText" class="label_auto input_mediumwidth adaptive_input">intestato a</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato1_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato1_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <!-- <label class="float_left">intestato a</label> -->
+            <moduli:dato id="opere_conformi_intestato2" tipo="longText" class="label_auto input_mediumwidth adaptive_input">intestato a</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato2_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato2_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <!-- <label class="float_left">intestato a</label> -->
+            <moduli:dato id="opere_conformi_intestato3" tipo="longText" class="label_auto input_mediumwidth adaptive_input">intestato a</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato3_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato3_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <!-- <label class="float_left">intestato a</label> -->
+            <moduli:dato id="opere_conformi_intestato4" tipo="longText" class="label_auto input_mediumwidth adaptive_input">intestato a</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato4_numero" class="label_auto input_xsmallwidth">n°</moduli:dato>
+            <moduli:dato id="opere_conformi_intestato4_data" class="label_auto input_xsmallwidth">del</moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    
+
+
+    <h3 class="align_left">SOLLEVA EVENTUALI ANNOTAZIONI SULLA LEGITTIMITA' DELL'IMMOBILE</h3>
+    <div>il Comune di BARI da ogni responsabilità nei confronti dei terzi.</div>
+    <div class="data-firma" id="data_firma_2">
+        <div class="firma">
+            <label>Firma del richiedente<br /><sub>allegare copia documento di identità come da art. 38 del D.P.R. n.445/2001</sub></label>
+            <span class="spazio-firma">&nbsp;</span>
+        </div>
+    </div>
+    <br />
+    <br />
+    <p>Il sottoscritto dichiara di aver preso visione dell'informativa ai sensi del  d. lgs n. 196/2003 e di dare il consenso al trattamento dei dati personali.</p>
+    <div class="riga">
+        <moduli:data-firma id="data_firma_3" class="data-firma" label-firma="Firma del richiedente"/>
+    </div>
+    <br />
+    <br />
+    <br />
+    <h3 class="align_left">ASSEVERAZIONE</h3>
+    <moduli:gruppo id="asseverazione" class="dati_modulo dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_progettista" class="label_auto input_mediumwidth_220">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="ordine_progettista" class="label_auto input_mediumwidth_220">tecnico progettista iscritto nell'albo professionale</moduli:dato>
+            <moduli:dato id="citta_ordine_progettista" class="label_auto input_xxsmallwidth">della provincia di </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="n_ordine_progettista" class="label_auto input_smallwidth">al progressivo</moduli:dato>
+            <div class="float_left">, titolare della redazione degli elaborati tecnici e grafici relativi all’istanza di Autorizzazione paesaggistica,</div>
+        </div>
+        <div class="riga">consapevole della responsabilità penale che assume ai sensi dell'art. 76 del T.U. approvato con D.P.R. 445/2000, nel caso di dichiarazioni non veritiere e falsità degli atti:
+        </div>
+    </moduli:gruppo>
+    <h3 class="align_left">DICHIARA</h3>
+    <p>la veridicità, la esattezza e la completezza delle dichiarazioni/certificazioni allegate alla presente istanza.</p>
+    <div class="riga">
+        <moduli:data-firma id="data_firma_4" class="data-firma" label-firma="Il Tecnico Incaricato <sub>(timbro e firma)</sub>"/>
+    </div>
+    <br />
+    <br />
+</moduli:modulo>

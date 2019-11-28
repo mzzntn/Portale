@@ -1,0 +1,411 @@
+/* RUBY 2
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/responsive.scss";
+*/
+/* RUBY < 2 */
+ 
+@import 'core/components/bootstrap/scss/bootstrap.scss';
+@import 'core/components/bootstrap/scss/responsive.scss';
+@import 'compass';
+
+@mixin text-shadow-portal($tipo: leggera, $shadow-1: default) {
+  $text-shadow-color-portal: $main-color; 
+  $text-shadow-h-offset-portal: 1px; 
+  $text-shadow-v-offset-portal: 1px; 
+  $text-shadow-blur-portal: 1px;
+
+  @if $tipo == pesante {
+    $text-shadow-color-portal: darken($main-color,20%); 
+    $text-shadow-h-offset-portal: 2px; 
+    $text-shadow-v-offset-portal: 2px; 
+    $text-shadow-blur-portal: 2px;
+  }
+  @include single-text-shadow($text-shadow-color-portal, $text-shadow-h-offset-portal, $text-shadow-v-offset-portal, $text-shadow-blur-portal);
+}
+
+$default-border-radius: 8px !default;
+
+$main-color: #3f82c3 !default;
+$link-color: #3f82c3 !default;
+$text-color: #333333 !default;
+$basecolor_menu: #F0F0F0 !default;
+$color_ON_main-color: white !default;
+$side_color: #f4f4f4 !default;
+
+$base_text_size: 13px !default;
+$h3_text_size: $base_text_size+1 !default;
+$TB_text_size: $base_text_size - 1 !default;
+
+$H_fascia: 150px !default;
+$H_logo: 90px !default;
+$W_logo: 65px !default;
+$H_nome: 45px !default;
+
+$H_FLN: $H_fascia - 20 !default;
+$H_FLN05: $H_FLN / 2 !default;
+$H05_logo: $H_logo / 2 !default;
+$margintop_logo: $H_FLN05 - $H05_logo !default;
+
+$H05_nome: $H_nome / 2 !default;
+$margintop_nome: $H05_logo - $H05_nome + $margintop_logo !default;
+
+body, html{
+     font-family: Helvetica, Arial, Sans-serif;     
+}
+
+#portal_container{
+    background-color: $side_color;
+}
+
+#portal{
+    background-color: white;
+    @extend .container;
+    a{
+        color: $main-color;
+        font-weight:bold;
+        //@include hover-link;
+    }
+}
+
+#portal_main{
+    //@include makeRow();
+    overflow: hidden;
+    min-height: 700px;
+    margin:0px;
+}
+
+.portal_top{
+    background-color: $main-color;
+    height: $H_fascia;
+    @include makeRow();
+    overflow: hidden;
+    background-color: $main-color;
+    height: $H_fascia;
+}
+
+#portal_left{
+    @include makeColumn(3);
+    margin:{
+        top: 20px;
+        left: 10px;
+    }
+}
+
+#portal_content{
+    @include makeColumn(9);
+    overflow:  hidden;
+    margin:{
+        top: 20px;
+        left: 10px;
+    }
+}
+
+h3 {
+    font{
+        size: 16px;
+        weight: lighter;
+    }
+}
+
+div#portal_content.nomeModuliaccessopubblicoidmoduli{
+    width:auto;
+}
+
+.ente{
+    @extend .container;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 60px;
+     h3{
+        color:$color_ON_main-color;
+    }
+}
+
+
+#topbar{
+    @extend .container;
+    margin: 0 auto;
+    font-size: $TB_text_size;
+    color: $color_ON_main-color;
+    padding-left: 60px;
+    span{
+        padding-right: 10px;
+    }
+    a{
+        color: $color_ON_main-color;
+        padding-right: 10px;
+        @include hover-link;
+    }
+}
+
+#logo{
+    background:{
+        repeat:no-repeat;
+    }
+    width: $W_logo;
+    height: $H_logo;
+    margin-top: $margintop_logo;
+    padding-bottom:$margintop_logo;
+    margin-bottom:0px;
+    float: left;
+}
+
+h1{
+    font-family: helvetica, arial, sans-serif;
+    color: $color_ON_main-color;
+    float: left;
+    font-size: $H_nome;
+    margin-top: $margintop_nome;
+    padding-left: 25px;
+    @include text-shadow-portal(pesante);
+}
+
+.menu_box{
+    background-color: $basecolor_menu;
+    @include border-radius(8px, 8px); 
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    h3{
+        color: $color_ON_main-color;
+        padding-left: 25px;
+        font:{
+            weight: lighter;
+            size: $h3_text_size;
+        }
+        @include gradient-vertical(lighten($main-color,13%), $main-color);
+        @include text-shadow-portal();
+        @include border-top-radius();
+    }
+    li{
+        @include no-bullets;
+        font-size: $base_text_size;
+    }
+}
+
+#user{
+    background-color: $basecolor_menu;
+    @include border-radius(8px, 8px); 
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    h3{
+        color: $color_ON_main-color;
+        padding-left: 25px;
+        font:{
+            weight: lighter;
+            size: $h3_text_size;
+        }
+        @include gradient-vertical(lighten($main-color,13%), $main-color);
+        @include text-shadow-portal();
+        @include border-top-radius();
+    }
+    li{
+        @include no-bullets;
+        font-size: $base_text_size;
+    }
+    a{
+        color: $text-color;
+        @include hover-link;
+    }
+}
+
+.menucnt{
+    li{
+        padding-top: 5px;
+    }
+}
+
+#riquadro-utente{
+    margin-left: 25px;
+    span{
+        margin-left: 0;
+    }
+    ul{
+        margin-left: 0;
+    }
+}
+
+#breadcrumb{
+    margin: 0 20px 15px 0px;
+    padding: 2px;
+    font-size: 12px;
+    border-bottom: 1px solid $main-color;
+    a{
+        color: $text-color;
+        @include hover-link;
+    }
+}
+
+#portal_left{
+    a{
+        color: $text-color;
+        font-weight:normal;
+        @include hover-link;
+    }
+}
+
+.introduzione{
+    a{
+        color: $main-color;
+        font-weight: bold;
+        @include hover-link;
+    }
+}
+
+#portal_bottom{
+    background-color: $main-color;
+    height: $H_fascia;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    ul{
+        @include no-bullets;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#portal_bottom .ente{
+    background-color: $main-color;
+    color: $color_ON_main-color;
+    padding:{
+        left: 40px;
+        top: 15px;
+    }
+    font-size: $base_text_size;
+    li{
+        @include text-shadow-portal();
+    }
+    a{
+        color: white;
+        @include hover-link;
+    }
+}
+
+.form-horizontal .control-label{
+    padding-right:25px;
+}
+
+.form-horizontal .control-group > label {
+    width: 150px;
+}
+
+.form-horizontal .controls {
+    margin-left: 175px;
+}
+
+#autenticazione_login .row, #cambio_password .row {
+    margin-left: 0px;
+}
+
+div.credenziale_accesso >div{
+    margin-bottom: 5px;
+}
+
+div.riga{
+    margin-bottom: 5px;
+}
+
+#portal_content{
+    h1, h2, h3{
+        margin: 8px 0;
+    }
+
+    h4, h5, h6{
+        margin: 5px 0;
+    }
+
+    li{
+        margin: 3px 0;
+    }
+}
+
+#topbar {
+    color: white;
+    background-color:transparent;
+}
+
+.align_right{
+    text-align: right;
+    width: 220px;
+}
+
+
+.cf_n_char{
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.auth_provider_logo{
+    margin-bottom: -15px;
+}
+
+.auth_provider_text{
+    line-height: 35px;
+}
+
+.spinner_spin{
+    display: block;
+    min-height: 80px;
+}
+
+/* dossier cittadino */
+#gestione_dossier {
+    li{
+        &.link_dati_dossier{
+            list-style: none outside none;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+    }
+    a{
+        &:hover {
+            color: #00C12B;
+        }
+    }
+
+    .no_b_margin{
+        margin-bottom: 0;
+    }
+
+    form.estrai_dati{
+        input{
+            margin-right: 15px;
+        }
+    }
+
+    form.filtra_transazioni{
+        .control-group{
+            margin-bottom: 5px;
+            > label{
+                text-align: left;
+                width: 130px;
+                }
+            > label.small_label{
+                text-align: left;
+                width: 100px;
+            }
+        }   
+        .controls {
+            margin-left: 80px;
+            input.small_input{
+                width: 130px;
+            }
+        }
+    }
+    .button_cancella{
+        margin-left: 10px;
+    }
+}
+
+
+//stili per ridefinire il popup della firma digitale
+.ui-button-text-only .ui-button-text {
+    padding: 6px 12px;
+}
+
+.ui-button .ui-button-text {
+    display: inline;
+}
+
+
+
+

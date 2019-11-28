@@ -1,0 +1,16 @@
+<div class="file-manager">
+    <tpl:asset type="js" src="js/file_manager.js" />
+    <div class="tabs">
+        <a href="{ widget_params(:action => 'archive') }" class="button_files { @active[:archive] }">_(Archive)</a>
+        <a href="{ widget_params(:action => 'upload') }" class="button_upload { @active[:upload] }">_(Upload file)</a>
+    </div>
+    <div class="div_archive">
+        <files:archive id="archive" sp:target-only="true"/>
+    </div>
+    <div class="div_upload">
+        <files:upload id="upload" sp:target-only="true"/>
+    </div>
+    <div class="div_viewer">
+        <files:viewer id="viewer" sp:target-only="true" />
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<struct name="amministratore" external="true">
+   <element name='login' type='text' key='true' />	
+   <element name='password' type='text' />
+   <element name='start_user' type='text' />
+</struct>

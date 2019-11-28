@@ -1,0 +1,14 @@
+<div>
+    <tpl:asset type="css" src="css/images.css" />
+    <tpl:asset type="js" src="js/image_browser.js" />
+    <div sp:each="@images |image|" class="image">
+        <div class="image-wrapper">
+            <a class="image-link" href="{ widget_params(:image => image[:id] ) }">
+                <img  src="{ image[:thumb] }" alt="{ image[:title] }" title="{ image[:title] }">
+            </a>
+        </div>
+        <div class="image-title">
+            { image[:title] }
+        </div>
+    </div>
+</div>

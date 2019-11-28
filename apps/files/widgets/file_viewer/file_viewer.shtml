@@ -1,0 +1,47 @@
+<div class="file-viewer">
+    <tpl:asset type="js" src="js/plugins/jquery.loadingdotdotdot.js" />
+    <tpl:asset type="js" src="js/file_viewer.js" />
+    <div sp:if="@uuid" style="display:none" class="uuid">{ @uuid }</div>
+    <div class="file_info">
+        <div class="details">
+            <div class="row">
+                <label>_(Size):</label><span class="data">{ @size }</span>
+            </div>
+            <div class="row">
+                <label>_(Type):</label><span class="data">{ @mime_type }</span>
+            </div>
+        </div>
+        <div class="preview">
+            <a href="{ widget_action('get_file') }" target="_blank">
+                <img src="{ widget_action('preview') }&t={ Time.now.to_i }">
+            </a>
+        </div>
+    </div>
+    <div class="saving_div" style="display: none">
+        _(Saving, please wait)
+    </div>
+    <div class="errors" style="display:none">
+        <div class="error_title_required">_(The title is required)</div>
+    </div>
+    <div class="params">
+        <form action="{ @request[:page_path] }" method="post">
+            <div class="fields">
+                <div class="row">
+                    <label>_(Name):</label>
+                    <input type="text" name="{ widget_param('name') }" value="{ @name }">
+                </div>
+                <div class="row">
+                    <label>_(Title):</label>
+                    <input type="text" name="{ widget_param('title') }" value="{ CGI.escapeHTML(@title || '') }" sp:attr-if="@require_title,required" class="title { (@require_title ? 'required' : '') }">
+                </div>
+                <div class="row tags">
+                    <label>_(Folder):</label>
+                    <input type="text" name="{ widget_param('tags') }" value="{ @tags }">
+                </div>
+            </div>
+            <div class="row submit" sp:if="!@no_buttons">
+                <input type="submit" name="{ widget_param('save') }" value="Ok">
+            </div>
+        </form>
+    </div>
+</div>

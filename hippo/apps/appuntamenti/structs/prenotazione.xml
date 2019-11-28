@@ -1,0 +1,16 @@
+<struct name='prenotazione'>
+	<element name='persona' type='text'/>
+	<element name='utente' type='int' />
+	<element name='operatore' type='appuntamenti::operatore' />
+	<element name='tipo' type='appuntamenti::tipo' />
+	<element name='email' type='email' />
+	<element name='telefono' type='text' />
+	<element name='inizio' type='dateTime' />
+	<element name='fine' type='dateTime' />
+	<element name='note' type='longText' />
+	<element name='noteUfficio' type='longText' />
+	<element name='motivoAnnullamento' type='longText' />
+	<element name='nrIstanza' type='int' />
+	<element name='stato' type='appuntamenti::stato'/>
+	<element name='allegato' type='file' />
+</struct>

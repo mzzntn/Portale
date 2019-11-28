@@ -1,0 +1,41 @@
+<div id="navigatore_portale" class="{ (@index ? 'nascondi_sotto_500' : '') }">
+    
+    <!--<span sp:if="@index || @attivazione" class="text-center central_nav" >
+		<span class="freccia freccia_sx_big">
+			<span class="navigatore left_navigatore">
+				<a href="{ Portal::PortalController.http_s_url('servizi_pubblici') }" id="link_serv_pubblici">SERVIZI PUBBLICI</a>
+			</span>
+		</span>
+		<span class="freccia freccia_dx_big">
+			<span class="navigatore right_navigatore">
+				<a href="{ Portal::PortalController.http_s_url('servizi_privati') }" id="link_serv_riservati">SERVIZI PRIVATI</a>
+			</span>
+		</span>
+	</span>-->
+
+<!--	<span sp:if="@autenticazione || @registrazione" class="text-center central_nav">
+		<span class="freccia freccia_sx_big">
+			<span class="navigatore left_navigatore text-uppercase">
+				<a href="{ Portal::PortalController.http_s_url('autenticazione') }" class="{ (@autenticazione ? 'active' : '') }" id="login-form-link">Accedi</a>
+			</span>
+		</span>
+		<span class="freccia freccia_dx_big">
+			<span class="navigatore right_navigatore text-uppercase">
+				<a sp:if="Spider.conf.get('portal.registrazione_utenti') == true" href="{ Portal::PortalController.http_s_url('registrazione') }" id="register-form-link" class="{ (@registrazione ? 'active' : '') }">Registrati</a>
+				<span sp:if="Spider.conf.get('portal.registrazione_utenti') == false">Registrati</span>
+			</span>
+		</span>
+	</span>-->
+	<!-- navigatore con un testo e le due frecce, usate per servizi pubblici e privati -->
+	<!--<div sp:if="@lista_servizi_pubblici || @lista_servizi_privati" class="text-center central_nav">
+		<div class="freccia freccia_completa">
+			<div class="navigatore navigatore_completo no_separatore text-uppercase">
+				<span>{ @testo_navigatore }</span>
+			</div>
+		</div>		
+	</div>-->
+
+
+
+</div>
+

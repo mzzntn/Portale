@@ -1,0 +1,6 @@
+<struct name="messaggio" external="true">
+    <element name="id" type="int" key="true" />
+    <element name="messaggio" type="portal_spider::messaggio" />
+    <element name="to" type="text" />
+    <element name="text" type="text" />
+</struct>

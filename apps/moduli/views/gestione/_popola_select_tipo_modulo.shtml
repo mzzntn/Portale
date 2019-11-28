@@ -1,0 +1,4 @@
+<select name="nome_modulo" id="select_tipo_modulo">
+	<option value="">Selezione nome modulo...</option>
+	<option sp:each="@tipi_modulo_da_settore |tipo_modulo|" value="{ tipo_modulo['id'] }" sp:attr-if="@tipo_modulo_settore_selezionato == tipo_modulo['id'],selected,selected" >{ tipo_modulo['nome'] }</option>
+</select>

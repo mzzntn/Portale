@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<struct name='operatore'>
+	<element name='nome' type='text' />
+	<element name='descrizione' type='longText' />
+	<element name='prenotazioni' type='appuntamenti::prenotazione' maxOccurs='unbounded' />
+	<element name='orari' type='appuntamenti::orario' maxOccurs='unbounded' />
+        <element name='tipi' type='appuntamenti::tipo' maxOccurs='unbounded' />
+        <element name='email' type='email' required='true' /> 
+	<element name='limitaMesi' label='Limita a mesi' type='int' />
+</struct>

@@ -1,0 +1,28 @@
+<html> 
+    <head> 
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+        <title>Comunicazione Portale Cittadino</title> 
+    </head> 
+	<body id="email">
+		<div>
+			Comunicazione inviata da: <%= Spider.conf.get('portal.nome') %>
+			<br />
+			<em><%= testo_breve %></em>
+		</div>
+		<div>
+		<% unless link_immagine.blank? %>
+			<img style="float:left;padding-right:10px;" src="<%= link_immagine %>" />
+		<% end %>
+		<div style="margin-left:190px;"></div>
+		<%= testo_comunicazione %>
+
+
+		
+		</div>
+		<div style="clear:both;">
+			Servizio Comunicazioni
+			<%= Spider.conf.get('portal.nome') %>
+		</div>
+	</body> 
+
+</html>

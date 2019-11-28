@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Spider::Files \n"
+"POT-Creation-Date: 2011-07-01 16:47+0200\n"
+"PO-Revision-Date: 2010-06-09 16:38+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: models/base_file.rb:13 models/tag.rb:4
+#: widgets/file_viewer/file_viewer.shtml:30
+msgid "Name"
+msgstr ""
+
+#: models/base_file.rb:14 widgets/file_viewer/file_viewer.shtml:34
+msgid "Title"
+msgstr ""
+
+#: models/base_file.rb:15 models/base_file.rb:16
+msgid "Tags"
+msgstr ""
+
+#: widgets/file_form/file_form.rb:25
+msgid "A file is required"
+msgstr ""
+
+#: widgets/file_archive/file_archive.shtml:5
+msgid "Folders"
+msgstr ""
+
+#: widgets/file_manager/file_manager.shtml:4
+msgid "Archive"
+msgstr ""
+
+#: widgets/file_manager/file_manager.shtml:5
+msgid "Upload file"
+msgstr ""
+
+#: widgets/file_upload/file_upload.shtml:7
+msgid "Choose file"
+msgstr ""
+
+#: widgets/file_upload/file_upload.shtml:10
+msgid "File"
+msgstr ""
+
+#: widgets/file_upload/file_upload.shtml:13
+#: widgets/file_viewer/file_viewer.shtml:8
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:47
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:48
+msgid "Size"
+msgstr ""
+
+#: widgets/file_upload/file_upload.shtml:18
+msgid "Upload"
+msgstr ""
+
+#: widgets/file_viewer/file_viewer.shtml:11
+msgid "Type"
+msgstr ""
+
+#: widgets/file_viewer/file_viewer.shtml:21
+msgid "Saving, please wait"
+msgstr ""
+
+#: widgets/file_viewer/file_viewer.shtml:24
+msgid "The title is required"
+msgstr ""
+
+#: widgets/file_viewer/file_viewer.shtml:38
+msgid "Folder"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:37
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:38
+msgid "Select files"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:38
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:39
+msgid "Add files to the upload queue and click the start button."
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:44
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:46
+msgid "Filename"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:46
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:47
+msgid "Status"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:56
+msgid "Add files"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:57
+msgid "Start upload"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:128
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:431
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:505
+msgid "Uploaded %d/%d files"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:175
+msgid "Add files."
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:189
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:240
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:584
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:632
+msgid "Drag files here."
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:274
+msgid "Error: File to large: "
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.plupload.queue/jquery.plupload.queue.js:278
+msgid "Error: Invalid file extension: "
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:62
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:564
+msgid "Add Files"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:63
+msgid "Start Upload"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:64
+msgid "Stop Upload"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:204
+msgid "Using runtime: "
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:230
+msgid "File count error."
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:297
+msgid "File: %s"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:301
+msgid "File: %f, size: %s, max file size: %m"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:566
+msgid "%d files queued"
+msgstr ""
+
+#: public/plupload/src/javascript/jquery.ui.plupload/jquery.ui.plupload.js:686
+msgid "Close"
+msgstr ""

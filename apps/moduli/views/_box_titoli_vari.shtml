@@ -1,0 +1,53 @@
+<div id="box_titoli_vari">
+	<h2 class="hide hidden mostra_in_stampa">Scheda B - Titoli Vari</h2>
+	<div sp:if="@titoli_vari.blank?" class="alert alert-info">
+		Non sono stati inseriti Titoli Vari
+	</div>
+	<div sp:if="!@titoli_vari.blank?" class="panel panel-default">
+		<div class="panel-heading">
+			<h4>Titoli Vari</h4>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered table-striped width_auto">
+				<thead>
+				    <tr class="heading_row">
+				    	<th>Titolo</th>
+				    	<th>In</th>
+				      	<th>Conseguito presso</th>
+				      	<th>Punteggio</th>
+						<th>Facolta</th>
+				      	<th>Anno</th>
+				     <!-- 	<th>Titolo/Descrizione</th>-->
+				      	<th class="nascondi_in_stampa"></th>
+				    </tr>
+				</thead>
+			  	<tbody>
+					<tr sp:each_pair="@titoli_vari |id,titolo_vario|">
+						<td>{ (Moduli.tipo_titolo_vario(titolo_vario['tipo_titolo']))['nome'] }</td>
+						<td>{ titolo_vario['in'] }</td>
+						<td>{ titolo_vario['universita'] }</td>
+						<td>{ (Moduli.hash_titoli_vari)[titolo_vario['tipo_titolo']]['punteggio'] }</td>
+						<td>{ titolo_vario['facolta'] }</td>
+						<td>{ titolo_vario['anno_accademico'] }</td>
+						<!--. <td>{ titolo_vario['titolo_descrizione'] }</td>-->
+						<td class="nascondi_in_stampa">
+							<a title="Cancella" class="link_cancellazione_titoli_vari" id_modulo="{ @id_modulo.to_s }" id_titolo_vario="{ titolo_vario['id_inc'].to_s }" href="#" ><i class="glyphicon glyphicon-trash"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="nascondi_in_stampa">
+				Totale Punteggi: <span id="totale_punteggio_titoli_vari">{ @totale_punteggio_titoli_vari }</span> (punteggio indicativo soggetto a verifica come da bando)
+				<input type="hidden" id="totale_punteggio_titoli_vari_form" name="totale_punteggio_titoli_vari" value="{ @totale_punteggio_titoli_vari }">
+			</div>
+		</div>
+                <p class="hide hidden mostra_in_stampa">
+                        Totale Punteggio Titoli Vari: <span id="totale_punteggio_titoli_vari">{ @totale_punteggio_titoli_vari }</span><br/>
+                        (punteggio indicativo soggetto a verifica come da bando)
+                </p>
+
+		<p class="hide hidden mostra_in_stampa annotazioni">
+			Ai sensi del Testo Unico approvato con D.P.R. 28/12/2000, n. 445, le dichiarazioni rese e sottoscritte nella domanda di ammissione hanno valore di autocertificazione; nel caso di falsità in atti e dichiarazioni mendaci si applicano le sanzioni penali previste dall’art. 76 del Testo Unico approvato con D.P.R. 28/12/2000, n. 445, pertanto anche ogni scheda va firmata e datata.
+		</p>
+	</div>
+</div>

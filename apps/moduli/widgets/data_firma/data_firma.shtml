@@ -1,0 +1,10 @@
+<div class="data-firma readonly_js">
+    <div class="data">
+        <label>Data</label><forms:datetime id="data" value="@data" change-month="true" change-year="true" />
+    </div>
+    <div class="firma">
+        <label>{ @label_firma }</label>
+        <!-- <span class="spazio-firma">&nbsp;</span> -->
+        <sp:run obj="@input" />
+    </div>
+</div>

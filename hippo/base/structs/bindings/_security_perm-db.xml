@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db"><table>_SECURITY_PERM</table><bind element="struct" dbField="ID_STRUCT"/><bind element="read" dbField="R"/><bind element="write" dbField="W"/></binding>

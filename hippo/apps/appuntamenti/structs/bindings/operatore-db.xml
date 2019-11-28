@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>APPUNTAMENTI__OPERATORE</table><bind element="nome" dbField="NOME"/><bind element="descrizione" dbField="DESCRIZIONE"/><mmbind element="tipi" table="APPUNTAMENTI__OPERATORE_REF_APPUNTAMENTI__TIPO" local_id="ID_APPUNTAMENTI__OPERATORE" remote_id="ID_APPUNTAMENTI__TIPO"/><bind element="email" dbField="EMAIL"/><bind element="limitaMesi" dbField="LIMITAMESI"/></binding>

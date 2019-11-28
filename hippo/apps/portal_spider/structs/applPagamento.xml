@@ -1,0 +1,5 @@
+<struct name="applPagamento" external="true">
+    <element name="id" type="text" />
+    <element name="nome" type="text" />
+    <element name="codice" type="text" />
+</struct>

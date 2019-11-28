@@ -1,0 +1,3 @@
+<div>
+    <core:search-table id="files_table" queryset="@files" elements="name,obj_modified"  />
+</div>

@@ -1,0 +1,8 @@
+<engine dbType='mssql'>
+<connection type='mssql'>
+<name>nome_db</name>
+<user>utente</user>
+<pass>password</pass>
+</connection>
+</engine>
+

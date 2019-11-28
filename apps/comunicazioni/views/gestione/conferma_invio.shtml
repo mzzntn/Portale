@@ -1,0 +1,77 @@
+<div>
+    <input type="hidden" id="id_comunicazione" value="{ @comunicazione.id }"/>
+	<legend>Conferma invio comunicazione: <span id="titolo">{ @comunicazione.titolo }</span></legend>
+        <div sp:if="@comunicazione.canali_pubblicazione.split(',').include?('facebook')" class="alert alert-danger" id="errore_pubblicazione_fb" style="display: none;">
+  		Si è verificato un errore durante la pubblicazione su facebook.
+    	</div>
+	    <div class="alert alert-success" id="{ (@comunicazione.canali_pubblicazione.split(',').include?('facebook') ? 'attendi_pubblicazione_fb' : '') }" style="{ (@comunicazione.canali_pubblicazione.split(',').include?('facebook') ? 'display: none;' : '') }">
+  		La comunicazione è stata pubblicata tramite i canali selezionati.
+  		<span sp:if="!@pubblicata_su_cms.blank?"><br />{ @pubblicata_su_cms }</span>	
+    	</div>
+    <div class="row">
+		<div sp:if="!@comunicazione.immagine.blank?" class="span4">
+	        <img id="img_comunicazione" src="{ Comunicazioni::GestioneComunicazioniController.https_url('download_immagine?id_com='+@comunicazione.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione">
+	    </div>
+	    <div class="span5">
+			<span class="label">Testo Breve:</span>
+			<div class="well well-small" id="testo_breve">
+				{ (@comunicazione.testo_breve.blank? ? "" : @comunicazione.testo_breve) }
+			</div>
+		</div>
+	</div>
+	<span class="label">Testo:</span>
+	<div class="well well-small width_50" id="testo">
+		{ @comunicazione.testo }
+	</div>
+	<div class="row">
+	    <div class="span2">
+	    	<span class="label">Data pubblicazione:</span>
+			<div class="well well-small width_100px">
+				{ @comunicazione.data_da.lformat(:short) }
+			</div>
+	    </div>
+	    <div class="span2">
+	    	<span class="label">Data scadenza:</span>
+			<div class="well well-small width_100px ">
+				{ @comunicazione.data_a.lformat(:short) }
+			</div>	
+	    </div>
+	    <div class="span3">
+	    	<span class="label">Tipologia Comunicazione:</span>
+			<div class="well well-small width_100px ">
+				<tpl:pass sp:if="@comunicazione.pubblica == true">Pubblica</tpl:pass>
+				<tpl:pass sp:if="@comunicazione.pubblica == false">Privata</tpl:pass>
+			</div>	
+	    </div>
+    </div>
+	<div class="row">
+		<div class="span3">
+			<span class="label">Canali di pubblicazione scelti:</span>
+			<div class="well well-small" >
+				<div sp:each="@comunicazione.canali_pubblicazione.split(',') |canale|" >
+					{ ( Comunicazioni.canale_comunicazione(canale).respond_to?(:dettagli_canale_comunicazione) ? Comunicazioni.canale_comunicazione(canale).dettagli_canale_comunicazione[:nome] : "" ) }
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="row form-actions">
+		<div  sp:if="@comunicazione.pubblica == false"  class="span2 offset4">
+			<a href="{ Comunicazioni::GestioneComunicazioniController.https_url }/{ @comunicazione.id }/lista_destinatari" class="btn">Lista destinatari</a>	
+		</div>
+		<div class="span2">
+			<a href="{ Comunicazioni::GestioneComunicazioniController.https_url }" class="btn">
+				Torna all'elenco</a>
+		</div>	
+	</div>
+
+	<!-- finestra modale per invio della comunicazione -->
+	<div id="modal_window" class="modal hide fade modal-sm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <!--- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+            <h3 id="myModalLabel">Invio Comunicazione</h3>
+        </div>
+        <div class="modal-body">
+            <h3>Invio comunicazione in corso, attendere il completamento dell'operazione.</h3>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div>
+	<div class="testata_modulo_chioggia">
+		<div class="logo_testata_modulo_chioggia">
+			<img  alt="logo comune" src="{ Moduli::ModuliController.download_img_b64('logo_chioggia.jpg') }" />
+		</div>
+		<div class="centro_testata_modulo_chioggia align_center">
+			<h2>{ Spider.conf.get('ente.nome') }</h2>
+			<div class="box_pratica">
+				<div class="">ISTANZA PORTALE NR.{ @id_pratica } DEL { (@data_pratica.blank? ? '' : Date.parse(@data_pratica).strftime('%d/%m/%Y') ) }</div>
+			</div>
+		</div>
+	</div>
+</div>

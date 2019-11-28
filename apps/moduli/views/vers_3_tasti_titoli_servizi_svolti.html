@@ -1,0 +1,409 @@
+<div class="modulo">
+	<legend>Completa Esperienze Lavorative svolta nell'esercizio di funzioni attinenti alle materie riferite al posto a concorso e Titoli di Studio</legend>
+	<span class="hide hidden" id="id_modulo">{ @id_modulo }</span>
+	<form method="post">
+		<tpl:include src="_box_servizi_pa" />
+		<button id="inserisci_servizio" type="button" class="btn btn-primary">Inserisci Esperienza Lavorativa</button>
+		<br /><br />
+		<tpl:include src="_box_titoli" />
+		<button type="button" tipo_titolo="laurea" class="inserisci_titolo btn btn-primary">Inserisci Ulteriore Laurea</button>
+		<button type="button" tipo_titolo="master" class="inserisci_titolo btn btn-primary">Inserisci Master</button>
+		<button type="button" tipo_titolo="dottorato" class="inserisci_titolo btn btn-primary">Inserisci Dottorato</button>
+		<br /><br />
+		<tpl:include src="_box_titoli_vari" />
+		<button id="inserisci_titolo_vario" type="button" class="btn btn-primary">Inserisci titoli vari</button>
+		<br /><br />
+		<div class="row">
+			<div class="back col-sm-2">
+	        	<a href="{ @link_indietro }" class="btn">Indietro</a>
+	    	</div>
+    		<div class="col-sm-2">
+	    		<button sp:if="@da_firmare" type="submit" sp:attr-if="!@errori.blank?,disabled,disabled" class="conferma btn btn-primary { (@errori.blank? ? '' : 'disabled') }">Conferma e Firma</button>
+				<button sp:if="!@da_firmare" type="submit" sp:attr-if="!@errori.blank?,disabled,disabled" class="conferma btn btn-primary { (@errori.blank? ? '' : 'disabled') }">Conferma e Procedi</button>
+	    	</div>
+	    </div>
+		
+	</form>
+	<br /><br /><br />
+	
+
+    
+    <!-- Modal Servizi Svolti-->
+	<div class="modal fade mio_modal" id="modal_servizi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Inserire il servizio prestato negli ultimi 15 anni nell'esercizio di funzioni attinenti alle materie riferite al posto a concorso</h4>
+	      		</div>
+		      	<div class="modal-body">
+		        	<form class='form-horizontal' id='form_servizi_ajax' method="POST" action="#" name="form_servizi_ajax"><br>
+				    	<div class='form-group'>
+				    		<label for='tipo_amministrazione' class='col-sm-2 control-label'>Servizio svolto presso *:</label>
+				    		<div class="col-sm-6">
+					        	<select class='form-control' id="tipo_amministrazione" name="tipo_amministrazione">
+					                <option value='ammin_prov'>Amministrazioni Provinciali</option>
+					                <option value='enti_locali'>Altri Enti Locali (Comuni – Comunità Montane)</option>
+					                <option value='altri_enti'>Altri Enti Pubblici</option>
+					            </select>
+					        </div>
+				        </div>
+				   		<div class='form-group'>
+				        	<label for='amministrazione' class='col-sm-2 control-label'>Amministrazione *:</label>
+				        	<div class='col-sm-8'><input type='text' class='form-control' id='amministrazione'></div>
+				    	</div>
+				    	<div class='form-group'>
+				    		<label for='cat_giuridica' class='col-sm-2 control-label'>Categoria Giuridica *:</label>
+				    		<div class="col-sm-2">
+					        	<select class='form-control' id="cat_giuridica" name="cat_giuridica">
+					                <option value='A'>A</option>
+					                <option value='B1'>B1</option>
+					                <option value='B3'>B3</option>
+					                <option value='C'>C</option>
+					                <option value='D1'>D1</option>
+					                <option value='D3'>D3</option>
+					                <option value='B1'>Leva Obbligatoria</option>
+					                <option value='B1'>Servizio civile volontario</option>
+					                <option value='D1'>Contratti di lavoro autonomo, di natura occasionale o coordinata e continuativa, per la stipula dei quali è stata richiesta la laurea</option>
+					                <option value='D3'>Contratti di lavoro autonomo, di natura occasionale o coordinata e continuativa, per la stipula dei quali è stata richiesta la laurea e anche l'iscrizione ad albi professionali</option>
+					            </select>
+					        </div>
+				        </div>
+				        <div class='form-group'>
+				        	<label for='note' class='col-sm-2 control-label'>Note :</label>
+				        	<div class='col-sm-8'>
+				        		<textarea id='note' class='form-control'></textarea>
+				        		<span class="help-block" id="msg_caratteri">Caratteri</span>
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				    		<div id="errore_percentuale" class='hide alert alert-error alert-danger'>
+	      						Si accettano valori compresi tra 1,00 e 100,00.
+	      					</div>
+	      				</div>
+				    	<div class='form-group'>
+				    		<label for='rid_lavorativa' class='col-sm-2 control-label'>Percentuale lavorativa :</label>
+				    		<div class='col-sm-2 input-group'>
+				    			<input type='text' class='form-control' id='rid_lavorativa' name='rid_lavorativa'>
+				    			<span class="input-group-addon"> %</span>
+				    		</div>
+				        </div>
+				    	<div class='form-group'>
+				    		<div id="errore_anni_validi" class='hide alert alert-error alert-danger'>
+	      						Si accettano solo esperienze lavorative degli ultimi 15 anni.
+	      					</div>
+	      				</div>
+				        <div class='form-group'>
+				    		<label for='inizio_servizio' class='col-sm-2 control-label'>Dal *:</label>
+				    		<div class="col-sm-2">
+				    			<forms:datetime id="inizio_servizio" change-month="true" change-year="true" past-dates="true" />
+				    		</div>
+				    		<label for='fine_servizio' class='col-sm-1 control-label'>Al *:</label>
+				    		<div class="col-sm-2">
+				    			<forms:datetime id="fine_servizio" change-month="true" change-year="true" />
+				    		</div>
+				    	</div>
+				    	<input type="hidden" id="data_pubblicazione_bando" value="{ @data_pubblicazione_bando }" name="data_pubblicazione_bando" />
+				    	<input type="hidden" id="data_fine_pubblicazione_bando" value="{ @data_fine_pubblicazione_bando }" name="data_fine_pubblicazione_bando" />
+					</form>
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		        	<button type="submit" class="btn btn-primary" id="invia_servizio">Salva</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<!-- Modal Titoli Studio LAUREA -->
+	<div class="modal fade mio_modal" id="modal_titoli_laurea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Inserisci Ulteriore Laurea</h4>
+	      		</div>
+		      	<div class="modal-body">
+		        	<form class='form-horizontal' id='form_titoli_ajax' method="POST" action="#"><br>
+				    	<div class='form-group'>
+				    		<label for='tipo_titolo_laurea' class='col-sm-3 control-label'>Tipo Titolo *:</label>
+				    		<div class="col-sm-6">
+					        	<select class='form-control' id="tipo_titolo_laurea" name="tipo_titolo_laurea">
+					                <option sp:each_pair="Moduli.hash_titoli(@cat_giuridica) |chiave_titolo, dati_titolo|" value='{ chiave_titolo }' 
+					                class="{ ((chiave_titolo == 'titolo_necessario') ? 'hide hidden' : '') }">{ dati_titolo['nome'] }</option>
+					            </select>
+					        </div>
+				        </div>
+				   		<div class='form-group'>
+				        	<label for='in_laurea' class='col-sm-3 control-label'>In *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='in_laurea' />
+				        		<!--
+				        		<span class="help-block">Riportare a seconda dei casi, l'istituto superiore ovvero l'università con indicazione della facoltà.</span>
+				        		-->
+				        	</div>
+				    	</div>
+				   		<div class='form-group'>
+				        	<label for='universita_laurea' class='col-sm-3 control-label'>Conseguito presso università di *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='universita_laurea' />
+				        		<!--
+				        		<span class="help-block">Riportare a seconda dei casi, l'istituto superiore ovvero l'università con indicazione della facoltà.</span>
+				        		-->
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='facolta_laurea' class='col-sm-3 control-label'>Facoltà di *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='facolta_laurea' />
+				        	</div>
+				    	</div>
+
+				    	<div class='form-group'>
+				    		<label for='anno_accademico_laurea' class='col-sm-3 control-label'>Anno accademico *:</label>
+				    		<div class="col-sm-2">
+				    			<input type='text' class='form-control' id='anno_accademico_laurea'>
+				    		</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='valutazione_laurea' class='col-sm-3 control-label'>Con la seguente valutazione:</label>
+				        	<div class='col-sm-2'><input type='text' class='form-control' id='valutazione_laurea'></div>
+				    	</div>		        
+					</form>
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		        	<button type="submit" class="btn btn-primary" id="invia_titolo_laurea">Salva</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->    
+
+	<!-- Modal Titoli Studio MASTER -->
+	<div class="modal fade mio_modal" id="modal_titoli_master" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Inserisci Master</h4>
+	      		</div>
+		      	<div class="modal-body">
+		        	<form class='form-horizontal' id='form_titoli_ajax' method="POST" action="#"><br>
+				    	<!--
+				    	<div class='form-group'>
+				    		<label for='tipo_titolo' class='col-sm-3 control-label'>Titolo *:</label>
+				    		<div class="col-sm-6">
+					        	<select class='form-control' id="tipo_titolo" name="tipo_titolo">
+					                <option sp:each_pair="Moduli.hash_titoli(@cat_giuridica) |chiave_titolo, dati_titolo|" value='{ chiave_titolo }'>{ dati_titolo['nome'] }</option>
+					            </select>
+					        </div>
+				        </div>
+				   		-->
+				   		<div class='form-group'>
+				        	<label for='in_master' class='col-sm-3 control-label'>Master in *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='in_master' />
+				        	</div>
+				    	</div>
+				   		<div class='form-group'>
+				        	<label for='universita_master' class='col-sm-3 control-label'>Conseguito presso università di *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='universita_master' />
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='facolta_master' class='col-sm-3 control-label'>Facoltà di *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='facolta_master' />
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				    		<label for='anno_accademico_master' class='col-sm-3 control-label'>Anno accademico *:</label>
+				    		<div class="col-sm-2">
+				    			<input type='text' class='form-control' id='anno_accademico_master'>
+				    		</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='valutazione_master' class='col-sm-3 control-label'>Con la seguente valutazione:</label>
+				        	<div class='col-sm-2'><input type='text' class='form-control' id='valutazione_master'></div>
+				    	</div>		        
+					</form>
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		        	<button type="submit" class="btn btn-primary" id="invia_titolo_master">Salva</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->    
+
+	<!-- Modal Titoli Studio DOTTORATO-->
+	<div class="modal fade mio_modal" id="modal_titoli_dottorato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Inserisci Dottorato</h4>
+	      		</div>
+		      	<div class="modal-body">
+		        	<form class='form-horizontal' id='form_titoli_ajax' method="POST" action="#"><br>
+				    	<!--
+				    	<div class='form-group'>
+				    		<label for='tipo_titolo' class='col-sm-3 control-label'>Titolo *:</label>
+				    		<div class="col-sm-6">
+					        	<select class='form-control' id="tipo_titolo" name="tipo_titolo">
+					                <option sp:each_pair="Moduli.hash_titoli(@cat_giuridica) |chiave_titolo, dati_titolo|" value='{ chiave_titolo }'>{ dati_titolo['nome'] }</option>
+					            </select>
+					        </div>
+				        </div>
+				   		-->
+				   		<div class='form-group'>
+				        	<label for='in_dottorato' class='col-sm-3 control-label'>Dottorato in *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='in_dottorato' />
+				        		
+				        	</div>
+				    	</div>
+				   		<div class='form-group'>
+				        	<label for='universita_dottorato' class='col-sm-3 control-label'>Conseguito presso università di *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='universita_dottorato' />
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='facolta_dottorato' class='col-sm-3 control-label'>Facoltà di *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='facolta_dottorato' />
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				    		<label for='anno_accademico_dottorato' class='col-sm-3 control-label'>Anno accademico *:</label>
+				    		<div class="col-sm-2">
+				    			<input type='text' class='form-control' id='anno_accademico_dottorato'>
+				    		</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='valutazione_dottorato' class='col-sm-3 control-label'>Con la seguente valutazione:</label>
+				        	<div class='col-sm-2'>
+				        		<input type='text' class='form-control' id='valutazione_dottorato'>
+				        	</div>
+				    	</div>		        
+					</form>
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		        	<button type="submit" class="btn btn-primary" id="invia_titolo_dottorato">Salva</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->    
+
+	<!-- Modal Titoli Vari-->
+	<div class="modal fade mio_modal" id="modal_titoli_vari" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Inserisci Titolo di Studio non attinente al Bando</h4>
+	      		</div>
+		      	<div class="modal-body">
+		        	<form class='form-horizontal' id='form_titoli_vari_ajax' method="POST" action="#"><br>
+				    	<div class='form-group'>
+				    		<label for='tipo_titolo' class='col-sm-3 control-label'>Titolo *:</label>
+				    		<div class="col-sm-6">
+					        	<select class='form-control' id="tipo_titolo_vario" name="tipo_titolo_vario">
+					        		<option sp:each_pair="Moduli.hash_titoli_vari |chiave_titolo, dati_titolo|" value='{ chiave_titolo }'>{ dati_titolo['nome'] }</option>
+					        	</select>
+					        </div>
+				        </div>
+				   		<div class='form-group'>
+				        	<label for='universita_vario' class='col-sm-3 control-label'>Conseguito presso *:</label>
+				        	<div class='col-sm-8'>
+				        		<input type='text' class='form-control' id='universita_vario' />
+				        		<span class="help-block">Riportare a seconda dei casi, l'istituto superiore ovvero l'università con indicazione della facoltà.</span>
+				        	</div>
+				    	</div>
+				    	<div class='form-group'>
+				    		<label for='anno_accademico_vario' class='col-sm-3 control-label'>Annualità di conseguimento *:</label>
+				    		<div class="col-sm-2">
+				    			<input type='text' class='form-control' id='anno_accademico_vario'>
+				    		</div>
+				    	</div>
+				    	<div class='form-group'>
+				        	<label for='valutazione_vario' class='col-sm-3 control-label'>Con la seguente valutazione:</label>
+				        	<div class='col-sm-2'><input type='text' class='form-control' id='valutazione_vario'></div>
+				    	</div>		        
+					</form>
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+		        	<button type="submit" class="btn btn-primary" id="invia_titolo_vario">Salva</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->    
+
+
+	<!-- Modal Cancellazione titoli di studio -->
+	<div class="modal fade mio_modal" id="modal_conferma_canc_titolo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Conferma cancellazione Titolo di Studio</h4>
+	      		</div>
+		      	<div class="modal-body">
+		      		<span class="hidden" id="id_titolo_da_cancellare"></span>
+		        	Sei sicuro di cancellare il titolo di studio?
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+		        	<button type="submit" class="btn btn-primary" id="cancella_titolo">Conferma</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- Modal Cancellazione titoli vari -->
+	<div class="modal fade mio_modal" id="modal_conferma_canc_titolo_vario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Conferma cancellazione Titolo non attinente al Bando</h4>
+	      		</div>
+		      	<div class="modal-body">
+		      		<span class="hidden" id="id_titolo_vario_da_cancellare"></span>
+		        	Sei sicuro di cancellare il titolo di studio?
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+		        	<button type="submit" class="btn btn-primary" id="cancella_titolo_vario">Conferma</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<!-- Modal cancellazione Servizi Svolti-->
+	<div class="modal fade mio_modal" id="modal_conferma_canc_servizio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	 	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	      			<h4>Conferma cancellazione Esperienza Lavorativa</h4>
+	      		</div>
+		      	<div class="modal-body">
+		      		<span class="hidden" id="id_servizio_da_cancellare"></span>
+		        	Sei sicuro di cancellare l' Esperienza Lavorativa?
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">Annulla</button>
+		        	<button type="submit" class="btn btn-primary" id="cancella_servizio">Conferma</button>
+		      	</div>
+	    	</div><!-- /.modal-content -->
+	  	</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+
+
+
+</div>

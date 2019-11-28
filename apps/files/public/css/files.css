@@ -1,0 +1,123 @@
+.wdgt-Spider-Files-FileUpload .content{
+	height: 80px;
+	padding: 20px;
+}
+
+.file-manager .tabs{
+	background-color: #DDDDDD;
+	padding: 5px;
+}
+
+.file-viewer{
+    font-size: .9em;
+}
+
+.file-manager .tabs a.active{
+	background-color: #EAEAEA;
+	padding: 3px;
+}
+
+.file-viewer .errors{
+	background-color: #FFAAAA;
+	margin: 20px;
+	padding: 10px;
+}
+
+.file-viewer .saving_div{
+    background-color: white;
+    padding: 10px;
+    border: 2px solid gray;
+    height: 30px;
+}
+
+.file-viewer .row{
+	overflow: hidden;
+	padding: 3px;
+}
+
+.file-viewer .row label{
+	width: 8em;
+	display: block;
+	float: left;
+}
+
+.file-viewer .row .inline{
+	float: left;
+}
+
+
+.file-viewer .row input, .wdgt-Spider-Images-ImageViewer .row .data{
+	float: left;
+	display: block;
+}
+
+.file-viewer .file_info{
+	overflow: hidden;
+	margin: 10px;
+	padding: 3px;
+}
+
+.file-viewer .preview{
+	float: left;
+	width: 140px;
+	text-align: center;
+}
+
+.file-viewer .preview img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.file-viewer .details{
+	float: left;
+	width: 14em;
+	background-color: #FFFFD9;
+	padding: 12px;
+	margin-right: 20px;
+}
+
+.file-viewer .params{
+	margin: 10px;
+	border: 1px solid #CECECE;
+	padding: 10px;
+}
+
+
+.wdgt-Spider-Files-FileArchive .tags_div{
+	margin: 5px 15px;
+	border: 1px solid #CECECE;
+}
+
+.wdgt-Spider-Files-FileArchive .tags_div h5{
+	margin: 0;
+	background-color: #ABABAB;
+	padding: 0 10px;
+}
+
+.wdgt-Spider-Files-FileArchive .tags{
+	padding: 5px 10px;
+}
+
+.wdgt-Spider-Files-FileArchive .search-table form{
+	margin: 8px 20px 0 20px;
+}
+
+
+.wdgt-Spider-Files-FileArchive .tags .active{
+	background-color: yellow;
+}
+
+.wdgt-Spider-Files-FileArchive .id-list ul{
+    margin: 15px;
+    list-style: circle;
+}
+
+.wdgt-Spider-Files-FileArchive .id-tags{
+    overflow: hidden;
+}
+
+.wdgt-Spider-Files-FileArchive .id-tags li{
+    list-style: none;
+    float: left;
+    margin: 3px 5px;
+}

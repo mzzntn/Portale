@@ -1,0 +1,69 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+
+    <p>
+        <h2 class="align_center">SERVIZIO ACCOGLIENZA MINORI PRESSO</h2>
+        <h2 class="align_center">SCUOLA PRIMARIA DI TOSCOLANO MADERNO</h2>
+        <h2 class="align_center">A.S. { Date.today.year }/{ Date.today.year+1 }</h2>
+
+    </p>
+    <br />
+    <br />
+    <p class="destinatario">Spett.le</p>
+    <p class="destinatario">Comune di Toscolano Maderno</p>
+    <p class="destinatario">Ufficio Pubblica Istruzione</p>
+    <br />
+    <h4 class="align_center">Scheda di iscrizione al</h4>
+    <h4 class="align_center">servizio di accoglienza minori presso la Scuola Primaria di Toscolano Maderno a.s. { Date.today.year }/{ Date.today.year+1 }</h4>
+    <br />
+    <br />
+    <moduli:gruppo id="dati_studente1" titolo="" class="dati_modulo no_border">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="input_bigwidth">Per l'alunno</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth">residente a</moduli:dato>
+            <moduli:dato id="prov_residenza" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="cap" class="label_xsmlwidth input_xxsmallwidth">cap. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza" class="input_mediumwidth">Via/V.LE/P.zza/Loc.</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_xsmlwidth input_xxsmallwidth">n. </moduli:dato>
+        </div>
+        <br />
+        <br />
+        <p>Si richiede l’iscrizione al servizio di accoglienza minori presso la Scuola Primaria di Toscolano Maderno per l’a.s. { Date.today.year }/{ Date.today.year+1 }.</p>
+        <br />
+        <br />
+        <div class="riga">
+            <moduli:dato id="classe" class="label_smlwidth">Classe</moduli:dato>
+            <moduli:dato id="sezione" class="label_smlwidth">Sezione</moduli:dato>
+        </div>
+        <br />
+        <br />
+        <p>Dati relativi ai genitori</p>
+        <br />
+        <br />
+        <div class="riga">
+            <moduli:dato id="padre" class="label_smlwidth input_largewidth">Padre</moduli:dato>
+            <moduli:dato id="padre_telefono" class="label_smlwidth">Telefono</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="madre" class="label_smlwidth input_largewidth">Madre</moduli:dato>
+            <moduli:dato id="madre_telefono" class="label_smlwidth">Telefono</moduli:dato>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </moduli:gruppo>
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma"/>
+    </div>
+</moduli:modulo>

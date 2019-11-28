@@ -1,0 +1,25 @@
+<div>
+	<legend>Lista destinatari comunicazione: { @utenti.length } utenti</legend>
+	<!-- Imposto il numero di utenti per pagina che viene passato al js -->
+	<input type='hidden' id='items_per_page' value="8" />  
+	<input type='hidden' id='max_page_in_navbar' value="10"/>
+	<input type='hidden' id='current_page' />  
+	<input type='hidden' id='show_per_page' />  
+
+	<div class='pagination_content'>  
+    	<p sp:each="@utenti |utente|" class="paginated_element">{ utente.nome } { utente.cognome }</p>
+    </div> 	
+
+    <!-- div che contiene il navigatore -->  
+	<div class="page_navigation pagination"><ul></ul></div> 
+	<div class="row form-actions">
+		<div class="span1 offset2">
+			<a href="{ Comunicazioni::GestioneComunicazioniController.https_url(@id_comunicazione+'/conferma_invio') }" class="btn">
+				Indietro</a>
+		</div>
+		<div class="span2">
+			<a href="{ Comunicazioni::GestioneComunicazioniController.https_url }" class="btn">
+				Torna all'elenco</a>
+		</div>	
+	</div>
+</div>	

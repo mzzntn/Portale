@@ -1,0 +1,30 @@
+<div>
+    <legend>Importa Modulo esistente</legend>
+    <div sp:if="@errori" class="alert alert-error width_50">
+        <ul>
+            <li sp:each="@errori |errore|">{ errore }</li>
+        </ul>
+    </div>
+        <form method="post" class="form-horizontal" id="importa_modulo" >
+            <p>Vuoi importare un modulo esistente?</p>
+            <div class="control-group">
+                <label class="control-label" for="modulo_da_caricare">Tipo Modulo</label>
+                <div class="controls">
+                    <select id="tipo" class="input-xxlarge" name="modulo_da_caricare">
+                        <option value="">Nuovo vuoto</option>
+                        <option sp:each="@moduli_da_caricare |modulo|" value="{ modulo.id }" >{ modulo.nome }</option>
+                    </select>
+                    <span class="help-block">Il modulo selezionato verrà inserito nell'Editor nella pagina seguente.</span>
+                </div>
+            </div>
+            <div class="row form-actions">
+                <div class="span1">
+                    <a class="btn" href="{ Moduli::GestioneModuliController.http_s_url('nuovo_tipo_modulo/'+@id_tipo_modulo) }">Indietro</a>
+                </div>
+                <div class="span1 offset5">
+                    <input type="submit" class="btn" name="submit" id="button_salva" value="Prosegui">
+                </div>
+            </div>
+        </form>
+
+</div>

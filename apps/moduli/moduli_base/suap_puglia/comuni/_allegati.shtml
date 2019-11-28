@@ -1,0 +1,330 @@
+<div id="allegati">
+    <moduli:gruppo id="allegato_a" titolo="" class="dati_modulo no_border break">
+        <sup class="float_right">
+            <strong>ALLEGATO A</strong>
+        </sup>
+        <div class="center_text">
+            <strong>DICHIARAZIONI DI ALTRE PERSONE (AMMINISTRATORI, SOCI) INDICATE ALL'ART. 2 D.P.R. 252/1998</strong>
+        </div>
+        <div class="center_text">
+            (solo per le società quando è compilato il quadro autocertificazione)
+        </div>
+
+        <div class="riga">
+            <moduli:dato id="cognome_altra_pers_1">Cognome</moduli:dato>
+            <moduli:dato id="nome_altra_pers_1">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_altra_pers_1">C. F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_altra_pers_1" class="label_mediumwidth input_xsmallwidth" tipo="data">Data di nascita </moduli:dato>
+            <moduli:dato id="cittadinanza_altra_pers_1" class="">Cittadinanza</moduli:dato>
+            <div class="float_left">Sesso </div><moduli:opzione id="sesso_m_altra_pers_1" class="elenco_prima label_xsmlwidth">M</moduli:opzione>
+            <moduli:opzione id="sesso_f_altra_pers_1" class="label_xsmlwidth" >F</moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_altra_pers_1" class="label_bigwidth input_smallwidth">Luogo di nascita: Stato </moduli:dato>
+            <moduli:dato id="provincia_nascita_altra_pers_1" class="label_smlwidth input_smallwidth">Provincia</moduli:dato>
+            <moduli:dato id="luogo_nascita_altra_pers_1" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="prov_residenza_altra_pers_1" class="label_bigwidth input_smallwidth">Residenza: Provincia </moduli:dato>
+            <moduli:dato id="citta_residenza_altra_pers_1" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <moduli:dato id="indirizzo_residenza_altra_pers_1" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="solo_civico_residenza_altra_pers_1" class="label_xsmlwidth input_xsmallwidth">N. </moduli:dato>
+            <moduli:dato id="cap_residenza_altra_pers_1" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div>
+        <h3><u>DICHIARA</u></h3>
+        <div class="riga">1. Di essere in possesso dei requisiti previsti dall'art. 71 del D.Lvo n. 59/2010</div>
+        <div class="riga">2. Che non sussistono nei propri confronti "cause di divieto, di decadenza o di sospensione di cui all'art. 10 della legge 31 maggio 1965, n. 575" (antimafia).
+        </div>
+        <div class="riga">
+            <strong><i>Il sottoscritto è consapevole che le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi comportano l'applicazione delle sanzioni penali previste dal D.P.R. 28/12/2000, n. 445</i></strong>
+        </div>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_1" class="data-firma" label-firma="FIRMA"/>
+        </div>
+
+        <br /><br /><br />
+
+        <div class="riga">
+            <moduli:dato id="cognome_altra_pers_2">Cognome</moduli:dato>
+            <moduli:dato id="nome_altra_pers_2">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_altra_pers_2">C. F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_altra_pers_2" class="label_mediumwidth input_xsmallwidth" tipo="data">Data di nascita </moduli:dato>
+            <moduli:dato id="cittadinanza_altra_pers_2" class="">Cittadinanza</moduli:dato>
+            <div class="float_left">Sesso </div><moduli:opzione id="sesso_m_altra_pers_2" class="elenco_prima label_xsmlwidth">M</moduli:opzione>
+            <moduli:opzione id="sesso_f_altra_pers_2" class="label_xsmlwidth" >F</moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_altra_pers_2" class="label_bigwidth input_smallwidth">Luogo di nascita: Stato </moduli:dato>
+            <moduli:dato id="provincia_nascita_altra_pers_2" class="label_smlwidth input_smallwidth">Provincia</moduli:dato>
+            <moduli:dato id="luogo_nascita_altra_pers_2" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="prov_residenza_altra_pers_2" class="label_bigwidth input_smallwidth">Residenza: Provincia </moduli:dato>
+            <moduli:dato id="citta_residenza_altra_pers_2" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <moduli:dato id="indirizzo_residenza_altra_pers_2" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="solo_civico_residenza_altra_pers_2" class="label_xsmlwidth input_xsmallwidth">N. </moduli:dato>
+            <moduli:dato id="cap_residenza_altra_pers_2" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div>
+        <h3><u>DICHIARA</u></h3>
+        <div class="riga">1. Di essere in possesso dei requisiti previsti dall'art. 71 del D.Lvo n. 59/2010</div>
+        <div class="riga">2. Che non sussistono nei propri confronti "cause di divieto, di decadenza o di sospensione di cui all'art. 10 della legge 31 maggio 1965, n. 575" (antimafia).
+        </div>
+        <div class="riga">
+            <strong><i>Il sottoscritto è consapevole che le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi comportano l'applicazione delle sanzioni penali previste dal D.P.R. 28/12/2000, n. 445</i></strong>
+        </div>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_2" class="data-firma" label-firma="FIRMA"/>
+        </div>
+
+        <br /><br /><br />
+
+        <div class="riga">
+            <moduli:dato id="cognome_altra_pers_3">Cognome</moduli:dato>
+            <moduli:dato id="nome_altra_pers_3">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_altra_pers_3">C. F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_altra_pers_3" class="label_mediumwidth input_xsmallwidth" tipo="data">Data di nascita </moduli:dato>
+            <moduli:dato id="cittadinanza_altra_pers_3" class="">Cittadinanza</moduli:dato>
+            <div class="float_left">Sesso </div><moduli:opzione id="sesso_m_altra_pers_3" class="elenco_prima label_xsmlwidth">M</moduli:opzione>
+            <moduli:opzione id="sesso_f_altra_pers_3" class="label_xsmlwidth" >F</moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_altra_pers_3" class="label_bigwidth input_smallwidth">Luogo di nascita: Stato </moduli:dato>
+            <moduli:dato id="provincia_nascita_altra_pers_3" class="label_smlwidth input_smallwidth">Provincia</moduli:dato>
+            <moduli:dato id="luogo_nascita_altra_pers_3" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="prov_residenza_altra_pers_3" class="label_bigwidth input_smallwidth">Residenza: Provincia </moduli:dato>
+            <moduli:dato id="citta_residenza_altra_pers_3" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <moduli:dato id="indirizzo_residenza_altra_pers_3" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="solo_civico_residenza_altra_pers_3" class="label_xsmlwidth input_xsmallwidth">N. </moduli:dato>
+            <moduli:dato id="cap_residenza_altra_pers_3" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div>
+        <h3><u>DICHIARA</u></h3>
+        <div class="riga">1. Di essere in possesso dei requisiti previsti dall'art. 71 del D.Lvo n. 59/2010</div>
+        <div class="riga">2. Che non sussistono nei propri confronti "cause di divieto, di decadenza o di sospensione di cui all'art. 10 della legge 31 maggio 1965, n. 575" (antimafia).
+        </div>
+        <div class="riga">
+            <strong><i>Il sottoscritto è consapevole che le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi comportano l'applicazione delle sanzioni penali previste dal D.P.R. 28/12/2000, n. 445</i></strong>
+        </div>
+        <div class="riga">
+            <moduli:data-firma id="data_firma_3" class="data-firma" label-firma="FIRMA"/>
+        </div>
+    </moduli:gruppo>
+    
+    <moduli:gruppo id="allegato_b" titolo="" class="dati_modulo no_border break">
+        <sup class="float_right">
+            <strong>ALLEGATO B</strong>
+        </sup>
+        <div class="center_text">
+            <strong>DICHIARAZIONE DEL LEGALE RAPPRESENTANTE O PREPOSTO</strong>
+        </div>
+        <div class="center_text">
+            (solo in caso di società esercente il settore alimentare quando è compilato il quadro autocertificazione)
+        </div>
+
+        <div class="riga">
+            <moduli:dato id="cognome_leg_rap">Cognome</moduli:dato>
+            <moduli:dato id="nome_leg_rap">Nome</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="codice_fiscale_leg_rap">C. F.</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="data_nascita_leg_rap" class="label_mediumwidth input_xsmallwidth" tipo="data">Data di nascita </moduli:dato>
+            <moduli:dato id="cittadinanza_leg_rap" class="">Cittadinanza</moduli:dato>
+            <div class="float_left">Sesso </div><moduli:opzione id="sesso_m_leg_rap" class="elenco_prima label_xsmlwidth">M</moduli:opzione>
+            <moduli:opzione id="sesso_f_leg_rap" class="label_xsmlwidth" >F</moduli:opzione>
+        </div>
+        <div class="riga">
+            <moduli:dato id="stato_nascita_leg_rap" class="label_bigwidth input_smallwidth">Luogo di nascita: Stato </moduli:dato>
+            <moduli:dato id="provincia_nascita_leg_rap" class="label_smlwidth input_smallwidth">Provincia</moduli:dato>
+            <moduli:dato id="luogo_nascita_leg_rap" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="prov_residenza_leg_rap" class="label_bigwidth input_smallwidth">Residenza: Provincia </moduli:dato>
+            <moduli:dato id="citta_residenza_leg_rap" class="label_smlwidth input_mediumwidth">Comune</moduli:dato>
+        </div>
+        <div class="riga margin_l_70">
+            <moduli:dato id="indirizzo_residenza_leg_rap" class="input_mediumwidth">Via, Piazza, ecc</moduli:dato>
+            <moduli:dato id="solo_civico_residenza_leg_rap" class="label_xsmlwidth input_xsmallwidth">N. </moduli:dato>
+            <moduli:dato id="cap_residenza_leg_rap" class="label_xsmlwidth input_xsmallwidth">C.A.P. </moduli:dato>
+        </div>
+
+        <moduli:opzioni id="all_b_tipo_persona" class="lista_checkbox_vertical">
+        <div class="riga">
+            <moduli:opzione id="all_b_tipo_leg_rap" class="">LEGALE RAPPRESENTANTE</moduli:opzione>
+            <moduli:dato id="all_b_tipo_leg_rap_soc" class="label_smlwidth input_largewidth">della società</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:opzione id="all_b_tipo_desig_prep" class="">DESIGNATO PREPOSTO</moduli:opzione>
+            <moduli:dato id="all_b_tipo_desig_prep_soc" class="label_smlwidth input_largewidth">della società</moduli:dato>
+            <moduli:dato id="all_b_tipo_desig_prep_data" class="label_smlwidth input_smallwidth">in data</moduli:dato>
+        </div>
+        </moduli:opzioni>
+
+
+
+        <h3><u>DICHIARA</u></h3>
+        <div class="riga">1. Di essere in possesso dei requisiti previsti dall'art. 71 del D.Lvo n. 59/2010</div>
+        <div class="riga">2. Che non sussistono nei propri confronti "cause di divieto, di decadenza o di sospensione di cui all'art. 10 della legge 31 maggio 1965, n. 575" (antimafia).
+        </div>
+        <moduli:opzioni id="all_b_commercio_alimentare" class="lista_checkbox_vertical">
+            <div class="clear_left">
+                3. Di essere in possesso di uno dei seguenti requisiti professionali:
+            </div>
+            <div class="clear_left margin_l_35">
+                <div class="float_left">3.1</div>
+                <moduli:opzione id="all_b_commercio_alimentare_3_1" class="elenco_prima">aver frequentato con esito positivo il corso professionale per il commercio del settore alimentare</moduli:opzione>
+                <div class="float_left mezza_colonna">
+                    <moduli:dato id="all_b_3_1_nome" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">nome dell'Istituto</moduli:dato>
+                    <moduli:dato id="all_b_3_1_oggetto" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">oggetto del corso</moduli:dato>
+                </div>
+                <div class="float_left mezza_colonna">
+                    <moduli:dato id="all_b_3_1_sede" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">sede</moduli:dato><br /><br />
+                    <moduli:dato id="all_b_3_1_anno" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">anno di conclusione</moduli:dato>
+                </div>
+            </div>
+            <div class="clear_left margin_l_35">
+                <div class="float_left">3.2</div>
+                <moduli:opzione id="all_b_commercio_alimentare_3_2" class="elenco_prima">di aver esercitato in proprio l'attività di vendita dei prodotti del settore alimentare</moduli:opzione>
+                <div class="riga">
+                    <moduli:dato id="all_b_3_2_tipo_att" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">tipo di attività</moduli:dato>
+                    <moduli:dato id="all_b_3_2_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_2_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+                <div class="riga">
+                    <moduli:dato id="all_b_3_2_n_cciaa" class="label_auto input_mediumwidth_220">n. iscrizione Registro Imprese</moduli:dato>
+                    <moduli:dato id="all_b_3_2_cciaa_di" class="label_smlwidth input_codfiscwidth">CCIAA di</moduli:dato>
+                    <moduli:dato id="all_b_3_2_n_rea" class="label_smlwidth input_smallwidth">n. R.E.A</moduli:dato>
+                </div>
+            </div>
+            <div class="clear_left margin_l_35">
+                <div class="float_left">3.3</div>
+                <moduli:opzione id="all_b_commercio_alimentare_3_3" class="elenco_prima">di aver prestato la propria opera presso imprese esercenti l'attività di vendita</moduli:opzione>
+                <div class="riga">di prodotti del settore alimentare o nel settore della somministrazione di alimenti e bevande</div>
+                <div class="float_left mezza_colonna">
+                    <moduli:dato id="all_b_3_3_nome_imp_1" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">nome impresa</moduli:dato>
+                    <moduli:dato id="all_b_3_3_nome_imp_2" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">nome impresa</moduli:dato>
+                </div>
+                <div class="float_left mezza_colonna">
+                    <moduli:dato id="all_b_3_3_sede_imp_1" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">sede impresa</moduli:dato><br /><br />
+                    <moduli:dato id="all_b_3_3_sede_imp_2" tipo="longText" class="label_auto input_mediumwidth_220 adaptive_input">sede impresa</moduli:dato>
+                </div>
+                <div class="riga">
+                    <div class="float_left">quale dipendente qualificato, regolarmente iscritto all'INPS,</div>
+                    <moduli:dato id="all_b_3_3_1_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_3_1_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+                <div class="riga">
+                    <div class="float_left">addetto all'amministrazione, regolarmente iscritto all'INPS,</div>
+                    <moduli:dato id="all_b_3_3_2_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_3_2_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+                <div class="riga">
+                    <div class="float_left">addetto alla vendita, regolarmente iscritto all'INPS,</div>
+                    <moduli:dato id="all_b_3_3_3_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_3_3_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+                <div class="riga">
+                    <div class="float_left">addetto alla preparazione degli alimenti, regolarmente iscritto all'INPS,</div>
+                    <moduli:dato id="all_b_3_3_4_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_3_4_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+                <div class="riga">
+                    <div class="float_left">socio lavoratore, regolarmente iscritto all'INPS,</div>
+                    <moduli:dato id="all_b_3_3_5_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_3_5_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+                <div class="riga">
+                    <div class="float_left">quale coadiutore familiare, regolarmente iscritto all'INPS,</div>
+                    <moduli:dato id="all_b_3_3_6_dal" class="label_smlwidth input_smallwidth">dal</moduli:dato>
+                    <moduli:dato id="all_b_3_3_6_al" class="label_smlwidth input_smallwidth">al</moduli:dato>
+                </div>
+            </div>
+            <div class="clear_left margin_l_35">
+                <div class="float_left">3.4</div>
+                <moduli:opzione id="all_b_commercio_alimentare_3_4" class="elenco_prima">di essere in possesso del seguente diploma di scuola secondaria superiore o di laurea, anche triennale, o di altra scuola ad indirizzo </moduli:opzione>
+                <div class="riga margin_l_35">professionale,  almeno triennale, purche' nel corso di studi siano previste materie attinenti al commercio, alla preparazione o alla </div>
+                <div class="riga margin_l_35">somministrazione degli alimenti:</div>
+                <div class="riga margin_l_35"><moduli:dato id="all_b_3_4" tipo="longText" class="input_bigwidth adaptive_input"></moduli:dato></div>
+            </div>
+        </moduli:opzioni>
+        <br />
+        <div class="riga">
+            <moduli:data-firma id="data_firma_4" class="data-firma" label-firma="FIRMA"/>
+        </div>
+        <br />
+        <div class="riga">
+            <strong><i>Il sottoscritto è consapevole che le dichiarazioni mendaci, la falsità negli atti e l'uso di atti falsi comportano l'applicazione delle sanzioni penali previste dal D.P.R. 28/12/2000, n. 445</i></strong>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="allegato_c" titolo="" class="dati_modulo no_border break">
+        <sup class="float_right">
+            <strong>ALLEGATO C</strong>
+        </sup>
+        <div class="center_text">
+            <strong>CLASSIFICAZIONE DELLE ATTIVITA' DI COMMERCIO AL DETTAGLIO</strong>
+        </div>
+        
+        <div class="riga">
+            <strong>Esercizi non specializzati a prevalenza alimentare</strong><br />
+            <div>- ipermercati (oltre 2.500 mq - self service)</div>
+            <div>- supermercati (oltre 400 mq - self service)</div>
+            <div>- altro (minimercati, prodotti surgelati…)</div>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi specializzati a prevalenza alimentare</strong><br />
+            <div>Frutta e verdura</div>
+            <div>Carne e prodotti a base di carne</div>
+            <div>Pesci, crostacei, molluschi</div>
+            <div>Pane, pasticceria, dolciumi</div>
+            <div>Bevande (vini, olii, birra ed altre)</div>
+            <div>Tabacco e altri generi di monopolio</div>
+            <div>Altri esercizi specializzati alimentari (drogherie, salumerie, pizzicherie, caffè torrefatto…)</div>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi non specializzati a prevalenza non alimentare</strong><br />
+            <div>Grandi magazzini (oltre 400 mq - self service)</div>
+            <div>Altro (vendita di una grande varietà di prodotti non alimentari)</div>
+        </div>
+
+        <div class="riga">
+            <strong>Esercizi specializzati a prevalenza non alimentare</strong><br />
+            <div>Farmacie</div>
+            <div>Articoli medicali e ortopedici</div>
+            <div>Cosmetici e articoli di profumeria</div>
+            <div>Prodotti tessili e biancheria</div>
+            <div>Articoli di abbigliamento e accessori, pellicceria</div>
+            <div>Calzature e articoli in cuoio</div>
+            <div>Mobili, casalinghi e articoli di illuminazione</div>
+            <div>Elettrodomestici, radio - televisori, dischi, strumenti musicali</div>
+            <div>Ferramenta, vernici, giardinaggio,art. igienico sanitari e da costruzione</div>
+            <div>Libri, giornali, cartoleria</div>
+            <div>Altri esercizi specializzati non alimentari (macchine e attrezzature per ufficio, materiale per ottica, fotografia, orologi, articoli gioielleria, giocattoli, </div> 
+            <div>articoli sportivi per il tempo libero,articoli da regalo, oggetti d'arte, combustibile uso domestico, natanti.....)</div>
+            <div>Articoli di seconda mano (libri usati, mobili usati, indumenti usati, ecc:)</div>
+            <div>Distributori di carburante</div>
+        </div>
+    </moduli:gruppo>
+</div>

@@ -1,0 +1,12 @@
+<div>
+    Ciao, e benvenuto all'autenticazione della regione lombardia.
+    <br><br>
+    SAMLResponse:
+    <pre>{ @saml_response }</pre>
+    <br><br>
+    Target:
+    <pre>{ @target }</pre>
+    <br><br>
+    Response status:
+    <pre>{ @response_status }</pre>
+</div>

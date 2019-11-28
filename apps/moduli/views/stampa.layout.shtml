@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <tpl:asset type="css" src="sass/stampa_new.scss" /> 
+    <head> 
+        <!-- <script src="http://{ Spider.conf.get('site.domain') }/spider/components/public/js/jquery/jquery-1.8.3.min.js"></script> -->
+        <!-- <script src="http://{ Spider.conf.get('site.domain') }/spider/components/public/js/spider.js"></script>
+        <script src="http://{ Spider.conf.get('site.domain') }/portal/servizi/moduli/public/js/moduli.js"></script> -->
+        <!-- importo moduli_new.scss e poi vado in sovrascrittura del modulo -->
+        
+        <!--ATTENZIONE: AGGIUNGERE QUI L'ASSET PER LA TESTATA DEI MODULI 
+        <tpl:assets widgets="moduli:modulo" />
+        -->
+    </head>
+    <body class="moduli_layout">
+        <div id="content">
+            <sp:yield />
+        </div>
+    </body>
+</html>

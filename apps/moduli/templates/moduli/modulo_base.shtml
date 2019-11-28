@@ -1,0 +1,11 @@
+<moduli:modulo id="modulo" titolo="" codice="">
+
+<tpl:include src="../testata_modulo/_testata_modulo" />
+
+	<div id="corpo_documento"></div>
+
+<tpl:pass sp:if="Spider.conf.get('moduli.includi_piede_informative')">
+	<tpl:include src="../piede_modulo/_piede_modulo" />
+</tpl:pass>
+
+</moduli:modulo>

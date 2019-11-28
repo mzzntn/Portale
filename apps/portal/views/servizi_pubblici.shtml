@@ -1,0 +1,20 @@
+<div id="elenchi_servizi" class="row">
+    <div id="elenco_servizi_pubblici_singoli" class="col-lg-12 col-md-12 col-sm-12 text-center">
+        <!--- Se sono su app mostro tasto per accedere -->
+        <div sp:if="!@utente_portale && !@layout_web" class="row">
+            <a href="{ Portal::ControllerAutenticazione.https_url }" class="btn btn-primary btn-lg col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 " >Accedi</a>
+            <br /><br /><br /><br />
+        </div>
+        <!-- LISTA DI SERVIZI PUBBLICI SEMPRE VISIBILE -->
+        <div class="text-uppercase lead"><h2>Servizi pubblici</h2></div>
+            <ul sp:if="!@servizi_pubblici.blank?">
+                <li sp:each="@servizi_pubblici |servizio|" class="bordo_servizio pad_servizio el_servizi">
+                    <a class="nome_servizio" href="{ servizio.url.strip+(servizio.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s) }" sp:tag-if="!servizio.url.blank?">{ servizio.nome }</a>
+                    <div class="descr_servizio lead" sp:if="!servizio.descrizione.blank?">{ servizio.descrizione }</div>
+                </li>
+            </ul>
+            <div sp:if="@servizi_pubblici.blank?" class="alert alert-warning">
+                Non sono attualmente presenti servizi pubblici.
+            </div>
+    </div>
+</div>  

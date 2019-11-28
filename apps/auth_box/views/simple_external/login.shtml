@@ -1,0 +1,5 @@
+<div>
+	Login Auth Box
+	<div sp:if="@errore">{ @errore }</div>
+	<tpl:include src="_login_box" />
+</div>

@@ -1,0 +1,938 @@
+/* variabili dei moduli, che importano quelle del portal*/
+@import "variabili_moduli";
+
+
+#portal_content.moduli .evidenzia_stato.confermato{
+    color: $link-color;
+}
+
+/* STILI MODULI */
+.moduli_layout{
+
+    $baseline: 24px;
+    $field-border-color: #9A7E7E; 
+
+    @mixin lista_checkbox{
+        div.input {
+            input{
+                float:left;
+            }
+            label{
+                float:left;
+                width:auto;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    #modulo{
+        font-family: Arial;
+        font-size: 12pt;    
+        max-width: 1024px;
+        width: 1024px;
+        margin: 0 auto;
+        input, button, select, textarea, p {
+            font-size: 12pt;
+            font-weight: normal;
+        }
+        table{
+            th{
+                text-align:center;
+            }
+            td{
+                text-align: left;
+                .errore_importo{
+                    border: 2px solid red;
+                }
+                input.importo_per_totale{
+                    width: 70px;
+                    text-align: right;
+                    margin-right: 0;
+                }
+                &.importi{
+                    text-align: right;
+                }
+            }
+            /* tabella raggruppata con n tbody,mostrando un bordo alla fine del tbody */
+            &.tabella_importi{
+                width: 99%;
+                border-collapse: collapse;
+                tbody{
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+
+
+        /* stili campi all'interno del modulo creati con editor */
+        .contenitore{
+            margin: 5px;
+            padding: 3px;
+        }
+
+        .riquadro_opzionale{
+            margin: 5px;
+            padding: 3px;
+        }
+
+    }
+
+    #portal_content {
+        overflow: visible;
+    }
+    .el_tmp{
+        position:absolute;
+        left:0;
+        margin-left: -500000px;
+    }
+    .hide{
+        display: none;
+    }
+    .break { page-break-before: always; }
+    .modulo{
+        line-height: $baseline;
+
+        .width_50{
+            width: 50%;
+        }
+        .width_30{
+            width: 30%;
+        }
+
+        .font_15{
+            font-size: 15px;
+        }
+
+        .font_20{
+            font-size: 20px;
+        }
+
+        .font_40{
+            font-size: 40px;
+        }
+
+        .sidecontentpullout{
+            width: 20px;
+            font-size: 20px;
+            color: #281D93;
+            padding: 10px;
+            background-color: #F0EFF4;
+            cursor: pointer;
+            left: 0;
+            position: fixed;
+            display: none;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            border: 1px solid #6B669E;
+        }
+
+        #modulo-sidebar_menu{
+            strong{
+                margin-left: 10px;
+                font-size: 20px;
+                border-bottom: 2px solid #D5E1FD;
+            }
+            ul{
+                margin-left: 15px;
+                list-style-type: none;
+                li{
+                    margin: 10px 0;
+                }
+            }
+            font-size: 16px;
+            position: fixed;
+            height: auto;
+            width: 200px; 
+            top: 100px;
+            background-color: #fff;
+            border: 1px solid #627EBD;
+            padding: 15px 5px;
+            box-shadow: 1px 1px 1px #888888;
+            .link_prosegui{
+                margin: 10px 0;
+                background-color: #51A351;
+                color: #fff;
+                font-style: italic;
+                border: 1px solid #51A351;
+                padding: 6px 15px; 
+                box-shadow: 1px 1px 1px #dedede;
+                font-size: 14px;
+            }
+            .link_torna_indietro{
+                margin: 10px 0;
+                background-color: #999999;
+                color: #fff;
+                font-style: italic;
+                border: 1px solid #999999;
+                padding: 6px 15px; 
+                box-shadow: 1px 1px 1px #dedede;
+                font-size: 14px;
+            }
+            .button_indietro{
+                margin: 20px 0;
+            }
+            .button_submit{
+                margin: 15px 0;
+            }
+        }
+
+        .barra_contenitore_opzioni, .barra_opzioni_template, .barra_contenitore_evento_intervento{
+            display: none;
+        }
+
+        input{
+            border: 0;
+            border-bottom: 1px solid $field-border-color;
+            padding-bottom: 2px;
+            margin-right: 12px;
+        }
+
+        hr{
+            border-color: #000;
+        }
+
+        fieldset{
+            margin: 10px 0 !important;
+            padding: 2px 15px 15px 15px /*!important*/;
+            /*border-color: #D8D8D8 !important;*/
+            border: 1px solid #D8D8D8 !important;
+        }
+
+        fieldset legend{
+            color: #555555;
+            border: 1px solid #D8D8D8;
+            padding: 0 5px;
+            padding-right: 211px;
+            width:auto;
+        }
+
+        h3.upper{
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .destinatario{
+            margin-left:15cm; 
+            margin-right:0cm; 
+            text-indent:0cm;
+        }
+        .input, .dato, .opzione, .inline, .input .change{
+            display: inline;
+        }
+
+        .opzioni.righe{
+            .opzione{
+                display: block;
+            }
+        }
+
+        .opzione{
+            .opzione{
+                margin-left: 25px;
+            }
+            .opzione.inline{
+                margin-left: 0;
+            }
+            .opzione.a_capo{
+                margin-left: 0;
+                display: block;
+                clear: left;
+            }
+        }
+
+        .input{
+            //white-space: nowrap;
+
+            label{
+                white-space: normal;
+            }
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        ul.circle{
+            list-style-type: circle;
+        }
+
+        ul.square{
+            list-style-type: square;
+        }
+
+        ul.dash 
+            li:before{ 
+            content:"-"; 
+            position:relative; 
+            left:-5px;
+        }
+
+        ol{
+            list-style-type: none;
+            counter-reset: list;
+        }
+
+        ol.roman{
+            list-style-type: lower-roman;
+        }
+
+        ol.alpha
+            >li:before {
+                content: counter(list, lower-alpha) ") ";
+                counter-increment: list;
+                list-style-type: lower-alpha;
+        }
+
+        ol.decimal{
+            list-style-type: decimal;
+        }
+
+        .data-firma{
+            clear: left;
+            margin: 15px 0;
+            display: block;
+            label{ 
+                float: left; 
+                margin-right: 20px;
+            }        
+            .data{ 
+                float: left;
+                overflow: hidden;
+                input{  width: 100px;
+                        text-align: center; 
+                }
+            }
+            .firma{ 
+                float: right; 
+                overflow: hidden; 
+                .spazio-firma{ 
+                    float: left;
+                    display: block; 
+                    width: 20em; 
+                    border-bottom: 1px solid $field-border-color; 
+                }
+            }
+
+        }
+
+        div.riga{
+            overflow: hidden;
+            display: block;
+            clear: left;
+            padding-top: 5px;
+        }
+        .dati_modulo{
+            clear:left;
+            label{
+                float: left;
+                width: 9em;
+            }
+            input{
+                 float: left;
+            }
+        }
+
+        .label_auto{
+            label{
+                width: auto;
+                margin-right: 5px;
+            }
+        }
+
+        .label_small_font{
+            label{
+                font-size: .7em;
+            }
+        } 
+
+        .label_xsmlwidth{
+            label{
+                width:3em;
+            }
+        }
+        
+        .label_smlwidth{
+            label{
+                width:5em;
+            }
+        }
+
+        .label_mediumwidth{
+            label{
+                width:7em;
+            }
+        }
+
+        .label_bigwidth{
+            label{
+                width:11em;
+            }
+        }
+
+        .label_xbigwidth{
+            label{
+                width:18em;
+            }
+        }
+
+        .label_xxbigwidth{
+            label{
+                width:25em !important;
+            }
+        }
+
+        .input_xxsmallwidth{
+            input, textarea{
+                width: 40px;
+            }
+        }
+
+        .input_xsmallwidth{
+            input, textarea{
+                width: 80px;
+            }
+        }
+
+        .input_smallwidth{
+            input, textarea{
+                width: 110px;
+            }
+        }
+
+        .input_codfiscwidth{
+            input, textarea{
+                width: 170px;
+            }
+        }
+
+        .input_auto{
+            label{
+                width: auto;
+                margin-right: 5px;
+            }
+        }
+
+        .input_mediumwidth_220{
+            input, textarea{
+                width: 220px;
+            }
+        }
+
+        .input_mediumwidth{
+            input, textarea{
+                width: 350px;
+            }
+        }
+
+        .input_largewidth{
+            input, textarea{
+                width: 450px;
+            }
+        }
+        
+        .input_bigwidth{
+            input, textarea{
+                width: 550px;
+            }
+        }
+
+        .mediumwidth{
+            width: 350px;
+        }
+
+        .all_width{
+            width:98% !important; 
+            input, textarea{
+                width:98% !important;
+            }   
+        }
+
+        .input_nascosto_select input{
+            width: 800px;
+        }
+
+        .lista_checkbox, .lista_input_oriz{
+            @include lista_checkbox;
+        }
+
+        .lista_checkbox_vertical{
+            @include lista_checkbox;
+            div.opzione{
+                clear: left;
+                display: block;
+            }
+            div.elenco_prima.opzione{
+                clear: none;
+                margin-right: 5px;
+            }    
+        }
+
+        .lista_checkbox_oriz{
+            div.opzione{
+                display: inline;
+                clear: none;
+            }
+        }
+
+        .clear_left{
+            clear: left;
+        }
+
+        .clear_both{
+            clear: both;
+        }
+
+        .float_left{
+            float: left;
+            margin-right: 5px;
+        }
+
+        .float_right{
+            float: right;
+        }
+        .float_center {
+            float: right;
+
+            position: relative;
+            left: -40%; /* or right 50% */
+            text-align: left;
+        }
+        .center_text{
+            text-align: center;
+        }
+
+        .center_div{
+            margin: 0 auto;
+        }
+
+        .justify_div{
+            text-align: justify;
+        }
+
+        .long_label_check{
+            label{
+                width:85% !important;
+            }
+        }
+
+        input[type="checkbox"]{
+            border: none;
+        }
+        .checkbox_a_dx{
+            input[type="checkbox"]{
+                margin-left: 10px;
+            }   
+        }
+
+         /* box in alto a destra per compilamento utente */
+        .box_top_dx{
+            float: right;
+            text-align: center;
+            width: 180px;
+            padding-bottom: 2px;
+            font-size: 1.1em;
+        }
+
+        .big_input input{
+            width: 450px!important;
+        }
+
+        table{
+            max-width: 99%;
+            margin-left: 1px;
+            text-align: center;
+            thead, tbody, td, th{
+                border: 1px solid #ddd;
+                font-family: Arial;
+                font-size: 12pt;
+            }
+            &.full_row_no_border{
+                border: none;
+                thead, tbody, td, th{
+                    width: 100%;
+                    border: none;
+                }
+            }
+            &.full_row{
+                width: 98%;
+                thead, tbody, td, th{
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+
+
+
+        table.full_row {
+            width: 100%;
+            th{
+                text-align: center;
+            }
+        }
+
+        .error{
+            color: #b94a48;
+        }
+
+        .margin_l_10{
+            margin-left: 10px;
+        }
+
+        .margin_l_20{
+            margin-left: 20px;
+        }
+
+        .margin_l_35{
+            margin-left: 35px;
+        }
+
+        .margin_l_70{
+            margin-left: 70px;
+        }
+
+        .margin_l_117{
+            margin-left: 117px;
+        }
+
+        .riga_grigia{
+            font-style: italic;
+            background-color: #E6E6E6;
+            text-align: left;
+        }
+
+        .align_left{
+            text-align: left;
+            div.input{
+                input{
+                    float: none;
+                }
+            }
+        }
+        .align_center{
+            text-align: center;
+            div.input{
+                input{
+                    float: none;
+                }
+            }
+        }
+
+        .td_large{
+            width: 50%;
+        }
+
+        .no_border{
+            border: none !important;
+            input, textarea{
+                border: none !important;
+            }  
+        }
+
+        textarea{
+            width:98%;
+            margin-top: -5px;
+        }
+
+
+        .adaptive_input textarea{
+            height: none;
+            vertical-align: middle;
+            line-height: 22px;
+            margin-right: 10px;
+            float: left;
+            padding: 0 5px;
+            resize: none;
+        }
+
+        .icon_check_square{
+            background-image: url("../check_icon.png");
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 14px;
+            line-height: 14px;
+            vertical-align: text-top;
+            width: 14px;
+        }
+        /* stile per gl iallegati, li mostro in linea */
+        .wdgt-Spider-Forms-FileInput{
+            display: inline-block;
+        }
+        .wdgt-Moduli-Allegato .change{
+            display: inline-block;
+            input[type="file"]{
+                display: inline-block;
+            }
+        }
+    /* stili per la combobox agganciata a input */
+        span.custom-combobox {
+            position: relative;
+            display: inline-block;
+            .custom-combobox-toggle {
+                top: 0;
+                bottom: 0;
+                margin-left: -10px;
+                padding: 0;
+                span.ui-button-text {
+                    height: 15px;
+                    display: block;
+                }
+            }
+            .custom-combobox-input {
+                margin: 0;
+                padding: 5px 10px;
+            }
+        }
+        
+
+        .no_float{
+            textarea{
+                float: none;
+            }   
+        }
+
+        .inline_block{
+            display: inline-block;
+        }
+
+        .larghezza_auto{
+            textarea{
+                width: auto;
+            }
+        }
+
+        /* stili che vengono da editor per campi input */
+        .input_xxsmallwidth{
+        width: 40px;
+        }
+
+        .input_smallwidth{
+          width: 110px;
+        }
+
+        .input_mediumwidth_220{
+            width: 220px;
+        }
+
+        .input_mediumwidth{
+          width: 350px;
+        }
+
+        .input_largewidth{
+            width: 450px;
+        }
+
+        .input_bigwidth{
+            width: 550px;
+        }
+
+        #modulo-avviso_errore{
+            display: none;
+        }
+
+        .riquadro_nascosto{
+            display: none;
+        }
+
+        /* stile per il template nominativo_firma per avere il fieldset ma non mostrare il bordo e a farlo inline */
+        .inline_no_border{
+            display: inline;
+            border: 0 none !important;
+        }
+
+    }
+
+  
+    /* finestra modale, caricata quando si deve compilare un modulo */
+    .modal.mio_modal{
+        top: 150px;
+        z-index: 100000;
+        .modal-dialog{
+            width: 800px
+        }
+    }
+
+}
+
+/* stili generali per applicazione */
+
+#portal_content{
+    &.moduli{
+
+        overflow: visible;
+
+        #heigth_400{
+            height: 400px;
+        }
+        .row{
+            margin-left: 0;
+        }
+        .b_t_margin_2{
+            margin-bottom: 2px;
+            margin-top: 2px; 
+        }
+        .t_b_margin_15{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .t_margin_5{
+            margin-top: 5px;
+        }
+        .mezza_colonna{
+            width: 48%;
+        }
+        .titolo_lista_moduli{
+            font-size: 16px;
+        }
+        #elenco_moduli a{
+            padding: 4px;
+            .descrizione_modulo{
+                font-size: 12px;
+                color: #9e9e9e;
+            }
+            p{
+                margin-bottom: 0;
+            }
+        } 
+        .green{
+            color: #52A452;
+        }
+        a.btn-info{
+            color: #fff;
+        }
+
+
+        .evidenzia_stato{
+            font-variant: small-caps;
+            font-weight: bold;
+            &.bozza{
+                color: #3366FF;
+            }
+            &.confermato{
+                color: #339900;
+            }
+            &.inviato{
+                color: #CC33CC;
+            }
+        }
+
+        /* correggo margine sx del tasto back per problemi quando inserito in una row con altri bottoni */
+        .row{
+            .back a {
+                margin-left: 0;
+            }
+        }
+
+        /* finestra modale */
+      
+        #modulo-modal_caricamento{
+            //background con opacity che non viene ereditata dai figli
+            background: rgba(0,0,0,0.5);
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10040;
+            .mio_modal{
+                position: fixed;
+                top: 40%;
+                left: 35%;
+                z-index: 11000;
+                width: 30%;
+                background-color: #fff;
+                border: 1px solid #999;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
+                -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+                opacity: 1;
+                .modal-header{
+                    padding: 9px 15px;
+                    border-bottom: 1px solid #eee;
+                    #modulo-myModalLabel{
+                        text-align: center;
+                    }
+                }
+                .modal-body {
+                    padding: 15px;
+                }
+            }
+            
+            
+            
+            .link_cancellazione{
+                color: #008AC1;
+                font-size: 110%;
+                cursor: pointer;
+            }
+        }
+
+
+        #pagination_content{
+            #elenco_moduli{
+                li.paginated_element{
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+
+        .testata_modulo{
+            .centro_testata_modulo{
+                text-align: center;
+                margin-left: 5px;
+                width: 57%;
+                float: left;
+            }
+            .logo_testata_modulo{
+                float: left;
+                width: 20%;
+                img{
+                    height: 170px;
+                    float: left;
+                    margin-left: 10px;
+                }
+            }
+            height: 180px;
+        }
+
+        #modulo-corpo_documento{
+            clear: both;
+        }
+
+        /* FINE STILI PER LE TESTATE DEI MODULI */
+
+        .annotazioni{
+            font-size: 11px;
+        }
+
+
+        /* PIEDE */
+
+        .piede_modulo{
+            .informativa{
+                text-align: justify;
+            }
+            .firma_elettronica{
+                text-align: justify;
+            }
+        }
+
+        /* FINE PIEDE */
+
+
+
+    } /* chiude class moduli */ 
+} /* chiude #portal_content */ 
+
+
+/* Stili per js combobox */
+.ui-autocomplete{
+    z-index: 1000;
+    .ui-menu-item .ui-state-focus{
+        color: blue;
+        font-weight: normal ;
+    }
+}

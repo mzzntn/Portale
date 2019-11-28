@@ -1,0 +1,3 @@
+<fieldset class="gruppo">
+    <legend sp:if="!@titolo.blank?">{ @titolo }</legend>
+</fieldset>

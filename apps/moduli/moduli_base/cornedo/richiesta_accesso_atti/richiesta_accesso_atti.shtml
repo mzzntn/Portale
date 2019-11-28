@@ -1,0 +1,98 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+    <moduli:gruppo id="box_intestazione_destra" class="box_top_dx">
+    Al { Spider.conf.get('ente.nome') }<br />
+    Alla c.a. del Responsabile del Settore<br />
+    </moduli:gruppo>
+    <div class="clear_both"></div>
+    <br />
+    <br />
+    <p class="clear_both">
+    <div class="float_left">
+    OGGETTO: Richiesta di
+    </div>
+        <moduli:opzioni id="tipo_richiesta" class="lista_checkbox_vertical float_left">
+            <moduli:opzione id="tipo_1">visione documenti/fascicolo</moduli:opzione>
+            <moduli:opzione id="tipo_2">rilascio copia documenti</moduli:opzione>
+        </moduli:opzioni>
+    </p>
+     
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo no_border dati_readable_js">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_bigwidth">Il/la sottoscritto/a</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth label_mediumwidth">Residente a </moduli:dato>
+            <moduli:dato id="indirizzo_residenza" class="label_xsmlwidth input_mediumwidth">in via</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="numero_telefono" class="label_smlwidth">Telefono</moduli:dato>
+            <moduli:dato id="fax" class="label_smlwidth">fax</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email" class="label_smlwidth">e-mail</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="nome_ditta" class="label_xxbigwidth input_mediumwidth">(in caso di persona giuridica) in nome e per conto di</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="sede_ditta" class="input_mediumwidth label_smlwidth">con sede a</moduli:dato>
+            <moduli:dato id="indirizzo_ditta" class="input_mediumwidth label_xsmlwidth">in via</moduli:dato>
+        </div>
+        
+        
+    </moduli:gruppo>
+    <p class="clear_both">
+        In qualità di:
+        <moduli:opzioni id="tipo_referenza" class="lista_checkbox_vertical">
+            <moduli:opzione id="rap_legale">Rappresentante legale della società/associazione/ente richiedente</moduli:opzione>
+            <moduli:opzione id="sog_inc">Soggetto incaricato (è necessario allegare in copia mandato/procura/convenzione di incarico. </moduli:opzione>
+            <div class="riga margin_l_35">Qualora manchi un atto formale, la richiesta deve essere sottoscritta dal diretto interessato)</div>
+        </moduli:opzioni>
+    </p>
+
+    <p class="clear_both">
+        <h3>Chiede</h3>
+        di prendere visione e/o di avere copia della seguente documentazione agli atti dell’amministrazione:
+        (N.B. specificare la tipologia del provvedimento, la data ed il numero, e comunque tutti i dati necessari ad identificare con esattezza il fascicolo o il documento oggetto della richiesta):
+        <div class="riga">
+            <moduli:dato tipo="longText" id="documenti" class="input_bigwidth adaptive_input"></moduli:dato>
+        </div>
+    </p>
+    <p class="clear_both">
+        per il seguente motivo (ai sensi dell’art. 22 della Legge 241/1990 deve trattarsi di un interesse diretto, concreto e attuale, corrispondente ad una situazione giuridicamente tutelata e collegata al documento al quale è chiesto l'accesso. In pratica, il richiedente deve dimostrare la necessità di conoscere il contenuto di atti collegati a un  bene concreto della vita, quali ad esempio: la partecipazione ad un concorso/appalto, il rilascio di autorizzazioni, la richiesta di contributi/ agevolazioni, la tutela giurisdizionale in giudizio, l’acquisto di un bene, eccetera):
+        <div class="riga">
+            <moduli:dato tipo="longText" id="motivo" class="input_bigwidth adaptive_input"></moduli:dato>
+        </div>
+    </p>
+
+
+
+    <p>
+        disponendo la consegna/autorizzazione alla visione a favore:
+        <moduli:opzioni id="in_favore_di" class="lista_checkbox_vertical checkbox_esclusivi1">
+            <moduli:opzione id="del_sottoscritto">del sottoscritto richiedente</moduli:opzione>
+            <moduli:opzione id="del_sig">del/la Signor/a</moduli:opzione><moduli:dato id="sig_consegnare" class="input_bigwidth"></moduli:dato>
+            <div class="row clear_both">ed il rilascio della documentazione richiesta</div>
+            <moduli:opzione id="copia_semplice">in copia fotostatica semplice</moduli:opzione>
+            <moduli:opzione id="copia_auth">in copia autenticata in bollo.</moduli:opzione>
+        </moduli:opzioni>
+
+    </p>
+
+    
+    
+    <p class="clear_both">
+        <h4>Dichiara di essere informato che:</h4>
+        <ul>
+            <li>- il conferimento dei dati personali indicati nella presente richiesta è obbligatorio, pena l’impossibilità di soddisfare la richiesta stessa; i dati personali saranno trattati dagli Uffici preposti in modo manuale ed informatizzato; i propri diritti sono previsti dall’art. 7 del D.Lgs. 196/2003</li>
+            <li>- la visione e il rilascio di copia saranno autorizzati una volta concluso l’eventuale procedimento di notifica ai controinteressati, fatte salve in ogni caso eventuali motivate comunicazioni di differimento/limitazione/rifiuto di accesso agli atti, nei casi previsti dalla normativa vigente.</li>
+        </ul>
+    </p>
+
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma" label-firma="Firma"/>
+    </div>
+
+</moduli:modulo>

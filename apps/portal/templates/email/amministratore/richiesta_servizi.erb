@@ -1,0 +1,10 @@
+L'utente <%=utente.nome%> <%=utente.cognome%> ha richiesto l'attivazione <%
+    if richiesti.length == 1
+%>del servizio <%= richiesti.first %><%
+    else
+%>dei seguenti servizi:
+<% richiesti.each do |richiesto| %>
+- <%= richiesto %>
+<% end %><% end %>
+
+Puoi attivarl<%= richiesti.length > 1 ? 'i' : 'o'%> dall'amministrazione del portale, alla pagina <%=link_amministrazione%>

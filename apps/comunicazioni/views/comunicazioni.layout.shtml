@@ -1,0 +1,10 @@
+<div id="comunicazioni_layout">
+	<!-- inserire eventuali named assets o widget PRIMA del css dell'applicazione -->
+    <tpl:asset type="css" src="sass/comunicazioni_new.scss" runmode="devel" order="12" />
+    
+    <sp:yield />
+    <!-- inserire eventuali librerie js PRIMA del js dell'applicazione -->
+    <tpl:asset type="js" src="js/jquery.htmlClean.js" />
+    <tpl:asset type="js" src="js/comunicazioni.js" />
+</div>
+	

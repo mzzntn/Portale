@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>APPUNTAMENTI__CHIUSURA</table><bind element="operatore" dbField="ID_OPERATORE"/><bind element="giorno_chiusura" dbField="GIORNO_CHIUSURA"/></binding>

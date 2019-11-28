@@ -1,0 +1,7 @@
+<engine dbType='mysql'>
+<connection type='mysql'>
+<name>DEMO</name>
+<user>DEMO</user>
+<pass>DEMO.my.db.pw</pass>
+</connection>
+</engine>

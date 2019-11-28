@@ -1,0 +1,26 @@
+<binding type="db" external="true">
+    <table>portal__utente</table>
+    <bind element="id" dbField="ID" />
+    <bind element='dtCreazione' dbField='obj_created' />
+    <bind element='dtModifica' dbField='obj_modified' />
+   <bind element='nome' dbField='nome' />
+   <bind element='cognome' dbField='cognome'  />
+   <bind element='sesso' dbField='sesso_id' />
+   <bind element='comuneNascita' dbField='comune_nascita' />
+   <bind element='provinciaNascita' dbField='provincia_nascita'  />
+   <bind element='dataNascita' dbField='data_nascita' />
+   <bind element='indirizzo' dbField='indirizzo_residenza' />
+   <bind element='civico' dbField='civico_residenza' />
+   <bind element='comune' dbField='comune_residenza' />
+   <bind element='provincia' dbField='provincia_residenza' />
+   <bind element='email' dbField='email'  />
+   <bind element='pec' dbField='pec'  />
+   <bind element='cf' dbField='codice_fiscale' />
+   <bind element='p_iva' dbField='p_iva'  />
+   <bind element='telefono' dbField='telefono' />
+   <bind element='fax' dbField='fax' />
+   <bind element='cellulare' dbField='cellulare' />
+   <bind element='albo' dbField='albo_id'  />
+   <bind element='n_albo' dbField='n_albo'  />
+   <bind element='p_albo' dbField='p_albo'  />
+</binding>

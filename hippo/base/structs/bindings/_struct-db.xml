@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db"><table>_STRUCT</table><bind element="name" dbField="NAME"/></binding>

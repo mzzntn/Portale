@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+    <!-- carico jquery e quello che serve per UI-->
+    <tpl:asset name="jquery-ui" />
+    <!-- file per firma digitale p7m dei file -->
+    <tpl:asset type="js" src="js/digisign/core.js" />
+    <!-- menu responsive laterale -->
+    <tpl:asset name="mmenu_js" />
+    <!-- javascript minificato da https://github.com/italia-it/spid-sp-access-button, impostare che compresso -->
+    <tpl:asset type="js" src="js/spid-sp-access-button.min.js" compressed="true"/>
+
+    <!-- INCLUDO LE WIDGET CHE MI POSSONO SERVIRE NEL PORTALE --> 
+    <tpl:assets widgets="forms:datetime" />
+    <tpl:asset name="bootstrap-3-modal" />
+    <!-- JAVASCRIPT PORTALE --> 
+    <tpl:asset type="js" src="js/portal.js" />
+
+    <tpl:asset type="css" src="sass/portal_new.scss" order="10" />
+
+    <!-- foglio di stile non minificato da https://github.com/italia-it/spid-sp-access-button 
+    <tpl:asset type="css" src="sass/spid.scss" /> -->
+    <tpl:asset type="css" src="sass/custom_stile.scss" order="100" />
+    
+    <tpl:assets src="registrazione/registrazione.shtml" />
+    
+    <tpl:include src="portal_head" />
+    <body>
+
+        <div>
+            <noscript><h3>Per la completa fruizione del sito si devono abilitare i JavaScript.</h3></noscript>
+            <div class="container-fluid perc_margini">
+                    <div sp:if="@layout_web">
+                        <span class="hide" id="menu_top_fixed"></span>
+                        <tpl:include src="portal_top" />
+                    </div>
+                    <section id="portal_container">
+                        <tpl:include src='portal' />
+                    </section>
+                    <div sp:if="@layout_web">
+                        <tpl:include src="portal_bottom" />
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>

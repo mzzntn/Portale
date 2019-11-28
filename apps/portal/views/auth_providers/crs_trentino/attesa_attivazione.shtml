@@ -1,0 +1,9 @@
+<div>
+    <p>
+        Gentile { @utente.nome } { @utente.cognome }, il tuo account è stato creato.
+    </p>
+    <p>
+        L'account verrà attivato a breve dall'amministratore. Ti invieremo un'e-mail non appena
+        potrai accedere al portale.
+    </p>
+</div>

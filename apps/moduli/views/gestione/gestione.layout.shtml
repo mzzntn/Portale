@@ -1,0 +1,36 @@
+<div id="container">
+    <tpl:asset name="jquery-ui" />
+    <tpl:asset name="bootstrap-2-js" />
+    <tpl:asset name="bootbox_2" />
+
+    <tpl:asset type="js" src="js/gestione_moduli.js" />
+    <tpl:asset type="css" src="sass/gestione_moduli.scss" />
+    <tpl:asset type="css" src="sass/stili_editor_tinymce.scss" />
+    
+    <tpl:assets widgets="core:table,forms:datetime" />
+    <tpl:asset type="css" src="sass/stampa_graduatoria.scss" media="print" />
+        
+    <div id="sidebar">
+        <div id="menu">
+            <ul>
+                <li class="{ (@sezione == 'gestione_moduli' ? 'active' : '') }">
+                    <a class="" href="{ Moduli::GestioneModuliController.http_s_url('index?r=1') }">Gestione Moduli</a>
+                </li>
+                <li class="{ (@sezione == 'ricerca_moduli' ? 'active' : '') }">
+                    <a class="" href="{ Moduli::GestioneModuliController.http_s_url('ricerca_moduli') }">Ricerca Moduli</a>
+                </li>
+                <li class="{ (@sezione == 'graduatoria_moduli' ? 'active' : '') }">
+                    <a class="" href="{ Moduli::GestioneModuliController.http_s_url('graduatoria_moduli') }">Graduatoria Moduli</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.soluzionipa.it/public/Editor_Moduli.pdf">Manuale d'uso</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <tpl:include src="/core/admin/_breadcrumb" />
+        <sp:yield />
+    </div>
+</div>

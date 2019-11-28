@@ -1,0 +1,12 @@
+<div>
+    <p sp:if="@contatti_confermati">
+        Grazie, { @utente.nome } { @utente.cognome }: i tuoi contatti sono ora confermati.
+    </p>
+    <p sp:if="!@contatti_confermati">
+    	Grazie, { @utente.nome } { @utente.cognome }: il tuo account è stato creato.
+    </p>
+    <p>
+        L'account verrà attivato a breve dall'amministratore. Ti invieremo un'e-mail non appena
+        potrai accedere al portale.
+    </p>
+</div>

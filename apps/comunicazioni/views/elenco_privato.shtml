@@ -1,0 +1,62 @@
+<div id="elenco_comunicazioni" class="col-lg-10">
+	<div class="row">
+        <h3 class="verde col-lg-6 col-md-6 col-sm-12 col-xs-12 pl0">Comunicazioni Private</h3>
+    </div>
+
+    <div sp:if="!@comunicazioni_utente.blank?" class="row"> 
+		<div sp:each="@comunicazioni_utente |com_utente|" class="bordo_servizio pb15 mb15 clearfix">
+			<h4 class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? '' : 'align_margin_dx') }">
+				{ com_utente.comunicazione.titolo }
+			</h4>
+			<div>
+				<div sp:if="!com_utente.comunicazione.immagine.blank?" class="container_img" style="{ @x_resolution.blank? ? '' : 'width:'+@x_resolution.to_s+'px' }">
+					<img src="{ Comunicazioni::ComunicazioniController.http_s_url('download_immagine?id_com='+com_utente.comunicazione.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? '' : 'align_margin_dx') } img-responsive pull-left mr10 img-respo"  style="{ @x_resolution.blank? ? '' : 'width:'+(@x_resolution-5).to_s+'px' }">
+				</div>
+				<div class="well_testo_comunicazione { !com_utente.letta ? 'da_leggere' : '' }">
+					{ ( com_utente.comunicazione.testo_breve.blank? ? com_utente.comunicazione.testo : com_utente.comunicazione.testo_breve ) }
+				</div>
+			</div>
+			<div class="btn btn-success">
+		        <a href="{ Comunicazioni::ComunicazioniController.http_s_url }/{ com_utente.comunicazione.id }/{ @tipologia_comunicazione }">Leggi tutto</a>
+		    </div>
+		</div>
+
+		<!--<div class="row">  ***** VERSIONE DI PRIMA *****
+				<div sp:if="!com_utente.comunicazione.immagine.blank?" class="col-lg-5 col-md-5 col-sm-5 col-xs-5 container_img" style="{ @x_resolution.blank? ? '' : 'width:'+@x_resolution.to_s+'px' }">
+					<img src="{ Comunicazioni::ComunicazioniController.http_s_url('download_immagine?id_com='+com_utente.comunicazione.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione" style="{ @x_resolution.blank? ? '' : 'width:'+(@x_resolution-5).to_s+'px' }">
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 well_testo_comunicazione { !com_utente.letta ? 'da_leggere' : '' }">
+					<p class="lead">{ ( com_utente.comunicazione.testo_breve.blank? ? com_utente.comunicazione.testo : com_utente.comunicazione.testo_breve ) }</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-offset-4 col-lg-2 col-lg-offset-4 col-md-2 col-sm-offset-4 col-sm-2 col-xs-offset-4 col-xs-2">
+					<span class="label label-info"><a href="{ Comunicazioni::ComunicazioniController.http_s_url }/{ com_utente.comunicazione.id }/{ @tipologia_comunicazione }">Leggi tutto >></a></span>
+				</div>
+			</div>-->
+
+	</div>
+
+	<div sp:if="@comunicazioni_utente.blank?" class="row">
+		<div class="alert alert-info col-lg-4 col-md-6">
+	    	Non sono attualmente presenti comunicazioni.
+	    </div>
+	</div> 
+
+	<!--  E L'ARCHIVIO? QUESTO SOTTO è DI QUELLE PUBBLICHE
+
+	<div class="row">
+    	<div class="fw mb10 pull-right">
+	        <a href="{ Comunicazioni::ComunicazioniController.http_s_url('archivio') }" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? 'btn btn_big_border' : '') }" class="btn">Archivio Comunicazioni</a>
+	    </div>
+	</div>
+
+	-->
+
+	<div class="row">
+		<div sp:if="Spider.conf.get('comunicazioni.integra_in_prisma') != true">
+        	<a href="{ Portal.http_s_url('indice_servizi') }" class="btn btn-success col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">Tutti i servizi</a>
+        </div>
+    </div>
+</div>	

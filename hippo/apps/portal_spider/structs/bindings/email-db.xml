@@ -1,0 +1,9 @@
+<binding type="db" external="true">
+    <table>spider__messenger__email</table>
+    <bind element="id" dbField="ID_EMAIL" />
+    <bind element="messaggio" dbField="MESSAGE_ID" />
+    <bind element="from" dbField="FROM_FIELD" />
+    <bind element="to" dbField="TO_FIELD" />    
+    <bind element="headers" dbField="HEADERS" />
+    <bind element="text" dbField='BODY' />
+</binding>

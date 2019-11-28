@@ -1,0 +1,10 @@
+<binding type="db" external="true">
+    <table>pagamenti__pagamento</table>
+    <bind element="id" dbField="ID" />
+    <bind element="utente" dbField="UTENTE_ID" />
+    <bind element="importo" dbField="IMPORTO" />
+    <bind element="descrizione" dbField="DESCRIZIONE" />
+    <bind element="elemento" dbField="ID_ELEMENTO" />
+    <bind element="applicazione" dbField="CODICE_APPLICAZIONE" />
+    <bind element="stato" dbField='STATO_ID' />
+</binding>

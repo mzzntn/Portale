@@ -1,0 +1,557 @@
+/* paginatore js */
+:not(.spider.components.table) .page_navigation.pagination {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 20px; }
+  :not(.spider.components.table) .page_navigation.pagination .active_page {
+    font-size: 120%;
+    font-weight: 700; }
+  :not(.spider.components.table) .page_navigation.pagination ul.lista_pagine {
+    list-style: none;
+    overflow: hidden;
+    display: none; }
+  :not(.spider.components.table) .page_navigation.pagination .active a {
+    font-size: 120%;
+    font-weight: 700;
+    cursor: default; }
+  :not(.spider.components.table) .page_navigation.pagination li.previous_link, :not(.spider.components.table) .page_navigation.pagination li.next_link {
+    border-left-width: 1px;
+    border-radius: 3px 0 0 3px; }
+:not(.spider.components.table) .sel_pagine {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 20px; }
+  :not(.spider.components.table) .sel_pagine button {
+    color: #049cdb; }
+  :not(.spider.components.table) .sel_pagine .dropdown-menu {
+    min-width: 30px; }
+    :not(.spider.components.table) .sel_pagine .dropdown-menu.lista_pagine {
+      max-height: 300px;
+      overflow-y: scroll; }
+
+#portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul, #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ol, .page-content ul, .page-content ol  {
+  padding-left: 18px; }
+  #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul li, #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ol li, .page-content ul li, .page-content ol li {
+    padding: initial;
+    list-style: outside none none; }
+#portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul li, .page-content ul li {
+  list-style-type: initial; }
+#portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ol li, .page-content ol li {
+  list-style-type: decimal; }
+#portal_container #portal_main #portal_content #link_trasparenza .form-group .alert {
+  margin-bottom: 0px;
+  height: 3.5rem; }
+#portal_container #portal_main #portal_content ul.nav-tabs > li {
+  padding: 0; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .pagination {
+  margin-bottom: 5px;
+  margin-left: 20px; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .pagination .active_page a {
+  cursor: default;
+  font-size: 120%;
+  font-weight: 700;
+  padding: 4px 12px; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .btn-group.sel_pagine {
+  vertical-align: bottom;
+  margin-bottom: 10px;
+  margin-left: 20px; }
+#portal_container #portal_main #portal_content [id$='_layout'] *[id$='_index'] *[id$='_table'] .btn-group.sel_pagine button {
+  color: #11b476; }
+#portal_container #portal_main #portal_content textarea.form-control {
+  height: auto; }
+
+.btn-bigger {
+  /*padding: 9px;
+  font-size: 1.1em;*/ }
+
+.control-label-right {
+  display: block;
+  margin-bottom: 0;
+  padding-top: 7px;
+  text-align: right; }
+
+.pagination > .active_page > a, .pagination > .active_page > a:hover, .pagination > .active_page > a:focus, .pagination > .active_page > span, .pagination > .active_page > span:hover, .pagination > .active_page > span:focus {
+  background-color: #11b476;
+  border-color: #11b476;
+  color: #fff;
+  cursor: default;
+  z-index: 2; }
+
+input[type="checkbox"].form-control {
+  height: 26px; }
+
+div.modal-dialog {
+  margin: 120px auto; }
+
+.fw input.btn {
+  background-color: #f1f2f2;
+  border-bottom: 1px solid #bcbec0;
+  border-bottom-right-radius: 0;
+  border-left: 1px solid #bcbec0;
+  border-top: 1px solid #bcbec0;
+  border-top-right-radius: 0;
+  color: #06c;
+  margin-right: 16px;
+  padding: 6px 4px 6px 10px; }
+
+.fw {
+  float: right; }
+
+div.back input.btn {
+  background-color: #f1f2f2;
+  border-bottom: 1px solid #bcbec0;
+  border-right: 1px solid #bcbec0;
+  border-top: 1px solid #bcbec0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: 16px;
+  padding: 6px 10px 6px 4px;
+  color: #06c; }
+
+.ui-autocomplete {
+  z-index: 10; }
+
+@media (min-width: 768px) {
+  #lista_trasparenza_categorie {
+    text-align: right; }
+
+  #lista_trasparenza_pagine {
+    text-align: left; } }
+.modal {
+  z-index: 20050; }
+
+footer#portal_bottom #hide_footer_background {
+  bottom: initial;
+}
+
+/* classi per il paginatore */
+.table > form > a.button, .table > form > span.button, .table > div > form > a.button, .table > div > form > span.button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #3c5eb6;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+}
+.table > form > span.button, .table > div > form > span.button {
+    background-color: #3c5eb6;
+    border-color: #3c5eb6;
+    color: #fff !important;
+    cursor: default;
+    font-weight: bold;
+    z-index: 2;
+}
+.table > form > a.button:first-child, .table > form > span.button:first-child, .table > div > form > a.button:first-child, .table > div > form > span.button:first-child  {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.table > form > a.button:nth-last-child(2), .table > form > span.button:nth-last-child(2), .table > div > form > a.button:nth-last-child(2), .table > div > form > span.button:nth-last-child(2) {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+body.wait *, body.wait {
+    cursor: progress !important;
+}
+/* fine classi paginatore */
+
+/* classi sezioni espandibili */
+
+.expandableTitle::after {
+  content: "\f0da";
+  font-family:'FontAwesome';
+  padding:  0px 8px;
+}
+.expandableTitle.open::after {
+  content: "\f0d7";
+}
+
+
+/*.ui-datepicker-multi .ui-datepicker-group {
+    width: 100%;
+}*/
+
+/*# sourceMappingURL=portal_nuovo.css.map */
+
+
+/* sistema il footer che in mobile area privata finiva dietro alla tabella (???) */
+footer#portal_bottom #visible_footer {
+  z-index: 1000000;
+}
+
+/* sistemazione bottoni in visualizzazione mobile */
+@media (max-width: 576px) {
+  .bottoni_pagina .btn, .titolo_pagina .btn {
+    margin-top: 12px;
+  }
+}
+
+/* INIZIO stili per tabelle mobile */
+ul.table, #portal_container #portal_main #portal_content #caricamento_pratiche_layout #caricamento_pratiche_index ul.table, .page-content ul.table {
+  padding: 0px;
+}
+ul.table, ul.table li {
+  list-style-type: none;
+}
+ul.table li {
+  display: table-row;
+}
+ul.table.row_linked li.paginated_element {
+  cursor: pointer;
+}
+ul.table.row_linked li.paginated_element:hover {
+  background-color: #f5f5f5;
+}
+
+ul.table li:nth-child(even) {background: #f9f9f9}
+
+ul.table li.table-header, ul.table li.table-caption {
+  font-weight: bold;
+  background-color: white;
+}
+
+ul.table.wrap-header li.table-header div {
+  white-space: normal;
+}
+
+ul.table li div {
+  display: table-cell;
+  border-style: solid;
+  border-color: #ddd;
+  padding: 8px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  vertical-align: middle;
+  
+  white-space: nowrap;
+}
+
+ul.table.table-wrap li div {
+  white-space: normal;
+}
+
+ul.table li.table-caption {
+  caption-side: top; 
+  display: table-caption; 
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 100%;
+}
+
+ul.table li div label {
+  display: none;
+  visibility: hidden;
+}
+
+ul.table li.table-header div {
+  border-bottom-width: 1px;
+}
+ul.table li div.cell-center {
+  text-align: center;
+}
+ul.table li div.cell-right {
+  text-align: right;
+}
+ul.table li div.cell-filler {
+  width: 100%;
+  white-space: normal; /* solo il cell-filler va a capo, per evitare colonne strette con testi brevi mandati a capo dopo ogni parola */
+}
+
+ul.table li div:last-child {
+  border-right-width: 1px;
+}
+ul.table li:last-child div {
+  border-bottom-width: 1px;
+}
+
+.muted {
+  color: #ddd;
+}
+
+#paginate_mobile {
+  text-align: center;
+}
+
+#paginate_mobile > form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#paginate_mobile > form > .sel_pagine {
+  margin: 0px !important;
+  display: block;
+  width: 100%;
+}
+
+#paginate_mobile > form > a.button, #paginate_mobile > form > span.button {
+  margin-left: -4px;
+}
+
+#paginate_mobile > form > .btn-group > .btn {
+  float: none;
+  margin: 10px;
+}
+
+/* nascondi paginazione mobile su larghezza display >= 577px */
+@media (min-width: 577px) {
+  #paginate_mobile, #endResults { display: none; visibility: hidden; }
+}
+
+/* tabella piccola (default): mostra visualizzazione mobile se larghezza display < 576px */
+@media (max-width: 576px) {
+  
+  ul.table li {
+    display: block;
+  }
+  ul.table li div {
+    white-space: normal;
+  }
+  ul.table li div label {
+    display: inline-block;
+    visibility: visible;
+    margin-right: 10px;
+  }
+  
+  ul.table li div,ul.table li:last-child div {
+    display: block;
+    width: 100%;
+    border-width: 0px 1px 0px 1px;
+  }
+  
+  ul.table li.table-header, ul.table li div.hidden-link, ul.table li div label.hidden-link, ul.table li div.empty {
+    display: none;
+    visibility: hidden;
+  }
+  
+  ul.table li div:first-child, ul.table li div.hidden-link + div, ul.table li div.empty + div {
+    border-top-width: 1px;
+  }
+  ul.table li:last-child div:last-child {
+    border-bottom-width: 1px;
+  }
+  
+  ul.table li div.cell-center {
+    text-align: left;
+  }
+  ul.table li div {
+    padding: 2px 8px;
+  }
+  ul.table li div:first-child, ul.table li div.hidden-link + div, ul.table li div.empty + div {
+    padding-top: 8px;
+  }
+  ul.table li div:last-child {
+    padding-bottom: 8px;
+  }
+  ul.table li div .form-control {
+    display: inline-block;
+    width: auto;
+  }
+  
+  ul.table li a {
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    white-space: normal;
+  }
+  
+  #paginate_desktop { display: none; visibility: hidden; }
+  
+  .fa-spin {
+    -animation: spin 1.2s infinite ease;
+    -webkit-animation: spin2 1.2s infinite ease;
+  }
+
+  @-webkit-keyframes spin2 {
+      from { -webkit-transform: rotate(0deg);}
+      to { -webkit-transform: rotate(360deg);}
+  }
+
+  @keyframes spin {
+      from { transform: scale(1) rotate(0deg);}
+      to { transform: scale(1) rotate(360deg);}
+  }
+  
+  ul.table li div.cell-right {
+    text-align: left;
+  }
+}
+
+/* tabella media: mostra visualizzazione ridotta se larghezza display < 768px e >= 577px */
+/* assegnata automaticamente per tabelle con più di 4 colonne */
+@media (max-width: 825px) and (min-width: 577px) {
+  
+  ul.table-medium li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+  
+  ul.table-medium li:last-child {
+    border-width: 0px;
+  }
+  
+  ul.table-medium li div label {
+    display: inline-block;
+    visibility: visible;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  
+  ul.table-medium li div,ul.table-medium li:last-child div {
+    display: inline-block;
+    border-width: 0px;
+    width: auto;
+  }
+  
+  ul.table-medium li.table-header, ul.table-medium li div.hidden-link, ul.table-medium li div label.hidden-link, ul.table-medium li div.empty {
+    display: none;
+    visibility: hidden;
+    border-width: 0px;
+  }
+    
+  ul.table li div:last-child {
+    border-right-width: 0px;
+  }
+  ul.table li:last-child div {
+    border-bottom-width: 0px;
+  }
+    
+  ul.table-medium li div.cell-center {
+    text-align: left;
+  }
+  
+  ul.table-medium li div.cell-filler {
+    width: auto;
+  }
+  ul.table-medium li div {
+    padding: 2px 8px;
+  }
+  ul.table-medium li div::after {
+    content: ";";
+  }
+  ul.table-medium li div .form-control {
+    display: inline-block;
+    width: auto;
+  }
+  
+  ul.table-medium li a {
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    white-space: normal;
+  }
+}
+
+/* tabella grande: mostra visualizzazione ridotta se larghezza display < 991px e >= 577px */
+/* assegnata automaticamente per tabelle con più di 8 colonne */
+@media (max-width: 1249px) and (min-width: 577px) {
+  
+  ul.table-big li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+  
+  ul.table-big li:last-child {
+    border-width: 0px;
+  }
+  
+  ul.table-big li div label {
+    display: inline-block;
+    visibility: visible;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  
+  ul.table-big li div,ul.table-big li:last-child div {
+    display: inline-block;
+    border-width: 0px;
+  }
+  
+  ul.table-big li.table-header, ul.table-big li div.hidden-link, ul.table-big li div label.hidden-link, ul.table-big li div.empty {
+    display: none;
+    visibility: hidden;
+    border-width: 0px;
+  }
+    
+  ul.table li div:last-child {
+    border-right-width: 0px;
+  }
+  ul.table li:last-child div {
+    border-bottom-width: 0px;
+  }
+    
+  ul.table-big li div.cell-center {
+    text-align: left;
+  }
+  
+  ul.table-big li div.cell-filler {
+    width: auto;
+  }
+  
+  ul.table-big li div {
+    padding: 2px 8px;
+  }
+  ul.table-big li div::after {
+    content: ";";
+  }
+  ul.table-big li div .form-control {
+    display: inline-block;
+    width: auto;
+  }
+  
+  ul.table-big li a {
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    white-space: normal;
+  }
+}
+/* FINE stili per tabelle mobile */

@@ -1,0 +1,5 @@
+<struct name='_security_user'>
+<element name='login' type='text' required='true' />
+<element name='password' type='password' />
+<element name='groups' label='Gruppi' type='_security_group' maxOccurs='unbounded' />
+</struct>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db" autogen="true"><table>APPUNTAMENTI__TIPO</table><bind element="tipo" dbField="TIPO"/><bind element="durata" dbField="DURATA"/><bind element="istruzioni" dbField="ISTRUZIONI"/></binding>

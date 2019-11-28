@@ -1,0 +1,7 @@
+<binding type="db" external="true">
+    <table>spider__auth__loginuser</table>
+    <bind element="user_id" dbField="ID" />
+    <bind element='login' dbField='username' />
+    <bind element='password' dbField='password' />
+    <bind element='start_user' dbField='start_user' />
+</binding>

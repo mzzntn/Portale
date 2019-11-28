@@ -1,0 +1,4 @@
+<div>
+    <h4>Siamo spiacenti, l'autenticazione non è andata a buon fine</h4> 
+    <h4>{ @messaggio_errore }</h4>
+</div>

@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Spider::Images\n"
+"POT-Creation-Date: 2011-07-01 16:47+0200\n"
+"PO-Revision-Date: 2011-07-01 16:49+0100\n"
+"Last-Translator: Ivan Pirlik <ivan.pirlik@soluzionipa.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: models/image.rb:42
+msgid "Image"
+msgstr "Immagine"
+
+#: models/image.rb:42
+msgid "Images"
+msgstr "Immagini"
+
+#: models/image.rb:47
+msgid "Tags"
+msgstr "Cartelle"
+
+#: models/image.rb:48
+msgid "License"
+msgstr "Licenza"
+
+#: models/image.rb:49
+msgid "Copies"
+msgstr "Copie"
+
+#: models/image.rb:50
+msgid "Label"
+msgstr "Etichetta"
+
+#: models/image.rb:52
+msgid "Width"
+msgstr "Larghezza"
+
+#: models/image.rb:53
+msgid "Height"
+msgstr "Altezza"
+
+#: models/tag.rb:4
+msgid "Image Tag"
+msgstr "Cartella Immagini"
+
+#: models/tag.rb:4
+msgid "Image Tags"
+msgstr "Cartelle Immagini"
+
+#: widgets/image_archive/image_archive.shtml:4
+msgid "Folders"
+msgstr "Cartelle"
+
+#: widgets/image_manager/image_manager.shtml:14
+msgid "On the Web"
+msgstr "Sul Web"
+
+#: widgets/image_manager/image_manager.shtml:16
+msgid "Upload image"
+msgstr "Carica immagine"
+
+#: widgets/image_search/image_search.shtml:5
+msgid "Search on Flickr"
+msgstr "Ricerca su Flickr"
+
+#: widgets/image_search/image_search.shtml:11
+msgid "Ok"
+msgstr "Ok"
+
+#: widgets/image_search/image_search.shtml:15
+msgid "Only images with a public license"
+msgstr "Solo immagini con una licenza pubblica"
+
+#: widgets/image_search/image_search.shtml:21
+msgid "Previous"
+msgstr "Indietro"
+
+#: widgets/image_search/image_search.shtml:22
+msgid "Page %s of %s"
+msgstr "Pagina %s di %s"
+
+#: widgets/image_search/image_search.shtml:23
+msgid "Next"
+msgstr "Avanti"
+
+#: widgets/image_viewer/image_viewer.shtml:5
+#: widgets/image_viewer/image_viewer.shtml:36
+msgid "Dimensions"
+msgstr "Dimensioni"
+
+#: widgets/image_viewer/image_viewer.shtml:13
+msgid "Original"
+msgstr "Originale"
+
+#: widgets/image_viewer/image_viewer.shtml:23
+msgid "Folder"
+msgstr "Cartella"
+
+#: widgets/image_viewer/image_viewer.shtml:32
+msgid "Caption"
+msgstr "Testo"
+
+#: widgets/image_viewer/image_viewer.shtml:44
+msgid "Keep ratio"
+msgstr "Mantieni proporzioni"
+

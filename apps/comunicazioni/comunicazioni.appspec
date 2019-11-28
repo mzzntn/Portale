@@ -1,0 +1,7 @@
+id "comunicazioni"
+name "Comunicazioni"
+version "0.3"
+author "Fabiano Pavan"
+depends "images"
+gems "twitter", "omniauth-twitter"
+

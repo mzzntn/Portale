@@ -1,0 +1,39 @@
+/* portale */
+
+    div#register div.textbox{
+      background-color: #000;
+      border: 1px solid #006699;
+    }
+
+/* box per delibere e calcolo ici */
+ 
+    div#pageBox{
+      background-color: #000;
+    }
+
+    div#pageBox div.leftTopCorner{
+    }
+
+    div#pageBox div.rightTopCorner{
+    }
+
+    div#pageBox div.leftBottomCorner{
+    }
+     
+    div#pageBox div.rightBottomCorner{
+    }
+ 
+    div#pageBox div.boxContent{
+    }
+
+    div#pageBox h3,h4,h5{
+      border-bottom: 1px solid #006699;
+    }
+    
+    div#pageBox div#iciCalculator{
+      border-left: 1px solid #006699;
+    }
+    
+    div#pageBox div#iciStuff{
+    }
+ 

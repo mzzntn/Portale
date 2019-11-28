@@ -1,0 +1,9 @@
+<div id="scelta_tipo_modulo">
+	<legend>Invio modulo tramite e-mail</legend>
+	<p class="lead">Modulo id { @modulo.id } dal titolo: '{ @modulo.tipo_modulo.nome }'</p>
+	<core:confirm id="confermaCancellazione" cancel_param="annulla" ok_param="conferma">
+        <tpl:content name="text">
+            <span class="lead">Sei sicuro di voler inviare il modulo per e-mail?</span>
+        </tpl:content>
+    </core:confirm>
+</div>

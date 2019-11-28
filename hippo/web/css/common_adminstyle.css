@@ -1,0 +1,452 @@
+/* @override http://bruna/test/test_nuovi_template/web/css/common_adminstyle.css */
+
+/** Ultima modifica: 
+ * aggiunto margine in #admin .content
+ * aggiunta .TextAreaInput
+ */
+
+/* struttura pagina */
+    
+    body,html{
+      color: #000;    
+      background-color: #D5D5D5;
+    }
+    
+    #container{
+      background-color: #fff;
+    }
+ 
+    #header{
+/*       background: url('img/headbg.gif') top repeat-x; */
+      background: url("img/header_bg.png?1389186654") repeat-x scroll center top #417690;
+    }
+
+    #topbar{
+      background-color: #9a001e;
+      color: #f5f5f5; 
+    }
+ 
+    #breadcrumb{
+      border-bottom: 1px solid #006699;
+    }
+     
+    .column{
+    }
+
+    #leftcolumn{
+    }
+
+    #rightcolumn{
+		position: relative;
+    }
+
+    #bottomlinks{
+    }
+
+    #footer{  
+      background-color: #F5F5F5;
+      border-top: 4px solid #006699;
+      border-bottom: 1px solid #006699;       
+    }
+  
+    #footDeco{
+    }
+
+    #footDecoSpacer{
+    }
+
+    #footDecoLeftCorner{
+      background: #fff url('img/foot_lbcorner.gif') bottom left no-repeat;
+    }
+
+    #footDecoRightCorner{
+      background: #fff url('img/foot_rbcorner.gif') bottom right no-repeat; 
+    }
+    
+    #admin.content{
+	    margin: 5px;		
+	    margin-right: auto;
+		
+	}
+    
+/* menu */
+    
+    .menu h3{ 
+      color: #fff;
+    }
+
+    #leftcolumn.column.menu h3{ 
+      background: #9a001e url('img/mhead_rtcorner_red.gif') top right no-repeat;
+    }
+
+    #rightcolumn.column.menu h3{ 
+      background: #9a001e url('img/mhead_ltcorner_red.gif') top left no-repeat;
+    }
+
+    .menu .menucnt{
+      border: 1px solid #AA0022;
+      background: #f5f5f5;
+    }
+   
+    .menu .menucnt p.error{
+      color: #ff0000;
+    }
+ 
+    .menu .menucnt form p label{
+      
+    }
+   
+/* collegamenti */
+  
+    /*a,a:visited,a:active{ 
+      color: #006699;
+      text-decoration: underline;
+    }
+
+    a:hover{
+      text-decoration: none;
+    }*/
+
+    a.highlight,a.highlight:active,a.highlight:visited{
+      /*color: #AA0022;
+      background: url('img/menulnk_off_right.gif') left no-repeat;     
+      background-position: 5% 50%;  */ 
+    }
+
+    a.highlight:hover,a.selected{ 
+      /*background: url('img/menulnk_on_right.gif') left no-repeat;
+      color: #AA0022;    
+      background-position: 5% 50%;     */  
+    }
+  
+    a.disabled{
+      color: #d5d5d5;
+      text-decoration: none; 
+    }
+    
+    #topbar a,#topbar a:active,#topbar a:visited{
+      color: #f5f5f5;
+      text-decoration: none;
+    }
+
+    #topbar a:hover{ 
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    #topbar a.fontsize,#topbar a.fontsize:active,#topbar a.fontsize:visited{
+      text-decoration: none;
+    }
+
+    #topbar .fs_small{         
+      background: url('img/bottoneDimTestoSmall_off.gif') left no-repeat; 
+    }
+
+    #topbar .fs_smallon,#topbar .fs_small:hover{   
+      background: url('img/bottoneDimTestoSmall_on.gif') left no-repeat; 
+    }
+
+    #topbar .fs_normal{        
+      background: url('img/bottoneDimTestoNormal_off.gif') left no-repeat; 
+    }
+
+    #topbar .fs_normalon,#topbar .fs_normal:hover{  
+      background: url('img/bottoneDimTestoNormal_on.gif') left no-repeat; 
+    }
+
+    #topbar .fs_big{           
+      background: url('img/bottoneDimTestoBig_off.gif') left no-repeat; 
+    }
+
+    #topbar .fs_bigon,#topbar .fs_big:hover{    
+      background: url('img/bottoneDimTestoBig_on.gif') left no-repeat;
+    }
+   
+    #breadcrumb a,#breadcrumb a:active,#breadcrumb a:visited{
+      color: #006699;
+    }
+
+    #breadcrumb a:hover{
+      color: #006699;
+    }
+
+    .menu .menucnt a,.menu .menucnt a:visited,.menu .menucnt a:active{
+      color: #235A6C;
+      background: url('img/menulnk_off_right.gif') left no-repeat;  
+      background-position: 5% 50%;
+      border-top: 1px solid #D5D5D5;
+    }
+
+    .menu .menucnt a:hover,.menu .menucnt a.selected{  
+      color: #AA0022;
+      border-top: 1px solid #AA0022;    
+      background: #E5E5E5 url('img/menulnk_on_right.gif') left no-repeat;
+      background-position: 5% 50%;
+    }
+ 
+    .menu .menucnt a.expanded,.menu .menucnt a.expanded:active,.menu .menucnt a.expanded:visited{ 
+      background: url('img/menulnk_on_bottom.gif') left no-repeat;
+      background-position: 5% 50%;
+    }
+
+    .menu .menucnt a.expanded:hover{ 
+      background: url('img/menulnk_on_right.gif') left no-repeat;
+      background-position: 5% 50%;
+    }
+      
+/* form */
+ 
+    .TextAreaInput {
+	    font-size: 1.3em;
+	    overflow: auto;
+    }
+
+    input,select,textarea,button,.button{
+      /*background-color: #f5f5f5;
+      color: #006699;*/        
+    }
+
+    form{
+    }
+
+    label{
+    }
+
+    form .formRow{
+      border-bottom: 1px solid #d5d5d5;
+      margin-bottom: 8px;
+    }
+
+    form  .formRow label{
+		background-color: #f3f3f3;
+		margin-right: 10px;
+		padding: 3px;
+		padding-left: 10px;
+    }
+    
+    form .formRow label:hover{
+    }
+
+    form .buttons{
+        /*border-top: 1px solid #d5d5d5;
+        background-color: #E5E5E5;*/
+    }
+
+
+    button, .button{
+      /*border: 2px solid #d5d5d5;
+      color: #AA0022 !important;    
+      background-color: #F0F0F0;*/
+    }
+
+    button:hover, .button:hover{
+      /*background-color: #F0F3FA;*/
+    }
+    
+    .rightalign .rightalign_inner{
+		padding-left: 32em;
+		text-align: left;
+	}
+
+    option{
+    }
+
+    input:focus,select:focus,textarea:focus{
+      background-color: white;
+    }
+
+    legend{
+      background-color: #E5E5E5;
+    }
+
+    fieldset{
+      border: 1px solid #E5E5E5;    
+    }
+
+/* table */
+
+    table.rowList{
+      border: 1px solid #d5d5d5;
+      color: #000;
+      font-size: 1em;
+      margin-top: 10px;
+    }
+    
+    table.rowList tr.odd{
+		background-color: #fcfaf4;
+    }
+    table.rowList tr.even {
+                background-color: #FEFEFE;
+    }
+
+    table.rowList th{
+      background-color: #f9f9f9;
+      border-bottom: 2px solid #d5d5d5;
+      border-right: 1px solid #cfcfcf;
+    }
+    
+    table.rowList th.topRow{
+		background-color: #828282;
+	}
+    
+    table.rowList th a{
+		color: #504f6b;
+		font-size: 0.95em;
+	}
+	
+	table.rowList th .highlightContainer{
+		background-color: #f7f7f7;
+		font-size: 0.9em;
+		padding-left: 5px;
+		padding-right: 10px;
+		padding-top: 1px;
+		padding-bottom: 1px;
+		border: 1px solid #636363;
+		margin-right: 5px;
+	}
+
+    table.rowList td{
+      border-bottom: 1px solid #d5d5d5;
+      border-right: 1px solid #efefef;
+      color: #393939;
+      padding: 4px;
+    }
+
+    table.rowList tr.selected td{
+      border-bottom: 1px solid #f0f0f0;
+      background-color: #d5d5d5;
+    }
+ 
+/* lists */
+
+    #bottomlinks ul li{
+      background-color: #006699;   
+    }
+
+    #bottomlinks ul li.leftCorner{
+      background: #006699 url('img/mhead_ltcorner.gif') top left no-repeat;
+    }
+
+    #bottomlinks ul li.rightCorner{
+      background: #006699 url('img/mhead_rtcorner.gif') top right no-repeat;
+    }
+ 
+/* headings & paragraphs */
+
+    .menu .menucnt p.info{
+
+    }
+ 
+    .content p{
+    
+    }
+  
+    p.info{
+      border: 0;
+      color: #656565;
+    }
+ 
+    p.highlight, span.highlight,fonthighlight{
+      color: #FF2929;
+    }
+    
+/* misc */
+ 
+    #pageNav{
+      text-align: center;
+      background-color: #f5f5f5;
+      border: 1px solid #006699;      
+    }
+ 
+    .calendar{
+      background-color: #f5f5f5;
+      border: 2px solid #006699;      
+    }
+    
+    .tooltip{
+      border: 1px solid #006699;
+      background-color: #f5f5f5;
+    }
+    
+    .TabView .tabButtons{
+		 /* border-bottom: 2px solid #e3e3e3; sballa senza il clear, ma il clear sballa le tabelle */
+	}
+    
+    .TabView .tabButton{
+		background-color: #f3f3f3;
+		border-left: 2px solid #606060;
+		border-right: 2px solid #606060;
+		border-top: 2px solid #606060;
+		margin-left: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 8px;
+		padding-top: 5px;
+		width: 5em;
+		height: 1em;
+		float: left;
+		text-align: center;
+		vertical-align: top;
+	}
+	
+	.TabView .tab{
+		border-left: 2px solid #e3e3e3;
+		border-right: 2px solid #e3e3e3;
+		border-bottom: 2px solid #e3e3e3;
+		padding: 5px;
+	}
+	
+  
+#container .spider-admin-container {
+    background: url("img/side_bg.png?1389186654") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+
+body, html {
+    background-color: #FFF;
+}
+
+
+.spider.components.crud .add 
+{
+    background: url("img/add.gif") no-repeat scroll 0 50% rgba(0, 0, 0, 0);
+    padding-left: 40px;
+}
+
+
+#container #sidebar, #container > .spider-admin-sidebar, .spider-admin-container #sidebar, .spider-admin-container > .spider-admin-sidebar
+{
+  width: 200px;
+}
+
+#app_buttons .glyphicon
+{
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.nav-tabs
+{
+  margin-bottom: 0px;   
+}
+
+.icons-sprite, .icons-logout, #header #admin_controls .logout_link
+{
+    background: url("img/logout.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+
+#header #admin_controls .logout_link {
+    background-position: right center;
+    margin-left: 6px;
+    padding-right: 25px;
+}
+
+#admin .TabView .table-bordered input[type="text"]
+{
+    width: 200px;
+}
+
+.glyphicon-calendar:before{content:"\e109"}
+
+.pagination .first, .pagination .next, .pagination .prev, .pagination .last {font-size: 18px;}

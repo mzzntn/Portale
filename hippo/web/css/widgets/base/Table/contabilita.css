@@ -1,0 +1,52 @@
+.rowList, .Table{
+  border: 0;
+  background-color: #dcdcdc;
+  font-size: small;
+
+}
+
+.rowList, .rowList th, .rowList td{
+  border: 1px solid #dcdcdc;
+}
+
+.rowList th{
+  background-color: #8B0000;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+      font-size: 10pt;
+  FONT-FAMILY:Tahoma, Verdana, Arial;
+   FONT-SIZE:12;
+}
+
+.rowList th A{
+  color: white;
+}
+
+A.tableMove{
+  color: black;
+}
+
+#tableLinks1{
+    font-size: 10pt;
+  FONT-FAMILY:Tahoma, Verdana, Arial;
+   FONT-SIZE:12;
+}
+
+
+
+
+.rowList td{
+  padding: 3px;
+    font-size: 10pt;
+  FONT-FAMILY:Tahoma, Verdana, Arial;
+   FONT-SIZE:12;
+}
+
+.rowList .row.odd{
+  background-color: #FFFACD;
+}
+
+.rowList .row.even{
+  background-color: #FFFFFF;
+}

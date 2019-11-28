@@ -1,0 +1,41 @@
+<div id="elenco_comunicazioni" class="col-lg-10">
+	<div class="row">
+        <h3 class="verde col-lg-6 col-md-6 col-sm-12 col-xs-12 pl0">Ultime comunicazioni</h3>
+    </div>
+    <div sp:if="!@comunicazioni.blank?" class="row"> 
+		<div sp:each="@comunicazioni |com|" class="bordo_servizio pb15 mb15 clearfix">
+			<h4 class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? '' : 'align_margin_dx') }">
+				{ com.titolo }</h4>
+			
+			<div>
+				<!--<div sp:if="!com.immagine.blank?" class="container_img" style="{ @x_resolution.blank? ? '' : 'width:'+@x_resolution.to_s+'px' }">-->
+				<div sp:if="!com.immagine.blank?" class="container_img">
+					<!--<img src="{ Comunicazioni::ComunicazioniController.http_s_url('download_immagine?id_com='+com.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? '' : 'align_margin_dx') } img-responsive pull-left mr10 img-respo"  style="{ @x_resolution.blank? ? '' : 'width:'+(@x_resolution-5).to_s+'px' }">-->
+					<img src="{ Comunicazioni::ComunicazioniController.http_s_url('download_immagine?id_com='+com.id.to_s+'&t_img=mini') }" alt="Immagine comunicazione" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? '' : 'align_margin_dx') } img-responsive pull-left mr10">
+				</div>
+				<div>
+					{ ( com.testo_breve.blank? ? com.testo : com.testo_breve ) }
+				</div>
+			</div>
+			<div class="btn btn-success">
+		        <a href="{ Comunicazioni::ComunicazioniController.http_s_url }/{ com.id }/{ @tipologia_comunicazione }">Leggi tutto</a>
+		    </div>
+		</div>
+	</div>
+	<div sp:if="@comunicazioni.blank?" class="row">
+		<div class="alert alert-info col-lg-6 col-md-6">
+	    	Non sono attualmente presenti comunicazioni.
+	    </div>
+	</div> 	
+
+	<div class="row">
+    	<div class="fw mb10 pull-right">
+	        <a href="{ Comunicazioni::ComunicazioniController.http_s_url('archivio') }" class="{ (Spider.conf.get('comunicazioni.integra_in_prisma') == true ? 'btn btn_big_border' : '') }" class="btn">Archivio Comunicazioni</a>
+	    </div>
+	</div>
+	<div class="row">
+		<div sp:if="Spider.conf.get('comunicazioni.integra_in_prisma') != true">
+        	<a href="{ Portal.http_s_url('indice_servizi') }" class="btn btn-success col-lg-2 col-lg-offset-5 col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">Tutti i servizi</a>
+        </div>
+    </div>
+</div>

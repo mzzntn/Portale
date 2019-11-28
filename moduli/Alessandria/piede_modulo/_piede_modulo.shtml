@@ -1,0 +1,14 @@
+<div>
+	<div class="piede_modulo">
+		<br />
+		<hr>
+		<p class="informativa">
+		<strong>Informativa ai sensi dell’art. 13 del D.Lgs 196 del 2003:</strong> i dati sopra riportati sono prescritti dalle disposizioni vigenti ai fini del procedimento per il quale sono richiesti e verranno utilizzati esclusivamente per tale scopo.<br>
+		<span sp:if="!Spider.config.get('moduli.testo_informativa_piede').blank?"></span>
+		{ Spider.config.get('moduli.testo_informativa_piede') }
+		</p>
+		<p class="firma_elettronica">
+		<strong>*definizione di firma elettronica:</strong> l'insieme dei dati in forma elettronica, allegati oppure connessi tramite associazione logica ad altri dati elettronici, utilizzati come metodo di identificazione informatica.
+		</p>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+L'utente <%=utente.nome%> <%=utente.cognome%> ha modificato i suoi dati.
+I dati cambiati sono:
+<%
+  cambiati.each do |k, v|
+%>
+- <%= k %>, da '<%= v[0] %>' a '<%= v[1] %>'
+<%
+  end
+%>
+Le modifiche non necessitano di conferma e sono visibili alla pagina <%=link_amministrazione%> 
+
+

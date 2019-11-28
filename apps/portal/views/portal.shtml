@@ -1,0 +1,92 @@
+<div id='portal_main' class="col-lg-12">
+<!-- VECCHIO
+    <div id='portal_left' sp:if="!@no_left_column">
+        <div class="menu_box">
+            <h3>Sezione pubblica</h3>
+		    <ul class='menucnt'>
+        	    <li>
+                    <a sp:if="defined?(Comunicazioni) == nil" href="{ Portal.url }">Indice</a>
+                    <a sp:if="defined?(Comunicazioni) != nil" href="{ Portal.http_s_url('indice_servizi') }">Indice</a>
+                </li>
+                <li sp:each="@servizi_pubblici |servizio|"><a href="{ servizio.url }">{ servizio.nome }</a></li>
+		    </ul>
+		</div>
+        <div id='user' sp:if="!@hide_user">
+            <tpl:include src='user_box'>
+        </div>
+    </div>
+    <div id="portal_content" class="{ @classe_contenuto_portale } { (!@no_left_column.blank? ? 'schermo_intero' : '') }">
+        <div id="breadcrumb" sp:if="@servizio_portale">
+            <a href="{ Portal.url }">Home</a> -> <a href="{ Portal.http_s_url(:servizi) }/{ @servizio_portale.id }">
+                { @servizio_portale.nome }
+            </a>
+        </div>
+        <sp:yield />
+    </div>
+-->
+
+
+    <!-- @classe_contenuto_portale permette di avere sul div una classe che identifica l'app che viene visualizzata a livello di portal.layout, es moduli, portal, comunicazioni  -->
+    <div id="portal_content" class="{ @classe_contenuto_portale } { ( @layout_web ? '' : 'mobile_view') }">
+        <!--
+        <div id="breadcrumb" sp:if="@servizio_portale">
+            <a href="{ Portal.url }">Home</a> -> <a href="{ Portal.http_s_url(:servizi) }/{ @servizio_portale.id }">
+                { @servizio_portale.nome }
+            </a>
+        </div>
+        -->
+
+        <!-- testo introduttivo per la index -->
+        <div sp:if="!@utente_portale" class="row">
+            <!-- NON SONO LOGGATO SUL PORTALE -->  
+            <div sp:if="@mostra_testo_indroduttivo" class="text-center lead col-lg-8 col-lg-offset-2">
+                <p class="visibility-580 lead">L' amministrazione,<br /> per facilitare il rapporto con i propri utenti, mette a disposizione questa sezione 
+                del portale <br>da cui è possibile, previa 
+                <a href="autenticazione">autenticazione</a>,
+                accedere ai servizi riservati.</p>
+                <p class="visibility-580 lead">Tutti i servizi del portale sono attivi comodamente da casa Vostra e senza limiti di orario.</p>
+                <p class="testo_servizi_attivi lead">I servizi attualmente attivi sono i seguenti:</p>
+            </div>
+        </div>
+        <div sp:if="@layout_web">
+            <!-- NAVIGATORE A FRECCE PER I SERVIZI-->
+            <tpl:include src="_navigatore" />
+        </div>
+
+        <div sp:if="!@layout_web" class="spaziatura_top">
+
+        </div>
+
+        <sp:yield />
+    </div>
+
+
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--- <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div> -->
+                <div class="modal-body">
+                    
+                </div>
+                <!---
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+                </div>
+                -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--- Modal 
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div> -->
+
+</div>

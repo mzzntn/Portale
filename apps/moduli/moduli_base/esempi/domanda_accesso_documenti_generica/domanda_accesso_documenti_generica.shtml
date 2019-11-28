@@ -1,0 +1,66 @@
+<moduli:modulo id="modulo" 
+    titolo="Domanda di accesso ai documenti amministrativi"
+    codice="Agg. 2011/Mod. DADU/6001">
+    <moduli:gruppo id="dati_utente" titolo="Dati personali" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato-utente id="nome_cognome" size="50">Il/la sottoscritto/a</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_nascita" label-align="utente">nato/a a </moduli:dato-utente>
+            <moduli:dato-utente id="data_nascita" class="label_smlwidth">il</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="codice_fiscale">C.F.</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_residenza" label-align="utente">residente a </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="indirizzo_residenza" label-align="utente">in via/fraz. </moduli:dato-utente>
+            <moduli:dato-utente id="numero_telefono" class="label_smlwidth">n. tel. </moduli:dato-utente>
+        </div>
+    </moduli:gruppo>
+
+    <moduli:gruppo id="giustificazione">
+        <h3><em>Specificare il motivo giustificativo della richiesta</em></h3>
+        <div class="riga">
+            <b>(da indicare <u>obbligatoriamente</u> art. 13 del regolamento comunale in materia di procedimento amministrativo e di diritto di informazione e di accesso ai documenti amministrativi approvato con deliberazione del consiglio comunale n. 14 dd. 29.03.2011, ad esclusione dell'accesso riguardante atti pubblici, deliberazioni, determinazioni, statuti) :</b>
+        </div>
+        <moduli:dato id="TESTO_giustificazione" tipo="longText" />
+    </moduli:gruppo>
+    <div class="center_div all_width">
+        <h3>Chiede</h3>
+        <div class="riga center_text">
+                L'ACCESSO ALLA SEGUENTE DOCUMENTAZIONE
+        </div>
+        <moduli:dato id="testo_chiede" tipo="longText" />
+    </div>
+    <moduli:opzioni id="visione_rilascio" class="lista_checkbox_vertical">
+                    <moduli:opzione id="visione">per visione della documentazione</moduli:opzione>
+                    <moduli:opzione id="per il rilascio">per il rilascio di
+                                    <moduli:opzioni id="tipo_copia" class="float_right">
+                                        <moduli:opzione id="copia">copia</moduli:opzione>
+                                        <moduli:opzione id="copia_conforme">copia conforme all'originale (in tal caso anche la domanda va presentata in marca da bollo ai sensi del D.P.R. 642/1972)</moduli:opzione>
+                                    </moduli:opzioni>
+                    </moduli:opzione>
+    </moduli:opzioni>
+    <moduli:gruppo id="box_firma" class="clear_both">
+        <moduli:data-firma id="data_firma" class="data-firma"/>
+    </moduli:gruppo>
+    <moduli:gruppo id="articoli_1" class="clear_left">
+                Ai sensi dell'art. 38 D.P.R. 445 del 28 dicembre 2000 e s.m.:
+                <moduli:opzioni id="istanza" class="lista_checkbox_vertical">
+                    <moduli:opzione id="sottoscritta">l’istanza è stata sottoscritta dall’interessato in presenza del
+                        <moduli:dato id="dipendente">dipendente:</moduli:dato>
+                    </moduli:opzione>
+                    <moduli:opzione id="documento" class="long_label_check">
+                        l’istanza è stata presentata unitamente a copia fotostatica non autenticata di un documento di identità del sottoscrittore all’ufficio competente
+                    </moduli:opzione>
+                </moduli:opzioni>
+    </moduli:gruppo>
+    <div class="clear_left">
+                <em class="all_width">
+                    Informativa ex. art. 13 del D.lgs. n° 196/2003: i dati personali raccolti saranno trattati, con strumenti cartacei e con strumenti informatici, esclusivamente nell'ambito del procedimento per il quale la presente dichiarazione viene resa.
+                </em>
+    </div>
+</moduli:modulo>

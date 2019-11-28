@@ -1,0 +1,187 @@
+<div class="form_centrale_stretto">
+    <div id="reg_mode" class="hidden">{ @mode }</div>
+    <div class="row"> 
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+        <!-- <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1"> -->
+            <div id="container_registrazione">
+                <div class="intestazione_form">
+                    
+                            <tpl:pass sp:if="!@registrazione_aziendale" >
+                                <p sp:if="@mode == nil || @mode == :persona" class="alert alert-info">
+                                    Questo modulo è per la registrazione di <strong>PERSONE FISICHE</strong>.<br> Per registrare una <strong>PERSONA GIURIDICA</strong>,
+                                    <a href="?mode=azienda"><strong>clicca qui</strong></a>.
+                                </p>
+                                <p sp:if="@mode == :azienda" class="alert alert-info">
+                                    Questo modulo è per la registrazione di <strong>PERSONE GIURIDICHE</strong>.<br> Per registrare una <strong>PERSONA FISICA</strong>,
+                                    <a href="?mode=persona"><strong>clicca qui</strong></a>.
+                                </p>
+                            </tpl:pass>
+                    
+                        <p>
+                            I campi segnati con <em class="form_required_symbol">*</em> sono obbligatori.
+                        </p>
+                    </div>
+                <forms:form model="@model" id="form_registrazione">
+                    <tpl:delete search=".form-actions" />
+                    <form:fields>
+                    <input type="hidden" value="{ @_parent.mode }" name="mode" />
+                        <fieldset sp:if="@_parent.mode == :azienda " class="ui-corner-all">
+                            <legend>Dati persona giuridica</legend>
+                            <div class="form-group">
+                                <forms:element_row element=":ragione_sociale" required="true" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <forms:element_row element=":partita_iva" required="true" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <forms:element_row element=":codice_fiscale_azienda" required="true" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <forms:element_row element=":indirizzo_azienda" required="true" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <forms:element_row element=":civico_azienda" required="true" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <forms:element_row element=":cap_azienda" required="true" class="form-control"/>
+                            </div>
+                            <tpl:pass sp:if="@comuni_prov_tabellati">
+                                <div class="form-group">
+                                    <forms:element_row element=":provincia_azienda_tab" required="true" class="form-control"/>
+                                </div>   
+                                <div class="form-group">
+                                    <forms:element_row element=":comune_azienda_tab" required="true" class="form-control"/>
+                                </div>
+                            </tpl:pass>
+                            <tpl:pass sp:if="@prov_tabellate">
+                                <div class="form-group">
+                                    <forms:element_row element=":provincia_azienda_tab" required="true" class="form-control"/>
+                                </div>   
+                                <div class="form-group">
+                                    <forms:element_row element=":comune_azienda" required="true" class="form-control"/>
+                                </div>
+                            </tpl:pass>
+                            <tpl:pass sp:if="!@prov_tabellate && !@comuni_prov_tabellati">
+                                <div class="form-group">
+                                    <forms:element_row element=":provincia_azienda" required="true" class="form-control"/>
+                                </div>   
+                                <div class="form-group">
+                                    <forms:element_row element=":comune_azienda" required="true" class="form-control"/>
+                                </div>
+                            </tpl:pass>
+                            <div class="form-group">
+                                <forms:element_row element=":telefono_azienda" class="form-control"/>
+                            </div>   
+                            <div class="form-group">
+                                <forms:element_row element=":fax_azienda" class="form-control"/>
+                            </div>   
+                            <div class="form-group">
+                                <forms:element_row element=":email_azienda" class="form-control"/>
+                            </div>   
+                            <div class="form-group">
+                                <forms:element_row element=":pec_azienda" class="form-control"/>
+                            </div>
+                        </fieldset>
+                        <tpl:include src="registrazione/_form_dati_anagrafici.shtml" />
+                    <div class="row">
+                        <fieldset class="ui-corner-all">
+                            <legend>Dati di accesso</legend>
+                            <tpl:pass sp:if="!@utente_login">
+                                <div class="form-group">
+                                    <forms:row error_condition="@errors[:username]">
+                                        <label for="username">Scegli un nome utente <em class="form_required_symbol">*</em></label>
+                                        <div class="controls">
+                                            <input type="text" id="username" name="username" value="{ @username }" class="form-control"/>
+                                        </div>
+                                    </forms:row>
+                                </div>   
+                                <div class="form-group">
+                                    <forms:row error_condition="@errors[:password]" sp:if="@password_libera">
+                                        <label for="password">Scegli una password <em class="form_required_symbol">*</em></label>
+                                        <div class="controls">
+                                            <input type="password" id="password" name="password" value="{ @password }" class="form-control"/>
+                                            <span sp:if="@password_normativa" class="help-block">La password deve essere di almeno 8 caratteri.</span>
+                                        </div>
+                                    </forms:row>
+                                </div>   
+                                <div class="form-group">
+                                    <forms:row error_condition="@errors[:password2]" sp:if="@password_libera">
+                                        <label for="password2">Ripeti la password <em class="form_required_symbol">*</em></label>
+                                        <div class="controls">
+                                            <input type="password" id="password2" name="password2" value="{ @password2 }" class="form-control"/>
+                                        </div>
+                                    </forms:row>
+                                    <div class="help-block" sp:if="!@password_libera">
+                                    La password ti verrà inviata dopo che i tuoi dati saranno stati verificati.
+                                    </div>
+                                </div> 
+                                
+                                <div class="form-group">
+                                    <forms:row error_condition="@errors[:accettazione_clausole]" sp:if="!@clausole.blank?">
+                                        <label for="accettazione_clausole">Accetto <em class="form_required_symbol">*</em></label>
+                                        <div class="controls">
+                                            <input type="checkbox" id="accettazione_clausole" name="accettazione_clausole" value="true" sp:attr-if="@accettazione_clausole == 'true',checked,checked" />
+                                        </div>
+                                        <br />
+                                        Registrandoti dichiari di aver letto e accetti integralmente l' <a href="#" class="trattamento_dati">Informativa sul trattamento dei Dati Personali</a> e l' <a href="#" class="privacy">Informativa sulla Privacy</a>.
+                                    </forms:row>
+                                </div>
+                                <div sp:if="Spider.conf.get('portal.abilita_gdpr_utente')">
+                                    <div class="form-group hide hidden">
+                                        <forms:element_row element=":disabilita_comunicazioni" />
+                                    </div>
+                                    <div class="form-group">
+                                        <h3><strong>AUTORIZZAZIONE AL TRATTAMENTO DATI</strong></h3>
+                                    </div>
+                                    <div class="form-group" id="informativa_gdpr">
+                                        { @informativa_gdpr }
+                                    </div>
+                                    <div class="form-group">
+                                        <forms:row error_condition="@errors[:accettazione_gdpr]">
+                                        <div><strong>Registrandoti dichiari di aver letto l' <a target="_blank" href="{ Portal::PortalController.http_s_url('informativa_gdpr') }" >informativa sul trattamento dei dati</a> ed autorizzare l'ente al trattamento dei tuoi dati personali.</strong></div>
+                                        <input type="checkbox" id="accettazione_gdpr" name="accettazione_gdpr" value="true" sp:attr-if="@accettazione_gdpr == 'true',checked,checked" />
+                                            <label for="accettazione_gdpr">Accetto <em class="form_required_symbol">*</em></label>
+                                        </forms:row>
+                                    </div>
+                                    <div class="form-group">
+                                        <strong>Autorizzo all' utilizzo dei miei dati di contatto per le comunicazioni telematiche.</strong>
+                                    </div>                               
+                                    <div class="form-group">
+                                        <forms:row>
+                                        <input type="checkbox" id="autorizza_comunicazioni" name="autorizza_comunicazioni" value="true" sp:attr-if="@autorizza_comunicazioni == 'true',checked,checked" />
+                                            <label for="autorizza_comunicazioni">Accetto</label>
+                                        </forms:row>
+                                    </div>
+                                </div>
+                            <tpl:pass>
+                        </fieldset>
+                    </div>
+                            <div class="row">
+                                <div class="alert alert-warning col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1" sp:if="@controllo_cf_errato != 'false'">
+                                    { @controllo_cf_errato }
+                                </div>
+                                <div sp:if="@controllo_cf_errato == 'false'" class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                                    <button type="submit" name="_w{ @widget[:param] }[submit]" id="submit_registrazione" class="form-control btn btn-success" value="Registrami">Registrami</button>
+                                </div>
+                                <div sp:if="@controllo_cf_errato != 'false'" class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                                    <button type="submit" name="_w{ @widget[:param] }[submit]" id="submit_registrazione" class="form-control btn btn-success" value="Conferma e prosegui">Conferma e prosegui</button>
+                                </div>
+                                <!--
+                                <div class="col-sm-4 col-sm-offset-4" sp:if="@controllo_cf_errato == 'false'">
+                                    <input type="submit" name="_w{ @widget[:param] }[submit]" id="submit_registrazione" class="form-control btn btn-success" value="Registrami" />
+                                </div>
+                                <div class="col-sm-4 col-sm-offset-4" sp:if="@controllo_cf_errato != 'false'">
+                                    <input type="submit" name="_w{ @widget[:param] }[submit]" id="submit_registrazione" class="form-control btn btn-success" value="Conferma e prosegui" />
+                                </div>
+                                -->
+                            </div>
+
+                        
+
+                    </form:fields>
+                </forms:form>
+            </div>
+        </div>
+    </div>
+
+</div>

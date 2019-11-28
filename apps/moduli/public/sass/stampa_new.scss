@@ -1,0 +1,266 @@
+/* variabili dei moduli, che importano quelle del portal*/
+@import "moduli_new";
+
+
+/* STILI MODULI */
+
+$baseline: 24px;
+$field-border-color: #9A7E7E; 
+
+body{
+    /* fisso dimensione carattere e famiglia */
+    font-size: 12pt;
+    font-family: Arial;
+    border: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    #modulo{
+        /* per avere l'interno del modulo a 1024  */
+        font-family: Arial;
+        width: 1024px;
+        max-width: 1024px;
+        margin: 0 auto;
+        input, button, select, p {
+            font-size: 12pt;
+            font-weight: normal;
+        }
+        textarea{
+            overflow: visible;
+            white-space: initial;
+        }
+        .custom-combobox-input{
+            width: auto;
+        }
+    }
+    
+}
+
+/* STILI MODULI */
+.moduli_layout{
+
+    @mixin lista_checkbox{
+        div.input {
+            input{
+                float:left;
+                padding-bottom: 5px;
+            }
+            label{
+                float:left;
+                width:auto;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    /* evita il page-break all'interno di questi elementi e classi */
+    table, .wdgt-Moduli-Opzioni, .wdgt-Spider-Forms-Text, div.opzioni{
+        page-break-inside: avoid;
+    }
+
+    /* per evitare che il page break tagli comunque un po' del bordo della checkbox */
+    .opzioni{
+        padding-top: 5px;
+    }
+
+
+    .modulo{
+        /* serve per mostrare i pezzi che vengono nascosti tramite javascript a video */      
+        .hide, .hidden{
+            &.mostra_in_stampa{
+                display: block;
+            }
+        }
+
+        .nascondi_in_stampa{
+            display: none;
+        }
+
+        .sidecontentpullout{
+            display: none;
+        }
+
+        #modulo-sidebar_menu{
+            display: none;
+        }
+
+        select{
+            display: none;
+        }
+
+        input{
+            border: 0;
+            padding: 0;
+            margin-right: 12px;
+            border-bottom: 1px solid $field-border-color;
+        }
+
+        h3{
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+
+        .wdgt-Moduli-Allegato {
+            .file-link{
+                color: #000;
+                display: block;
+                pointer-events: none;
+                cursor: auto;
+                text-decoration: none;
+            }
+            .js-change-link{
+                display: none;
+            }
+            span.clear{
+                display: none;
+            }
+            .change{
+                display: none;
+            }
+        }
+
+        .label_auto{
+            label{
+                width: auto;
+            }
+        }
+
+    
+
+        .input_bigwidth{
+            input, textarea{
+                width: 550px;
+                margin-left: 20px;
+            }
+        }
+
+        fieldset{
+            legend{
+                display: none;
+            }
+        }
+
+        input[type="submit"]{
+            display: none;
+        }
+
+        input[type='checkbox']{
+            margin-left:2px !important;
+        }
+
+        /* mette un contorno ben visibile alle checkbox */
+        input[type="checkbox"]{
+            /*outline: 1px solid #000;*/
+            border: none;
+        }
+
+        /* nasconde il submit che si vede a video per la stampa*/
+        .bottom_screen_link{
+            display: none;
+        }
+
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+            max-width: 99%;
+            margin-left: 1px;
+            tr, td, th, tbody, thead, tfoot {
+                page-break-inside: avoid !important;
+            }
+            thead, tbody, td, th{
+                border: 1px solid #ddd;
+            }
+            &.full_row_no_border{
+                border: none;
+                thead, tbody, td, th{
+                    width: 100%;
+                    border: none;
+                }
+            }
+            &.full_row{
+                width: 98%;
+                thead, tbody, td, th{
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+
+        .adaptive_input textarea{
+            height: none;
+            vertical-align: middle;
+            line-height: 22px;
+            margin-right: 10px;
+            padding: 0 5px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+        }
+
+        #modulo-modal_caricamento, #modulo-avviso_errore{
+            display: none;
+        }
+
+
+        .testata_modulo{
+            .centro_testata_modulo{
+                text-align: center;
+                margin-left: 5px;
+                width: 57%;
+                float: left;
+            }
+            .logo_testata_modulo{
+                float: left;
+                width: 20%;
+                img{
+                    height: 170px;
+                    float: left;
+                    margin-left: 10px;
+                }
+            }
+            height: 180px;
+        }
+
+    }
+
+}
+
+/* tabelle in titoli e servizi presso pa */
+#box_servizi, #box_titoli_studio, #box_titoli_vari{
+    table{
+        border-collapse: collapse;
+        border-spacing: 0;
+        max-width: 99%;
+        margin-left: 1px;
+        thead, tbody, td, th{
+            border: 1px solid #ddd;
+            page-break-inside: avoid !important;
+        }
+        tr, tfoot {
+            page-break-inside: avoid !important;
+        }
+        &.full_row_no_border{
+            border: none;
+            thead, tbody, td, th{
+                width: 100%;
+                border: none;
+            }
+        }
+        &.full_row{
+            width: 98%;
+            thead, tbody, td, th{
+                border: 1px solid #ddd;
+            }
+        }
+    }
+    p.annotazioni{
+        font-size: 7pt;
+    }
+}
+
+/* valido anche fuori dal modulo per bandi */
+.hide, .hidden{
+    &.mostra_in_stampa{
+        display: block;
+    }
+}
+

@@ -1,0 +1,136 @@
+<moduli:modulo id="modulo" titolo="Richiesta Trasporto/Mensa - anno 2015/16" codice="" class="modulo_stretto">
+    <div class="row">
+    <div class="span2 offset6">
+    	Al Sig.<br />
+				SINDACO<br />
+				del Comune di<br />
+				36072 – CHIAMPO (VI)<br />
+		</div>
+    </div>
+	
+    <moduli:gruppo id="dati_utente" titolo="Dati personali" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato-utente id="nome_cognome" size="50">Il/la sottoscritto/a</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_nascita" label-align="utente">nato/a a </moduli:dato-utente>
+            <moduli:dato-utente id="prov_nascita" label-align="utente">provincia </moduli:dato-utente>
+        </div>
+        <div>
+            <moduli:dato-utente id="data_nascita">il</moduli:dato-utente>
+            <moduli:dato-utente id="codice_fiscale">Codice Fiscale</moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="luogo_residenza" label-align="utente">residente a </moduli:dato-utente>
+            <moduli:dato-utente id="prov_residenza" label-align="utente">provincia </moduli:dato-utente>
+        </div>
+        <div>
+            <moduli:dato-utente id="cap">cap </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="indirizzo_residenza" label-align="utente">in via/fraz. </moduli:dato-utente>
+            <moduli:dato-utente id="numero_telefono" class="label_smlwidth">n. tel. </moduli:dato-utente>
+        </div>
+        <div class="riga">
+            <moduli:dato-utente id="email" label-align="utente">e-mail </moduli:dato-utente>
+            <moduli:dato-utente id="cellulare" class="label_smlwidth">cellulare </moduli:dato-utente>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="figlio_e_fermata">
+    	<moduli:opzioni id="tipo_genitore" class="lista_checkbox checkbox_esclusivi1">
+            <moduli:opzione id="padre">Padre</moduli:opzione>
+            <moduli:opzione id="madre">Madre</moduli:opzione>
+        </moduli:opzioni><br />
+        alunno cognome <moduli:dato id="cognome_alunno" size="50"></moduli:dato>
+        alunno nome <moduli:dato id="nome_alunno" size="50"></moduli:dato>
+        <br />
+        <div class="riga">
+            <moduli:opzioni id="sesso_alunno" class="lista_checkbox checkbox_esclusivi2">
+                <moduli:opzione id="sesso_alunno_m">Maschio</moduli:opzione>
+                <moduli:opzione id="sesso_alunno_f">Femmina</moduli:opzione>
+            </moduli:opzioni>
+            nato il <moduli:dato id="data_nascita_alunno" tipo="data"></moduli:dato><br /> 
+        </div>
+        <div class="riga">
+            codice fiscale <moduli:dato id="codice_fiscale_alunno" ></moduli:dato>
+        </div>
+        <br />      
+	</moduli:gruppo>
+    <moduli:gruppo id="richieste_servizi">
+    	CHIEDE che il/la proprio/a figlio/a possa usufruire dei sottoindicati servizi per l’anno scolastico 2015/16:<br />
+    	(barrare la casella sottoindicata che interessa)<br />
+    	    <moduli:opzioni id="servizio_mensa" class="lista_checkbox">
+                <moduli:opzione id="mensa">MENSA</moduli:opzione>
+                <moduli:opzione id="dieta_speciale">Dieta Speciale</moduli:opzione><br />
+                <moduli:dato id="descrizione_dieta" class="input_bigwidth">Descrizione Dieta</moduli:dato>
+            </moduli:opzioni><br /><br />
+            <moduli:opzioni id="servizio_trasporto" class="lista_checkbox">
+                <moduli:opzione id="trasporto">TRASPORTO</moduli:opzione>
+            </moduli:opzioni><br />
+            <moduli:opzioni id="servizio_bus" class="lista_checkbox">
+                <moduli:opzione id="richiedi_piedibus">richiedi PIEDIBUS</moduli:opzione>
+                <moduli:opzione id="con_bus_ritorno">con BUS RITORNO</moduli:opzione>
+            </moduli:opzioni>
+        <br />
+        <br />
+        <div class="riga">
+            Dichiara che il suddetto allievo risulta iscritto, per l’anno scolastico 2015/16, <br />
+            presso la sottoindicata scuola di Chiampo – classe/sezione: <moduli:dato class="inline" id="sezione_classe_scuola" size="50"></moduli:dato>
+        </div>
+        <moduli:opzioni id="scuola" class="lista_checkbox_vertical checkbox_esclusivi3">
+            <moduli:opzione id="f_corradi_via_bellini">SCUOLA DELL’INFANZIA STATALE “F. Corradi” di Via V. Bellini, 21 (Plesso Pregiana)
+            </moduli:opzione>
+            <moduli:opzione id="f_corradi_via_fogazzaro">SCUOLA DELL’INFANZIA STATALE “F. Corradi” di Via A. Fogazzaro, 17 (Plesso Arso)
+            </moduli:opzione>
+            <moduli:opzione id="g_zanella_via_biolo">SCUOLA DELL'INFANZIA PARITARIA “G. Zanella” di Via B. Biolo, 41
+            </moduli:opzione>
+            <moduli:opzione id="g_zanella_via_dal_molin">SCUOLA PRIMARIA STATALE “G. Zanella” di Via T. Dal Molin, 42 (Plesso Capoluogo)
+            </moduli:opzione>
+            <moduli:opzione id="mistrorigo_via_lazio">SCUOLA PRIMARIA STATALE “Don P. Mistrorigo” di Via Lazio, 3 (Plesso Arso)
+            </moduli:opzione>
+            <moduli:opzione id="s_g_bosco_via_portinari">SCUOLA PRIMARIA STATALE “S.G. Bosco” di Via Portinari, 13 (Plesso Portinari)
+            </moduli:opzione>
+            <moduli:opzione id="s_negro_fante_italia">SCUOLA SECONDARIA STATALE DI 1° "S. Negro" di Via Fante d'Italia, 31
+            </moduli:opzione>
+        </moduli:opzioni>
+    </moduli:gruppo>
+    <moduli:gruppo id="trasporto_scolastico">
+    	NOTIZIE UTILI PER IL SERVIZIO DI TRASPORTO SCOLASTICO <br />
+    	<div class="row">
+    		<div class="span5">a) Ha già utilizzato il trasporto nell’anno precedente	</div>
+    		<div class="span2">
+    			<moduli:opzioni id="trasporto_anno_prec" class="lista_checkbox checkbox_esclusivi4">
+		            <moduli:opzione id="trasporto_utilizzato_si">SI</moduli:opzione>
+		            <moduli:opzione id="trasporto_utilizzato_no">NO</moduli:opzione>
+		        </moduli:opzioni>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="span5">b) E’ a conoscenza della fermata più vicina</div>
+    		<div class="span2">
+    			<moduli:opzioni id="fermata_piu_vicina" class="lista_checkbox checkbox_esclusivi5">
+		            <moduli:opzione id="conoscenza_fermata_si">SI</moduli:opzione>
+		            <moduli:opzione id="conoscenza_fermata_no">NO</moduli:opzione>
+		        </moduli:opzioni>
+    		</div>
+    	</div>
+        <div class="row">
+            <div class="span10">c) Indicare la via esatta della fermata (Andata Mattino) del trasporto se DIVERSA dalla residenza</div>
+            <div class="span8">
+                via <moduli:dato id="via_fermata" size="50"></moduli:dato>
+                civico <moduli:dato id="civico_fermata" size="30"></moduli:dato>
+            </div>
+        </div>
+        <br />
+	</moduli:gruppo>
+	<moduli:data-firma label-firma="FIRMA DEL GENITORE" id="data_firma_2" class="data-firma"/>
+	<br />
+    <fieldset>
+        <b>INFORMATIVA AI SENSI DELL’ART. 13 - D.LGS. DEL 30.06.03, N° 196</b><br />
+        “Codice in materia di protezione dei dati personali”
+        <p>
+            <small>Si comunica che tutti i dati personali sopraindicati sono raccolti, trattati e custoditi da questo Comune solo per l’adempimento delle procedure della presente richiesta, precisando che il conferimento degli stessi è facoltativo ma necessario ed indispensabile per l’istruttoria della pratica.
+            </small>
+        </p>
+    </fieldset>
+</moduli:modulo>

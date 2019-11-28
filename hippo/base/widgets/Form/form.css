@@ -1,0 +1,59 @@
+.input{
+		BACKGROUND-COLOR: #E8ECE0;
+		COLOR: #000000;
+}
+
+.input.error{
+		BACKGROUND-COLOR: #E44651;
+}
+
+
+
+.form{
+	BACKGROUND-COLOR: #6983CF;
+	BORDER-BOTTOM: #000000 1px solid;
+	BORDER-LEFT: #000000 1px solid;
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-TOP: #000000 1px solid;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana;
+}
+
+.form_SUBMIT{
+	BACKGROUND-COLOR: #d8f0d0;
+	BORDER-BOTTOM: #00cc00 2px solid;
+	BORDER-LEFT: #00cc00 2px solid;
+	BORDER-RIGHT: #00cc00 2px solid;
+	BORDER-TOP: #00cc00 2px solid;
+	COLOR: #000000;
+	FONT-FAMILY: Verdana
+}
+
+.form_label{
+}
+
+.form_background{
+}
+
+form_errordiv{
+		BACKGROUND-COLOR: #E44651;
+		COLOR: #000000;
+		FONT-WEIGHT: bold;
+		WIDTH: 80%;
+}
+
+form_label{
+	FONT-WEIGHT: bold;
+}
+
+input_readOnlyText{
+	BACKGROUND-COLOR: #CCCCFF;
+}
+
+A:visited{
+	COLOR: #0000FF;
+}
+
+A:hover{
+	COLOR: #1F931F;
+}

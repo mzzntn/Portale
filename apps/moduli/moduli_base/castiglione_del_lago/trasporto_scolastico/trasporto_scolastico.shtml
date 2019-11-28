@@ -1,0 +1,166 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p>
+        <h2 class="align_center">A.S. 2015/2016</h2>
+        <h2 class="align_center">Domanda di Iscrizione al SERVIZIO TRASPORTO SCOLASTICO</h2>
+    </p>
+
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_mediumwidth">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth">residente a</moduli:dato>
+            <moduli:dato id="prov_residenza" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="cap" class="label_xsmlwidth input_xxsmallwidth">cap. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza" class="label_bigwidth input_mediumwidth">Via/V.LE/P.zza/Loc.</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_xsmlwidth input_xxsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec" class="label_xbigwidth input_mediumwidth">INDIRIZZO DI POSTA ELETTRONICA (P.E.C.)</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email" class="label_xbigwidth input_mediumwidth">INDIRIZZO E-MAIL </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare" class="label_xbigwidth input_mediumwidth">NUMERO CELLULARE</moduli:dato>   
+        </div>
+    </moduli:gruppo>
+
+    <strong>In qualità di genitore o di chi ne fa le veci dello/gli studente/i</strong>
+    <moduli:gruppo id="dati_studente1" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente2" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente3" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente4" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <h3><u>CHIEDE</u></h3>
+
+    <p>Che il/i figlio/i venga/no ammesso/i al servizio di Trasporto Scolastico organizzato dall'Amministrazione Comunale.</p>
+
+    <moduli:opzioni id="tipo_trasporto" class="lista_input_oriz align_center">
+        <moduli:opzione id="and_rit"><label><strong>ANDATA E RITORNO</strong></label></moduli:opzione>
+        <moduli:opzione id="solo_andat" class="a_capo"><label><strong>SOLO ANDATA</strong></label></moduli:opzione>
+        <moduli:opzione id="solo_rit" class="a_capo"><label><strong>SOLO RITORNO</strong></label></moduli:opzione>
+    </moduli:opzioni>
+
+    <br />
+    <h4 class="clear_both">COMUNICA CHE ALTRO/I EVENTUALE/I FIGLIO/FIGLIA/FIGLI E'/ E'/SONO GIA' ISCRITTO/I AL SERVIZIO TRASPORTO SCOLASTICO COMUNALE O PRIVATO:</h4>
+
+    <moduli:gruppo id="altro_figlio1" class="dati_modulo label_small_font">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_altro_stud" class="label_xbigwidth input_mediumwidth">Cognome e nome studente:</moduli:dato>
+            <moduli:opzioni id="tipo_trasporto_altro" class="lista_input_oriz">
+                <moduli:opzione id="and_rit_altro">ANDATA E RITORNO</moduli:opzione>
+                <moduli:opzione id="solo_andat_altro" class="a_capo">SOLO ANDATA</moduli:opzione>
+                <moduli:opzione id="solo_rit_altro" class="a_capo">SOLO RITORNO</moduli:opzione>
+            </moduli:opzioni>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="altro_figlio2" class="dati_modulo label_small_font">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_altro_stud" class="label_xbigwidth input_mediumwidth">Cognome e nome studente:</moduli:dato>
+            <moduli:opzioni id="tipo_trasporto_altro" class="lista_input_oriz">
+                <moduli:opzione id="and_rit_altro">ANDATA E RITORNO</moduli:opzione>
+                <moduli:opzione id="solo_andat_altro" class="a_capo">SOLO ANDATA</moduli:opzione>
+                <moduli:opzione id="solo_rit_altro" class="a_capo">SOLO RITORNO</moduli:opzione>
+            </moduli:opzioni>
+        </div>
+    </moduli:gruppo>
+
+
+    <div class="riga align_center">A tal fine il sottoscritto <h3 class="inline"><u>DICHIARA</u></h3> di</div>
+
+    <ol class="decimal">
+        <li>
+            <strong>CONOSCERE E ACCETTARE </strong>incondizionatamente tutte le norme contenute nel regolamento comunale che  disciplina il servizio di trasporto alunni;</li>
+        <li><strong>IMPEGNARSI AD ACCOMPAGNARE </strong>(corsa di andata) <strong>E A PRELEVARE </strong>(corsa di ritorno) l'utente nel punto di raccolta (fermata) prescelto in coincidenza rispettivamente degli orari di andata e ritorno dello scuolabus sollevando il Comune  da ogni responsabilità in merito;</li>
+        <li><strong>ESSERE A CONOSCENZA </strong>che il Comune di Castiglione del Lago prende in custodia i bambini
+        <ul class="dash">
+            <li><strong>all'andata</strong> dal momento in cui sono saliti sullo scuolabus fino all'entrata nell'edificio scolastico;</li>
+            <li><strong>al ritorno </strong>dall'uscita di scuola fino alla discesa dallo scuolabus in corrispondenza della fermata prescelta;</li>
+        </ul>
+        </li>
+        <li><strong>SOLLEVARE DA OGNI RESPONSABILITA' </strong>il Comune nei confronti del proprio figlio nelle fasi precedenti e   successive all'inizio/termine del servizio;</li>
+        <li><strong>ESSERE A CONOSCENZA </strong>che per i soli utenti frequentanti le SCUOLE MATERNE E PRIMARIE, nell'eventualità in cui il genitore, o suo incaricato,  non fosse presente per la presa in consegna nel punto di fermata indicato, l'utente verrà accompagnato presso la sede dei Vigili Urbani dove resterà in custodia fino all'arrivo del genitore.</li>
+        <li><strong>ESSERE INFORMATO </strong>ai sensi e per gli effetti di cui all'art. 13 del D.Lgs. n. 196 del 30/06/2003, che i dati personali saranno trattati, anche con strumenti informatici, esclusivamente nell'ambito del procedimento per il quale la presente dichiarazione viene resa.</li>
+    </ul>
+
+    <p><strong><u>L'Iscrizione al servizio si intende per l'intera durata del ciclo scolastico frequentato. Sarà compito  della famiglia dell'alunno comunicare, per iscritto, eventuali modifiche o cancellazioni. In mancanza di indicazioni l'Ufficio Comunale competente continuerà ad inviare i relativi bollettini di pagamento fino al termine dello stesso ciclo scolastico.
+    </u></strong></p>
+    <br /><br />
+    <h4>PER LE SCUOLE PRIMARIE E SECONDARIE DI PRIMO E SECONDO GRADO NON È DOVUTA LA QUOTA RELATIVA AL MESE DI GIUGNO SE È STATO EFFETTUATO IL PAGAMENTO DI SETTEMBRE.</h4>
+
+    <p>Non è prevista nessuna riduzione mensile per parziale utilizzazione del servizio per cause che non dipendano dall'Amministrazione Comunale.
+    Per tutte le scuole pubbliche e private, il servizio trasporto osserva il calendario scolastico Regionale vigente.
+    </p>
+
+    <moduli:data-firma id="data_firma_1" class="data-firma"/>
+
+    <br /><br />
+
+    <moduli:gruppo id="inform_privacy">
+        <h4 class="align_center">INFORMATIVA AI SENSI DEL D.L. 30.06.2003 N. 196 (PRIVACY)</h4>
+        <p>Si rende noto che le informazioni fornite dalla S.V.,  dati personali, eventuali  recapiti di posta elettronica e numeri di cellulari, potranno essere utilizzati in conformità a quanto previsto  dalla normativa vigente in materia di privacy (art. 13 Dlgs. 196/2003 ) e  ci consentiranno di effettuare eventuali urgenti  comunicazioni  inerenti i Servizi Scolastici Mensa e Trasporto. </p>
+    </moduli:gruppo>
+
+    <br /><br />
+</moduli:modulo>

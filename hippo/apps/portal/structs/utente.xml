@@ -1,0 +1,45 @@
+<struct name='utente'>
+<extends>_security_user</extends>
+<element name='master' type='text' label='Codice master' />
+<element name='nome' meaning='name(1)' type='text' required='true' />
+<element name='cognome' meaning='name(2)' type='text' required='true' />
+<element name='sesso' type='inline' required='true'>
+  <struct>
+    <element name='id' type='text' />
+    <element name='descr' type='text' />
+  </struct>
+  <data>
+    <row><id>M</id><descr>Maschio</descr></row>
+    <row><id>F</id><descr>Femmina</descr></row>
+  </data>
+</element>
+<element name='comuneNascita' type='text' label='Comune di Nascita' required='true'/>
+<element name='provinciaNascita' type='text' label='Provincia di Nascita' required='true' />
+<element name='dataNascita' type='dateTime' label='Data di Nascita' required='true'/>
+<element name='indirizzo' type='text' required='true'/>
+<element name='comune' type='text' required='true'/>
+<element name='provincia' type='text' required='true'/>
+<element name='email' type='email' required='true' />
+<element name='cf' type='text' required='true' />
+<element name='tipodocumento' type='inline' label='Tipo Documento' required='true'>
+  <struct>
+    <element name='id' type='text' />
+    <element name='descr' type='text' />
+  </struct>
+  <data>
+    <row><id>C.I.</id><descr>Carta di Identità</descr></row>
+    <row><id>Patente</id><descr>Patente</descr></row>
+  </data>
+</element>
+<element name='nrdocumento' type='text' label='Nr. Documento' required='true'/>
+<element name='datadocumento' type='dateTime' label='Data Documento' required='true'/>
+<element name='rilasciato' type='text' required='true'/>
+<element name='telefono' type='text' />
+<element name='fax' type='text' />
+<element name='cellulare' type='text' />
+<element name='siti' type='portal::servizioPrivato' maxOccurs='unbounded' />
+<extend element='siti'>
+<element name='login' type='text' />
+<element name='password' type='text' />
+</extend>
+</struct>

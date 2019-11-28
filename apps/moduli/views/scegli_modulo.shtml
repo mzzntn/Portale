@@ -1,0 +1,57 @@
+<div id="scelta_tipo_modulo">
+	<div class="row titolo_pagina">
+		<h3 class="verde col-lg-9 col-md-9 col-sm-9 col-xs-12">Elenco Moduli e Questionari</h3>
+	</div>
+	<div sp:if="@moduli_utente_attivi.blank?" class="alert alert-info">
+    	Non sono attualmente presenti moduli che puoi compilare.
+    </div>
+    <div sp:if="!@errore_azione.blank?" class="alert alert-error alert-danger">
+    	{ @errore_azione }
+    </div>
+	<div id="heigth_400" sp:if="!@moduli_utente_attivi.blank?">
+		<!-- Imposto il numero di righe per pagina che viene passato al js -->
+
+		<input type='hidden' id='items_per_page' value="10" />  
+		<!-- Imposto il numero di link alle pagine da mostrare nella navbar --> 
+		<input type='hidden' id='max_page_in_navbar' value="8"/>
+		<!-- the input fields that will hold the variables we will use -->  
+		<input type='hidden' id='current_page' />  
+		<input type='hidden' id='show_per_page' />
+
+		<form class="form-search" method="post">
+	    	<input type="text" class="input-large search-query" name="query_ricerca" value="{ (@query_ricerca.blank? ? '' : @query_ricerca) }">
+	    	<label for="settore">Settore</label>
+	    	<select id="settore" name="settore">
+                <option value="tutti" sp:attr-if="(@settore_selezionato == nil || @settore_selezionato == 'tutti'), selected, selected">Tutti</option>
+                <option value="0" sp:attr-if="(@settore_selezionato == '0'), selected, selected">Settore generico</option>
+                <option sp:each="@settori_modulo |settore|" value="{ settore.id }" sp:attr-if="(@settore_selezionato == settore.id.to_s), selected, selected">{ settore.nome }</option>
+            </select>
+	    	<button type="submit" name="cerca_parole" class="btn" value="true">Cerca</button>
+	    	<button type="submit" name="azzera_ricerca" class="btn" value="true">Azzera</button>
+	    </form>
+
+		<div id='pagination_content' class="corpo_pagina clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		    
+		    <ul id="elenco_moduli" sp:if="@moduli_utente_attivi.length > 0">
+		    <!-- in master <ul id="elenco_moduli" sp:if="@moduli_utente_attivi.length > 0" class="nav nav-tabs nav-stacked"> -->
+		        <li sp:each="@moduli_utente_attivi |tipo_modulo|" class="row bordo_servizio paginated_element">
+		        	
+		        	<a href="{ Moduli::ModuliController.http_s_url(tipo_modulo.id.to_s+'/modulo/') }">
+			        	<h4>{ tipo_modulo.nome }</h4>
+			        	<span sp:if="!tipo_modulo.disponibile_al.blank?"><em> (Disponibile fino al: { tipo_modulo.disponibile_al.lformat(:short) })</em></span>
+			        	
+			        </a>
+			        <p class="descrizione_tipo_modulo">{ tipo_modulo.descrizione }</p>
+			    </li>
+		    </ul>
+	    </div>
+	    <!-- div che contiene il navigatore -->  
+		<div id="page_navigation" class="pagination"><ul></ul></div>
+	</div>
+	<div class="row">
+		<div class="back col-sm-2">
+        	<a href="{ @link_indietro }" class="btn">Indietro</a>
+    	</div>
+    </div>
+</div>
+

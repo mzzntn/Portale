@@ -1,0 +1,52 @@
+@import "compass"; 
+
+@import "variabili";
+
+@import 'portal/sass/portal.scss';
+
+@font-face {
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sintony'), url(http://themes.googleusercontent.com/static/fonts/sintony/v1/3U1YPkuvIZcjFV_iKr78mw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Sintony';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Sintony Bold'), local('Sintony-Bold'), url(http://themes.googleusercontent.com/static/fonts/sintony/v1/TiXPkS2VjL9yF_daQZv9IhsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+$W_logo: 80px;
+$H_logo: 100px;
+
+
+#logo{
+    background:{
+        image: $stemma; 
+        repeat:no-repeat;
+        color:white;
+    }
+    width: 80px;
+    height:100px;
+    border: 2px solid #FFFFFF;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+#topbar{
+    margin-top: -15px;
+}
+
+h1{
+    font-family: 'Sintony', helvetica, arial, sans-serif;
+    margin-top: 50px;
+    font-size: 39px;
+}
+
+
+#portal_bottom {
+    height: auto;
+    padding-bottom: 15px;
+}
+

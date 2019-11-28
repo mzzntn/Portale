@@ -1,0 +1,34 @@
+<HTML>
+<head><TITLE></TITLE></head>
+<link rel="stylesheet" type="text/css" href="myHTML.css">
+<script src='../js/divControls.js'></script>
+<script src='myHTML.js'></script>
+<script src='../js/comboBox.js'></script>
+<body>
+<center>
+<h2>Prova di myHTML</h2>
+<br>
+<div id='myHTML'></div>
+<br><br>
+Prova della comboBox: <input type='text' name='prova' id='combo'>
+<input type='hidden' name='boh' id='combohidden'>
+<script>
+myHTML = new MyHTML('myHTML');
+myHTML.init();
+combo = new ComboBox('combo', 'combohidden');
+combo.v = new Array();
+combo.v[0] = 'Padova';
+combo.v[1] = 'Rararorro';
+combo.v[2] = 'Atlantide';
+combo.v[3] = 'Genova';
+combo.v[4] = 'Firenze';
+combo.v[5] = 'Venezia';
+combo.v[6] = 'Belluno';
+combo.v[7] = 'Betlemme';
+combo.v[8] = 'Biella';
+combo.init();
+</script>
+
+</center>
+</body>
+</HTML>

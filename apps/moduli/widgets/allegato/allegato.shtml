@@ -1,0 +1,7 @@
+<span class="allegato">
+	<strong sp:if="!@input.value.blank? && @input.value != 'cancellato'" class="hide mostra_in_stampa">Allegato Caricato: </strong>
+    <label sp:if="!@label.blank?" for="{ @input.full_id }-input">{ @label }</label>
+    <span sp:if="@input.value.blank? || (!@input.value.blank? && @input.value != 'cancellato')">
+    	<sp:run  obj="@input" />
+    </span>
+</span>

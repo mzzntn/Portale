@@ -1,0 +1,9 @@
+<struct name='operatore'>
+<element name='login' type='text' required='true' />
+<element name='password' type='password' />
+<element name='descrizione' type='text' />
+<element name='note' type='longText' />
+<element name='start_user' type='text' />
+<element name='settore' type='settore' />
+</struct>
+

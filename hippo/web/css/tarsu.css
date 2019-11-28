@@ -1,0 +1,89 @@
+/* ---- Tarsu style ------ */
+
+.dati {
+  font-weight: bold;
+  margin-left: 15px;
+}
+.uppercase {
+	font-size: 110%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#dati_anagrafici{
+	margin-top: 15px;
+	width: 65%;
+	border: 1px solid #CECECE;
+	padding:2px 8px;
+}
+
+#altri_dati{
+	margin-top: 10px;
+	width: 25%;
+	border: 1px solid #CECECE;
+	padding:2px 8px;
+	float: right;
+	height:122px;
+}
+
+#tabella_ubicazioni{
+	margin-top: 20px;
+	border: 1px solid #CECECE;
+}
+
+#tabella_ubicazioni table{
+	width: 100%;
+	text-align: center;
+}
+
+#tabella_ubicazioni table th, .storico table th {
+	background-color: #AAA;
+	border: 1px solid #7E7E7E;
+	color:white;
+}
+#tabella_ubicazioni table{
+}	
+
+.tab_ub{
+	background: #eee;
+}
+.totale td{
+  border-top: 2px solid #D5D5D5;
+  padding-top: 5px;
+}
+
+#legenda_riduzioni, #legenda_tariffe {
+	background: white;
+	border: 5px solid #999;
+	text-align: center;
+}
+
+#link_tarsu {
+	text-align: center;
+	margin: 10px auto;
+	margin-bottom: 5px;
+}
+#link_tarsu a{
+	margin-right: 20px;
+}
+
+.storico table {
+	width: 100%;
+	text-align: center;
+}
+
+.storico table tr{
+	border: 1px solid #D5D5D5;
+}
+
+#altri_dati a, #altri_dati a:active, #altri_dati a:visited {
+    color: #235A6C;
+    background: url('img/menulnk_right.gif') left no-repeat;  
+    background-position: 5% 50%;
+	padding-left:20px;
+}
+
+#tabella_ubicazioni a, #tabella_ubicazioni a:active, #tabella_ubicazioni a:visited {
+	color: #235A6C;
+}
+

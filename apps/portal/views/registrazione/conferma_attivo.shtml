@@ -1,0 +1,12 @@
+<div>
+    <p>
+        Grazie, { @utente.nome } { @utente.cognome }: il tuo account è ora attivo.<br>
+        <div sp:if="!@utente">
+            Puoi <a href="{ Portal.url }/autenticazione">effettuare il login</a>.
+       	</div>
+    </p>
+    <p>
+    Alcuni servizi potrebbero richiedere l'attivazione da parte dell'amministratore: puoi verificare
+    lo stato dei tuoi servizi alla <a href="{ Portal.url }/servizi">pagina dei servizi</a>.
+    </p>
+</div>

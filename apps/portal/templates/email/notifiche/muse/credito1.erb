@@ -1,0 +1,6 @@
+Gentile <%= nome %> <%= cognome %>,
+il credito della sua CityCard numero <%= badge %> è <%= credito > 0 ? 'in esaurimento' : 'esaurito'%>.
+Il credito attualmente presente sulla carta è di € <%= credito.lformat %>.
+La invitiamo a ricaricare al più presto la sua CityCard.
+Cordiali saluti,
+<%= Spider.conf.get('ente.tipo') %> <%= Spider.conf.get('ente.nome') %>

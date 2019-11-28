@@ -1,0 +1,269 @@
+.administrator.rigaTopSx{
+  text-align: left;
+  font-size: 0.6em;
+  margin-left: 10px;
+}
+
+.administrator.rigaTopDx{
+  text-align: right;
+  margin-left: 10px;
+  	color: #333;
+	font: 28px arial,serif;
+}
+
+.administrator.heading{
+	background-color: #AA0022;
+	color: #000;
+	font-weight: bolder;
+	width: 100%;
+}
+
+.administrator.contextRow{
+  background-color: #FEFF8F;
+  font-weight: bold;
+}
+
+.administrator.headingInner    {
+	position: relative;
+	top: -7px;
+	left: -7px;
+	margin: 0;
+	BACKGROUND: url(img/bg.gif) #369 repeat-x 50% bottom;
+	color: #333;
+	font: 28px arial,serif;
+  display: block;
+  text-align: right;
+}
+
+.administrator.heading div    {
+	margin: 10px;
+}
+
+.Administrator.menu.menuDiv{
+	height: 100%;
+	float: left;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: justify;
+  padding-right: 10px;
+}
+
+/* colori per l'effetto roll-over */
+*.administrator.mainDiv    {
+	border-color: #aa0022;
+		padding-left: 10px;
+	/*border-right-style: outset;
+	border-right-color: #aa0022;*/
+}
+
+A.administrator.menu.entry{
+	display: block;/* il link occupa tutto lo spazio orizzontale */
+	text-decoration: none;/* elimino la sottolineatura, che si tratta di un link si capisce dalla struttura */
+	padding: 0 1em;/* lascia spazio fra il bordo del menu e il testo del link */
+	height: 1.3em;
+	line-height: 1.3em;/* altezza del link: height e line-height devono avere il medesimo valore */
+	border-width: 5px;
+	border-style: none solid;/* aggiungo dei bordi laterali */
+		BACKGROUND: url(img/bg.gif) #369 repeat-x 50% bottom;
+	color: #333;
+	border-color: #ddd;
+	white-space: nowrap;
+}
+
+.administrator.menu.sectionLabel{
+  display: block;
+}
+
+A:link.administrator.menu.entry , A:visited.administrator.menu.entry     {
+	BACKGROUND: url(img/bg.gif) #369 repeat-x 50% bottom;
+	color: #333;
+	border-color: #ddd;
+}
+
+A:link.Administrator.Menu.entry.current, A:visited.Administrator.Menu.entry.current{
+  border-color: #8fb681;
+}
+
+/* colori per il link */
+A:hover.administrator.menu.entry , A:active.administrator.menu.entry   {
+	background: #ddd;
+	color: #c00;
+	border-color: #aa0022;
+}
+
+.administrator.Table {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border-bottom: thin ridge #FF8A75;
+  border-bottom-width: 2px;
+  border-left: thin ridge #FF8A75;
+  border-right-width: 2px;
+  border-right: thin ridge #FF8A75;
+  border-top-width: 2px;
+  border-top: thin ridge #FF8A75;
+  padding-top: 10px;
+/*BACKGROUND: url(img/bg.gif) #369 repeat-x  top;*/
+}
+
+.administrator.structOps   {
+	FONT-SIZE: 85%;/*BACKGROUND: url(img/bg.gif) #369 repeat-x 50% top;*/
+	FLOAT: left;
+	WIDTH: 100%;
+	LINE-HEIGHT: normal;
+}
+
+.administrator.structOps UL   {
+	font-size: 16px;
+	PADDING-RIGHT: 10px;
+	PADDING-LEFT: 10px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 10px;
+	LIST-STYLE-TYPE: none;
+	
+}
+
+.administrator.structOps LI   {
+	BACKGROUND: url(img/right.gif) no-repeat right bottom;
+	PADDING-RIGHT: 5px;
+	PADDING-LEFT: 0px;
+	FLOAT: left;
+	MARGIN: 0px; /* regolo la distanza tra bottoni*/
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	height: 30px;
+
+}
+
+.administrator.structOps A  {
+	BACKGROUND: url(img/left.gif) no-repeat left bottom;
+	PADDING-RIGHT: 7px;
+	PADDING-LEFT: 20px;
+	DISPLAY: block;
+	FLOAT: left;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	color: #aa0022;
+	TEXT-DECORATION: none;
+	FONT-WEIGHT: bold;
+	height: 30px;
+}
+
+
+.administrator.structOps A:hover   {
+	COLOR: #fff;
+}
+
+.administrator.structOps *#current   {
+	BACKGROUND-IMAGE: url(img/right_on.gif);
+}
+
+.administrator.structOps *#current A    {
+	BACKGROUND-IMAGE: url(img/left_on.gif);
+	PADDING-BOTTOM: 5px;
+	COLOR: #333;
+}
+
+.administrator.Form{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: justify;
+	text-indent: 2px;
+	border: thin ridge #FF8A75;
+	empty-cells: show; 
+	table-layout: fixed;
+}
+
+
+
+.administrator.Table.tasti_li,  .administrator.Form.SearchForm.tasti_input , .administrator.Table.SearchForm.tasti_input, .administrator.Form.SearchForm.tasti_li{
+	PADDING-RIGHT: 5px;
+	PADDING-LEFT: 0px;
+	BACKGROUND: url(img/right.gif) no-repeat right top;
+	FLOAT: left; /* le voci di menu devono innanzitutto essere affiancate l'una all'altra, per cui per ogni li impostiamo un float: left.*/
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 0px;
+	border: none;
+	white-space: normal;
+	width:150px;
+	text-align: left;
+	height:50px;
+		
+}
+
+
+
+.administrator.Table.action {
+  font-size: 10px;
+  padding: 0px;
+}
+
+.administrator.Table.action.care {
+	background-color: #FF0000;
+	color: #FFFF00;
+	font-size: 0.8em;
+	padding: 2px;
+}
+
+
+
+.administrator.Form.label, .administrator.Form.labelTd{
+	COLOR: #DC143C;
+	border-left-style: double;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: double;
+	font-size: 12px;
+	width: 120px;
+}	
+
+.administrator.Form.button    {
+	BACKGROUND-IMAGE: url(img/bg.gif);
+	PADDING-BOTTOM: 5px;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold; 
+}
+
+
+.Administrator.Form.button, .Administrator.SearchForm.cerca, .Administrator.SearcForm.button{
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #e9ebeb;
+  text-align: center;
+  width: 150px;
+  color: #aa0f2e;
+  font-weight: bold; 
+}
+
+.administrator.Form.input{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align: justify;
+
+}
+
+.administrator.Form.input.text.TextInput{
+  	width: 300px;
+}
+
+.administrator.TextAreaInput{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-align: justify;
+	width: 300px;
+}
+
+.Table.tasti , .Form.SearchForm.tasti, .Table.SearchForm.tasti{
+	PADDING-RIGHT: 7px;
+	PADDING-LEFT: 20px;
+	BACKGROUND: url(img/left.gif) no-repeat left top;
+	FLOAT: left;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 5px;
+	border: none;
+	height:50px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}

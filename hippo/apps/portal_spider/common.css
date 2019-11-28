@@ -1,0 +1,410 @@
+/* @override http://bruna/test/test_nuovi_template/web/css/common.css */
+
+/* resetto i settaggi di default */
+
+    *{  
+      padding:0; 
+      margin:0; 
+    }
+
+    img{ 
+      border: 0; 
+    }
+  
+    h1,h2,h3,h4,h5{
+    }
+ 
+    p{
+      padding: 0.4em 4px;
+    }
+             
+/* stili ricorrenti */
+
+    .center{
+      margin: 0 auto;
+    }
+
+    .centeralign{
+      text-align: center;
+    }
+
+    .rightalign{ 
+      text-align: right; 
+    }
+
+    .leftalign{ 
+      text-align: left;
+    }
+
+    .hide{ 
+      display: none; 
+    }
+
+    .show{ 
+      display: inline;
+    }
+
+    .block{
+      display: block;
+    }
+
+    .inline{
+        float: none;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: inline;
+    }
+
+    .clear{ 
+      clear: both; 
+    }
+
+    .indentleft{ 
+      margin-left: 10px; 
+    }
+
+    .indentright{ 
+      margin-right: 10px; 
+    }
+ 
+    .small_font{ 
+      font-size: 80%; 
+    }
+
+    .normal_font{ 
+      font-size: 100%; 
+    }
+
+    .big_font{ 
+      font-size: 120%; 
+    }
+ 
+/* struttura pagina */
+    
+    body,html{
+    }
+    
+    div#container{
+      width: 90%;
+      margin: 0px auto;
+    }
+ 
+    div#header{
+    }
+
+    div#topbar{
+    }
+ 
+    div#link_accessibilita{
+      float: right;
+    }
+  
+    div#breadcrumb{
+      margin: 10px 205px 10px 205px; 
+      padding: 2px;
+    }
+     
+    div.column{
+      width: 185px;
+      padding-top: 10px;
+    }
+
+    div#leftcolumn{
+      float: left;
+      margin-left: 8px;
+    }
+
+    div#rightcolumn{
+      float: right;
+      margin-right: 8px;
+    }
+
+    div.content{
+      margin: 0 205px;
+      padding: 5px;    
+    }
+
+    div.content.wide{
+      margin: 0;
+      width: 100%;
+    }
+    
+    div#bottomlinks{
+      clear: both;
+      margin: 30px 0 1px 0;    
+    }
+
+    div#footer{  
+      clear: both;
+      padding: 10px;
+    }
+  
+    div#footDeco{
+      clear: both;
+    }
+
+    div#footDecoSpacer{
+      height: 19px;
+    }
+
+    div#footDecoLeftCorner{
+      height: 19px;
+      width: 19px;
+      float: left;
+    }
+
+    div#footDecoRightCorner{
+      float: right;
+      height: 19px;
+      width: 19px; 
+    }
+    
+/* menu */
+    
+    div.menu h3{ 
+      margin: 0;
+      padding: 2px 0px 2px 10px; 
+      font-size: 0.85em;
+    }
+
+    div#leftcolumn  div.menu h3{ 
+    }
+
+    div#rightcolumn div.menu h3{ 
+    }
+
+    div.menu div.menucnt{
+      margin-bottom: 10px; 
+    }
+   
+    div.menu div.menucnt p.error{
+    }
+ 
+    div.menu div.menucnt form .formRow label{
+      width: 5em;
+    }
+     
+/* collegamenti */
+  
+    a,a:visited,a:active{ 
+      text-decoration: underline;
+    }
+
+    a.highlight,a.highlight:active,a.highlight:visited{
+      padding: 0.3em 0 0.3em 20px;
+    }
+
+    a.selected,a.selected:active,a.selected:visited{
+      padding: 0.3em 0 0.3em 20px;
+    }
+
+    a.disabled{
+      margin: 2px;  
+      padding: 0.2em 0 0.2em 15px;
+      text-decoration: none;       
+    }
+    
+    #topbar a, #topbar a:active, #topbar a:visited{
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    #topbar a:hover{ 
+      text-decoration: underline; 
+    }
+
+    #topbar a.fontsize, #topbar a.fontsize:active, #topbar a.fontsize:visited{
+      padding: 10px;
+      width: 20px;
+      height: 20px;
+    }
+
+    div#topbar a.fontsize:hover{ 
+      text-decoration: none; 
+    }
+
+    div#breadcrumb a,div#breadcrumb a:active,div#breadcrumb a:visited{
+    
+    }
+
+    div#breadcrumb a:hover{
+    
+    }
+
+    div.menu div.menucnt a,div.menu div.menucnt a:visited,div.menu div.menucnt a:active{
+      display: block;     
+      padding: 0.3em 0 0.3em 20px;
+      text-decoration: none;    
+    }
+
+    div.menu div.menucnt a:hover,div.menu div.menucnt a.selected{  
+    }
+ 
+    div.menu div.menucnt a.expanded,div.menu div.menucnt a.expanded:active,div.menu div.menucnt a.expanded:visited{ 
+    }
+
+    div.menu div.menucnt a.expanded:hover{ 
+    }
+
+    div#bottomlinks ul li a,div#bottomlinks ul li a:active,div#bottomlinks ul li a:visited{
+      height: 3em;
+      padding: 10px;
+      font-weight: bold;
+    }
+        
+   .checkboxes.row{
+       padding-bottom: 5px;
+       margin-bottom: 5px;
+   }
+
+    .checkboxes label{
+       float: none;
+       display: inline;
+    }
+
+    .checkboxes input{
+       margin-right: 8px;
+    }
+
+
+/* form */
+ 
+    form{
+    }
+
+    div.smallform{
+      width: 27em;
+    }
+
+    label{
+      width: 12em;
+      display: block;
+      float: left;    
+    }
+
+    form .formRow label{
+      text-align: left;
+    }
+        
+    form p label:hover{
+    }
+
+    form div.buttons{
+      margin-top: 10px;
+      padding: 5px;
+      text-align: right;
+    }
+
+    input,textarea,select{
+      padding: 2px;
+      font-size: 0.9em;
+    }
+
+    option{
+      padding-right: 10px;
+    }
+
+    input:focus,select:focus{
+    }
+
+    button, .button{  
+      padding: 2px 10px;    
+      font-size: 0.85em;
+      font-weight: bold;
+      text-decoration: none !important;
+    }
+
+    input.big,select.big{
+      width: 220px;
+    }
+
+    legend{    
+      font-size: 1.1em;
+      font-weight: bold;
+      font-family: Verdana, Tahoma, Arial, Sans-serif;     
+      padding: 5px 10px;  
+    }
+
+    fieldset{
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+/* table */
+
+    table,table tr,table th,table td,table tbody tr,table tbody td,table tbody th{
+      border: 0;
+      font-family: Tahoma, Verdana, Arial, Sans-serif;    
+    }
+ 
+    table th,table tbody th{
+      font-size: 1em;
+      padding: 4px;
+      text-align: center;
+    }
+
+    table td,table tbody td{
+      padding: 2px;
+    }
+    
+    table.rowList{
+    }
+         
+/* lists */
+     
+    ul{
+      list-style: square inside;
+      margin: 10px;
+    }
+    
+    li{
+	  margin-bottom: 0.2em;
+	
+	}
+
+    ol{
+      list-style: decimal inside;
+      margin: 10px;
+    }
+ 
+    div#bottomlinks ul{
+      margin: 0;
+    }
+
+    div#bottomlinks ul li{
+      float: left;
+      width: 7em;
+      margin-left: 20px;
+    }
+
+/* headings & paragraphs */
+
+    div.menu div.menucnt p.info{
+      padding: 4px;
+      font-weight: normal;
+    }
+ 
+    div.content p{
+      
+    }
+ 
+    form p.info{
+    }
+     
+/* misc */
+
+    div#pageNav{
+      width: 30%;
+      margin: 5px auto;
+      padding: 5px;   
+    }
+ 
+    div.calendar{
+      padding: 10px;    
+    }
+    
+    div.tooltip{
+      padding: 10px;
+    }
+
+    

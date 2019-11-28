@@ -1,0 +1,68 @@
+<div>
+	<legend>Elenco Segnalazioni</legend>
+	<!-- Imposto il numero di segnalazioni che viene passato al js -->
+	<input type='hidden' id='items_per_page' value="7" /> 
+	<!-- Imposto il numero di link alle pagine da mostrare nella navbar --> 
+	<input type='hidden' id='max_page_in_navbar' value="10"/>
+	<!-- the input fields that will hold the variables we will use -->  
+	<input type='hidden' id='current_page' />  
+	<input type='hidden' id='show_per_page' />  
+	
+	<form class="form-inline" method="post">
+		<label>Filtra la tabella per stato segnalazione: </label>
+		<select name="tipo_stato">
+		<option value="">Seleziona...</option>
+			<option sp:each="@stati |stato|" value="{ stato.id }" sp:attr-if="stato == @nome_stato,selected,selected">{ stato }</option>
+		</select>
+		<button type="submit" class="btn">Filtra</button>
+	</form>
+
+	<div sp:if="@segnalazioni.length == 0">
+		<div class="alert alert-warning width_50">Non sono presenti segnalazioni.</div>
+	</div>
+
+	<div id='pagination_content'>
+	<div sp:if="!@filtro.blank?"> Segnalazioni con stato: <strong>{ @nome_stato }</strong> </div>
+	<table sp:if="@segnalazioni.length > 0" class="table table-bordered table-striped width_auto">
+		<thead>
+	    <tr class="heading_row">
+			<th></th>
+			<th>Nome Cognome</th>
+			<th>E-Mail</th>
+			<th>Tipologia Richiesta</th>
+			<th>Stato</th>
+			<th></th>
+			<th></th>
+	    </tr>
+	  	</thead>
+	  	<tbody>
+	    	<tr sp:each="@segnalazioni |segnalazione|" class="paginated_element">
+	    		<td>
+	    			<a href="{ Comunicazioni::GestioneComunicazioniController.https_url('dettaglio_segnalazione/'+segnalazione.id.to_s) }">Vedi</a>
+	    		</td>
+	    		<td>
+	    			{ segnalazione.nome } { segnalazione.cognome }
+	    		</td>
+	    		<td>
+		      		{ segnalazione.email }
+		     	</td>
+		     	<td>
+		      		{ segnalazione.tipologia_richiesta }
+		     	</td>
+		     	<td>
+		      		{ segnalazione.stato }
+		     	</td>
+		     	<td>
+		     	</td>
+		     	<td>
+		      		<span class="link_cancellazione" segnalazione-id="{ segnalazione.id }">Elimina</span>
+		     	</td>
+	    	</tr>		
+	   </tbody>
+	</table>
+
+    </div> 	
+
+    <!-- div che contiene il navigatore -->  
+	<div id="page_navigation" class="pagination"><ul></ul></div>  
+</div>

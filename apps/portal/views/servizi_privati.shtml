@@ -1,0 +1,23 @@
+<div id="elenchi_servizi" class="row">
+    <div id="elenco_servizi_privati" class="col-lg-12 col-md-12 col-sm-12 text-center">
+            <div class="text-uppercase lead"><h2>Servizi privati</h2></div>
+            <ul sp:if="!@servizi_privati_utente.blank?">
+                <li sp:each="@servizi_privati_utente |servizio|" class="bordo_servizio pad_servizio el_servizi">
+                    <a class="nome_servizio" href="{ servizio.url.strip+(servizio.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s)+Portal.par_ext_app(servizio.id,@sid,@id_utente_portale) }" sp:tag-if="!servizio.url.blank? && ( (!servizio.usa_oauth?) || (servizio.usa_oauth? && (!Spider.conf.get('portal.client_id_oauth2').blank? && !Spider.conf.get('portal.secret_oauth2').blank?) ) )">{ servizio.nome }</a>
+                    <div class="descr_servizio lead" sp:if="!servizio.descrizione.blank?">{ servizio.descrizione }</div>
+                </li>
+            </ul>
+            <!-- SE NON SONO STATI CONFIGURATI SERVIZI PRIVATI-->
+            <div sp:if="@servizi_privati.blank?" class="alert alert-warning text-center">
+                Non sono attualmente presenti servizi privati a cui registrarsi.
+            </div>
+            <!-- UTENTE NON REGISTRATO A SERVIZI PRIVATI-->
+            <div sp:if="@servizi_privati_utente.blank? && !@servizi_privati.blank?" class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 alert alert-warning text-center">
+                Attualmente non sei registrato ad alcun servizio.<br />
+                <a href="servizi/">
+                    Richiedi l'attivazione di nuovi servizi.
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

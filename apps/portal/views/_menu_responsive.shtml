@@ -1,0 +1,123 @@
+<nav id="menu_responsive_laterale" class="not_display">
+    <div>
+        <p>
+            <a href="{ Portal::PortalController.http_s_url('index') }" title="home">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home
+            </a>
+        </p>
+        <ul>
+            <li sp:if="Spider.conf.get('portal.abilita_translate')">
+                <span id="google_translate_element_resp"></span>
+            </li>
+            <li>
+                <span>
+                    <a href="{ Portal::PortalController.http_s_url('informativa_gdpr') }" title="Informativa Trattamento Dati">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Informativa Trattamento Dati
+                    </a>
+                </span>
+            </li>
+            <li sp:if="!@utente_portale.blank?">
+                <span>
+                    <a href="{ Portal::PortalController.http_s_url }" title="nome cognome">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    { @utente_portale.nome } { @utente_portale.cognome }
+                    </a>
+                </span>
+            </li>
+            <li sp:if="!@utente_portale.blank?">
+                <span>
+                    <a href="{ Portal::PortalController.http_s_url('servizi') }" title="gestione servizi">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    Gestione Servizi
+                    </a>
+                </span>
+            </li>
+            <li sp:if="@utente_portale.blank?">
+                <span>
+                    <a href="{ Portal::PortalController.http_s_url('autenticazione') }" title="autenticazione">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    Accedi
+                    </a>
+                </span>
+            </li>
+            <li sp:if="!@num_com_non_lette.blank? && @num_com_non_lette > 0">
+                <span>
+                    <a href="{ Comunicazioni::ComunicazioniController.http_s_url('elenco_privato') }" title="news private">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    News Private <span>({ @num_com_non_lette })</span>
+                    </a>
+                </span>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <span>
+                    <a href="#serv_pubblici" title="servizi pubblici">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        Servizi Pubblici
+                    </a>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a href="#serv_privati" title="servizi privati">
+                        <i class="fa fa-user-secret" aria-hidden="true"></i>
+                        Servizi Privati
+                    </a>
+                </span>
+            </li>
+            
+            <li sp:if="!@url_sito.blank?">
+                <span>
+                    <a href="{ @url_sito }" title="sito ufficiale">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    Sito Ufficiale
+                    </a>
+                </span>
+            </li>
+            <li class="divider"></li>
+            <li sp:if="!@utente_portale.blank?">
+                <span>
+                    <a href="{ Portal::PortalController.http_s_url('autenticazione/logout') }" title="Logout">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        Logout
+                    </a>
+                </span>
+            </li>
+       </ul>
+
+
+
+        <!-- subpanel -->
+        <div id="serv_pubblici" class="Panel">
+            <p>Lista servizi</p>
+            <span sp:if="@servizi_pubblici.blank?">Non sono presenti servizi</span>
+            <ul sp:if="!@servizi_pubblici.blank?">
+                <li sp:each="@servizi_pubblici |servizio_pubb|">
+                    <a class="nome_servizio" href="{ servizio_pubb.url.strip+(servizio_pubb.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s)+Portal.par_ext_app(servizio_pubb.id,@sid,@id_utente_portale) }" sp:tag-if="!servizio_pubb.url.blank? && ( (!servizio_pubb.usa_oauth?) || (servizio_pubb.usa_oauth? && (!Spider.conf.get('portal.client_id_oauth2').blank? && !Spider.conf.get('portal.secret_oauth2').blank?) ) )">{ servizio_pubb.nome }</a>
+                </li>
+            </ul>
+        </div>
+        <div id="serv_privati" class="Panel">
+            <p>Lista servizi</p>
+            <div sp:if="!@servizi_privati_utente.blank?">
+                <span sp:if="@servizi_privati_utente.blank?">Non sono presenti servizi</span>
+                <ul sp:if="!@servizi_privati_utente.blank?">
+                    <li sp:each="@servizi_privati_utente |servizio_priv_ut|">
+                        <a class="nome_servizio" href="{ servizio_priv_ut.url.strip+(servizio_priv_ut.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s)+Portal.par_ext_app(servizio_priv_ut.id,@sid,@id_utente_portale) }" sp:tag-if="!servizio_priv_ut.url.blank? && ( (!servizio_priv_ut.usa_oauth?) || (servizio_priv_ut.usa_oauth? && (!Spider.conf.get('portal.client_id_oauth2').blank? && !Spider.conf.get('portal.secret_oauth2').blank?) ) )">{ servizio_priv_ut.nome }</a>
+                    </li>
+                </ul>
+            </div>
+            <div sp:if="@servizi_privati_utente.blank?">
+                <span sp:if="@servizi_privati.blank?">Non sono presenti servizi</span>
+                <ul sp:if="!@servizi_privati.blank?">
+                    <li sp:each="@servizi_privati |servizio_priv|">
+                        <a class="nome_servizio" href="{ servizio_priv.url.strip+(servizio_priv.url.include?('?') ? '&layout='+@layout_web.to_s : '?layout='+@layout_web.to_s)+Portal.par_ext_app(servizio_priv.id,@sid,@id_utente_portale) }" sp:tag-if="!servizio_priv.url.blank? && ( (!servizio_priv.usa_oauth?) || (servizio_priv.usa_oauth? && (!Spider.conf.get('portal.client_id_oauth2').blank? && !Spider.conf.get('portal.secret_oauth2').blank?) ) )">{ servizio_priv.nome }</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</nav>

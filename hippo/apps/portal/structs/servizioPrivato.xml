@@ -1,0 +1,9 @@
+<struct name='servizioPrivato'>
+<element name='nome' type='text' />
+<element name='url' type='text' size='200'/>
+<element name='descrizione' type='longText' />
+<element name='autenticazione' type='int' />
+<element name='codEstr' type='text' label='Codice estrazione' />
+<element name='campoLogin' label='Campo Login' type='text' />
+<element name='campoPassword' label='Campo Password' type='text' />
+</struct>

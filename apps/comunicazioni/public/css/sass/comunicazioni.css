@@ -1,0 +1,117 @@
+/* serve per togliere i -30px della classe row con bootstrap2 */
+/* line 4, ../../sass/comunicazioni.scss */
+.align_margin_dx {
+  margin-left: 30px;
+}
+
+/* serve per allineare a 0 il margine per problemi con .row e .span con bootstrap2 */
+/* line 8, ../../sass/comunicazioni.scss */
+.align_margin_sx {
+  margin-left: 0px;
+}
+
+/* line 23, ../../sass/comunicazioni.scss */
+#dettaglio_comunicazione.form-actions {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+/* line 27, ../../sass/comunicazioni.scss */
+#dettaglio_comunicazione .well-large {
+  width: 655px;
+}
+/* line 30, ../../sass/comunicazioni.scss */
+#dettaglio_comunicazione div.row {
+  margin-left: 0px;
+}
+/* line 13, ../../sass/comunicazioni.scss */
+#dettaglio_comunicazione .container_img {
+  float: left;
+  width: 160px;
+}
+/* line 16, ../../sass/comunicazioni.scss */
+#dettaglio_comunicazione .container_img img {
+  width: 155px;
+}
+/* line 34, ../../sass/comunicazioni.scss */
+#dettaglio_comunicazione .contenuti_comunicazione_dettaglio {
+  margin-left: 0;
+  padding: 10px;
+}
+
+/* line 41, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .titolo_com_utente {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+}
+/* line 46, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .da_leggere {
+  font-weight: 700;
+}
+/* line 49, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .clear_block {
+  border-top: 1px solid #9DC5D8;
+  margin-top: 8px;
+  clear: both;
+}
+/* line 54, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .well_testo_comunicazione {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 0;
+}
+/* line 59, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .label-info {
+  font-size: 13px;
+  font-weight: normal;
+  padding: 6px;
+}
+/* line 63, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .label-info a {
+  color: white;
+}
+/* line 65, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .label-info a:hover {
+  color: white;
+}
+/* line 66, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .label-info a:visited {
+  color: white;
+}
+/* line 13, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .container_img {
+  float: left;
+  width: 160px;
+}
+/* line 16, ../../sass/comunicazioni.scss */
+#elenco_comunicazioni .container_img img {
+  width: 155px;
+}
+
+/* line 73, ../../sass/comunicazioni.scss */
+.separatore_navigazione {
+  margin: 30px 20px 0 0;
+  border-top: 1px solid #346A83;
+  padding-top: 10px;
+  line-height: 30px;
+}
+
+/* line 80, ../../sass/comunicazioni.scss */
+.center_text {
+  text-align: center;
+}
+
+/* line 84, ../../sass/comunicazioni.scss */
+.space5 {
+  margin: 5px 0;
+}
+
+/* line 88, ../../sass/comunicazioni.scss */
+.space10 {
+  margin: 10px 0;
+}
+
+/* line 92, ../../sass/comunicazioni.scss */
+.space20 {
+  margin: 20px 0;
+}

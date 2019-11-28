@@ -1,0 +1,336 @@
+<moduli:modulo id="modulo" 
+    titolo=""
+    codice="">
+
+    <p>
+        <h2 class="align_center">DOMANDA DI DETERMINAZIONE TARIFFA SERVIZIO TRASPORTO SCOLASTICO</h2>
+        <h2 class="align_center">A.S. 2016/2017</h2>
+    </p>
+
+    <moduli:gruppo id="dati_utente" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="nome_cognome" class="input_mediumwidth">Il sottoscritto</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_residenza" class="input_mediumwidth">residente a</moduli:dato>
+            <moduli:dato id="prov_residenza" class="label_xsmlwidth input_xxsmallwidth">prov. </moduli:dato>
+            <moduli:dato id="cap" class="label_xsmlwidth input_xxsmallwidth">cap. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="indirizzo_residenza" class="label_bigwidth input_mediumwidth">Via/V.LE/P.zza/Loc.</moduli:dato>
+            <moduli:dato id="civico_residenza" class="label_xsmlwidth input_xxsmallwidth">n. </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="pec" class="label_xbigwidth input_mediumwidth">INDIRIZZO DI POSTA ELETTRONICA (P.E.C.)</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="email" class="label_xbigwidth input_mediumwidth">INDIRIZZO E-MAIL </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="cellulare" class="label_xbigwidth input_mediumwidth">NUMERO CELLULARE</moduli:dato>   
+        </div>
+    </moduli:gruppo>
+
+    <p>
+        <strong>In qualità di genitore o di chi ne fa le veci, chiede la DETERMINAZIONE DELLA TARIFFA per il Servizio di Trasporto Scolastico:
+        <moduli:opzioni id="tipo_trasporto" class="lista_checkbox lista_checkbox_oriz">
+            <div class="riga">
+            <moduli:opzione id="and_rit">ANDATA/RITORNO</moduli:opzione>
+            <moduli:opzione id="andata">ANDATA</moduli:opzione>
+            <moduli:opzione id="ritorno">RITORNO</moduli:opzione>
+            </div>
+        </moduli:opzioni>
+         per i seguenti figli: </strong>
+    </p>
+
+    <moduli:gruppo id="dati_studente1" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente2" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente3" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+    <moduli:gruppo id="dati_studente4" titolo="" class="dati_modulo">
+        <div class="riga">
+            <moduli:dato id="cognome_nome_stud" class="label_xbigwidth input_bigwidth">Cognome e nome studente:</moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="luogo_nascita_stud" class="input_mediumwidth">Nato a </moduli:dato>
+            <moduli:dato id="data_nascita_stud" class="label_xsmlwidth input_xsmallwidth" tipo="data">il </moduli:dato>
+        </div>
+        <div class="riga">
+            <moduli:dato id="scuola_stud" class="label_xbigwidth input_mediumwidth">Iscritto e frequentante la Scuola:</moduli:dato>
+            <moduli:dato id="classe_stud" class="label_smlwidth input_xxsmallwidth">CLASSE</moduli:dato>
+            <moduli:dato id="sezione_stud" class="label_smlwidth input_xxsmallwidth">SEZIONE</moduli:dato>
+        </div>
+    </moduli:gruppo>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="td_large"></th>
+                <th>FASCIA A</th>
+                <th>FASCIA B</th>
+                <th>FASCIA C</th>
+                <th>FASCIA D</th>
+                <th>FASCIA E</th>
+            </tr>
+            <tr>
+                <th>DESCRIZIONE</th>
+                <th>IISEE da 5941,00 a € 10.000,00</th>
+                <th>ISEE da € 10.001,00 a € 14.000,00</th>
+                <th>ISEE da € 14.001,0 a € 18.000,00</th>
+                <th>ISEE da € 18.001,00 a € 22.000,00</th>
+                <th>ISEE oltre € 22.001,00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>TRASPORTO SCOLASTICO A/R</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite (per famiglie con 1 figlio fruitore del servizio)</td>
+                <td>24,50</td>
+                <td>27,00</td>
+                <td>28,00</td>
+                <td>31,00</td>
+                <td>34,00</td>
+            </tr>
+            <tr>
+                <td>Annuale (per famiglie con 1 figlio fruitore del servizio) -Pagamento antic</td>
+                <td>195,00</td>
+                <td>214,50</td>
+                <td>224,00</td>
+                <td>246,00</td>
+                <td>268,00</td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite  (per famiglie con 2 figli   fruitori  del servizio)</td>
+                <td>17,50</td>
+                <td>19,00</td>
+                <td>20,00</td>
+                <td>22,00</td>
+                <td>24,00</td>
+            </tr>
+            <tr>
+                <td>Annuale  (per famiglie con 2 figli   fruitori  del servizio) - Pagamento antic</td>
+                <td>140,00</td>
+                <td>154,00</td>
+                <td>161,00</td>
+                <td>176,00</td>
+                <td>192,50</td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite (per famiglie con 3 o più figli fruitori del servizio)</td>
+                <td>12,50</td>
+                <td>14,00</td>
+                <td>14,00</td>
+                <td>16,00</td>
+                <td>17,50</td>
+            </tr>
+            <tr>
+                <td>Annuale (per famiglie con 3 o più figli fruitori del servizio) -Pagam.Antic</td>
+                <td>100,00</td>
+                <td>110,00</td>
+                <td>115,00</td>
+                <td>126,00</td>
+                <td>137,50</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>TRASPORTO SCOLASTICO SOLO ANDATA O SOLO RITORNO</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite (per famiglie con 1 figlio fruitore del servizio)</td>
+                <td>14,00</td>
+                <td>15,50</td>
+                <td>16,00</td>
+                <td>18,00</td>
+                <td>19,00</td>
+            </tr>
+            <tr>
+                <td>Annuale (per famiglie con 1 figlio fruitore del servizio)-Pag.Anticipato</td>
+                <td>112,00</td>
+                <td>123,00</td>
+                <td>129,00</td>
+                <td>144,00</td>
+                <td>154,00</td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite  (per famiglie con 2 figli   fruitori  del servizio)</td>
+                <td>12,00</td>
+                <td>13,00</td>
+                <td>14,00</td>
+                <td>16,00</td>
+                <td>16,50</td>
+            </tr>
+            <tr>
+                <td>Annuale  (per famiglie con 2 figli   fruitori  del servizio) -Pag. Anticip.</td>
+                <td>96,00</td>
+                <td>105,50</td>
+                <td>110,00</td>
+                <td>121,00</td>
+                <td>132,00</td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite (per famiglie con 3 o più figli fruitori del servizio)</td>
+                <td>9,50</td>
+                <td>10,50</td>
+                <td>11,00</td>
+                <td>12,00</td>
+                <td>13,00</td>
+            </tr>
+            <tr>
+                <td>Annuale (per famiglie con 3 o più figli fruitori del servizio) - Pag. Anticip.</td>
+                <td>76,00</td>
+                <td>83,50</td>
+                <td>87,00</td>
+                <td>96,00</td>
+                <td>104,50</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>TRASPORTO SCOLASTICO (Tariffe valide  anche per Ditta Privata ACAP)</strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>PER UTENTI SERVIZIO MISTO (UNA CORSA COMUNALE +  UNA PUBBLICO) </strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite (per famiglie con 1 figlio fruitore del servizio)</td>
+                <td>12,25</td>
+                <td>13,50</td>
+                <td>14,00</td>
+                <td>15,50</td>
+                <td>17,00</td>
+            </tr>
+            <tr>
+                <td>Annuale (per famiglie con 1 figlio fruitore del servizio)-Pag.Anticipato</td>
+                <td>97,50</td>
+                <td>107,25</td>
+                <td>112,00</td>
+                <td>123,00</td>
+                <td>134,00</td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite  (per famiglie con 2 figli   fruitori  del servizio)</td>
+                <td>8,75</td>
+                <td>9,50</td>
+                <td>10,00</td>
+                <td>11,00</td>
+                <td>12,00</td>
+            </tr>
+            <tr>
+                <td>Annuale  (per famiglie con 2 figli   fruitori  del servizio) -Pag. Anticip.</td>
+                <td>70,00</td>
+                <td>77,00</td>
+                <td>80,50</td>
+                <td>88,00</td>
+                <td>96,25</td>
+            </tr>
+            <tr>
+                <td>Mensile pro-capite (per famiglie con 3 o più figli fruitori del servizio)</td>
+                <td>6,25</td>
+                <td>7,00</td>
+                <td>7,00</td>
+                <td>8,00</td>
+                <td>8,75</td>
+            </tr>
+            <tr>
+                <td>Annuale (per famiglie con 3 o più figli fruitori del servizio) - Pag. Anticip.</td>
+                <td>50,00</td>
+                <td>55,00</td>
+                <td>57,50</td>
+                <td>63,00</td>
+                <td>68,75</td>
+            </tr>
+        </tbody>
+    </table>
+    <br /><br />
+    <p>A tale fine il sottoscritto <h3><u>DICHIARA</u></h3></p>
+    <br />
+    
+    <ul class="dash">
+        <li>che dal calcolo effettuato dall'Ente <sub><small>(1)</small></sub><moduli:dato id="ente_calcolatore" class="label_xbigwidth"></moduli:dato> in data <moduli:dato id="data_calcolo" class="label_smlwidth input_xsmallwidth" tipo="data"></moduli:dato> risulta un ISEE di € <moduli:dato id="isee_calcolato" class="input_xsmallwidth"></moduli:dato></li>
+        <li>di avere a conoscenza che nel caso di corresponsione del beneficio, si applica l'art. 11 del D.P.C.M.05/12/2013 n. 159, in materia di controllo di veridicità delle informazioni fornite e di essere a conoscenza delle sanzioni penali previste dall'art. 76 del D.P.R. 28/12/2000 n. 445, in caso di dichiarazioni mendaci rese in sede di autocertificazione;</li>
+    </ul>
+    
+    <p><strong>NOTE:</strong> <sub><small>(1)</small></sub> Indicare l'Ente presso il quale è stata attestata la Dichiarazione ISEE (Es. Sede o Agenzia INPS, Centro Assistenza Fiscale CAF, Studio Commerciale)</p>
+
+    <div class="riga">
+        <moduli:data-firma id="data_firma_1" class="data-firma"/>
+    </div>
+    <br /><br />
+</moduli:modulo>

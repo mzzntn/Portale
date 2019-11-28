@@ -1,0 +1,18 @@
+Gentile <%= nome %> <%= cognome %>,
+la pratica <%=num1%>-<%=num2%>-<%=num3%> "<%=descrizione%>" è stata <%= pubblicata_aggiornata %> nel sito comunale.
+<%
+if testo_iter
+%>
+<br><br>
+Passo di iter eseguito:
+<%= testo_iter %>
+<%
+end
+%>
+<br><br>
+La può visualizzare all'indirizzo
+<a href="<%=url_pratica%>"><%= url_pratica %></a><br>
+dopo aver effettuato il login.<br><br>
+
+Cordiali saluti,<br>
+<%= Spider.conf.get('ente.tipo') %> <%= Spider.conf.get('ente.nome')

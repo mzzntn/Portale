@@ -1,0 +1,19 @@
+<html>
+    <tpl:asset name="jquery" />
+    <tpl:asset name="bootstrap-3-dropdown" /> <!-- per paginatore -->
+    <tpl:asset name="bootstrap-sass" />
+    <head>
+        <tpl:asset sp:each="@assets[:js] |script|" type="js" src="{ script }" />
+    	<tpl:asset sp:each='@assets[:css] |css_file|' type="css" src="{ css_file }" />
+    	<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    	<tpl:output-assets type="js" />
+    	<tpl:output-assets type="css" />
+    </head>
+    <body>
+        <div id="content" class="container align_left">
+            <sp:yield />
+        </div>
+    </body>
+</html>

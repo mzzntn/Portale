@@ -1,0 +1,34 @@
+<struct name='servizioPubblico'>
+<element name='nome' type='text' />
+<element name='url' type='text' />
+<element name='descrizione' type='longText' />
+<element name='codEstr' label='Codice Estrazione' type='text' />
+<element name='posizione' type='int' />
+<element name='trasparenza' label='Posizione Amm Trasparente' type='inline'>
+<struct>
+<element name='id' type='text' />
+<element name='descr' type='text' />
+</struct>
+<data>
+	<row><id>provvOrgani</id><descr>Provvedimenti - Organi politici</descr></row>
+	<row><id>provvDirigenti</id><descr>Provvedimenti - Dirigenti</descr></row>
+	<row><id>appalti</id><descr>Bandi di gara e contratti (AVCP)</descr></row>
+	<row><id>benefici</id><descr>Sovvenzioni e vantaggi economici - Atti di concessione</descr></row>
+	<row><id>incarichi</id><descr>Consulenti e collaboratori</descr></row>
+	<row><id>bilanci</id><descr>Bilanci - Bilancio preventivo e consuntivo</descr></row>
+	<row><id>antiCorruzione</id><descr>Anticorruzione (Piano triennale, etc.)</descr></row>
+	<row><id>operePubbliche</id><descr>Opere pubbliche (Piano triennale)</descr></row>
+	<row><id>triennale</id><descr>Disposizioni generali - Programma triennale per la trasparenza</descr></row>
+	<row><id>performancePiano</id><descr>Performance - Piano della perfomance</descr></row>
+	<row><id>performancePremi</id><descr>Performance - dati relativi ai premi</descr></row>
+	<row><id>atti</id><descr>Disposizioni generali - Atti generali (statuto e regolamenti)</descr></row>	
+	<row><id>criteriBenefici</id><descr>Sovvenzioni e vantaggi economici - Criteri e modalita</descr></row>
+	<row><id>territorio</id><descr>Pianificazione e governo del territorio</descr></row>
+	<row><id>intStraordinari</id><descr>Interventi straordinari e di emergenza</descr></row>
+	<row><id>concorsi</id><descr>Bandi di concorso</descr></row>
+	<row><id>collettiva</id><descr>Personale - Contrattazione collettiva</descr></row>
+	<row><id>integrata</id><descr>Personale - Contrattazione integrativa</descr></row>
+	<row><id>incVertice</id><descr>Personale - incarichi amministrativi di vertice</descr></row>
+</data>
+</element>
+</struct>

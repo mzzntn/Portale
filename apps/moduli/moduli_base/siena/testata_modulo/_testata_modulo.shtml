@@ -1,0 +1,7 @@
+<div>
+	<div class="testata_modulo_siena">
+		<div class="logo_testata_modulo_siena">
+			<img  alt="logo comune" src="{ Moduli::ModuliController.download_img_b64('logo_siena.png') }" height="100%" width="100%" />
+		</div>
+	</div>
+</div>

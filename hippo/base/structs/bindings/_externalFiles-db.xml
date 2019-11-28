@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<binding type="db"><table>_EXTERNALFILES</table><bind element="file" dbField="FILE"/><bind element="counter" dbField="COUNTER"/></binding>

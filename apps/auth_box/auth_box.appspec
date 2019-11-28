@@ -1,0 +1,4 @@
+id "auth_box"
+name "Auth Box"
+version "0.1"
+author "Fabiano Pavan, Ivan Pirlik"

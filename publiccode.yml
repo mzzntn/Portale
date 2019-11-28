@@ -1,0 +1,149 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+applicationSuite: Next - Servizi OnLine
+categories:
+  - communications
+  - contact-management
+  - workflow-management
+description:
+  it:
+    apiDocumentation: 'https://github.com/ComunediAlessandria/Portale'
+    documentation: 'https://github.com/ComunediAlessandria/Portale'
+    features:
+      - Prenotazione appuntamenti
+      - Istanze OnLine
+      - Comunicazioni Social e multicanale
+      - Accesso con eIDAS
+    genericName: Servizi OnLine
+    longDescription: >2
+       
+
+      Il sistema è composto da 4 componenti fondamentali: Portale dei servizi,
+      Appuntamenti OnLine, Comunicazioni Multicanale e Social, Modulistica
+      OnLine.
+
+
+      1. PORTALE DEI SERVIZI
+
+
+      Questa componente si preoccupa della registrazione dei cittadini e
+      gestione dell'accesso dei cittadini anche mediante SPID o eIDAS e sarà
+      quindi un punto unico di accesso per tutti i servizi erogati nel portale.
+
+
+      Il portale inoltre traccia tutte le attività dell'utente e quindi l’ente
+      potrà sapere sempre che cosa ha fatto chi e quando.
+
+
+      2. APPUNTAMENTI ONLINE
+
+
+      Il cittadino potrà scegliere l’operatore/sportello, visualizzare i giorni
+      e gli orari disponibili e prenotare il suo appuntamento.
+
+
+      Il sistema invierà una mail iCal al cittadino ed allo sportello che
+      potranno quindi inserirsi nel proprio calendario.
+
+
+      L’ente dal canto suo potrà aggiungere sportelli/operatori, tipologia
+      appuntamento (con durante anche diverse), giorni ed orari di
+      disponibilità.
+
+
+      3. COMUNICAZIONI MULTICANALE E SOCIAL
+
+
+      L’ente potrà generare da un unico punti comunicazioni pubbliche (notifica
+      a tutti) o private, scegliendo uno o più dei canali disponibili: Portale,
+      RSS, email, sms, twitter, facebook.
+
+
+      4. MODULISTICA ONLINE  
+
+
+      Il sistema consente al cittadino di presentare qualsiasi tipologia di
+      istanza, scegliendole da quelle che l’ente può definire in modo semplice
+      ed immediato.
+
+
+      Per ciascuna istanza oltre al testo che viene impostato mediante un
+      semplice editor, l’ente potrà decidere:
+
+
+      - la tipologia di firma desiderata: solo digitale(\*),
+      digitale/analogica(\*), nessuna
+
+
+      - la tipologia di ricevuta: il sistema è in grado di generare la lettera
+      di avvio del procedimento ai sensi dell’art. 18 bis della L 241/90
+
+
+      - la modalità di invio: email/pec normale, email/pec interoperabile,
+      webservice con il sistema di protocollo
+
+
+      (\*) Se l’utente ha effettuato l’acceso con SPID, non verrà richiesta
+      nessuna firma, come previsto dalla norma.
+
+
+      Il sistema è inoltre predisposto per l’integrazione con PagoPA sia per la
+      parte di diritti ed incassi verso l’ente, che per la marca digitale
+      (ebollo).
+    shortDescription: >-
+      Accesso mediante SPID / eIDAS. Servizi disponibili: prenotazione
+      appuntamenti, comunicazione multicanale e social, istanze online
+developmentStatus: stable
+inputTypes:
+  - text/csv
+  - application/json
+intendedAudience:
+  countries:
+    - it
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: true
+    misureMinimeSicurezza: true
+    modelloInteroperabilita: true
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: true
+    spid: true
+landingURL: 'https://github.com/ComunediAlessandria/Portale'
+legal:
+  license: AGPL-3.0-or-later
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: false
+maintenance:
+  contacts:
+    - email: helpdesk.pa@dedagroup.it
+      name: Servizio Clienti
+  contractors:
+    - name: Dedagroup Public Services Srl
+      until: '2025-12-31'
+      website: 'https://www.civilianext.it'
+  type: contract
+name: 'Portale appuntamenti, comunicazioni e modulistica'
+outputTypes:
+  - text/csv
+  - application/json
+  - text/html
+platforms:
+  - web
+  - windows
+  - mac
+  - linux
+  - ios
+releaseDate: '2019-10-31'
+softwareType: standalone/web
+url: 'https://github.com/ComunediAlessandria/Portale'
+usedBy:
+  - Comune di Alessandria
